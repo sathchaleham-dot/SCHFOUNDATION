@@ -1,1 +1,2111 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Join Us | हमारे साथ जुड़ें — Sath Chale Hum Foundation</title>
+  <meta name="description" content="स्वयंसेवक बनें — साथ चले हम फाउंडेशन के साथ जुड़ें और समाज में सकारात्मक बदलाव की यात्रा का हिस्सा बनें।">
+  <meta name="theme-color" content="#071a12">
+
+  <meta property="og:title" content="Join Us | साथ चले हम फाउंडेशन">
+  <meta property="og:description" content="आपका समय, सहयोग और प्रयास किसी के जीवन में नई उम्मीद जगा सकता है।">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+
+    /* =========================================================
+       GLOBAL
+    ========================================================= */
+
+    *{ margin:0; padding:0; box-sizing:border-box; }
+
+    html{ scroll-behavior:smooth; overflow-x:hidden; }
+
+    :root{
+      --green:#087443;
+      --dark-green:#043d27;
+      --deep:#021c12;
+      --gold:#f4c542;
+      --yellow:#ffd83d;
+      --red:#d71920;
+      --white:#ffffff;
+      --text:#18231e;
+      --muted:#65736c;
+      --shadow:0 18px 45px rgba(0,0,0,.12);
+    }
+
+    body{
+      font-family:"Poppins","Tiro Devanagari Hindi",sans-serif;
+      background:#f5f9f7;
+      color:var(--text);
+      overflow-x:hidden;
+    }
+
+    a{ text-decoration:none; color:inherit; }
+    img{ max-width:100%; display:block; }
+    button{ font-family:inherit; }
+
+    .container{ width:min(1180px,92%); margin:auto; }
+    .hindi{ font-family:"Tiro Devanagari Hindi",serif; }
+
+    /* =========================================================
+       HEADER
+    ========================================================= */
+
+    .site-header{
+      position:fixed; left:0; top:0; width:100%; z-index:9999;
+      background:rgba(2,28,18,.93);
+      backdrop-filter:blur(18px);
+      -webkit-backdrop-filter:blur(18px);
+      border-bottom:1px solid rgba(255,255,255,.1);
+      box-shadow:0 10px 35px rgba(0,0,0,.12);
+    }
+    .header-inner{
+      min-height:88px; display:flex; align-items:center;
+      justify-content:space-between; gap:25px;
+    }
+    .brand{ display:flex; align-items:center; gap:14px; min-width:0; }
+    .brand-logo{
+      width:62px; height:62px; object-fit:contain; flex-shrink:0;
+      filter:drop-shadow(0 5px 10px rgba(0,0,0,.25));
+    }
+    .brand-text{ min-width:0; }
+    .brand-name{
+      color:#fff; font-size:clamp(1.05rem,2vw,1.55rem);
+      font-weight:900; line-height:1.2; white-space:nowrap;
+      text-shadow:0 2px 15px rgba(0,0,0,.3);
+    }
+    .brand-tagline{ color:#cde9da; font-size:.75rem; font-weight:600; margin-top:4px; white-space:nowrap; }
+    .desktop-nav{ display:flex; align-items:center; gap:4px; }
+    .desktop-nav a{
+      color:#fff; font-size:.83rem; font-weight:700;
+      padding:12px 11px; border-radius:12px; transition:.3s ease; white-space:nowrap;
+    }
+    .desktop-nav a:hover,
+    .desktop-nav a.active{ color:var(--yellow); background:rgba(255,255,255,.08); transform:translateY(-2px); }
+    .donate-nav{
+      background:var(--red)!important; padding:12px 18px!important;
+      box-shadow:0 8px 25px rgba(215,25,32,.35);
+      animation:pulseDonate 1.5s infinite;
+    }
+    .donate-nav:hover{ color:#fff!important; background:#ef2028!important; }
+    @keyframes pulseDonate{
+      0%,100%{ transform:scale(1); box-shadow:0 8px 25px rgba(215,25,32,.30); }
+      50%{ transform:scale(1.06); box-shadow:0 10px 35px rgba(215,25,32,.65); }
+    }
+    .menu-toggle{
+      display:none; width:45px; height:45px;
+      border:1px solid rgba(255,255,255,.2);
+      background:rgba(255,255,255,.08);
+      border-radius:12px; cursor:pointer; padding:9px;
+    }
+    .menu-toggle span{
+      display:block; width:100%; height:3px; background:#fff;
+      margin:5px 0; border-radius:5px; transition:.3s;
+    }
+    .mobile-nav{
+      display:none; background:rgba(2,28,18,.98);
+      border-top:1px solid rgba(255,255,255,.1); padding:12px 4%;
+    }
+    .mobile-nav a{
+      display:block; color:#fff; padding:13px 15px;
+      border-radius:10px; font-weight:700; margin:3px 0;
+    }
+    .mobile-nav a:hover,
+    .mobile-nav a.active{ background:rgba(255,255,255,.08); color:var(--yellow); }
+    .mobile-nav .donate-nav{ text-align:center; margin-top:8px; }
+    .mobile-nav.active{ display:block; }
+
+    /* =========================================================
+       PAGE BANNER
+    ========================================================= */
+
+    .page-banner{
+      background:
+        linear-gradient(135deg,rgba(2,28,18,.94),rgba(7,92,55,.86)),
+        url('https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1800&q=80')
+        center/cover no-repeat;
+      color:#fff; padding:175px 0 95px; text-align:center;
+    }
+    .banner-badge{
+      display:inline-flex; align-items:center; gap:9px;
+      padding:8px 17px; border:1px solid rgba(255,255,255,.3);
+      background:rgba(255,255,255,.09); border-radius:100px;
+      font-size:.78rem; font-weight:700; margin-bottom:20px;
+    }
+    .banner-badge i{ color:var(--yellow); }
+    .page-banner h1{
+      font-size:clamp(2rem,5vw,3.6rem); font-weight:900; line-height:1.2;
+    }
+    .page-banner h1 span{ color:var(--yellow); }
+    .page-banner p{
+      color:#cfe8db; margin:14px auto 0;
+      max-width:820px; font-size:1rem; line-height:1.8;
+    }
+    .page-banner p.hi{ font-family:"Tiro Devanagari Hindi",serif; }
+    .breadcrumb{ margin-top:22px; font-size:.85rem; color:#a9c9b8; }
+    .breadcrumb a{ color:#cfe8db; }
+    .breadcrumb a:hover{ color:var(--yellow); }
+    .breadcrumb i{ font-size:.6rem; margin:0 8px; opacity:.7; }
+
+    /* =========================================================
+       SLIDER SECTIONS
+    ========================================================= */
+
+    .slider-section{ position:relative; padding:90px 0; overflow:hidden; }
+    .slider-section .container{ position:relative; z-index:2; }
+    .slider-section::before{
+      content:""; position:absolute; inset:0;
+      background-image:radial-gradient(circle, rgba(255,255,255,.04) 1px, transparent 1px);
+      background-size:26px 26px; pointer-events:none;
+    }
+    .slider-head{ text-align:center; margin-bottom:50px; }
+    .slider-head .small-title{
+      display:inline-block; font-size:.9rem; font-weight:800;
+      letter-spacing:3px; text-transform:uppercase; margin-bottom:14px;
+    }
+    .slider-head h2{
+      font-size:clamp(2rem,4.4vw,3.2rem); line-height:1.15; font-weight:900;
+    }
+    .slider-head h2 span{ color:var(--yellow); }
+    .slider-head p{
+      max-width:820px; margin:20px auto 0; line-height:1.85; font-size:1rem;
+    }
+
+    .premium-slider{ position:relative; max-width:920px; margin:auto; padding:0 70px; }
+    .slider-window{ position:relative; overflow:hidden; border-radius:28px; min-height:420px; }
+
+    .slide{
+      position:absolute; inset:0; opacity:0; visibility:hidden;
+      transition:opacity .6s ease, transform .6s ease;
+      transform:translateX(30px);
+      padding:55px 50px; border-radius:28px;
+      border:1px solid rgba(255,255,255,.14);
+      backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+      display:flex; flex-direction:column; justify-content:center; text-align:center;
+      box-shadow:0 22px 60px rgba(0,0,0,.35);
+    }
+    .slide.active{
+      opacity:1; visibility:visible; transform:translateX(0); position:relative;
+    }
+
+    .slide[data-tone="green"]{
+      background:
+        radial-gradient(circle at 20% 20%,rgba(24,166,91,.28),transparent 45%),
+        linear-gradient(150deg,rgba(255,255,255,.09),rgba(255,255,255,.03));
+    }
+    .slide[data-tone="red"]{
+      background:
+        radial-gradient(circle at 20% 20%,rgba(239,32,40,.25),transparent 45%),
+        linear-gradient(150deg,rgba(255,255,255,.09),rgba(255,255,255,.03));
+    }
+    .slide[data-tone="gold"]{
+      background:
+        radial-gradient(circle at 20% 20%,rgba(255,216,61,.22),transparent 45%),
+        linear-gradient(150deg,rgba(255,255,255,.09),rgba(255,255,255,.03));
+    }
+    .slide[data-tone="teal"]{
+      background:
+        radial-gradient(circle at 20% 20%,rgba(20,184,166,.25),transparent 45%),
+        linear-gradient(150deg,rgba(255,255,255,.09),rgba(255,255,255,.03));
+    }
+    .slide[data-tone="orange"]{
+      background:
+        radial-gradient(circle at 20% 20%,rgba(249,115,22,.25),transparent 45%),
+        linear-gradient(150deg,rgba(255,255,255,.09),rgba(255,255,255,.03));
+    }
+
+    .slide-badge{
+      display:inline-flex; align-items:center; gap:8px;
+      margin:0 auto 22px; padding:7px 16px; border-radius:100px;
+      font-size:.72rem; font-weight:900; letter-spacing:2px; text-transform:uppercase;
+      background:rgba(255,216,61,.13);
+      border:1px solid rgba(255,216,61,.32);
+      color:var(--yellow);
+    }
+    .slide[data-tone="red"] .slide-badge{ background:rgba(255,107,112,.13); border-color:rgba(255,107,112,.32); color:#ff8a8f; }
+    .slide[data-tone="green"] .slide-badge{ background:rgba(24,166,91,.15); border-color:rgba(24,166,91,.35); color:#4ade80; }
+    .slide[data-tone="teal"] .slide-badge{ background:rgba(20,184,166,.15); border-color:rgba(20,184,166,.35); color:#5eead4; }
+    .slide[data-tone="orange"] .slide-badge{ background:rgba(249,115,22,.15); border-color:rgba(249,115,22,.35); color:#fdba74; }
+
+    .slide-icon{
+      width:96px; height:96px; border-radius:28px;
+      display:grid; place-items:center; font-size:2.4rem;
+      margin:0 auto 26px;
+      background:linear-gradient(145deg,#0ba35a,#06733f); color:#fff;
+      box-shadow:0 18px 45px rgba(8,116,67,.4),inset 0 1px 0 rgba(255,255,255,.25);
+      transition:.4s;
+    }
+    .slide[data-tone="red"] .slide-icon{ background:linear-gradient(145deg,#ef2028,#a80f16); box-shadow:0 18px 45px rgba(215,25,32,.4),inset 0 1px 0 rgba(255,255,255,.25); }
+    .slide[data-tone="gold"] .slide-icon{ background:linear-gradient(145deg,#ffd83d,#c89a00); color:#1c2e22; box-shadow:0 18px 45px rgba(244,197,66,.4),inset 0 1px 0 rgba(255,255,255,.3); }
+    .slide[data-tone="teal"] .slide-icon{ background:linear-gradient(145deg,#14b8a6,#0f766e); box-shadow:0 18px 45px rgba(20,184,166,.4),inset 0 1px 0 rgba(255,255,255,.25); }
+    .slide[data-tone="orange"] .slide-icon{ background:linear-gradient(145deg,#f97316,#c2410c); box-shadow:0 18px 45px rgba(249,115,22,.4),inset 0 1px 0 rgba(255,255,255,.25); }
+    .slide:hover .slide-icon{ transform:scale(1.06) rotate(-4deg); }
+
+    .slide-title{
+      font-family:"Tiro Devanagari Hindi",serif;
+      font-size:clamp(1.5rem,3vw,2.2rem); font-weight:900;
+      color:#fff; line-height:1.35; margin-bottom:8px; letter-spacing:.3px;
+    }
+    .slide-title-en{
+      font-size:1rem; font-weight:800; color:#c9e5d6;
+      letter-spacing:.5px; margin-bottom:22px;
+    }
+    .slide[data-tone="red"] .slide-title-en{ color:#ffb3b6; }
+    .slide[data-tone="gold"] .slide-title-en{ color:#ffe590; }
+    .slide[data-tone="teal"] .slide-title-en{ color:#a7f3e4; }
+    .slide[data-tone="orange"] .slide-title-en{ color:#fed7aa; }
+
+    .slide-desc{
+      font-family:"Tiro Devanagari Hindi",serif;
+      font-size:1.15rem; font-weight:700; line-height:1.75;
+      color:#f0fbf5; max-width:680px; margin:0 auto 14px;
+    }
+    .slide-desc-en{
+      font-size:.95rem; color:#9bc9b3; line-height:1.7;
+      max-width:640px; margin:0 auto; font-style:italic;
+    }
+    .slide[data-tone="red"] .slide-desc-en{ color:#d9a7a9; }
+    .slide[data-tone="gold"] .slide-desc-en{ color:#d1c07d; }
+    .slide[data-tone="teal"] .slide-desc-en{ color:#94d5c9; }
+    .slide[data-tone="orange"] .slide-desc-en{ color:#e0b088; }
+
+    .slider-arrow{
+      position:absolute; top:50%; transform:translateY(-50%);
+      width:52px; height:52px; border-radius:50%;
+      border:1px solid rgba(255,255,255,.25);
+      background:rgba(255,255,255,.08);
+      backdrop-filter:blur(10px); color:#fff;
+      font-size:1rem; cursor:pointer;
+      display:grid; place-items:center; transition:.3s; z-index:5;
+    }
+    .slider-arrow:hover{ background:var(--yellow); color:#173524; border-color:var(--yellow); transform:translateY(-50%) scale(1.08); }
+    .slider-arrow.prev{ left:0; }
+    .slider-arrow.next{ right:0; }
+
+    .slider-dots{
+      display:flex; justify-content:center; gap:10px; margin-top:28px; flex-wrap:wrap;
+    }
+    .slider-dot{
+      min-width:44px; height:44px; padding:0 14px;
+      border-radius:12px; border:1px solid rgba(255,255,255,.18);
+      background:rgba(255,255,255,.06); color:#c9e5d6;
+      font-size:.8rem; font-weight:900; cursor:pointer;
+      transition:.3s; display:inline-flex; align-items:center; justify-content:center; gap:6px;
+    }
+    .slider-dot:hover{ background:rgba(255,216,61,.15); border-color:rgba(255,216,61,.4); color:var(--yellow); transform:translateY(-2px); }
+    .slider-dot.active{
+      background:var(--yellow); border-color:var(--yellow); color:#173524;
+      box-shadow:0 8px 22px rgba(255,216,61,.3);
+    }
+    .slider-dot i{ font-size:.7rem; }
+
+    .way-section{
+      background:
+        radial-gradient(circle at 12% 12%,rgba(255,216,61,.09),transparent 30%),
+        radial-gradient(circle at 88% 88%,rgba(8,116,67,.22),transparent 40%),
+        linear-gradient(160deg,#021c12 0%,#043d27 45%,#021c12 100%);
+      color:#fff;
+    }
+    .way-section .slider-head .small-title{ color:var(--yellow); }
+    .way-section .slider-head h2{ color:#fff; }
+    .way-section .slider-head p{ color:#b8d4c5; }
+
+    .help-section-join{
+      background:
+        radial-gradient(circle at 12% 12%,rgba(255,216,61,.09),transparent 30%),
+        radial-gradient(circle at 88% 88%,rgba(215,25,32,.22),transparent 40%),
+        linear-gradient(160deg,#1a0304 0%,#3d0f12 45%,#1a0304 100%);
+      color:#fff;
+    }
+    .help-section-join .slider-head .small-title{ color:#ff8a8f; }
+    .help-section-join .slider-head h2{ color:#fff; }
+    .help-section-join .slider-head h2 span{ color:#ff8a8f; }
+    .help-section-join .slider-head p{ color:#e5b9ba; }
+
+    /* =========================================================
+       FORM SECTION
+    ========================================================= */
+
+    .form-section{
+      background:
+        linear-gradient(rgba(246,250,248,.96),rgba(246,250,248,.96)),
+        radial-gradient(circle at 20% 20%,#b8efd0,transparent 30%);
+      padding:100px 0;
+    }
+    .form-shell{
+      max-width:1000px; margin:auto; background:#fff;
+      border-radius:32px; box-shadow:0 30px 80px rgba(0,0,0,.12);
+      overflow:hidden; border:1px solid #dcebe2;
+    }
+    .form-head{
+      background:
+        radial-gradient(circle at 12% 20%,rgba(255,216,61,.18),transparent 30%),
+        linear-gradient(135deg,#043d27,#087443);
+      padding:45px 45px 40px; color:#fff;
+      position:relative; overflow:hidden;
+    }
+    .form-head::before{
+      content:""; position:absolute; inset:0;
+      background-image:radial-gradient(circle,rgba(255,255,255,.06) 1px,transparent 1px);
+      background-size:22px 22px; pointer-events:none;
+    }
+    .form-head-content{ position:relative; z-index:2; }
+    .form-head-badge{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:7px 16px; border-radius:100px;
+      background:rgba(255,216,61,.14);
+      border:1px solid rgba(255,216,61,.35);
+      color:var(--yellow);
+      font-size:.72rem; font-weight:900;
+      letter-spacing:2px; text-transform:uppercase; margin-bottom:16px;
+    }
+    .form-head h3{
+      font-family:"Tiro Devanagari Hindi",serif;
+      font-size:clamp(1.5rem,3vw,2.1rem); font-weight:900;
+      line-height:1.3; margin-bottom:8px;
+    }
+    .form-head p{
+      color:#c9e5d6; line-height:1.7; font-size:.95rem; max-width:700px;
+    }
+    .form-body{ padding:45px; }
+
+    /* SECTION HEADER */
+
+    .form-step{
+      margin-bottom:38px; padding-bottom:32px;
+      border-bottom:1px dashed #d7e9de;
+    }
+    .form-step:last-of-type{
+      border-bottom:none; padding-bottom:12px; margin-bottom:24px;
+    }
+
+    .step-title{
+      display:flex; align-items:center; gap:13px; margin-bottom:24px;
+    }
+    .step-num{
+      flex-shrink:0; width:44px; height:44px;
+      border-radius:14px; display:grid; place-items:center;
+      background:linear-gradient(145deg,#0ba35a,#06733f);
+      color:#fff; font-weight:900; font-size:1rem;
+      box-shadow:0 8px 20px rgba(8,116,67,.28);
+    }
+    .form-step:nth-of-type(1) .step-num{ background:linear-gradient(145deg,#0ba35a,#06733f); }
+    .form-step:nth-of-type(2) .step-num{ background:linear-gradient(145deg,#ef2028,#a80f16); box-shadow:0 8px 20px rgba(215,25,32,.28); }
+    .form-step:nth-of-type(3) .step-num{ background:linear-gradient(145deg,#ffd83d,#c89a00); color:#1c2e22; box-shadow:0 8px 20px rgba(244,197,66,.3); }
+    .form-step:nth-of-type(4) .step-num{ background:linear-gradient(145deg,#14b8a6,#0f766e); box-shadow:0 8px 20px rgba(20,184,166,.28); }
+    .form-step:nth-of-type(5) .step-num{ background:linear-gradient(145deg,#f97316,#c2410c); box-shadow:0 8px 20px rgba(249,115,22,.28); }
+    .form-step:nth-of-type(6) .step-num{ background:linear-gradient(145deg,#7c3aed,#5b21b6); box-shadow:0 8px 20px rgba(124,58,237,.28); }
+    .form-step:nth-of-type(7) .step-num{ background:linear-gradient(145deg,#0ea5e9,#0369a1); box-shadow:0 8px 20px rgba(14,165,233,.28); }
+    .form-step:nth-of-type(8) .step-num{ background:linear-gradient(145deg,#dc2626,#7f1d1d); box-shadow:0 8px 20px rgba(220,38,38,.28); }
+    .form-step:nth-of-type(9) .step-num{ background:linear-gradient(145deg,#0891b2,#155e75); box-shadow:0 8px 20px rgba(8,145,178,.28); }
+
+    .step-title h4{
+      font-family:"Tiro Devanagari Hindi",serif;
+      font-size:1.15rem; font-weight:900;
+      color:var(--dark-green); line-height:1.35;
+    }
+    .step-title p{
+      font-size:.78rem; color:var(--muted);
+      font-weight:600; margin-top:3px; letter-spacing:.3px;
+    }
+
+    /* ROLE SELECTOR */
+
+    .role-selector{
+      padding:26px 28px; border-radius:20px;
+      background:
+        radial-gradient(circle at 15% 25%,rgba(255,216,61,.15),transparent 40%),
+        linear-gradient(135deg,#f0fbf5,#e5f5ec);
+      border:2px solid #cde8d8; margin-bottom:36px; text-align:center;
+    }
+    .role-selector > label{
+      display:block;
+      font-family:"Tiro Devanagari Hindi",serif;
+      font-size:1.05rem; font-weight:900;
+      color:var(--dark-green); margin-bottom:18px; line-height:1.5;
+    }
+    .role-selector > label span{ color:var(--red); }
+    .role-options{
+      display:flex; justify-content:center; gap:16px; flex-wrap:wrap;
+    }
+    .role-option{
+      position:relative; flex:1; min-width:180px; max-width:300px;
+    }
+    .role-option input{ position:absolute; opacity:0; pointer-events:none; }
+    .role-option label{
+      display:flex; flex-direction:column; align-items:center; gap:10px;
+      padding:22px 20px; border-radius:18px;
+      border:2px solid #cde8d8; background:#fff;
+      cursor:pointer; transition:.3s; text-align:center;
+    }
+    .role-option label i{ font-size:1.6rem; color:#7ba891; transition:.3s; }
+    .role-option label strong{
+      font-size:1.05rem; font-weight:900;
+      color:var(--dark-green); letter-spacing:.3px;
+    }
+    .role-option label span{ font-size:.78rem; color:#8a988f; font-weight:600; }
+    .role-option label:hover{ border-color:#a8d5bd; transform:translateY(-3px); }
+    .role-option input:checked + label{
+      border-color:var(--green);
+      background:linear-gradient(145deg,#e9f7ef,#d9f2e4);
+      box-shadow:0 12px 30px rgba(8,116,67,.2);
+      transform:translateY(-4px);
+    }
+    .role-option input:checked + label i{ color:var(--green); transform:scale(1.15); }
+
+    /* FIELDS */
+
+    .field-row{
+      display:grid; grid-template-columns:1fr 1fr;
+      gap:18px; margin-bottom:18px;
+    }
+    .field-row.single{ grid-template-columns:1fr; }
+    .field-row.triple{ grid-template-columns:repeat(3,1fr); }
+
+    .field-group{
+      display:flex; flex-direction:column; min-width:0;
+    }
+    .field-group label{
+      font-size:.82rem; font-weight:800; color:var(--dark-green);
+      margin-bottom:8px; letter-spacing:.2px;
+      display:flex; align-items:center; gap:5px; flex-wrap:wrap;
+    }
+    .field-group label .req{ color:var(--red); font-size:.9rem; }
+    .field-group label .hint{
+      font-size:.7rem; color:#8a988f; font-weight:600; margin-left:auto;
+    }
+
+    .field-group input,
+    .field-group select,
+    .field-group textarea{
+      width:100%; padding:13px 15px; border-radius:12px;
+      border:2px solid #dcebe2; background:#f8fcf9;
+      font-family:inherit; font-size:.92rem; color:var(--text);
+      transition:.25s;
+    }
+    .field-group textarea{ resize:vertical; min-height:110px; line-height:1.6; }
+    .field-group input:focus,
+    .field-group select:focus,
+    .field-group textarea:focus{
+      outline:none; border-color:var(--green); background:#fff;
+      box-shadow:0 0 0 4px rgba(8,116,67,.1);
+    }
+    .field-group select{
+      cursor:pointer; appearance:none;
+      background-image:url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23087443' stroke-width='3' stroke-linecap='round'%3e%3cpolyline points='6 9 12 15 18 9'/%3e%3c/svg%3e");
+      background-repeat:no-repeat;
+      background-position:right 15px center;
+      background-size:14px;
+      padding-right:42px;
+    }
+
+    /* NAME SPLIT */
+    .name-split{
+      display:grid; grid-template-columns:repeat(3,1fr); gap:14px;
+    }
+    .name-split .field-group label{
+      font-size:.72rem; color:#6b7970; font-weight:700;
+    }
+
+    /* OTHER REVEAL FIELD */
+    .other-reveal{
+      margin-top:10px;
+      display:none;
+      animation:fadeReveal .35s ease;
+    }
+    .other-reveal.show{ display:block; }
+
+    @keyframes fadeReveal{
+      from{ opacity:0; transform:translateY(-8px); }
+      to{ opacity:1; transform:translateY(0); }
+    }
+
+    .other-reveal input{
+      border-color:#ffd83d!important;
+      background:#fffef5!important;
+    }
+    .other-reveal input:focus{
+      border-color:var(--gold)!important;
+      box-shadow:0 0 0 4px rgba(244,197,66,.18)!important;
+    }
+
+    .other-reveal .reveal-label{
+      display:flex; align-items:center; gap:7px;
+      font-size:.75rem; font-weight:800;
+      color:#a37a00; margin-bottom:8px; letter-spacing:.3px;
+    }
+    .other-reveal .reveal-label i{ color:var(--gold); }
+
+    /* RADIO ROWS */
+    .radio-row{
+      display:flex; gap:10px; flex-wrap:wrap;
+    }
+    .radio-item{
+      position:relative; flex:1; min-width:110px;
+    }
+    .radio-item input{ position:absolute; opacity:0; pointer-events:none; }
+    .radio-item label{
+      display:flex; align-items:center; justify-content:center;
+      gap:7px; padding:12px 14px; border-radius:12px;
+      border:2px solid #dcebe2; background:#f8fcf9;
+      font-size:.82rem; font-weight:800; color:#4a5a52;
+      cursor:pointer; transition:.25s; text-align:center; margin:0;
+    }
+    .radio-item label:hover{ border-color:#a8d5bd; background:#fff; }
+    .radio-item input:checked + label{
+      border-color:var(--green); background:#e9f7ef; color:var(--green);
+      box-shadow:0 6px 16px rgba(8,116,67,.15);
+    }
+    .radio-item input:focus-visible + label{ box-shadow:0 0 0 4px rgba(8,116,67,.15); }
+
+    /* CHECK GRID */
+    .check-grid{
+      display:grid; grid-template-columns:repeat(2,1fr); gap:10px;
+    }
+    .check-grid.three{ grid-template-columns:repeat(3,1fr); }
+
+    .check-item{ position:relative; }
+    .check-item input{ position:absolute; opacity:0; pointer-events:none; }
+    .check-item label{
+      display:flex; align-items:flex-start; gap:10px;
+      padding:12px 14px; border-radius:12px;
+      border:2px solid #dcebe2; background:#f8fcf9;
+      font-size:.82rem; font-weight:700; color:#4a5a52;
+      cursor:pointer; transition:.25s; line-height:1.4; margin:0;
+    }
+    .check-item label::before{
+      content:""; flex-shrink:0; width:18px; height:18px;
+      border-radius:6px; border:2px solid #c1d5c9;
+      background:#fff; margin-top:1px; transition:.25s;
+      display:grid; place-items:center;
+    }
+    .check-item label:hover{ border-color:#a8d5bd; background:#fff; }
+    .check-item input:checked + label{
+      border-color:var(--green); background:#e9f7ef; color:var(--green);
+    }
+    .check-item input:checked + label::before{
+      background:var(--green); border-color:var(--green);
+      content:"✓"; color:#fff; font-size:.75rem;
+      font-weight:900; line-height:1;
+      display:grid; place-items:center;
+    }
+
+    /* LANGUAGES */
+    .lang-grid{
+      display:grid; grid-template-columns:repeat(3,1fr); gap:10px;
+    }
+    .lang-item{ position:relative; }
+    .lang-item input{ position:absolute; opacity:0; pointer-events:none; }
+    .lang-item label{
+      display:flex; align-items:center; justify-content:center;
+      gap:8px; padding:12px 10px; border-radius:12px;
+      border:2px solid #dcebe2; background:#f8fcf9;
+      font-size:.82rem; font-weight:800; color:#4a5a52;
+      cursor:pointer; transition:.25s; text-align:center; margin:0; line-height:1.3;
+    }
+    .lang-item label .flag{ font-size:1rem; line-height:1; }
+    .lang-item label:hover{ border-color:#a8d5bd; background:#fff; }
+    .lang-item input:checked + label{
+      border-color:var(--green); background:#e9f7ef; color:var(--green);
+      box-shadow:0 6px 16px rgba(8,116,67,.15);
+    }
+
+    /* CONSENT */
+    .consent-box{
+      display:flex; gap:14px; align-items:flex-start;
+      padding:18px 20px; border-radius:16px;
+      background:#f4fbf7; border:2px solid #dcebe2;
+      transition:.25s; margin-top:8px;
+    }
+    .consent-box:focus-within{ border-color:var(--green); box-shadow:0 0 0 4px rgba(8,116,67,.1); }
+    .consent-box input{
+      width:22px; height:22px; accent-color:var(--green);
+      flex-shrink:0; cursor:pointer; margin-top:2px;
+    }
+    .consent-box label{
+      font-size:.86rem; line-height:1.7; color:#4a5a52; cursor:pointer; margin:0;
+    }
+    .consent-box label strong{ color:var(--dark-green); }
+    .consent-box label a{ color:var(--green); font-weight:800; text-decoration:underline; }
+    .consent-box .en-text{
+      display:block; font-size:.78rem; color:#7a8880;
+      font-style:italic; margin-top:8px;
+    }
+
+    /* EMERGENCY */
+    .emergency-card{
+      padding:22px; border-radius:18px;
+      background:linear-gradient(135deg,#fff5f5,#ffe9ea);
+      border:2px solid #fbd0d2;
+    }
+    .emergency-card .em-head{
+      display:flex; align-items:center; gap:10px;
+      margin-bottom:18px; color:#8f0d13;
+    }
+    .emergency-card .em-head i{ font-size:1.1rem; }
+    .emergency-card .em-head strong{
+      font-family:"Tiro Devanagari Hindi",serif;
+      font-size:1rem; font-weight:900; letter-spacing:.3px;
+    }
+    .emergency-card .field-group label{ color:#7a2a2d; }
+    .emergency-card .field-group input{ border-color:#fbd0d2; background:#fff; }
+    .emergency-card .field-group input:focus{
+      border-color:var(--red);
+      box-shadow:0 0 0 4px rgba(215,25,32,.1);
+    }
+
+    /* SUBMIT */
+    .form-submit{
+      display:flex; flex-direction:column; gap:14px;
+      align-items:center; text-align:center;
+      padding-top:24px; border-top:2px dashed #d7e9de; margin-top:20px;
+    }
+    .form-submit p{
+      font-size:.82rem; color:#7a8880; line-height:1.6; max-width:560px;
+    }
+    .form-submit p em{
+      display:block; font-size:.76rem; color:#9aa8a0; margin-top:5px;
+    }
+    .submit-btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:11px;
+      min-height:60px; padding:16px 42px; border-radius:16px; border:none;
+      cursor:pointer; font-family:inherit; font-size:1rem; font-weight:900;
+      letter-spacing:.4px; color:#fff;
+      background:linear-gradient(135deg,#087443,#0ba35a);
+      box-shadow:0 14px 36px rgba(8,116,67,.35);
+      transition:.3s; position:relative; overflow:hidden;
+    }
+    .submit-btn::before{
+      content:""; position:absolute; inset:0;
+      background:linear-gradient(135deg,transparent,rgba(255,255,255,.15),transparent);
+      transform:translateX(-100%); transition:.6s;
+    }
+    .submit-btn:hover{ transform:translateY(-3px); box-shadow:0 18px 45px rgba(8,116,67,.45); }
+    .submit-btn:hover::before{ transform:translateX(100%); }
+    .submit-btn i{ font-size:1.05rem; }
+
+    /* =========================================================
+       CTA
+    ========================================================= */
+
+    .cta-strip{
+      background:
+        radial-gradient(circle at 15% 30%,rgba(255,216,61,.18),transparent 25%),
+        radial-gradient(circle at 85% 70%,rgba(8,116,67,.22),transparent 25%),
+        linear-gradient(135deg,#032a1a,#075f38);
+      color:#fff; padding:80px 0; text-align:center;
+    }
+    .cta-strip h2{
+      font-size:clamp(1.8rem,4vw,3rem); font-weight:900; line-height:1.3;
+    }
+    .cta-strip h2 span{ color:var(--yellow); }
+    .cta-strip p{
+      color:#cdebd9; margin-top:14px;
+      max-width:720px; margin-left:auto; margin-right:auto; line-height:1.85;
+    }
+    .cta-buttons{
+      display:flex; justify-content:center; flex-wrap:wrap; gap:14px; margin-top:30px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:9px;
+      min-height:52px; padding:14px 25px; border-radius:14px;
+      font-size:.9rem; font-weight:800; border:none; cursor:pointer;
+      transition:.3s ease;
+    }
+    .btn:hover{ transform:translateY(-4px); }
+    .btn-red{ color:#fff; background:var(--red); box-shadow:0 12px 30px rgba(215,25,32,.35); }
+    .btn-green{ color:#fff; background:var(--green); box-shadow:0 12px 30px rgba(8,116,67,.35); }
+    .btn-outline{ color:#fff; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.35); }
+    .btn-pulse{ animation:pulseButton 1.5s infinite; }
+    @keyframes pulseButton{
+      0%,100%{ box-shadow:0 10px 28px rgba(215,25,32,.3); }
+      50%{ box-shadow:0 12px 40px rgba(215,25,32,.75); }
+    }
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer{ background:#01160d; color:#fff; padding-top:70px; }
+    .footer-grid{
+      display:grid; grid-template-columns:1.3fr 1fr 1fr;
+      gap:50px; padding-bottom:50px;
+    }
+    .footer-brand{
+      display:flex; align-items:center; gap:15px; margin-bottom:17px;
+    }
+    .footer-brand img{ width:65px; height:65px; object-fit:contain; }
+    .footer-brand h3{ font-size:1.1rem; font-weight:900; }
+    .footer-tagline{ color:#b7d6c5; line-height:1.7; font-size:.9rem; }
+    .footer-heading{ font-size:1rem; font-weight:900; margin-bottom:22px; color:#fff; }
+    .social-heading{ text-align:center; }
+    .social-icons{ display:flex; justify-content:center; gap:15px; }
+    .social-icon{
+      width:50px; height:50px; display:grid; place-items:center;
+      border-radius:16px; background:#0c3925; color:#fff;
+      font-size:1.2rem; transition:.3s;
+      border:1px solid rgba(255,255,255,.08);
+    }
+    .social-icon:hover{ transform:translateY(-5px); background:var(--green); }
+    .quick-links a{
+      display:block; color:#b8d3c4; font-size:.88rem;
+      margin:11px 0; transition:.3s;
+    }
+    .quick-links a:hover{ color:var(--yellow); transform:translateX(4px); }
+    .footer-bottom{
+      border-top:1px solid rgba(255,255,255,.1);
+      padding:25px 0; text-align:center;
+      color:#90ad9c; font-size:.8rem;
+    }
+    .footer-bottom a{ color:#c5dace; margin:0 8px; }
+    .footer-bottom a:hover{ color:var(--yellow); }
+    .footer-bottom .copyright{ margin-top:10px; color:#d0e1d7; font-weight:600; }
+    .footer-name{ color:#fff; font-weight:800; margin-top:10px; }
+
+    /* =========================================================
+       BACK TO TOP
+    ========================================================= */
+
+    .back-top{
+      position:fixed; right:20px; bottom:20px;
+      width:45px; height:45px; border:none; border-radius:50%;
+      background:var(--red); color:#fff; cursor:pointer; z-index:1000;
+      display:grid; place-items:center;
+      opacity:0; visibility:hidden; transition:.3s;
+      box-shadow:0 8px 25px rgba(215,25,32,.3);
+    }
+    .back-top.show{ opacity:1; visibility:visible; }
+
+    /* =========================================================
+       REDUCED MOTION
+    ========================================================= */
+
+    @media (prefers-reduced-motion: reduce){
+      *,*::before,*::after{
+        animation-duration:.01ms!important;
+        animation-iteration-count:1!important;
+        transition-duration:.01ms!important;
+        scroll-behavior:auto!important;
+      }
+    }
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media(max-width:1100px){
+      .desktop-nav{ gap:0; }
+      .desktop-nav a{ padding:10px 7px; font-size:.75rem; }
+      .donate-nav{ padding:10px 13px!important; }
+      .brand-logo{ width:55px; height:55px; }
+      .brand-name{ font-size:1.05rem; }
+    }
+
+    @media(max-width:850px){
+      .desktop-nav{ display:none; }
+      .menu-toggle{ display:block; }
+      .header-inner{ min-height:75px; }
+      .brand-logo{ width:52px; height:52px; }
+      .brand-name{ font-size:1rem; }
+      .brand-tagline{ font-size:.65rem; }
+      .page-banner{ padding:145px 0 75px; }
+
+      .premium-slider{ padding:0 8px; }
+      .slider-window{ min-height:440px; }
+      .slide{ padding:40px 28px; }
+      .slide-icon{ width:80px; height:80px; font-size:2rem; }
+      .slide-title{ font-size:1.5rem; }
+      .slide-desc{ font-size:1rem; }
+      .slider-arrow{ width:42px; height:42px; font-size:.85rem; }
+      .slider-arrow.prev{ left:-4px; }
+      .slider-arrow.next{ right:-4px; }
+
+      .field-row,
+      .field-row.triple,
+      .name-split{ grid-template-columns:1fr; }
+      .check-grid,
+      .check-grid.three{ grid-template-columns:1fr; }
+      .lang-grid{ grid-template-columns:repeat(2,1fr); }
+
+      .form-body{ padding:32px 24px; }
+      .form-head{ padding:35px 24px 30px; }
+      .footer-grid{ grid-template-columns:1fr; gap:35px; }
+      .social-heading{ text-align:left; }
+      .social-icons{ justify-content:flex-start; }
+      .form-section{ padding:70px 0; }
+    }
+
+    @media(max-width:600px){
+      .brand-name{ white-space:normal; line-height:1.15; }
+      .brand-tagline{ white-space:normal; }
+
+      .premium-slider{ padding:0; }
+      .slider-window{ min-height:500px; border-radius:22px; }
+      .slide{ padding:34px 22px; border-radius:22px; }
+      .slide-icon{ width:70px; height:70px; font-size:1.7rem; border-radius:22px; }
+      .slide-title{ font-size:1.3rem; }
+      .slide-title-en{ font-size:.88rem; }
+      .slide-desc{ font-size:.98rem; }
+      .slide-desc-en{ font-size:.85rem; }
+      .slider-arrow{ width:38px; height:38px; font-size:.78rem; }
+      .slider-arrow.prev{ left:-8px; }
+      .slider-arrow.next{ right:-8px; }
+      .slider-dot{ min-width:40px; height:40px; font-size:.72rem; padding:0 10px; }
+
+      .form-shell{ border-radius:24px; }
+      .form-body{ padding:26px 18px; }
+      .form-head{ padding:30px 20px 26px; }
+      .step-num{ width:38px; height:38px; font-size:.9rem; }
+      .step-title h4{ font-size:1rem; }
+
+      .role-options{ gap:10px; }
+      .role-option{ min-width:140px; }
+      .role-option label{ padding:18px 14px; }
+
+      .lang-grid{ gap:8px; }
+      .lang-item label{ font-size:.75rem; padding:10px 8px; gap:6px; }
+      .lang-item label .flag{ font-size:.9rem; }
+
+      .emergency-card{ padding:18px 16px; }
+      .submit-btn{ width:100%; padding:15px 24px; font-size:.92rem; }
+      .cta-buttons .btn{ width:100%; }
+      .footer-bottom a{ display:inline-block; margin:5px; }
+    }
+
+    @media(max-width:380px){
+      .brand-logo{ width:45px; height:45px; }
+      .brand-name{ font-size:.82rem; }
+      .brand-tagline{ font-size:.57rem; }
+      .menu-toggle{ width:40px; height:40px; }
+      .lang-grid{ grid-template-columns:1fr 1fr; }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <img class="brand-logo"
+           src="https://raw.githubusercontent.com/sathchaleham-dot/sath-chale-ham-/main/sath_chale_ham_logo_HD-1.png"
+           alt="साथ चले हम फाउंडेशन Logo">
+      <div class="brand-text">
+        <div class="brand-name">साथ चले हम फाउंडेशन</div>
+        <div class="brand-tagline">साथ चले हम, बदलाव की ओर</div>
+      </div>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="work.html">Work</a>
+      <a href="team.html">Team</a>
+      <a href="events.html">Events</a>
+      <a href="join-us.html" class="active">Join Us</a>
+      <a href="donate.html" class="donate-nav"><i class="fa-solid fa-heart"></i> Donate Us</a>
+    </nav>
+
+    <button class="menu-toggle" id="menuToggle"
+            aria-label="Open Menu" aria-expanded="false"
+            aria-controls="mobileNav" type="button">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="work.html">Work</a>
+    <a href="team.html">Team</a>
+    <a href="events.html">Events</a>
+    <a href="join-us.html" class="active">Join Us</a>
+    <a href="donate.html" class="donate-nav"><i class="fa-solid fa-heart"></i> Donate Us</a>
+  </nav>
+</header>
+
+
+<!-- =========================================================
+     PAGE BANNER
+========================================================= -->
+
+<section class="page-banner">
+  <div class="container">
+    <div class="banner-badge"><i class="fa-solid fa-users"></i> Join Us</div>
+
+    <h1>Join Us | <span class="hindi">हमारे साथ जुड़ें</span></h1>
+
+    <p class="hi">
+      हमसे जुड़ें और समाज में सकारात्मक बदलाव लाने की इस यात्रा का हिस्सा बनें।
+      आपका समय, सहयोग और प्रयास किसी के जीवन में नई उम्मीद जगा सकता है।
+    </p>
+
+    <p>
+      Join us and be part of our journey towards positive change in society.
+      Your time, support, and efforts can bring new hope into someone's life.
+    </p>
+
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <i class="fa-solid fa-chevron-right"></i>
+      <span>Join Us</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================
+     OUR WAY OF WORKING
+========================================================= -->
+
+<section class="slider-section way-section" id="way">
+  <div class="container">
+
+    <div class="slider-head">
+      <span class="small-title">Our Way of Working</span>
+      <h2>हमारा काम करने का तरीका | <span>Our Way of Working</span></h2>
+      <p class="hindi">ये पाँच सिद्धांत हमारे हर कार्य की नींव हैं — सीधी मदद से लेकर समानता और सम्मान तक।</p>
+    </div>
+
+    <div class="premium-slider" id="waySlider">
+
+      <button class="slider-arrow prev" type="button" aria-label="Previous slide">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <button class="slider-arrow next" type="button" aria-label="Next slide">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
+      <div class="slider-window">
+
+        <div class="slide active" data-tone="green">
+          <span class="slide-badge"><i class="fa-solid fa-hashtag"></i> Principle 01</span>
+          <div class="slide-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+          <h3 class="slide-title">सीधी मदद</h3>
+          <div class="slide-title-en">Direct Help</div>
+          <p class="slide-desc">ज़रूरतमंद लोगों तक सीधे और समय पर मदद पहुँचाना।</p>
+          <p class="slide-desc-en">Providing direct and timely support to people in need.</p>
+        </div>
+
+        <div class="slide" data-tone="red">
+          <span class="slide-badge"><i class="fa-solid fa-hashtag"></i> Principle 02</span>
+          <div class="slide-icon"><i class="fa-solid fa-people-arrows"></i></div>
+          <h3 class="slide-title">मिलकर काम करना</h3>
+          <div class="slide-title-en">Working Together</div>
+          <p class="slide-desc">स्वयंसेवकों और समुदाय के लोगों के साथ मिलकर काम करना।</p>
+          <p class="slide-desc-en">Working together with volunteers and the community.</p>
+        </div>
+
+        <div class="slide" data-tone="gold">
+          <span class="slide-badge"><i class="fa-solid fa-hashtag"></i> Principle 03</span>
+          <div class="slide-icon"><i class="fa-solid fa-shield-heart"></i></div>
+          <h3 class="slide-title">ईमानदारी और पारदर्शिता</h3>
+          <div class="slide-title-en">Honesty &amp; Transparency</div>
+          <p class="slide-desc">अपने कार्यों में ईमानदारी रखना और सही एवं स्पष्ट जानकारी साझा करना।</p>
+          <p class="slide-desc-en">Working honestly and sharing clear and accurate information about our work.</p>
+        </div>
+
+        <div class="slide" data-tone="teal">
+          <span class="slide-badge"><i class="fa-solid fa-hashtag"></i> Principle 04</span>
+          <div class="slide-icon"><i class="fa-solid fa-people-group"></i></div>
+          <h3 class="slide-title">समुदाय की भागीदारी</h3>
+          <div class="slide-title-en">Community Participation</div>
+          <p class="slide-desc">लोगों को साथ जोड़कर समाज में सकारात्मक और स्थायी बदलाव लाना।</p>
+          <p class="slide-desc-en">Bringing people together to create positive and lasting change in society.</p>
+        </div>
+
+        <div class="slide" data-tone="orange">
+          <span class="slide-badge"><i class="fa-solid fa-hashtag"></i> Principle 05</span>
+          <div class="slide-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+          <h3 class="slide-title">समानता और सम्मान</h3>
+          <div class="slide-title-en">Equality &amp; Respect</div>
+          <p class="slide-desc">हर व्यक्ति के साथ सम्मान और समानता का व्यवहार करना।</p>
+          <p class="slide-desc-en">Treating everyone with dignity and equality.</p>
+        </div>
+
+      </div>
+
+      <div class="slider-dots" id="wayDots" role="tablist"></div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================
+     HOW YOU CAN HELP
+========================================================= -->
+
+<section class="slider-section help-section-join" id="help">
+  <div class="container">
+
+    <div class="slider-head">
+      <span class="small-title">How You Can Help</span>
+      <h2>आप हमारी मदद कैसे कर सकते हैं? | <span>How You Can Help</span></h2>
+      <p class="hindi">पाँच तरीके — जिनसे आप हमारे कार्यों से जुड़ सकते हैं और किसी की ज़िंदगी बदल सकते हैं।</p>
+    </div>
+
+    <div class="premium-slider" id="helpSlider">
+
+      <button class="slider-arrow prev" type="button" aria-label="Previous slide">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <button class="slider-arrow next" type="button" aria-label="Next slide">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
+      <div class="slider-window">
+
+        <div class="slide active" data-tone="green">
+          <span class="slide-badge"><i class="fa-solid fa-hashtag"></i> Way 01</span>
+          <div class="slide-icon"><i class="fa-solid fa-clock"></i></div>
+          <h3 class="slide-title">अपना समय दें</h3>
+          <div class="slide-title-en">Give Your Time</div>
+          <p class="slide-desc">स्वयंसेवक बनें और जरूरतमंद लोगों की मदद करें।</p>
+          <p class="slide-desc-en">Volunteer your time to help people in need.</p>
+        </div>
+
+        <div class="slide" data-tone="red">
+          <span class="slide-badge"><i class="fa-solid fa-hashtag"></i> Way 02</span>
+          <div class="slide-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+          <h3 class="slide-title">दान दें</h3>
+          <div class="slide-title-en">Donate</div>
+          <p class="slide-desc">अपनी इच्छा और क्षमता के अनुसार जरूरतमंद लोगों की मदद के लिए योगदान दें।</p>
+          <p class="slide-desc-en">Donate according to your wish and ability to help people in need.</p>
+        </div>
+
+        <div class="slide" data-tone="gold">
+          <span class="slide-badge"><i class="fa-solid fa-hashtag"></i> Way 03</span>
+          <div class="slide-icon"><i class="fa-solid fa-handshake"></i></div>
+          <h3 class="slide-title">सहयोग करें</h3>
+          <div class="slide-title-en">Support Us</div>
+          <p class="slide-desc">अपनी क्षमता, कौशल या संसाधनों के माध्यम से हमारे काम में सहयोग करें।</p>
+          <p class="slide-desc-en">Support our work through your skills, resources, or whatever you can contribute.</p>
+        </div>
+
+        <div class="slide" data-tone="teal">
+          <span class="slide-badge"><i class="fa-solid fa-hashtag"></i> Way 04</span>
+          <div class="slide-icon"><i class="fa-solid fa-bullhorn"></i></div>
+          <h3 class="slide-title">जागरूकता फैलाएँ</h3>
+          <div class="slide-title-en">Spread Awareness</div>
+          <p class="slide-desc">सही जानकारी दूसरों तक पहुँचाएँ और लोगों को जागरूक करें।</p>
+          <p class="slide-desc-en">Share useful information and help spread awareness.</p>
+        </div>
+
+        <div class="slide" data-tone="orange">
+          <span class="slide-badge"><i class="fa-solid fa-hashtag"></i> Way 05</span>
+          <div class="slide-icon"><i class="fa-solid fa-microphone"></i></div>
+          <h3 class="slide-title">अपनी आवाज़ बनें</h3>
+          <div class="slide-title-en">Be a Voice for Change</div>
+          <p class="slide-desc">अच्छे बदलाव की पहल का हिस्सा बनें और जरूरतमंदों की आवाज़ को आगे बढ़ाएँ।</p>
+          <p class="slide-desc-en">Be part of positive change and help amplify the voices of those in need.</p>
+        </div>
+
+      </div>
+
+      <div class="slider-dots" id="helpDots" role="tablist"></div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================
+     JOIN US FORM
+========================================================= -->
+
+<section class="form-section" id="volunteer">
+  <div class="container">
+
+    <div class="form-shell">
+
+      <!-- FORM HEAD -->
+
+      <div class="form-head">
+        <div class="form-head-content">
+          <div class="form-head-badge">
+            <i class="fa-solid fa-file-signature"></i>
+            Volunteer Registration
+          </div>
+
+          <h3>स्वयंसेवक पंजीकरण | Volunteer Registration</h3>
+
+          <p>
+            आपकी दी गई जानकारी पूरी तरह सुरक्षित रहेगी और केवल स्वयंसेवा से जुड़े कार्यों के लिए उपयोग की जाएगी। <strong style="color:#ffd83d;">(*)</strong> वाले फ़ील्ड अनिवार्य हैं।
+            <br><span style="color:#a9d5bd;font-style:italic;">Your information will be kept secure and used only for volunteer-related activities. Fields marked with <strong style="color:#ffd83d;">(*)</strong> are mandatory.</span>
+          </p>
+        </div>
+      </div>
+
+
+      <div class="form-body">
+
+        <form action="https://formsubmit.co/sathchaleham@gmail.com" method="POST" id="joinForm">
+
+          <input type="hidden" name="_subject" value="New Volunteer Registration — Sath Chale Hum Foundation">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+
+
+          <!-- ============================================
+               ROLE SELECTOR
+          ============================================ -->
+
+          <div class="role-selector">
+
+            <label>
+              आप किस रूप में "साथ चले हम" से जुड़ना चाहते हैं? <span>*</span>
+              <br><span style="font-size:.82rem;color:#65736c;font-weight:700;">How would you like to join "Sath Chale Hum"?</span>
+            </label>
+
+            <div class="role-options">
+
+              <div class="role-option">
+                <input type="radio" id="role_member" name="Join As" value="Member" required>
+                <label for="role_member">
+                  <i class="fa-solid fa-id-card"></i>
+                  <strong>सदस्य | Member</strong>
+                  <span>सदस्य बनें</span>
+                </label>
+              </div>
+
+              <div class="role-option">
+                <input type="radio" id="role_volunteer" name="Join As" value="Volunteer" required>
+                <label for="role_volunteer">
+                  <i class="fa-solid fa-hands-helping"></i>
+                  <strong>स्वयंसेवक | Volunteer</strong>
+                  <span>स्वयंसेवक बनें</span>
+                </label>
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- ============================================
+               STEP 01 — PERSONAL INFORMATION
+          ============================================ -->
+
+          <div class="form-step">
+
+            <div class="step-title">
+              <div class="step-num">01</div>
+              <div>
+                <h4>व्यक्तिगत जानकारी | Personal Information</h4>
+                <p>आपका नाम, जन्म तिथि एवं मूल विवरण | Your name, date of birth, and basic details</p>
+              </div>
+            </div>
+
+            <div class="field-group" style="margin-bottom:16px;">
+              <label>पूरा नाम | Full Name <span class="req">*</span></label>
+              <div class="name-split">
+                <div class="field-group">
+                  <label for="ffirst">पहला नाम | First Name <span class="req">*</span></label>
+                  <input type="text" id="ffirst" name="First Name" required placeholder="First">
+                </div>
+                <div class="field-group">
+                  <label for="fmiddle">मध्य नाम | Middle Name</label>
+                  <input type="text" id="fmiddle" name="Middle Name" placeholder="Middle">
+                </div>
+                <div class="field-group">
+                  <label for="flast">अंतिम नाम | Last Name <span class="req">*</span></label>
+                  <input type="text" id="flast" name="Last Name" required placeholder="Last">
+                </div>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field-group">
+                <label for="fguardian">पिता / पति का नाम | Father's / Spouse's Name</label>
+                <input type="text" id="fguardian" name="Guardian Name" placeholder="पिता या पति का नाम">
+              </div>
+              <div class="field-group">
+                <label for="fdob">जन्म तिथि | Date of Birth <span class="req">*</span></label>
+                <input type="date" id="fdob" name="Date of Birth" required>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field-group">
+                <label for="fgender">लिंग | Gender <span class="req">*</span></label>
+                <select id="fgender" name="Gender" required>
+                  <option value="">-- चुनें | Select --</option>
+                  <option value="Male">पुरुष | Male</option>
+                  <option value="Female">महिला | Female</option>
+                  <option value="Other">अन्य | Other</option>
+                  <option value="Prefer not to say">बताना नहीं चाहते | Prefer not to say</option>
+                </select>
+              </div>
+              <div class="field-group">
+                <label for="fblood">रक्त समूह | Blood Group <span class="req">*</span></label>
+                <select id="fblood" name="Blood Group" required>
+                  <option value="">-- चुनें | Select --</option>
+                  <option value="A+">A+</option>
+                  <option value="A-">A−</option>
+                  <option value="B+">B+</option>
+                  <option value="B-">B−</option>
+                  <option value="AB+">AB+</option>
+                  <option value="AB-">AB−</option>
+                  <option value="O+">O+</option>
+                  <option value="O-">O−</option>
+                  <option value="Unknown">ज्ञात नहीं | Unknown</option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+
+
+          <!-- ============================================
+               STEP 02 — CONTACT
+          ============================================ -->
+
+          <div class="form-step">
+
+            <div class="step-title">
+              <div class="step-num">02</div>
+              <div>
+                <h4>संपर्क जानकारी | Contact Information</h4>
+                <p>हम आपसे इसी माध्यम से संपर्क करेंगे | We will use these details to contact you</p>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field-group">
+                <label for="fphone">मोबाइल नंबर | Mobile Number <span class="req">*</span> <span class="hint">10 अंक | 10 digits</span></label>
+                <input type="tel" id="fphone" name="Mobile" required placeholder="XXXXXXXXXX" pattern="[0-9]{10}" maxlength="10" inputmode="numeric">
+              </div>
+              <div class="field-group">
+                <label for="fwhatsapp">व्हाट्सएप नंबर | WhatsApp Number <span class="hint">यदि मोबाइल से अलग हो</span></label>
+                <input type="tel" id="fwhatsapp" name="WhatsApp" placeholder="XXXXXXXXXX" pattern="[0-9]{10}" maxlength="10" inputmode="numeric">
+              </div>
+            </div>
+
+            <div class="field-row single">
+              <div class="field-group">
+                <label for="femail">ईमेल पता | Email Address <span class="req">*</span></label>
+                <input type="email" id="femail" name="Email" required placeholder="you@example.com">
+              </div>
+            </div>
+
+          </div>
+
+
+          <!-- ============================================
+               STEP 03 — ADDRESS (smart dropdowns)
+          ============================================ -->
+
+          <div class="form-step">
+
+            <div class="step-title">
+              <div class="step-num">03</div>
+              <div>
+                <h4>पता | Address</h4>
+                <p>आप वर्तमान में कहाँ रहते हैं? | Where do you currently live?</p>
+              </div>
+            </div>
+
+            <div class="field-row single">
+              <div class="field-group">
+                <label for="faddress">पूरा पता | Full Address <span class="req">*</span></label>
+                <input type="text" id="faddress" name="Address" required placeholder="मकान नं., गली, मोहल्ला / गाँव">
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field-group">
+                <label for="fcity">शहर / गाँव | City / Village <span class="req">*</span></label>
+                <input type="text" id="fcity" name="City" required placeholder="शहर या गाँव">
+              </div>
+              <div class="field-group">
+                <label for="fpincode">पिन कोड | PIN Code <span class="req">*</span> <span class="hint">6 अंक | 6 digits</span></label>
+                <input type="text" id="fpincode" name="PIN Code" required placeholder="XXXXXX" pattern="[0-9]{6}" maxlength="6" inputmode="numeric">
+              </div>
+            </div>
+
+            <!-- COUNTRY -->
+
+            <div class="field-row">
+              <div class="field-group">
+                <label for="fcountry">देश | Country <span class="req">*</span></label>
+                <select id="fcountry" name="Country Select" required>
+                  <option value="">-- चुनें | Select --</option>
+                  <option value="India" selected>भारत | India</option>
+                  <option value="Other">अन्य | Other</option>
+                </select>
+                <div class="other-reveal" id="countryOtherWrap">
+                  <div class="reveal-label"><i class="fa-solid fa-pen"></i> कृपया देश का नाम लिखें | Please write your country name</div>
+                  <input type="text" name="Country Other" id="fcountryOther" placeholder="Enter country name">
+                </div>
+              </div>
+
+              <!-- STATE -->
+
+              <div class="field-group">
+                <label for="fstate">राज्य | State <span class="req">*</span></label>
+                <select id="fstate" name="State Select" required>
+                  <option value="">-- चुनें | Select --</option>
+                  <option value="Bihar" selected>बिहार | Bihar</option>
+                  <option value="Other">अन्य | Other</option>
+                </select>
+                <div class="other-reveal" id="stateOtherWrap">
+                  <div class="reveal-label"><i class="fa-solid fa-pen"></i> कृपया राज्य का नाम लिखें | Please write your state name</div>
+                  <input type="text" name="State Other" id="fstateOther" placeholder="Enter state name">
+                </div>
+              </div>
+            </div>
+
+            <!-- DISTRICT -->
+
+            <div class="field-row single">
+              <div class="field-group">
+                <label for="fdistrict">जिला | District <span class="req">*</span></label>
+
+                <!-- Bihar district dropdown -->
+                <select id="fdistrict" name="District" required>
+                  <option value="">-- जिला चुनें | Select District --</option>
+                  <option value="Araria">अररिया | Araria</option>
+                  <option value="Arwal">अरवल | Arwal</option>
+                  <option value="Aurangabad">औरंगाबाद | Aurangabad</option>
+                  <option value="Banka">बाँका | Banka</option>
+                  <option value="Begusarai">बेगूसराय | Begusarai</option>
+                  <option value="Bhagalpur">भागलपुर | Bhagalpur</option>
+                  <option value="Bhojpur">भोजपुर | Bhojpur</option>
+                  <option value="Buxar">बक्सर | Buxar</option>
+                  <option value="Darbhanga">दरभंगा | Darbhanga</option>
+                  <option value="East Champaran">पूर्वी चम्पारण | East Champaran</option>
+                  <option value="Gaya">गया | Gaya</option>
+                  <option value="Gopalganj">गोपालगंज | Gopalganj</option>
+                  <option value="Jamui">जमुई | Jamui</option>
+                  <option value="Jehanabad">जहानाबाद | Jehanabad</option>
+                  <option value="Kaimur">कैमूर | Kaimur</option>
+                  <option value="Katihar">कटिहार | Katihar</option>
+                  <option value="Khagaria">खगड़िया | Khagaria</option>
+                  <option value="Kishanganj">किशनगंज | Kishanganj</option>
+                  <option value="Lakhisarai">लखीसराय | Lakhisarai</option>
+                  <option value="Madhepura">मधेपुरा | Madhepura</option>
+                  <option value="Madhubani">मधुबनी | Madhubani</option>
+                  <option value="Munger">मुंगेर | Munger</option>
+                  <option value="Muzaffarpur">मुजफ्फरपुर | Muzaffarpur</option>
+                  <option value="Nalanda">नालंदा | Nalanda</option>
+                  <option value="Nawada">नवादा | Nawada</option>
+                  <option value="Patna">पटना | Patna</option>
+                  <option value="Purnia">पूर्णिया | Purnia</option>
+                  <option value="Rohtas">रोहतास | Rohtas</option>
+                  <option value="Saharsa">सहरसा | Saharsa</option>
+                  <option value="Samastipur">समस्तीपुर | Samastipur</option>
+                  <option value="Saran">सारण | Saran</option>
+                  <option value="Sheohar">शिवहर | Sheohar</option>
+                  <option value="Sheikhpura">शेखपुरा | Sheikhpura</option>
+                  <option value="Sitamarhi">सीतामढ़ी | Sitamarhi</option>
+                  <option value="Siwan">सिवान | Siwan</option>
+                  <option value="Supaul">सुपौल | Supaul</option>
+                  <option value="Vaishali">वैशाली | Vaishali</option>
+                  <option value="West Champaran">पश्चिमी चम्पारण | West Champaran</option>
+                </select>
+
+                <!-- Other district input -->
+                <div class="other-reveal" id="districtOtherWrap">
+                  <div class="reveal-label"><i class="fa-solid fa-pen"></i> कृपया जिले का नाम लिखें | Please write your district name</div>
+                  <input type="text" name="District Other" id="fdistrictOther" placeholder="Enter district name">
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+          <!-- ============================================
+               STEP 04 — EDUCATION
+          ============================================ -->
+
+          <div class="form-step">
+
+            <div class="step-title">
+              <div class="step-num">04</div>
+              <div>
+                <h4>शिक्षा | Education</h4>
+                <p>आपकी उच्चतम शैक्षणिक योग्यता | Your highest educational qualification</p>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field-group">
+                <label for="feducation">उच्चतम शिक्षा | Highest Qualification <span class="req">*</span></label>
+                <select id="feducation" name="Education" required>
+                  <option value="">-- चुनें | Select --</option>
+                  <option value="10th Pass">10वीं पास | 10th Pass</option>
+                  <option value="12th Pass">12वीं पास | 12th Pass</option>
+                  <option value="Graduate">स्नातक | Graduate</option>
+                  <option value="Postgraduate">परास्नातक | Postgraduate</option>
+                  <option value="Diploma">डिप्लोमा | Diploma</option>
+                  <option value="ITI / Technical">ITI / तकनीकी | ITI / Technical</option>
+                  <option value="Doctorate">डॉक्टरेट | Doctorate</option>
+                  <option value="Other">अन्य | Other</option>
+                </select>
+              </div>
+              <div class="field-group">
+                <label for="fstream">विषय / स्ट्रीम | Subject / Stream</label>
+                <input type="text" id="fstream" name="Stream" placeholder="जैसे: कला, विज्ञान, वाणिज्य">
+              </div>
+            </div>
+
+          </div>
+
+
+          <!-- ============================================
+               STEP 05 — OCCUPATION & LANGUAGES
+          ============================================ -->
+
+          <div class="form-step">
+
+            <div class="step-title">
+              <div class="step-num">05</div>
+              <div>
+                <h4>व्यवसाय एवं भाषाएँ | Occupation &amp; Languages</h4>
+                <p>आपका पेशा और सहज भाषाएँ | Your profession and comfortable languages</p>
+              </div>
+            </div>
+
+            <div class="field-row single">
+              <div class="field-group">
+                <label for="foccupation">व्यवसाय / पेशा | Occupation / Profession</label>
+                <select id="foccupation" name="Occupation">
+                  <option value="">-- चुनें | Select --</option>
+                  <option value="Student">छात्र / छात्रा | Student</option>
+                  <option value="Private Job">निजी नौकरी | Private Job</option>
+                  <option value="Government Job">सरकारी नौकरी | Government Job</option>
+                  <option value="Business">व्यवसाय | Business</option>
+                  <option value="Agriculture">कृषि | Agriculture</option>
+                  <option value="Homemaker">गृहिणी | Homemaker</option>
+                  <option value="Self-employed">स्वतंत्र व्यवसाय | Self-employed</option>
+                  <option value="Other">अन्य | Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label>आप किन भाषाओं में सहज हैं? | Which languages are you comfortable with? <span class="req">*</span> <span class="hint">एक या अधिक चुनें</span></label>
+              <div class="lang-grid">
+                <div class="lang-item"><input type="checkbox" id="l1" name="Languages" value="हिन्दी"><label for="l1"><span class="flag">🇮🇳</span> हिन्दी | Hindi</label></div>
+                <div class="lang-item"><input type="checkbox" id="l2" name="Languages" value="English"><label for="l2"><span class="flag">🇬🇧</span> अंग्रेज़ी | English</label></div>
+                <div class="lang-item"><input type="checkbox" id="l3" name="Languages" value="Urdu"><label for="l3"><span class="flag">🕌</span> उर्दू | Urdu</label></div>
+                <div class="lang-item"><input type="checkbox" id="l4" name="Languages" value="Maithili"><label for="l4"><span class="flag">📜</span> मैथिली | Maithili</label></div>
+                <div class="lang-item"><input type="checkbox" id="l5" name="Languages" value="Bhojpuri"><label for="l5"><span class="flag">🎵</span> भोजपुरी | Bhojpuri</label></div>
+                <div class="lang-item"><input type="checkbox" id="l6" name="Languages" value="Bengali"><label for="l6"><span class="flag">🌾</span> बांग्ला | Bengali</label></div>
+                <div class="lang-item"><input type="checkbox" id="l7" name="Languages" value="Marathi"><label for="l7"><span class="flag">🏔️</span> मराठी | Marathi</label></div>
+                <div class="lang-item"><input type="checkbox" id="l8" name="Languages" value="Punjabi"><label for="l8"><span class="flag">🪙</span> पंजाबी | Punjabi</label></div>
+                <div class="lang-item"><input type="checkbox" id="l9" name="Languages" value="Other"><label for="l9"><span class="flag">🔹</span> अन्य | Other</label></div>
+              </div>
+            </div>
+
+          </div>
+
+
+          <!-- ============================================
+               STEP 06 — VOLUNTEER PREFERENCES
+          ============================================ -->
+
+          <div class="form-step">
+
+            <div class="step-title">
+              <div class="step-num">06</div>
+              <div>
+                <h4>स्वयंसेवा प्राथमिकताएँ | Volunteer Preferences</h4>
+                <p>आप किस क्षेत्र में और कितने समय तक सहयोग कर सकते हैं? | In which areas and for how much time can you contribute?</p>
+              </div>
+            </div>
+
+            <div class="field-group" style="margin-bottom:20px;">
+              <label>रुचि के क्षेत्र | Areas of Interest <span class="req">*</span> <span class="hint">एक या अधिक चुनें</span></label>
+              <div class="check-grid">
+                <div class="check-item"><input type="checkbox" id="c1" name="Interest" value="Education & Child Development"><label for="c1">शिक्षा एवं बाल विकास | Education &amp; Child Development</label></div>
+                <div class="check-item"><input type="checkbox" id="c2" name="Interest" value="Women Empowerment"><label for="c2">महिला सशक्तिकरण | Women Empowerment</label></div>
+                <div class="check-item"><input type="checkbox" id="c3" name="Interest" value="Health & Medical Care"><label for="c3">स्वास्थ्य एवं चिकित्सा | Health &amp; Medical Care</label></div>
+                <div class="check-item"><input type="checkbox" id="c4" name="Interest" value="Support for the Poor & Needy"><label for="c4">गरीब एवं जरूरतमंद कल्याण | Support for the Poor &amp; Needy</label></div>
+                <div class="check-item"><input type="checkbox" id="c5" name="Interest" value="Disability Welfare"><label for="c5">दिव्यांगजन कल्याण | Disability Welfare</label></div>
+                <div class="check-item"><input type="checkbox" id="c6" name="Interest" value="Senior Citizens Welfare"><label for="c6">वृद्धजन कल्याण | Senior Citizens' Welfare</label></div>
+                <div class="check-item"><input type="checkbox" id="c7" name="Interest" value="Youth & Skill Development"><label for="c7">युवा एवं कौशल विकास | Youth &amp; Skill Development</label></div>
+                <div class="check-item"><input type="checkbox" id="c8" name="Interest" value="Employment & Livelihood"><label for="c8">रोजगार एवं आजीविका | Employment &amp; Livelihood</label></div>
+                <div class="check-item"><input type="checkbox" id="c9" name="Interest" value="Rural Development"><label for="c9">ग्रामीण विकास | Rural Development</label></div>
+                <div class="check-item"><input type="checkbox" id="c10" name="Interest" value="Agriculture & Farmers Welfare"><label for="c10">कृषि एवं किसान कल्याण | Agriculture &amp; Farmers' Welfare</label></div>
+                <div class="check-item"><input type="checkbox" id="c11" name="Interest" value="Environment & Water Conservation"><label for="c11">पर्यावरण एवं जल संरक्षण | Environment &amp; Water Conservation</label></div>
+                <div class="check-item"><input type="checkbox" id="c12" name="Interest" value="Sanitation & Nutrition"><label for="c12">स्वच्छता एवं पोषण | Sanitation &amp; Nutrition</label></div>
+                <div class="check-item"><input type="checkbox" id="c13" name="Interest" value="Animal Welfare"><label for="c13">पशु कल्याण | Animal Welfare</label></div>
+                <div class="check-item"><input type="checkbox" id="c14" name="Interest" value="Disaster Relief"><label for="c14">आपदा राहत | Disaster Relief</label></div>
+                <div class="check-item"><input type="checkbox" id="c15" name="Interest" value="Social Justice"><label for="c15">सामाजिक न्याय | Social Justice</label></div>
+                <div class="check-item"><input type="checkbox" id="c16" name="Interest" value="Digital Education"><label for="c16">डिजिटल शिक्षा | Digital Education</label></div>
+              </div>
+            </div>
+
+            <div class="field-group" style="margin-bottom:18px;">
+              <label>उपलब्धता | Availability <span class="req">*</span></label>
+              <div class="radio-row">
+                <div class="radio-item">
+                  <input type="radio" id="av1" name="Availability" value="Weekend" required>
+                  <label for="av1"><i class="fa-solid fa-calendar-week"></i> सप्ताहांत</label>
+                </div>
+                <div class="radio-item">
+                  <input type="radio" id="av2" name="Availability" value="Weekday">
+                  <label for="av2"><i class="fa-solid fa-calendar-day"></i> कार्यदिवस</label>
+                </div>
+                <div class="radio-item">
+                  <input type="radio" id="av3" name="Availability" value="Both">
+                  <label for="av3"><i class="fa-solid fa-calendar-check"></i> दोनों | Both</label>
+                </div>
+                <div class="radio-item">
+                  <input type="radio" id="av4" name="Availability" value="Flexible">
+                  <label for="av4"><i class="fa-solid fa-shuffle"></i> लचीला | Flexible</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field-group">
+                <label for="fhours">प्रति सप्ताह उपलब्ध समय | Hours Available per Week</label>
+                <select id="fhours" name="Hours per Week">
+                  <option value="">-- चुनें | Select --</option>
+                  <option value="1-3 hours">1–3 घंटे | 1–3 hours</option>
+                  <option value="4-6 hours">4–6 घंटे | 4–6 hours</option>
+                  <option value="7-10 hours">7–10 घंटे | 7–10 hours</option>
+                  <option value="More than 10 hours">10 घंटे से अधिक | More than 10 hours</option>
+                </select>
+              </div>
+              <div class="field-group">
+                <label for="fmode">स्वयंसेवा का तरीका | Mode of Volunteering</label>
+                <select id="fmode" name="Volunteering Mode">
+                  <option value="">-- चुनें | Select --</option>
+                  <option value="On-Ground">क्षेत्रीय / प्रत्यक्ष | On-Ground</option>
+                  <option value="Online">ऑनलाइन | Online</option>
+                  <option value="Both">दोनों | Both</option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+
+
+          <!-- ============================================
+               STEP 07 — SKILLS & EXPERIENCE
+          ============================================ -->
+
+          <div class="form-step">
+
+            <div class="step-title">
+              <div class="step-num">07</div>
+              <div>
+                <h4>कौशल एवं अनुभव | Skills &amp; Experience</h4>
+                <p>आपके कौशल हमारे कार्यों को और सशक्त बना सकते हैं | Your skills can help strengthen our work</p>
+              </div>
+            </div>
+
+            <div class="field-group" style="margin-bottom:20px;">
+              <label>आपके कौशल | Your Skills <span class="hint">जो लागू हों उन्हें चुनें | Select all that apply</span></label>
+              <div class="check-grid three">
+                <div class="check-item"><input type="checkbox" id="s1" name="Skills" value="Teaching / Tutoring"><label for="s1">शिक्षण / ट्यूशन | Teaching</label></div>
+                <div class="check-item"><input type="checkbox" id="s2" name="Skills" value="Computer / IT"><label for="s2">कंप्यूटर / IT | Computer / IT</label></div>
+                <div class="check-item"><input type="checkbox" id="s3" name="Skills" value="Design / Graphics"><label for="s3">डिजाइन / ग्राफिक्स | Design</label></div>
+                <div class="check-item"><input type="checkbox" id="s4" name="Skills" value="Social Media"><label for="s4">सोशल मीडिया | Social Media</label></div>
+                <div class="check-item"><input type="checkbox" id="s5" name="Skills" value="Content Writing"><label for="s5">कंटेंट लेखन | Content Writing</label></div>
+                <div class="check-item"><input type="checkbox" id="s6" name="Skills" value="Photography / Videography"><label for="s6">फोटोग्राफी / वीडियो | Photography</label></div>
+                <div class="check-item"><input type="checkbox" id="s7" name="Skills" value="Medical / Healthcare"><label for="s7">चिकित्सा / स्वास्थ्य | Medical</label></div>
+                <div class="check-item"><input type="checkbox" id="s8" name="Skills" value="Legal Advice"><label for="s8">कानूनी सलाह | Legal Advice</label></div>
+                <div class="check-item"><input type="checkbox" id="s9" name="Skills" value="Accounting / Finance"><label for="s9">लेखा / वित्त | Accounting</label></div>
+                <div class="check-item"><input type="checkbox" id="s10" name="Skills" value="Communication / Presentation"><label for="s10">संचार / प्रस्तुति | Communication</label></div>
+                <div class="check-item"><input type="checkbox" id="s11" name="Skills" value="Organization / Management"><label for="s11">संगठन / प्रबंधन | Management</label></div>
+                <div class="check-item"><input type="checkbox" id="s12" name="Skills" value="Fundraising"><label for="s12">फंड जुटाना | Fundraising</label></div>
+                <div class="check-item"><input type="checkbox" id="s13" name="Skills" value="Other"><label for="s13">अन्य | Other</label></div>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field-group">
+                <label>क्या आपने पहले स्वयंसेवा की है? | Do you have prior volunteering experience? <span class="req">*</span></label>
+                <div class="radio-row">
+                  <div class="radio-item">
+                    <input type="radio" id="ex1" name="Prior Experience" value="Yes" required>
+                    <label for="ex1"><i class="fa-solid fa-check"></i> हाँ | Yes</label>
+                  </div>
+                  <div class="radio-item">
+                    <input type="radio" id="ex2" name="Prior Experience" value="No">
+                    <label for="ex2"><i class="fa-solid fa-xmark"></i> नहीं | No</label>
+                  </div>
+                </div>
+              </div>
+              <div class="field-group">
+                <label for="fheard">आपको "साथ चले हम" के बारे में कैसे पता चला? | How did you hear about "Sath Chale Hum"? <span class="req">*</span></label>
+                <select id="fheard" name="Heard From" required>
+                  <option value="">-- चुनें | Select --</option>
+                  <option value="Facebook">फेसबुक | Facebook</option>
+                  <option value="Instagram">इंस्टाग्राम | Instagram</option>
+                  <option value="WhatsApp">व्हाट्सएप | WhatsApp</option>
+                  <option value="YouTube">यूट्यूब | YouTube</option>
+                  <option value="Newspaper">समाचार पत्र | Newspaper</option>
+                  <option value="Friend">मित्र | Friend</option>
+                  <option value="Event">कार्यक्रम | Event</option>
+                  <option value="School / College">स्कूल / कॉलेज | School / College</option>
+                  <option value="Other">अन्य | Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field-row single">
+              <div class="field-group">
+                <label for="fexperience">पिछला अनुभव | Previous Experience <span class="hint">यदि कोई हो | If any</span></label>
+                <textarea id="fexperience" name="Previous Experience" placeholder="आपने पहले किस संस्था के साथ काम किया, किस क्षेत्र में और कितने समय तक — संक्षेप में लिखें।"></textarea>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field-group">
+                <label for="fngoexp">क्या आपको किसी NGO, सामाजिक संस्था या सामुदायिक कार्य में पहले का अनुभव है? | Do you have prior experience with an NGO, social organization, or community work? <span class="req">*</span></label>
+                <select id="fngoexp" name="NGO Experience" required>
+                  <option value="">-- चुनें | Select --</option>
+                  <option value="Yes">हाँ | Yes</option>
+                  <option value="No">नहीं | No</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field-row single">
+              <div class="field-group">
+                <label for="fsocialexp">अपने सामाजिक कार्य के अनुभव के बारे में बताएं। | Tell us about your social work experience.</label>
+                <textarea id="fsocialexp" name="Social Work Experience" placeholder="आपने अब तक किस प्रकार के सामाजिक कार्यों में भाग लिया है — संक्षेप में लिखें।"></textarea>
+              </div>
+            </div>
+
+          </div>
+
+
+          <!-- ============================================
+               STEP 08 — EMERGENCY CONTACT
+          ============================================ -->
+
+          <div class="form-step">
+
+            <div class="step-title">
+              <div class="step-num">08</div>
+              <div>
+                <h4>🚨 आपातकालीन संपर्क | Emergency Contact</h4>
+                <p>आपातकालीन स्थिति में संपर्क करने के लिए | To contact in case of an emergency</p>
+              </div>
+            </div>
+
+            <div class="emergency-card">
+              <div class="em-head">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <strong>आपातकालीन संपर्क विवरण | Emergency Contact Details</strong>
+              </div>
+
+              <div class="field-row">
+                <div class="field-group">
+                  <label for="femname">संपर्क व्यक्ति का नाम | Contact Person's Name <span class="req">*</span></label>
+                  <input type="text" id="femname" name="Emergency Contact Name" required placeholder="करीबी व्यक्ति का नाम">
+                </div>
+                <div class="field-group">
+                  <label for="femphone">संपर्क नंबर | Contact Number <span class="req">*</span></label>
+                  <input type="tel" id="femphone" name="Emergency Contact Number" required placeholder="XXXXXXXXXX" pattern="[0-9]{10}" maxlength="10" inputmode="numeric">
+                </div>
+              </div>
+
+              <div class="field-row">
+                <div class="field-group">
+                  <label for="femrelation">आपका उनसे संबंध | Your Relationship with Them <span class="req">*</span></label>
+                  <input type="text" id="femrelation" name="Emergency Relationship" required placeholder="जैसे: माता, पिता, भाई, बहन">
+                </div>
+                <div class="field-group">
+                  <label for="fememail">ईमेल पता | Email Address</label>
+                  <input type="email" id="fememail" name="Emergency Email" placeholder="emergency@example.com">
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+          <!-- ============================================
+               STEP 09 — MOTIVATION & CONSENT
+          ============================================ -->
+
+          <div class="form-step">
+
+            <div class="step-title">
+              <div class="step-num">09</div>
+              <div>
+                <h4>प्रेरणा एवं सहमति | Motivation &amp; Consent</h4>
+                <p>कृपया हमें बताएँ कि आप क्यों जुड़ना चाहते हैं | Please tell us why you want to join</p>
+              </div>
+            </div>
+
+            <div class="field-row single">
+              <div class="field-group">
+                <label for="fmotivation">आप हमसे क्यों जुड़ना चाहते हैं? | Why do you want to join us? <span class="req">*</span></label>
+                <textarea id="fmotivation" name="Motivation" required placeholder="अपने शब्दों में लिखें — आप किस उद्देश्य से जुड़ना चाहते हैं और आप किस प्रकार योगदान देना चाहते हैं।"></textarea>
+              </div>
+            </div>
+
+            <div class="field-row single">
+              <div class="field-group">
+                <label for="fsuggestion">कोई सुझाव | Any Suggestions <span class="hint">वैकल्पिक | Optional</span></label>
+                <textarea id="fsuggestion" name="Suggestion" placeholder="हमारे कार्यों के बारे में आपका कोई सुझाव हो तो लिखें।"></textarea>
+              </div>
+            </div>
+
+            <div class="field-group" style="margin-bottom:16px;">
+              <label style="font-family:'Tiro Devanagari Hindi',serif;font-size:1rem;color:var(--dark-green);margin-bottom:10px;">
+                घोषणा एवं सहमति | Declaration &amp; Consent <span class="req">*</span>
+              </label>
+
+              <div class="consent-box">
+                <input type="checkbox" id="fconsent" name="Consent" value="Agreed" required>
+                <label for="fconsent">
+                  मैं पुष्टि करता/करती हूँ कि ऊपर दी गई सभी जानकारी सत्य एवं सही है। मैं <strong>साथ चले हम फाउंडेशन</strong> के <a href="terms.html">नियम एवं शर्तों</a> तथा <a href="privacy.html">गोपनीयता नीति</a> से सहमत हूँ। मैं स्वेच्छा से स्वयंसेवक के रूप में पंजीकरण कर रहा/रही हूँ।
+                  <span class="en-text">
+                    I confirm that all the information provided above is true and correct. I agree to the Terms &amp; Conditions and Privacy Policy of Sath Chale Hum Foundation. I am voluntarily registering as a volunteer.
+                  </span>
+                </label>
+              </div>
+            </div>
+
+          </div>
+
+
+          <!-- ============================================
+               SUBMIT
+          ============================================ -->
+
+          <div class="form-submit">
+
+            <button type="submit" class="submit-btn">
+              <i class="fa-solid fa-paper-plane"></i>
+              पंजीकरण जमा करें | Submit Registration
+            </button>
+
+            <p>
+              सबमिट करते ही आपकी जानकारी हमारी टीम तक पहुँच जाएगी। हम 2–3 कार्यदिवसों के भीतर आपसे संपर्क करेंगे।
+              <em>Once you submit the form, your information will be sent to our team. We will contact you within 2–3 working days.</em>
+            </p>
+
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="cta-strip">
+  <div class="container">
+    <h2>साथ चले हम, <span>बदलाव की ओर</span></h2>
+    <p class="hindi">
+      आपका एक कदम किसी की नई शुरुआत बन सकता है। आज ही हमसे जुड़ें या दान देकर हमारे कार्यों को सशक्त बनाएँ।
+    </p>
+    <div class="cta-buttons">
+      <a href="donate.html" class="btn btn-red btn-pulse"><i class="fa-solid fa-heart"></i> Donate Us</a>
+      <a href="work.html" class="btn btn-green"><i class="fa-solid fa-list-check"></i> Our Work</a>
+      <a href="events.html" class="btn btn-outline"><i class="fa-solid fa-calendar-days"></i> View Events</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="https://raw.githubusercontent.com/sathchaleham-dot/sath-chale-ham-/main/sath_chale_ham_logo_HD-1.png" alt="Sath Chale Hum Foundation Logo">
+          <h3>Sath Chale Hum Foundation</h3>
+        </div>
+        <div class="footer-tagline">
+          साथ चले हम – बदलाव की ओर<br>
+          Step Together Towards Change
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading social-heading">Our Social Media</div>
+        <div class="social-icons">
+          <a class="social-icon" href="https://www.facebook.com/share/1PUUzvUfoo/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a class="social-icon" href="https://www.instagram.com/sathchaleham?stkn=MWFzanhuYjFpcGhrZg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a class="social-icon" href="https://youtube.com/@sathchaleham?si=uKH0gC8E7rM_xdpC" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Quick Links | महत्वपूर्ण लिंक</div>
+        <div class="quick-links">
+          <a href="index.html">Home | होम</a>
+          <a href="about.html">About Us | हमारे बारे में</a>
+          <a href="work.html">Our Work | हमारे कार्य</a>
+          <a href="team.html">Our Team | हमारी टीम</a>
+          <a href="events.html">Events | कार्यक्रम</a>
+          <a href="donate.html">Donate Us | दान करें</a>
+          <a href="join-us.html">Join Us | हमारे साथ जुड़ें</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>
+        <a href="terms.html">Terms &amp; Conditions</a> |
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+      <div class="copyright">© 2026 Sath Chale Hum Foundation. All Rights Reserved.</div>
+      <div class="footer-name">-Sath Chale Hum Foundation-</div>
+    </div>
+  </div>
+</footer>
+
+
+<button class="back-top" id="backTop" aria-label="Back to Top" type="button">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+  /* MOBILE MENU */
+  var menuToggle = document.getElementById("menuToggle");
+  var mobileNav  = document.getElementById("mobileNav");
+
+  if(menuToggle && mobileNav){
+    menuToggle.addEventListener("click", function(){
+      mobileNav.classList.toggle("active");
+      menuToggle.setAttribute("aria-expanded", mobileNav.classList.contains("active") ? "true" : "false");
+    });
+    mobileNav.querySelectorAll("a").forEach(function(link){
+      link.addEventListener("click", function(){
+        mobileNav.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+
+
+  /* PREMIUM SLIDER */
+  function buildSlider(rootId, dotsId, autoMs){
+
+    var root = document.getElementById(rootId);
+    if(!root){ return; }
+
+    var slides = root.querySelectorAll(".slide");
+    var dotsContainer = document.getElementById(dotsId);
+    if(!slides.length || !dotsContainer){ return; }
+
+    var current = 0;
+    var timer = null;
+
+    slides.forEach(function(slide, i){
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "slider-dot" + (i === 0 ? " active" : "");
+      btn.setAttribute("aria-label", "Slide " + (i + 1));
+      btn.setAttribute("role", "tab");
+      var icon = document.createElement("i");
+      icon.className = "fa-solid fa-circle";
+      var label = document.createElement("span");
+      label.textContent = (i + 1 < 10 ? "0" : "") + (i + 1);
+      btn.appendChild(icon);
+      btn.appendChild(label);
+      btn.addEventListener("click", function(){ show(i); });
+      dotsContainer.appendChild(btn);
+    });
+
+    var dots = dotsContainer.querySelectorAll(".slider-dot");
+
+    function show(index){
+      slides.forEach(function(s){ s.classList.remove("active"); });
+      dots.forEach(function(d){ d.classList.remove("active"); });
+      if(slides[index]) slides[index].classList.add("active");
+      if(dots[index])   dots[index].classList.add("active");
+      current = index;
+      if(timer){ clearInterval(timer); }
+      if(slides.length > 1){
+        timer = setInterval(function(){
+          var next = (current + 1) % slides.length;
+          show(next);
+        }, autoMs);
+      }
+    }
+
+    root.querySelectorAll(".slider-arrow").forEach(function(arrow){
+      arrow.addEventListener("click", function(){
+        var dir = arrow.classList.contains("next") ? 1 : -1;
+        var next = (current + dir + slides.length) % slides.length;
+        show(next);
+      });
+    });
+
+    root.setAttribute("tabindex", "0");
+    root.addEventListener("keydown", function(e){
+      if(e.key === "ArrowRight"){ show((current + 1) % slides.length); }
+      else if(e.key === "ArrowLeft"){ show((current - 1 + slides.length) % slides.length); }
+    });
+
+    if(slides.length > 1){
+      timer = setInterval(function(){
+        var next = (current + 1) % slides.length;
+        show(next);
+      }, autoMs);
+    }
+  }
+
+  buildSlider("waySlider",  "wayDots",  4500);
+  buildSlider("helpSlider", "helpDots", 4500);
+
+
+  /* =========================================================
+     SMART ADDRESS DROPDOWNS
+     Country -> State -> District
+  ========================================================= */
+
+  var countrySelect = document.getElementById("fcountry");
+  var stateSelect   = document.getElementById("fstate");
+  var districtSelect = document.getElementById("fdistrict");
+
+  var countryOtherWrap  = document.getElementById("countryOtherWrap");
+  var stateOtherWrap    = document.getElementById("stateOtherWrap");
+  var districtOtherWrap = document.getElementById("districtOtherWrap");
+
+  var countryOtherInput  = document.getElementById("fcountryOther");
+  var stateOtherInput    = document.getElementById("fstateOther");
+  var districtOtherInput = document.getElementById("fdistrictOther");
+
+  /* Country change */
+  countrySelect.addEventListener("change", function(){
+
+    if(this.value === "Other"){
+
+      /* Show "Other Country" text input */
+      countryOtherWrap.classList.add("show");
+      countryOtherInput.required = true;
+
+      /* Disable India-specific State/District dropdowns, show text inputs */
+      stateSelect.value = "Other";
+      stateSelect.setAttribute("disabled", "disabled");
+      stateOtherWrap.classList.add("show");
+      stateOtherInput.required = true;
+
+      districtSelect.setAttribute("disabled", "disabled");
+      districtOtherWrap.classList.add("show");
+      districtOtherInput.required = true;
+
+    } else if(this.value === "India"){
+
+      /* Hide "Other Country" input */
+      countryOtherWrap.classList.remove("show");
+      countryOtherInput.required = false;
+      countryOtherInput.value = "";
+
+      /* Reset State back to Bihar */
+      stateSelect.removeAttribute("disabled");
+      stateSelect.value = "Bihar";
+
+      stateOtherWrap.classList.remove("show");
+      stateOtherInput.required = false;
+      stateOtherInput.value = "";
+
+      /* Reset District back to Bihar dropdown */
+      districtSelect.removeAttribute("disabled");
+      districtSelect.value = "";
+      districtOtherWrap.classList.remove("show");
+      districtOtherInput.required = false;
+      districtOtherInput.value = "";
+
+    } else {
+
+      /* No selection */
+      countryOtherWrap.classList.remove("show");
+      stateOtherWrap.classList.remove("show");
+      districtOtherWrap.classList.remove("show");
+    }
+  });
+
+
+  /* State change */
+  stateSelect.addEventListener("change", function(){
+
+    if(this.value === "Other"){
+
+      stateOtherWrap.classList.add("show");
+      stateOtherInput.required = true;
+
+      /* Hide Bihar district dropdown, show text input */
+      districtSelect.setAttribute("disabled", "disabled");
+      districtSelect.value = "";
+      districtOtherWrap.classList.add("show");
+      districtOtherInput.required = true;
+
+    } else if(this.value === "Bihar"){
+
+      stateOtherWrap.classList.remove("show");
+      stateOtherInput.required = false;
+      stateOtherInput.value = "";
+
+      /* Restore Bihar district dropdown */
+      districtSelect.removeAttribute("disabled");
+      districtSelect.value = "";
+      districtOtherWrap.classList.remove("show");
+      districtOtherInput.required = false;
+      districtOtherInput.value = "";
+
+    } else {
+
+      stateOtherWrap.classList.remove("show");
+    }
+  });
+
+
+  /* Ensure the initial state matches auto-selected India + Bihar */
+  countrySelect.dispatchEvent(new Event("change"));
+
+
+  /* BACK TO TOP */
+  var backTop = document.getElementById("backTop");
+  if(backTop){
+    window.addEventListener("scroll", function(){
+      if(window.scrollY > 500){
+        backTop.classList.add("show");
+      } else {
+        backTop.classList.remove("show");
+      }
+    });
+    backTop.addEventListener("click", function(){
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+});
+
+</script>
+
+</body>
+</html>
