@@ -5,18 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>साथ चले हम फाउंडेशन | Sath Chale Hum Foundation</title>
-  <meta name="description" content="साथ चले हम फाउंडेशन – साथ चले हम, बदलाव की ओर">
+  <meta name="description" content="साथ चले हम फाउंडेशन – साथ चले हम, बदलाव की ओर। शिक्षा, स्वास्थ्य, महिला सशक्तिकरण एवं समाज कल्याण हेतु कार्यरत सामाजिक संस्था।">
   <meta name="theme-color" content="#071a12">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="साथ चले हम फाउंडेशन">
+  <meta property="og:description" content="साथ चले हम, बदलाव की ओर">
+  <meta property="og:type" content="website">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
   <style>
 
@@ -28,7 +31,11 @@
       margin:0;
       padding:0;
       box-sizing:border-box;
+    }
+
+    html{
       scroll-behavior:smooth;
+      overflow-x:hidden;
     }
 
     :root{
@@ -44,11 +51,6 @@
       --text:#18231e;
       --muted:#65736c;
       --shadow:0 18px 45px rgba(0,0,0,.12);
-      --radius:24px;
-    }
-
-    html{
-      overflow-x:hidden;
     }
 
     body{
@@ -198,7 +200,8 @@
       white-space:nowrap;
     }
 
-    .desktop-nav a:hover{
+    .desktop-nav a:hover,
+    .desktop-nav a.active{
       color:var(--yellow);
       background:rgba(255,255,255,.08);
       transform:translateY(-2px);
@@ -264,8 +267,10 @@
       margin:3px 0;
     }
 
-    .mobile-nav a:hover{
+    .mobile-nav a:hover,
+    .mobile-nav a.active{
       background:rgba(255,255,255,.08);
+      color:var(--yellow);
     }
 
     .mobile-nav .donate-nav{
@@ -283,6 +288,7 @@
 
     .hero{
       height:100vh;
+      height:100svh;
       min-height:700px;
       position:relative;
       overflow:hidden;
@@ -457,7 +463,7 @@
     }
 
     /* =========================================================
-       DAILY SUPPORT POPUP
+       POPUP
     ========================================================= */
 
     .popup-overlay{
@@ -611,7 +617,7 @@
     }
 
     /* =========================================================
-       SMILE SECTION
+       SMILE STRIP
     ========================================================= */
 
     .smile-strip{
@@ -667,7 +673,7 @@
     }
 
     /* =========================================================
-       DAILY SUPPORT SECTION
+       DAILY SUPPORT
     ========================================================= */
 
     .daily-section{
@@ -819,7 +825,7 @@
     }
 
     /* =========================================================
-       VALUES SLIDESHOW
+       VALUES SLIDER
     ========================================================= */
 
     .values-section{
@@ -852,14 +858,8 @@
     }
 
     @keyframes fadeSlide{
-      from{
-        opacity:0;
-        transform:translateX(20px);
-      }
-      to{
-        opacity:1;
-        transform:translateX(0);
-      }
+      from{opacity:0;transform:translateX(20px);}
+      to{opacity:1;transform:translateX(0);}
     }
 
     .value-card{
@@ -989,6 +989,11 @@
       line-height:1.5;
     }
 
+    .work-more{
+      text-align:center;
+      margin-top:30px;
+    }
+
     /* =========================================================
        TEAM
     ========================================================= */
@@ -1049,8 +1054,13 @@
       font-weight:900;
     }
 
+    .team-more{
+      text-align:center;
+      margin-top:35px;
+    }
+
     /* =========================================================
-       WORKING METHOD / HELP
+       METHOD SLIDER
     ========================================================= */
 
     .dark-slider-section{
@@ -1105,7 +1115,7 @@
     }
 
     /* =========================================================
-       HELP SECTION
+       HELP
     ========================================================= */
 
     .help-section{
@@ -1187,6 +1197,11 @@
     .event-card p{
       color:#5e6b65;
       line-height:1.9;
+    }
+
+    .event-more{
+      text-align:center;
+      margin-top:30px;
     }
 
     /* =========================================================
@@ -1286,6 +1301,11 @@
       color:#5f6d66;
       font-size:.9rem;
       line-height:1.7;
+    }
+
+    .contact-card a{
+      color:var(--green);
+      font-weight:700;
     }
 
     /* =========================================================
@@ -1390,6 +1410,10 @@
       margin:0 8px;
     }
 
+    .footer-bottom a:hover{
+      color:var(--yellow);
+    }
+
     .footer-bottom .copyright{
       margin-top:10px;
       color:#d0e1d7;
@@ -1432,271 +1456,110 @@
     }
 
     /* =========================================================
+       REDUCED MOTION
+    ========================================================= */
+
+    @media (prefers-reduced-motion: reduce){
+      *,*::before,*::after{
+        animation-duration:.01ms!important;
+        animation-iteration-count:1!important;
+        transition-duration:.01ms!important;
+        scroll-behavior:auto!important;
+      }
+    }
+
+    /* =========================================================
        RESPONSIVE
     ========================================================= */
 
     @media(max-width:1100px){
-
-      .desktop-nav{
-        gap:0;
-      }
-
-      .desktop-nav a{
-        padding:10px 7px;
-        font-size:.75rem;
-      }
-
-      .donate-nav{
-        padding:10px 13px!important;
-      }
-
-      .brand-logo{
-        width:55px;
-        height:55px;
-      }
-
-      .brand-name{
-        font-size:1.05rem;
-      }
+      .desktop-nav{gap:0}
+      .desktop-nav a{padding:10px 7px;font-size:.75rem}
+      .donate-nav{padding:10px 13px!important}
+      .brand-logo{width:55px;height:55px}
+      .brand-name{font-size:1.05rem}
     }
 
     @media(max-width:850px){
+      .desktop-nav{display:none}
+      .menu-toggle{display:block}
+      .header-inner{min-height:75px}
+      .brand-logo{width:52px;height:52px}
+      .brand-name{font-size:1rem}
+      .brand-tagline{font-size:.65rem}
 
-      .desktop-nav{
-        display:none;
-      }
-
-      .menu-toggle{
-        display:block;
-      }
-
-      .header-inner{
-        min-height:75px;
-      }
-
-      .brand-logo{
-        width:52px;
-        height:52px;
-      }
-
-      .brand-name{
-        font-size:1rem;
-      }
-
-      .brand-tagline{
-        font-size:.65rem;
-      }
-
-      .hero{
-        min-height:650px;
-      }
-
-      .hero-copy{
-        padding-top:75px;
-      }
-
-      .hero h1{
-        font-size:clamp(2.8rem,11vw,5rem);
-      }
+      .hero{min-height:650px}
+      .hero-copy{padding-top:75px}
+      .hero h1{font-size:clamp(2.8rem,11vw,5rem)}
 
       .support-cards,
-      .daily-boxes{
-        grid-template-columns:repeat(2,1fr);
-      }
+      .daily-boxes{grid-template-columns:repeat(2,1fr)}
 
-      .mission-grid{
-        grid-template-columns:1fr;
-      }
-
-      .team-grid{
-        grid-template-columns:1fr;
-      }
-
-      .contact-grid{
-        grid-template-columns:1fr;
-      }
-
-      .footer-grid{
-        grid-template-columns:1fr;
-        gap:35px;
-      }
-
-      .social-heading{
-        text-align:left;
-      }
-
-      .social-icons{
-        justify-content:flex-start;
-      }
-
-      .section{
-        padding:70px 0;
-      }
+      .mission-grid{grid-template-columns:1fr}
+      .team-grid{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr;gap:35px}
+      .social-heading{text-align:left}
+      .social-icons{justify-content:flex-start}
+      .section{padding:70px 0}
     }
 
     @media(max-width:600px){
+      .container{width:min(92%,550px)}
+      .brand-name{white-space:normal;line-height:1.15}
+      .brand-tagline{white-space:normal}
 
-      .container{
-        width:min(92%,550px);
-      }
-
-      .brand-text{
-        overflow:hidden;
-      }
-
-      .brand-name{
-        white-space:normal;
-        line-height:1.15;
-      }
-
-      .brand-tagline{
-        white-space:normal;
-      }
-
-      .hero{
-        min-height:640px;
-      }
-
+      .hero{min-height:640px}
       .hero-slide::before{
         background:
           linear-gradient(90deg,
           rgba(0,18,11,.92),
           rgba(0,18,11,.66));
       }
+      .hero h1{letter-spacing:-1px;margin-bottom:18px}
+      .hero-main{font-size:1.25rem}
+      .hero-english{font-size:.9rem}
+      .hero-buttons{width:100%}
+      .hero-buttons .btn{flex:1;min-width:140px}
 
-      .hero h1{
-        letter-spacing:-1px;
-        margin-bottom:18px;
-      }
+      .support-popup{padding:30px 17px 25px;border-radius:23px}
+      .support-cards{grid-template-columns:repeat(2,1fr);gap:9px}
+      .support-card{padding:18px 8px;border-radius:16px}
+      .support-card .amount{font-size:1.6rem}
+      .support-card .supporter{font-size:.55rem}
+      .support-card .daily{font-size:.72rem}
+      .support-card .monthly{font-size:.62rem}
 
-      .hero-main{
-        font-size:1.25rem;
-      }
-
-      .hero-english{
-        font-size:.9rem;
-      }
-
-      .hero-buttons{
-        width:100%;
-      }
-
-      .hero-buttons .btn{
-        flex:1;
-        min-width:140px;
-      }
-
-      .support-popup{
-        padding:30px 17px 25px;
-        border-radius:23px;
-      }
-
-      .support-cards{
-        grid-template-columns:repeat(2,1fr);
-        gap:9px;
-      }
-
-      .support-card{
-        padding:18px 8px;
-        border-radius:16px;
-      }
-
-      .support-card .amount{
-        font-size:1.6rem;
-      }
-
-      .support-card .supporter{
-        font-size:.55rem;
-      }
-
-      .support-card .daily{
-        font-size:.72rem;
-      }
-
-      .support-card .monthly{
-        font-size:.62rem;
-      }
-
-      .daily-boxes{
-        grid-template-columns:repeat(2,1fr);
-        gap:10px;
-      }
-
-      .daily-box{
-        padding:22px 10px;
-        border-radius:18px;
-      }
-
-      .daily-box .amount{
-        font-size:2.3rem;
-      }
-
-      .daily-box .supporter{
-        font-size:.62rem;
-      }
-
-      .daily-box .daily{
-        font-size:.78rem;
-      }
-
-      .daily-box .monthly{
-        font-size:.65rem;
-      }
+      .daily-boxes{grid-template-columns:repeat(2,1fr);gap:10px}
+      .daily-box{padding:22px 10px;border-radius:18px}
+      .daily-box .amount{font-size:2.3rem}
+      .daily-box .supporter{font-size:.62rem}
+      .daily-box .daily{font-size:.78rem}
+      .daily-box .monthly{font-size:.65rem}
 
       .mission-card,
       .event-card,
       .method-card,
-      .help-card{
-        padding:30px 20px;
-      }
+      .help-card{padding:30px 20px}
 
       .value-card,
-      .work-card{
-        padding:35px 20px;
-      }
+      .work-card{padding:35px 20px}
 
-      .smile-section{
-        padding:60px 0;
-      }
+      .smile-strip{padding:60px 0}
 
-      .join-buttons .btn{
-        width:100%;
-      }
+      .join-buttons .btn{width:100%}
 
-      .footer-bottom a{
-        display:inline-block;
-        margin:5px;
-      }
+      .footer-bottom a{display:inline-block;margin:5px}
     }
 
     @media(max-width:380px){
-
-      .brand-logo{
-        width:45px;
-        height:45px;
-      }
-
-      .brand-name{
-        font-size:.82rem;
-      }
-
-      .brand-tagline{
-        font-size:.57rem;
-      }
-
-      .menu-toggle{
-        width:40px;
-        height:40px;
-      }
-
-      .hero h1{
-        font-size:2.65rem;
-      }
-
+      .brand-logo{width:45px;height:45px}
+      .brand-name{font-size:.82rem}
+      .brand-tagline{font-size:.57rem}
+      .menu-toggle{width:40px;height:40px}
+      .hero h1{font-size:2.65rem}
       .daily-boxes,
-      .support-cards{
-        gap:7px;
-      }
+      .support-cards{gap:7px}
     }
 
   </style>
@@ -1712,7 +1575,7 @@
 
   <div class="container header-inner">
 
-    <a href="#home" class="brand">
+    <a href="index.html" class="brand">
 
       <img
         class="brand-logo"
@@ -1726,26 +1589,26 @@
 
     </a>
 
-    <!-- DESKTOP NAV -->
-    <nav class="desktop-nav">
+    <nav class="desktop-nav" aria-label="Main navigation">
 
-      <a href="#home">Home</a>
-      <a href="#about">About Us</a>
-      <a href="#work">Work</a>
-      <a href="#team">Team</a>
-      <a href="#join">Join Us</a>
-      <a href="#events">Events</a>
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="work.html">Work</a>
+      <a href="team.html">Team</a>
+      <a href="events.html">Events</a>
+      <a href="join-us.html">Join Us</a>
 
-      <a href="#donate" class="donate-nav">
+      <a href="donate.html" class="donate-nav">
         <i class="fa-solid fa-heart"></i> Donate Us
       </a>
 
     </nav>
 
-    <!-- MOBILE ONLY -->
     <button class="menu-toggle"
             id="menuToggle"
             aria-label="Open Menu"
+            aria-expanded="false"
+            aria-controls="mobileNav"
             type="button">
 
       <span></span>
@@ -1756,17 +1619,16 @@
 
   </div>
 
-  <!-- MOBILE NAV -->
-  <nav class="mobile-nav" id="mobileNav">
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
 
-    <a href="#home">Home</a>
-    <a href="#about">About Us</a>
-    <a href="#work">Work</a>
-    <a href="#team">Team</a>
-    <a href="#join">Join Us</a>
-    <a href="#events">Events</a>
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="work.html">Work</a>
+    <a href="team.html">Team</a>
+    <a href="events.html">Events</a>
+    <a href="join-us.html">Join Us</a>
 
-    <a href="#donate" class="donate-nav">
+    <a href="donate.html" class="donate-nav">
       <i class="fa-solid fa-heart"></i> Donate Us
     </a>
 
@@ -1821,18 +1683,18 @@
       </div>
 
       <div class="hero-english">
-        Your Support, Someone’s New Beginning.
+        Your Support, Someone's New Beginning.
       </div>
 
       <div class="hero-buttons">
 
-        <a href="#donate"
-           class="btn btn-red btn-pulse">
+        <a href="donate.html"
+           class="btn btn-red btn-pulse open-donate-popup">
           <i class="fa-solid fa-heart"></i>
           Donate Us
         </a>
 
-        <a href="#join"
+        <a href="join-us.html"
            class="btn btn-outline">
           <i class="fa-solid fa-users"></i>
           Join Us
@@ -1846,11 +1708,11 @@
 
   <div class="hero-dots">
 
-    <button class="hero-dot active" data-slide="0"></button>
-    <button class="hero-dot" data-slide="1"></button>
-    <button class="hero-dot" data-slide="2"></button>
-    <button class="hero-dot" data-slide="3"></button>
-    <button class="hero-dot" data-slide="4"></button>
+    <button class="hero-dot active" data-slide="0" aria-label="Slide 1"></button>
+    <button class="hero-dot" data-slide="1" aria-label="Slide 2"></button>
+    <button class="hero-dot" data-slide="2" aria-label="Slide 3"></button>
+    <button class="hero-dot" data-slide="3" aria-label="Slide 4"></button>
+    <button class="hero-dot" data-slide="4" aria-label="Slide 5"></button>
 
   </div>
 
@@ -1858,10 +1720,10 @@
 
 
 <!-- =========================================================
-     POPUP
+     DONATE POPUP (teaser)
 ========================================================= -->
 
-<div class="popup-overlay" id="supportPopup">
+<div class="popup-overlay" id="supportPopup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
 
   <div class="support-popup">
 
@@ -1874,12 +1736,12 @@
 
     <div class="support-title">
 
-      <h2>
+      <h2 id="popupTitle">
         आपका <span>₹1</span>, किसी की मुस्कान 😊
       </h2>
 
       <div class="english">
-        Your ₹1, Someone’s Smile
+        Your ₹1, Someone's Smile
       </div>
 
     </div>
@@ -1890,52 +1752,39 @@
 
     <div class="support-cards">
 
-      <div class="support-card selected"
-           data-amount="1">
-
+      <div class="support-card selected" data-amount="1">
         <div class="amount">₹1</div>
         <div class="supporter">DAILY SUPPORTER</div>
         <div class="daily">₹1 प्रतिदिन</div>
         <div class="monthly">लगभग ₹30 / माह</div>
-
       </div>
 
-      <div class="support-card"
-           data-amount="2">
-
+      <div class="support-card" data-amount="2">
         <div class="amount">₹2</div>
         <div class="supporter">DAILY SUPPORTER</div>
         <div class="daily">₹2 प्रतिदिन</div>
         <div class="monthly">लगभग ₹60 / माह</div>
-
       </div>
 
-      <div class="support-card"
-           data-amount="5">
-
+      <div class="support-card" data-amount="5">
         <div class="amount">₹5</div>
         <div class="supporter">DAILY SUPPORTER</div>
         <div class="daily">₹5 प्रतिदिन</div>
         <div class="monthly">लगभग ₹150 / माह</div>
-
       </div>
 
-      <div class="support-card"
-           data-amount="10">
-
+      <div class="support-card" data-amount="10">
         <div class="amount">₹10</div>
         <div class="supporter">DAILY SUPPORTER</div>
         <div class="daily">₹10 प्रतिदिन</div>
         <div class="monthly">लगभग ₹300 / माह</div>
-
       </div>
 
     </div>
 
     <div class="popup-donate">
 
-      <a href="#donate"
-         class="btn btn-red btn-pulse popupDonateButton">
+      <a href="donate.html" class="btn btn-red btn-pulse">
         <i class="fa-solid fa-heart"></i>
         DONATE NOW
       </a>
@@ -1961,7 +1810,7 @@
     </h2>
 
     <div class="english">
-      Your ₹1, Someone’s Smile
+      Your ₹1, Someone's Smile
     </div>
 
     <div class="smile-message">
@@ -2004,10 +1853,10 @@
       </p>
 
       <p>
-        A small contribution of just ₹1 a day can bring hope into someone’s life.
+        A small contribution of just ₹1 a day can bring hope into someone's life.
         Join our Daily ₹1 Supporter campaign and contribute to our efforts in
         education, healthcare, and support for those in need. Your small step
-        can be the reason behind someone’s smile.
+        can be the reason behind someone's smile.
       </p>
 
       <p class="hindi">
@@ -2025,58 +1874,43 @@
 
     <div class="daily-boxes">
 
-      <div class="daily-box selected"
-           data-amount="1">
-
+      <div class="daily-box selected" data-amount="1">
         <div class="amount">₹1</div>
         <div class="supporter">DAILY SUPPORTER</div>
         <div class="daily">₹1 प्रतिदिन</div>
         <div class="monthly">लगभग ₹30 / माह</div>
-
       </div>
 
-      <div class="daily-box"
-           data-amount="2">
-
+      <div class="daily-box" data-amount="2">
         <div class="amount">₹2</div>
         <div class="supporter">DAILY SUPPORTER</div>
         <div class="daily">₹2 प्रतिदिन</div>
         <div class="monthly">लगभग ₹60 / माह</div>
-
       </div>
 
-      <div class="daily-box"
-           data-amount="5">
-
+      <div class="daily-box" data-amount="5">
         <div class="amount">₹5</div>
         <div class="supporter">DAILY SUPPORTER</div>
         <div class="daily">₹5 प्रतिदिन</div>
         <div class="monthly">लगभग ₹150 / माह</div>
-
       </div>
 
-      <div class="daily-box"
-           data-amount="10">
-
+      <div class="daily-box" data-amount="10">
         <div class="amount">₹10</div>
         <div class="supporter">DAILY SUPPORTER</div>
         <div class="daily">₹10 प्रतिदिन</div>
         <div class="monthly">लगभग ₹300 / माह</div>
-
       </div>
 
     </div>
 
     <div class="daily-action">
 
-      <button class="btn btn-red btn-pulse"
-              id="mainDonateButton"
-              type="button">
-
+      <a href="donate.html"
+         class="btn btn-red btn-pulse">
         <i class="fa-solid fa-heart"></i>
         DONATE NOW
-
-      </button>
+      </a>
 
     </div>
 
@@ -2187,6 +2021,13 @@
 
     </div>
 
+    <div style="text-align:center;margin-top:40px;">
+      <a href="about.html" class="btn btn-green">
+        <i class="fa-solid fa-arrow-right"></i>
+        Read More | और पढ़ें
+      </a>
+    </div>
+
   </div>
 
 </section>
@@ -2222,149 +2063,66 @@
     <div class="value-slider" id="valueSlider">
 
       <div class="value-slide active">
-
         <div class="value-card">
-
-          <div class="value-icon">
-            <i class="fa-solid fa-hand-holding-heart"></i>
-          </div>
-
+          <div class="value-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
           <div class="value-number">01</div>
-
           <h3>सेवा | Service</h3>
-
-          <p>
-            सेवा के माध्यम से समाज के जरूरतमंद लोगों तक सहयोग पहुँचाना।
-          </p>
-
+          <p>सेवा के माध्यम से समाज के जरूरतमंद लोगों तक सहयोग पहुँचाना।</p>
         </div>
-
       </div>
 
-
       <div class="value-slide">
-
         <div class="value-card">
-
-          <div class="value-icon">
-            <i class="fa-solid fa-scale-balanced"></i>
-          </div>
-
+          <div class="value-icon"><i class="fa-solid fa-scale-balanced"></i></div>
           <div class="value-number">02</div>
-
           <h3>समानता | Equality</h3>
-
-          <p>
-            सभी के साथ समानता और सम्मान का व्यवहार।
-          </p>
-
+          <p>सभी के साथ समानता और सम्मान का व्यवहार।</p>
         </div>
-
       </div>
 
-
       <div class="value-slide">
-
         <div class="value-card">
-
-          <div class="value-icon">
-            <i class="fa-solid fa-shield-heart"></i>
-          </div>
-
+          <div class="value-icon"><i class="fa-solid fa-shield-heart"></i></div>
           <div class="value-number">03</div>
-
           <h3>ईमानदारी | Integrity</h3>
-
-          <p>
-            हर कार्य में ईमानदारी और जिम्मेदारी।
-          </p>
-
+          <p>हर कार्य में ईमानदारी और जिम्मेदारी।</p>
         </div>
-
       </div>
 
-
       <div class="value-slide">
-
         <div class="value-card">
-
-          <div class="value-icon">
-            <i class="fa-solid fa-eye"></i>
-          </div>
-
+          <div class="value-icon"><i class="fa-solid fa-eye"></i></div>
           <div class="value-number">04</div>
-
           <h3>पारदर्शिता | Transparency</h3>
-
-          <p>
-            कार्यों और सहयोग में पारदर्शिता बनाए रखना।
-          </p>
-
+          <p>कार्यों और सहयोग में पारदर्शिता बनाए रखना।</p>
         </div>
-
       </div>
 
-
       <div class="value-slide">
-
         <div class="value-card">
-
-          <div class="value-icon">
-            <i class="fa-solid fa-heart"></i>
-          </div>
-
+          <div class="value-icon"><i class="fa-solid fa-heart"></i></div>
           <div class="value-number">05</div>
-
           <h3>करुणा | Compassion</h3>
-
-          <p>
-            जरूरतमंद लोगों के प्रति संवेदनशीलता और करुणा।
-          </p>
-
+          <p>जरूरतमंद लोगों के प्रति संवेदनशीलता और करुणा।</p>
         </div>
-
       </div>
 
-
       <div class="value-slide">
-
         <div class="value-card">
-
-          <div class="value-icon">
-            <i class="fa-solid fa-bolt"></i>
-          </div>
-
+          <div class="value-icon"><i class="fa-solid fa-bolt"></i></div>
           <div class="value-number">06</div>
-
           <h3>सशक्तिकरण | Empowerment</h3>
-
-          <p>
-            लोगों को आत्मनिर्भर और सशक्त बनाने की दिशा में प्रयास।
-          </p>
-
+          <p>लोगों को आत्मनिर्भर और सशक्त बनाने की दिशा में प्रयास।</p>
         </div>
-
       </div>
 
-
       <div class="value-slide">
-
         <div class="value-card">
-
-          <div class="value-icon">
-            <i class="fa-solid fa-people-group"></i>
-          </div>
-
+          <div class="value-icon"><i class="fa-solid fa-people-group"></i></div>
           <div class="value-number">07</div>
-
-          <h3>सामुदायिक भागीदारी | Community Participation</h3>
-
-          <p>
-            समुदाय की सक्रिय भागीदारी के साथ सकारात्मक बदलाव की दिशा में कार्य।
-          </p>
-
+          <h3>सामुदायिक भागीदारी | Community</h3>
+          <p>समुदाय की सक्रिय भागीदारी के साथ सकारात्मक बदलाव की दिशा में कार्य।</p>
         </div>
-
       </div>
 
     </div>
@@ -2403,199 +2161,142 @@
 
       <div class="work-slide active">
         <div class="work-card">
-          <div class="work-icon">
-            <i class="fa-solid fa-book-open"></i>
-          </div>
+          <div class="work-icon"><i class="fa-solid fa-book-open"></i></div>
           <div class="work-number">01 / 16</div>
-          <h3>
-            शिक्षा एवं बाल विकास — Education & Child Development
-          </h3>
+          <h3>शिक्षा एवं बाल विकास — Education &amp; Child Development</h3>
         </div>
       </div>
 
       <div class="work-slide">
         <div class="work-card">
-          <div class="work-icon">
-            <i class="fa-solid fa-person-dress"></i>
-          </div>
+          <div class="work-icon"><i class="fa-solid fa-person-dress"></i></div>
           <div class="work-number">02 / 16</div>
-          <h3>
-            महिला सशक्तिकरण एवं विकास — Women Empowerment & Development
-          </h3>
+          <h3>महिला सशक्तिकरण एवं विकास — Women Empowerment &amp; Development</h3>
         </div>
       </div>
 
       <div class="work-slide">
         <div class="work-card">
-          <div class="work-icon">
-            <i class="fa-solid fa-heart-pulse"></i>
-          </div>
+          <div class="work-icon"><i class="fa-solid fa-heart-pulse"></i></div>
           <div class="work-number">03 / 16</div>
-          <h3>
-            स्वास्थ्य एवं चिकित्सा — Health & Medical Care
-          </h3>
+          <h3>स्वास्थ्य एवं चिकित्सा — Health &amp; Medical Care</h3>
         </div>
       </div>
 
       <div class="work-slide">
         <div class="work-card">
-          <div class="work-icon">
-            <i class="fa-solid fa-hand-holding-dollar"></i>
-          </div>
+          <div class="work-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
           <div class="work-number">04 / 16</div>
-          <h3>
-            गरीब एवं जरूरतमंद कल्याण — Welfare of Poor & Needy
-          </h3>
+          <h3>गरीब एवं जरूरतमंद कल्याण — Welfare of Poor &amp; Needy</h3>
         </div>
       </div>
 
       <div class="work-slide">
         <div class="work-card">
-          <div class="work-icon">
-            <i class="fa-solid fa-wheelchair"></i>
-          </div>
+          <div class="work-icon"><i class="fa-solid fa-wheelchair"></i></div>
           <div class="work-number">05 / 16</div>
-          <h3>
-            दिव्यांगजन कल्याण एवं सशक्तिकरण — Disability Welfare & Empowerment
-          </h3>
+          <h3>दिव्यांगजन कल्याण एवं सशक्तिकरण — Disability Welfare &amp; Empowerment</h3>
         </div>
       </div>
 
       <div class="work-slide">
         <div class="work-card">
-          <div class="work-icon">
-            <i class="fa-solid fa-person-cane"></i>
-          </div>
+          <div class="work-icon"><i class="fa-solid fa-person-cane"></i></div>
           <div class="work-number">06 / 16</div>
-          <h3>
-            वृद्धजन कल्याण — Senior Citizen Welfare
-          </h3>
+          <h3>वृद्धजन कल्याण — Senior Citizen Welfare</h3>
         </div>
       </div>
 
       <div class="work-slide">
         <div class="work-card">
-          <div class="work-icon">
-            <i class="fa-solid fa-user-graduate"></i>
-          </div>
+          <div class="work-icon"><i class="fa-solid fa-user-graduate"></i></div>
           <div class="work-number">07 / 16</div>
-          <h3>
-            युवा विकास एवं कौशल विकास — Youth Development & Skill Development
-          </h3>
+          <h3>युवा विकास एवं कौशल विकास — Youth &amp; Skill Development</h3>
         </div>
       </div>
 
       <div class="work-slide">
         <div class="work-card">
-          <div class="work-icon">
-            <i class="fa-solid fa-briefcase"></i>
-          </div>
+          <div class="work-icon"><i class="fa-solid fa-briefcase"></i></div>
           <div class="work-number">08 / 16</div>
-          <h3>
-            रोजगार, स्वरोजगार एवं आजीविका — Employment, Self-Employment & Livelihood
-          </h3>
+          <h3>रोजगार, स्वरोजगार एवं आजीविका — Employment &amp; Livelihood</h3>
         </div>
       </div>
 
       <div class="work-slide">
         <div class="work-card">
-          <div class="work-icon">
-            <i class="fa-solid fa-house-chimney"></i>
-          </div>
+          <div class="work-icon"><i class="fa-solid fa-house-chimney"></i></div>
           <div class="work-number">09 / 16</div>
-          <h3>
-            ग्रामीण विकास एवं ग्राम उत्थान — Rural Development & Village Upliftment
-          </h3>
+          <h3>ग्रामीण विकास एवं ग्राम उत्थान — Rural Development &amp; Village Upliftment</h3>
         </div>
       </div>
 
       <div class="work-slide">
         <div class="work-card">
-          <div class="work-icon">
-            <i class="fa-solid fa-wheat-awn"></i>
-          </div>
+          <div class="work-icon"><i class="fa-solid fa-wheat-awn"></i></div>
           <div class="work-number">10 / 16</div>
-          <h3>
-            कृषि एवं किसान कल्याण — Agriculture & Farmer Welfare
-          </h3>
+          <h3>कृषि एवं किसान कल्याण — Agriculture &amp; Farmer Welfare</h3>
         </div>
       </div>
 
       <div class="work-slide">
         <div class="work-card">
-          <div class="work-icon">
-            <i class="fa-solid fa-leaf"></i>
-          </div>
+          <div class="work-icon"><i class="fa-solid fa-leaf"></i></div>
           <div class="work-number">11 / 16</div>
-          <h3>
-            पर्यावरण एवं जल संरक्षण — Environment & Water Conservation
-          </h3>
+          <h3>पर्यावरण एवं जल संरक्षण — Environment &amp; Water Conservation</h3>
         </div>
       </div>
 
       <div class="work-slide">
         <div class="work-card">
-          <div class="work-icon">
-            <i class="fa-solid fa-faucet-drip"></i>
-          </div>
+          <div class="work-icon"><i class="fa-solid fa-faucet-drip"></i></div>
           <div class="work-number">12 / 16</div>
-          <h3>
-            स्वच्छता, पेयजल एवं पोषण — Sanitation, Drinking Water & Nutrition
-          </h3>
+          <h3>स्वच्छता, पेयजल एवं पोषण — Sanitation, Water &amp; Nutrition</h3>
         </div>
       </div>
 
       <div class="work-slide">
         <div class="work-card">
-          <div class="work-icon">
-            <i class="fa-solid fa-paw"></i>
-          </div>
+          <div class="work-icon"><i class="fa-solid fa-paw"></i></div>
           <div class="work-number">13 / 16</div>
-          <h3>
-            पशु कल्याण एवं संरक्षण — Animal Welfare & Protection
-          </h3>
+          <h3>पशु कल्याण एवं संरक्षण — Animal Welfare &amp; Protection</h3>
         </div>
       </div>
 
       <div class="work-slide">
         <div class="work-card">
-          <div class="work-icon">
-            <i class="fa-solid fa-house-flood-water"></i>
-          </div>
+          <div class="work-icon"><i class="fa-solid fa-house-flood-water"></i></div>
           <div class="work-number">14 / 16</div>
-          <h3>
-            आपदा राहत एवं पुनर्वास — Disaster Relief & Rehabilitation
-          </h3>
+          <h3>आपदा राहत एवं पुनर्वास — Disaster Relief &amp; Rehabilitation</h3>
         </div>
       </div>
 
       <div class="work-slide">
         <div class="work-card">
-          <div class="work-icon">
-            <i class="fa-solid fa-scale-balanced"></i>
-          </div>
+          <div class="work-icon"><i class="fa-solid fa-scale-balanced"></i></div>
           <div class="work-number">15 / 16</div>
-          <h3>
-            सामाजिक न्याय, मानव अधिकार एवं कानूनी जागरूकता — Social Justice, Human Rights & Legal Awareness
-          </h3>
+          <h3>सामाजिक न्याय एवं कानूनी जागरूकता — Social Justice &amp; Legal Awareness</h3>
         </div>
       </div>
 
       <div class="work-slide">
         <div class="work-card">
-          <div class="work-icon">
-            <i class="fa-solid fa-laptop"></i>
-          </div>
+          <div class="work-icon"><i class="fa-solid fa-laptop"></i></div>
           <div class="work-number">16 / 16</div>
-          <h3>
-            डिजिटल शिक्षा, जन-जागरूकता एवं सामाजिक विकास — Digital Education, Public Awareness & Social Development
-          </h3>
+          <h3>डिजिटल शिक्षा एवं जन-जागरूकता — Digital Education &amp; Awareness</h3>
         </div>
       </div>
 
     </div>
 
     <div class="slider-controls" id="workDots"></div>
+
+    <div class="work-more">
+      <a href="work.html" class="btn btn-green">
+        <i class="fa-solid fa-list-check"></i>
+        View All Work Areas | सभी कार्य क्षेत्र देखें
+      </a>
+    </div>
 
   </div>
 
@@ -2627,43 +2328,27 @@
     <div class="team-grid">
 
       <div class="team-card">
-
-        <div class="team-icon">
-          <i class="fa-solid fa-landmark"></i>
-        </div>
-
-        <h3>
-          Board of Trustees | न्यास मंडल
-        </h3>
-
+        <div class="team-icon"><i class="fa-solid fa-landmark"></i></div>
+        <h3>Board of Trustees | न्यास मंडल</h3>
       </div>
-
 
       <div class="team-card">
-
-        <div class="team-icon">
-          <i class="fa-solid fa-user-tie"></i>
-        </div>
-
-        <h3>
-          Advisory Board | सलाहकार मंडल
-        </h3>
-
+        <div class="team-icon"><i class="fa-solid fa-user-tie"></i></div>
+        <h3>Advisory Board | सलाहकार मंडल</h3>
       </div>
-
 
       <div class="team-card">
-
-        <div class="team-icon">
-          <i class="fa-solid fa-people-group"></i>
-        </div>
-
-        <h3>
-          Program Team | कार्यक्रम संचालन टीम
-        </h3>
-
+        <div class="team-icon"><i class="fa-solid fa-people-group"></i></div>
+        <h3>Program Team | कार्यक्रम संचालन टीम</h3>
       </div>
 
+    </div>
+
+    <div class="team-more">
+      <a href="team.html" class="btn btn-green">
+        <i class="fa-solid fa-users"></i>
+        Meet Our Team | टीम से मिलें
+      </a>
     </div>
 
   </div>
@@ -2696,52 +2381,38 @@
     <div class="method-slider">
 
       <div class="method-slide active">
-
         <div class="method-card">
           <i class="fa-solid fa-hand-holding-heart"></i>
           <h3>सीधी मदद | Direct Help</h3>
         </div>
-
       </div>
 
-
       <div class="method-slide">
-
         <div class="method-card">
           <i class="fa-solid fa-people-arrows"></i>
           <h3>मिलकर काम करना | Working Together</h3>
         </div>
-
       </div>
 
-
       <div class="method-slide">
-
         <div class="method-card">
           <i class="fa-solid fa-shield-heart"></i>
-          <h3>ईमानदारी और पारदर्शिता | Honesty & Transparency</h3>
+          <h3>ईमानदारी और पारदर्शिता | Honesty &amp; Transparency</h3>
         </div>
-
       </div>
 
-
       <div class="method-slide">
-
         <div class="method-card">
           <i class="fa-solid fa-people-group"></i>
           <h3>समुदाय की भागीदारी | Community Participation</h3>
         </div>
-
       </div>
 
-
       <div class="method-slide">
-
         <div class="method-card">
           <i class="fa-solid fa-scale-balanced"></i>
-          <h3>समानता और सम्मान | Equality & Respect</h3>
+          <h3>समानता और सम्मान | Equality &amp; Respect</h3>
         </div>
-
       </div>
 
     </div>
@@ -2779,52 +2450,38 @@
     <div class="help-slider">
 
       <div class="help-slide active">
-
         <div class="help-card">
           <i class="fa-solid fa-clock"></i>
           <h3>अपना समय दें | Give Your Time</h3>
         </div>
-
       </div>
 
-
       <div class="help-slide">
-
         <div class="help-card">
           <i class="fa-solid fa-hand-holding-heart"></i>
           <h3>दान दें | Donate</h3>
         </div>
-
       </div>
 
-
       <div class="help-slide">
-
         <div class="help-card">
           <i class="fa-solid fa-handshake"></i>
           <h3>सहयोग करें | Support Us</h3>
         </div>
-
       </div>
 
-
       <div class="help-slide">
-
         <div class="help-card">
           <i class="fa-solid fa-bullhorn"></i>
           <h3>जागरूकता फैलाएँ | Spread Awareness</h3>
         </div>
-
       </div>
 
-
       <div class="help-slide">
-
         <div class="help-card">
           <i class="fa-solid fa-microphone"></i>
           <h3>अपनी आवाज़ बनें | Be a Voice for Change</h3>
         </div>
-
       </div>
 
     </div>
@@ -2866,7 +2523,7 @@
       </div>
 
       <h3>
-        Events & Social Activities
+        Events &amp; Social Activities
       </h3>
 
       <p class="hindi">
@@ -2874,6 +2531,13 @@
         बदलाव के लिए कार्यक्रम और सामाजिक गतिविधियाँ आयोजित की जाती हैं।
       </p>
 
+    </div>
+
+    <div class="event-more">
+      <a href="events.html" class="btn btn-green">
+        <i class="fa-solid fa-calendar-check"></i>
+        View All Events | सभी कार्यक्रम देखें
+      </a>
     </div>
 
   </div>
@@ -2902,14 +2566,14 @@
 
       <p>
         Join us and be part of our journey towards positive change in society.
-        Your time, support, and efforts can bring new hope into someone’s life.
+        Your time, support, and efforts can bring new hope into someone's life.
       </p>
 
 
       <div class="join-buttons">
 
-        <a href="#donate"
-           class="btn btn-red btn-pulse">
+        <a href="donate.html"
+           class="btn btn-red btn-pulse open-donate-popup">
           <i class="fa-solid fa-heart"></i>
           Donate Us
         </a>
@@ -2920,11 +2584,10 @@
           Join Us
         </a>
 
-        <a href="#"
-           class="btn btn-outline"
-           onclick="alert('Downloads section will be connected here.'); return false;">
-          <i class="fa-solid fa-download"></i>
-          Downloads
+        <a href="join-us.html#volunteer"
+           class="btn btn-outline">
+          <i class="fa-solid fa-file-signature"></i>
+          Volunteer Form
         </a>
 
       </div>
@@ -3032,8 +2695,6 @@
 
     <div class="footer-grid">
 
-      <!-- BRAND -->
-
       <div>
 
         <div class="footer-brand">
@@ -3056,8 +2717,6 @@
       </div>
 
 
-      <!-- SOCIAL -->
-
       <div>
 
         <div class="footer-heading social-heading">
@@ -3071,39 +2730,29 @@
              target="_blank"
              rel="noopener noreferrer"
              aria-label="Facebook">
-
             <i class="fa-brands fa-facebook-f"></i>
-
           </a>
-
 
           <a class="social-icon"
              href="https://www.instagram.com/sathchaleham?stkn=MWFzanhuYjFpcGhrZg=="
              target="_blank"
              rel="noopener noreferrer"
              aria-label="Instagram">
-
             <i class="fa-brands fa-instagram"></i>
-
           </a>
-
 
           <a class="social-icon"
              href="https://youtube.com/@sathchaleham?si=uKH0gC8E7rM_xdpC"
              target="_blank"
              rel="noopener noreferrer"
              aria-label="YouTube">
-
             <i class="fa-brands fa-youtube"></i>
-
           </a>
 
         </div>
 
       </div>
 
-
-      <!-- QUICK LINKS -->
 
       <div>
 
@@ -3113,33 +2762,13 @@
 
         <div class="quick-links">
 
-          <a href="#home">
-            Home | होम
-          </a>
-
-          <a href="#about">
-            About Us | हमारे बारे में
-          </a>
-
-          <a href="#work">
-            Our Work | हमारे कार्य
-          </a>
-
-          <a href="#team">
-            Our Team | हमारी टीम
-          </a>
-
-          <a href="#donate">
-            Donate Us | दान करें
-          </a>
-
-          <a href="#join">
-            Join Us | हमारे साथ जुड़ें
-          </a>
-
-          <a href="#events">
-            Events | कार्यक्रम
-          </a>
+          <a href="index.html">Home | होम</a>
+          <a href="about.html">About Us | हमारे बारे में</a>
+          <a href="work.html">Our Work | हमारे कार्य</a>
+          <a href="team.html">Our Team | हमारी टीम</a>
+          <a href="events.html">Events | कार्यक्रम</a>
+          <a href="donate.html">Donate Us | दान करें</a>
+          <a href="join-us.html">Join Us | हमारे साथ जुड़ें</a>
 
         </div>
 
@@ -3148,22 +2777,11 @@
     </div>
 
 
-    <!-- COPYRIGHT -->
-
     <div class="footer-bottom">
 
       <div>
-
-        <a href="terms.html">
-          Terms & Conditions
-        </a>
-
-        |
-
-        <a href="privacy.html">
-          Privacy Policy
-        </a>
-
+        <a href="terms.html">Terms &amp; Conditions</a> |
+        <a href="privacy.html">Privacy Policy</a>
       </div>
 
       <div class="copyright">
@@ -3187,9 +2805,7 @@
         id="backTop"
         aria-label="Back to Top"
         type="button">
-
   <i class="fa-solid fa-arrow-up"></i>
-
 </button>
 
 
@@ -3205,8 +2821,8 @@ document.addEventListener("DOMContentLoaded", function(){
      MOBILE MENU
   ========================================================= */
 
-  const menuToggle = document.getElementById("menuToggle");
-  const mobileNav = document.getElementById("mobileNav");
+  var menuToggle = document.getElementById("menuToggle");
+  var mobileNav  = document.getElementById("mobileNav");
 
   if(menuToggle && mobileNav){
 
@@ -3214,14 +2830,19 @@ document.addEventListener("DOMContentLoaded", function(){
 
       mobileNav.classList.toggle("active");
 
+      var isOpen = mobileNav.classList.contains("active");
+
+      menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+
     });
 
-
-    document.querySelectorAll(".mobile-nav a").forEach(function(link){
+    mobileNav.querySelectorAll("a").forEach(function(link){
 
       link.addEventListener("click", function(){
 
         mobileNav.classList.remove("active");
+
+        menuToggle.setAttribute("aria-expanded", "false");
 
       });
 
@@ -3234,81 +2855,58 @@ document.addEventListener("DOMContentLoaded", function(){
      HERO SLIDESHOW
   ========================================================= */
 
-  const heroSlides =
-    document.querySelectorAll(".hero-slide");
-
-  const heroDots =
-    document.querySelectorAll(".hero-dot");
-
-  let heroIndex = 0;
-
+  var heroSlides = document.querySelectorAll(".hero-slide");
+  var heroDots   = document.querySelectorAll(".hero-dot");
+  var heroIndex  = 0;
+  var heroTimer  = null;
 
   function showHeroSlide(index){
 
-    if(!heroSlides.length){
-      return;
-    }
+    if(!heroSlides.length){ return; }
 
+    heroSlides.forEach(function(slide){ slide.classList.remove("active"); });
+    heroDots.forEach(function(dot){ dot.classList.remove("active"); });
 
-    heroSlides.forEach(function(slide){
-
-      slide.classList.remove("active");
-
-    });
-
-
-    heroDots.forEach(function(dot){
-
-      dot.classList.remove("active");
-
-    });
-
-
-    if(heroSlides[index]){
-
-      heroSlides[index].classList.add("active");
-
-    }
-
-
-    if(heroDots[index]){
-
-      heroDots[index].classList.add("active");
-
-    }
-
+    if(heroSlides[index]){ heroSlides[index].classList.add("active"); }
+    if(heroDots[index]){   heroDots[index].classList.add("active"); }
 
     heroIndex = index;
 
+    if(heroTimer){ clearInterval(heroTimer); }
+
+    if(heroSlides.length > 1){
+
+      heroTimer = setInterval(function(){
+
+        heroIndex = (heroIndex + 1) % heroSlides.length;
+
+        showHeroSlide(heroIndex);
+
+      }, 5000);
+
+    }
+
   }
 
+  heroDots.forEach(function(dot){
 
-  heroDots.forEach(function(dot,index){
+    dot.addEventListener("click", function(){
 
-    dot.addEventListener("click",function(){
-
-      showHeroSlide(index);
+      showHeroSlide(parseInt(dot.getAttribute("data-slide"), 10));
 
     });
 
   });
 
-
   if(heroSlides.length > 1){
 
-    setInterval(function(){
+    heroTimer = setInterval(function(){
 
-      heroIndex++;
-
-      if(heroIndex >= heroSlides.length){
-
-        heroIndex = 0;
-
-      }
+      heroIndex = (heroIndex + 1) % heroSlides.length;
 
       showHeroSlide(heroIndex);
 
-    },5000);
+    }, 5000);
 
   }
 
@@ -3317,22 +2915,12 @@ document.addEventListener("DOMContentLoaded", function(){
      POPUP
   ========================================================= */
 
-  const popup =
-    document.getElementById("supportPopup");
-
-  const popupClose =
-    document.getElementById("popupClose");
-
-  const mainDonateButton =
-    document.getElementById("mainDonateButton");
-
+  var popup       = document.getElementById("supportPopup");
+  var popupClose  = document.getElementById("popupClose");
 
   function openPopup(){
 
-    if(!popup){
-      return;
-    }
-
+    if(!popup){ return; }
 
     popup.classList.add("active");
 
@@ -3340,13 +2928,9 @@ document.addEventListener("DOMContentLoaded", function(){
 
   }
 
-
   function closePopup(){
 
-    if(!popup){
-      return;
-    }
-
+    if(!popup){ return; }
 
     popup.classList.remove("active");
 
@@ -3354,17 +2938,11 @@ document.addEventListener("DOMContentLoaded", function(){
 
   }
 
-
-  /* =========================================================
-     POPUP CLOSE BUTTON
-  ========================================================= */
-
   if(popupClose){
 
-    popupClose.addEventListener("click",function(e){
+    popupClose.addEventListener("click", function(e){
 
       e.preventDefault();
-
       e.stopPropagation();
 
       closePopup();
@@ -3373,50 +2951,32 @@ document.addEventListener("DOMContentLoaded", function(){
 
   }
 
-
-  /* =========================================================
-     CLICK OUTSIDE POPUP = CLOSE
-  ========================================================= */
-
   if(popup){
 
-    popup.addEventListener("click",function(e){
+    popup.addEventListener("click", function(e){
 
-      if(e.target === popup){
-
-        closePopup();
-
-      }
+      if(e.target === popup){ closePopup(); }
 
     });
 
   }
 
+  document.addEventListener("keydown", function(e){
 
-  /* =========================================================
-     ESC KEY = CLOSE
-  ========================================================= */
-
-  document.addEventListener("keydown",function(e){
-
-    if(e.key === "Escape"){
-
-      closePopup();
-
-    }
+    if(e.key === "Escape"){ closePopup(); }
 
   });
 
 
   /* =========================================================
-     ALL DONATE BUTTONS = OPEN POPUP
+     DONATE POPUP OPENERS
+     These buttons have real hrefs (donate.html) so they still
+     work if JavaScript is disabled.
   ========================================================= */
 
-  document.querySelectorAll(
-    ".donate-nav, .hero-buttons .btn-red, .join-buttons .btn-red, #mainDonateButton"
-  ).forEach(function(button){
+  document.querySelectorAll(".donate-nav, .hero-buttons .open-donate-popup, .join-buttons .open-donate-popup").forEach(function(button){
 
-    button.addEventListener("click",function(e){
+    button.addEventListener("click", function(e){
 
       e.preventDefault();
 
@@ -3428,65 +2988,16 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
   /* =========================================================
-     POPUP DONATE NOW
+     POPUP SUPPORT CARD SELECTION
   ========================================================= */
 
-  const popupDonateButton =
-    document.querySelector(".popupDonateButton");
-
-
-  if(popupDonateButton){
-
-    popupDonateButton.addEventListener("click",function(e){
-
-      e.preventDefault();
-
-      closePopup();
-
-
-      setTimeout(function(){
-
-        const donateSection =
-          document.getElementById("donate");
-
-
-        if(donateSection){
-
-          donateSection.scrollIntoView({
-
-            behavior:"smooth",
-
-            block:"start"
-
-          });
-
-        }
-
-      },100);
-
-    });
-
-  }
-
-
-  /* =========================================================
-     SUPPORT CARD SELECTION
-  ========================================================= */
-
-  const popupCards =
-    document.querySelectorAll(".support-card");
-
+  var popupCards = document.querySelectorAll(".support-card");
 
   popupCards.forEach(function(card){
 
-    card.addEventListener("click",function(){
+    card.addEventListener("click", function(){
 
-      popupCards.forEach(function(item){
-
-        item.classList.remove("selected");
-
-      });
-
+      popupCards.forEach(function(item){ item.classList.remove("selected"); });
 
       card.classList.add("selected");
 
@@ -3496,39 +3007,26 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
   /* =========================================================
-     DAILY CARD SELECTION
+     DAILY BOX SELECTION
   ========================================================= */
 
-  const dailyBoxes =
-    document.querySelectorAll(".daily-box");
-
+  var dailyBoxes = document.querySelectorAll(".daily-box");
 
   dailyBoxes.forEach(function(box){
 
-    box.addEventListener("click",function(){
+    box.addEventListener("click", function(){
 
-      dailyBoxes.forEach(function(item){
-
-        item.classList.remove("selected");
-
-      });
-
+      dailyBoxes.forEach(function(item){ item.classList.remove("selected"); });
 
       box.classList.add("selected");
 
-
-      const amount =
-        box.getAttribute("data-amount");
-
+      var amount = box.getAttribute("data-amount");
 
       popupCards.forEach(function(card){
 
         card.classList.remove("selected");
 
-
-        if(
-          card.getAttribute("data-amount") === amount
-        ){
+        if(card.getAttribute("data-amount") === amount){
 
           card.classList.add("selected");
 
@@ -3542,202 +3040,104 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
   /* =========================================================
-     GENERIC SLIDER FUNCTION
+     GENERIC SLIDER
   ========================================================= */
 
-  function createSlider(
-    slideSelector,
-    dotContainerId,
-    interval
-  ){
+  function createSlider(slideSelector, dotContainerId, interval){
 
-    const slides =
-      document.querySelectorAll(slideSelector);
+    var slides       = document.querySelectorAll(slideSelector);
+    var dotContainer = document.getElementById(dotContainerId);
 
+    if(!slides.length || !dotContainer){ return; }
 
-    const dotContainer =
-      document.getElementById(dotContainerId);
+    var current = 0;
+    var timer   = null;
 
+    slides.forEach(function(_, index){
 
-    if(!slides.length || !dotContainer){
+      var dot = document.createElement("button");
 
-      return;
+      dot.type = "button";
 
-    }
+      dot.className = "slider-dot" + (index === 0 ? " active" : "");
 
+      dot.setAttribute("aria-label", "Slide " + (index + 1));
 
-    let current = 0;
-
-
-    slides.forEach(function(_,index){
-
-      const dot =
-        document.createElement("button");
-
-
-      dot.className =
-        "slider-dot" +
-        (index === 0 ? " active" : "");
-
-
-      dot.setAttribute(
-        "aria-label",
-        "Slide " + (index + 1)
-      );
-
-
-      dot.addEventListener("click",function(){
-
-        show(index);
-
-      });
-
+      dot.addEventListener("click", function(){ show(index); });
 
       dotContainer.appendChild(dot);
 
     });
 
-
-    const dots =
-      dotContainer.querySelectorAll(".slider-dot");
-
+    var dots = dotContainer.querySelectorAll(".slider-dot");
 
     function show(index){
 
-      slides.forEach(function(slide){
+      slides.forEach(function(slide){ slide.classList.remove("active"); });
+      dots.forEach(function(dot){ dot.classList.remove("active"); });
 
-        slide.classList.remove("active");
-
-      });
-
-
-      dots.forEach(function(dot){
-
-        dot.classList.remove("active");
-
-      });
-
-
-      if(slides[index]){
-
-        slides[index].classList.add("active");
-
-      }
-
-
-      if(dots[index]){
-
-        dots[index].classList.add("active");
-
-      }
-
+      if(slides[index]){ slides[index].classList.add("active"); }
+      if(dots[index]){   dots[index].classList.add("active"); }
 
       current = index;
 
-    }
+      if(timer){ clearInterval(timer); }
 
+      if(slides.length > 1){
+
+        timer = setInterval(function(){
+
+          current = (current + 1) % slides.length;
+
+          show(current);
+
+        }, interval);
+
+      }
+
+    }
 
     if(slides.length > 1){
 
-      setInterval(function(){
+      timer = setInterval(function(){
 
-        current++;
-
-
-        if(current >= slides.length){
-
-          current = 0;
-
-        }
-
+        current = (current + 1) % slides.length;
 
         show(current);
 
-      },interval);
+      }, interval);
 
     }
 
   }
 
-
-  /* =========================================================
-     VALUES SLIDER
-  ========================================================= */
-
-  createSlider(
-    ".value-slide",
-    "valueDots",
-    3500
-  );
-
-
-  /* =========================================================
-     WORK SLIDER
-  ========================================================= */
-
-  createSlider(
-    ".work-slide",
-    "workDots",
-    3500
-  );
-
-
-  /* =========================================================
-     METHOD SLIDER
-  ========================================================= */
-
-  createSlider(
-    ".method-slide",
-    "methodDots",
-    3200
-  );
-
-
-  /* =========================================================
-     HELP SLIDER
-  ========================================================= */
-
-  createSlider(
-    ".help-slide",
-    "helpDots",
-    3200
-  );
+  createSlider(".value-slide",  "valueDots",  3500);
+  createSlider(".work-slide",   "workDots",   3500);
+  createSlider(".method-slide", "methodDots", 3200);
+  createSlider(".help-slide",   "helpDots",   3200);
 
 
   /* =========================================================
      BACK TO TOP
   ========================================================= */
 
-  const backTop =
-    document.getElementById("backTop");
-
+  var backTop = document.getElementById("backTop");
 
   if(backTop){
 
-    window.addEventListener("scroll",function(){
+    window.addEventListener("scroll", function(){
 
       if(window.scrollY > 500){
-
         backTop.classList.add("show");
-
-      }else{
-
+      } else {
         backTop.classList.remove("show");
-
       }
 
     });
 
+    backTop.addEventListener("click", function(){
 
-    backTop.addEventListener("click",function(){
-
-      window.scrollTo({
-
-        top:0,
-
-        behavior:"smooth"
-
-      });
+      window.scrollTo({ top: 0, behavior: "smooth" });
 
     });
 
@@ -3745,62 +3145,29 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
   /* =========================================================
-     INTERNAL LINKS
-     DONATE BUTTONS ARE HANDLED ABOVE
+     INTERNAL ANCHOR LINKS (same-page only)
+     Real page links (about.html etc.) are skipped automatically.
   ========================================================= */
 
-  document.querySelectorAll(
-    'a[href^="#"]'
-  ).forEach(function(link){
+  document.querySelectorAll('a[href^="#"]').forEach(function(link){
 
-    link.addEventListener("click",function(e){
+    link.addEventListener("click", function(e){
 
-      const target =
-        link.getAttribute("href");
+      if(e.defaultPrevented){ return; }
 
+      var target = link.getAttribute("href");
 
-      /*
-        Donate buttons ko yahan handle nahi karna,
-        kyunki unka popup event already upar handle ho raha hai.
-      */
+      if(!target || target === "#"){ return; }
 
-      if(
-        link.classList.contains("donate-nav") ||
-        link.classList.contains("popupDonateButton") ||
-        link.closest(".hero-buttons") ||
-        link.closest(".join-buttons")
-      ){
+      var element = document.querySelector(target);
 
-        return;
+      if(element){
 
-      }
+        e.preventDefault();
 
+        closePopup();
 
-      if(
-        target &&
-        target !== "#"
-      ){
-
-        const element =
-          document.querySelector(target);
-
-
-        if(element){
-
-          e.preventDefault();
-
-          closePopup();
-
-
-          element.scrollIntoView({
-
-            behavior:"smooth",
-
-            block:"start"
-
-          });
-
-        }
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
 
       }
 
