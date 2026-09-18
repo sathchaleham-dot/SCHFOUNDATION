@@ -1,1 +1,1263 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Terms & Conditions | नियम एवं शर्तें — Sath Chale Hum Foundation</title>
+  <meta name="description" content="साथ चले हम फाउंडेशन की वेबसाइट उपयोग की नियम एवं शर्तें — दान, स्वयंसेवा एवं सेवाओं की शर्तें।">
+  <meta name="theme-color" content="#071a12">
+
+  <meta property="og:title" content="Terms & Conditions | साथ चले हम फाउंडेशन">
+  <meta property="og:description" content="वेबसाइट उपयोग, दान एवं स्वयंसेवा की नियम एवं शर्तें।">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+
+    *{ margin:0; padding:0; box-sizing:border-box; }
+    html{ scroll-behavior:smooth; overflow-x:hidden; }
+
+    :root{
+      --green:#087443;
+      --dark-green:#043d27;
+      --deep:#021c12;
+      --gold:#f4c542;
+      --yellow:#ffd83d;
+      --red:#d71920;
+      --white:#ffffff;
+      --text:#18231e;
+      --muted:#65736c;
+    }
+
+    body{
+      font-family:"Poppins","Tiro Devanagari Hindi",sans-serif;
+      background:#f5f9f7;
+      color:var(--text);
+      overflow-x:hidden;
+    }
+
+    a{ text-decoration:none; color:inherit; }
+    img{ max-width:100%; display:block; }
+    button{ font-family:inherit; }
+
+    .container{ width:min(1180px,92%); margin:auto; }
+    .hindi{ font-family:"Tiro Devanagari Hindi",serif; }
+
+    /* HEADER */
+    .site-header{
+      position:fixed; left:0; top:0; width:100%; z-index:9999;
+      background:rgba(2,28,18,.93);
+      backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px);
+      border-bottom:1px solid rgba(255,255,255,.1);
+      box-shadow:0 10px 35px rgba(0,0,0,.12);
+    }
+    .header-inner{
+      min-height:88px; display:flex; align-items:center;
+      justify-content:space-between; gap:25px;
+    }
+    .brand{ display:flex; align-items:center; gap:14px; min-width:0; }
+    .brand-logo{
+      width:62px; height:62px; object-fit:contain; flex-shrink:0;
+      filter:drop-shadow(0 5px 10px rgba(0,0,0,.25));
+    }
+    .brand-text{ min-width:0; }
+    .brand-name{
+      color:#fff; font-size:clamp(1.05rem,2vw,1.55rem);
+      font-weight:900; line-height:1.2; white-space:nowrap;
+      text-shadow:0 2px 15px rgba(0,0,0,.3);
+    }
+    .brand-tagline{ color:#cde9da; font-size:.75rem; font-weight:600; margin-top:4px; white-space:nowrap; }
+    .desktop-nav{ display:flex; align-items:center; gap:4px; }
+    .desktop-nav a{
+      color:#fff; font-size:.83rem; font-weight:700;
+      padding:12px 11px; border-radius:12px; transition:.3s ease; white-space:nowrap;
+    }
+    .desktop-nav a:hover,
+    .desktop-nav a.active{ color:var(--yellow); background:rgba(255,255,255,.08); transform:translateY(-2px); }
+    .donate-nav{
+      background:var(--red)!important; padding:12px 18px!important;
+      box-shadow:0 8px 25px rgba(215,25,32,.35);
+      animation:pulseDonate 1.5s infinite;
+    }
+    .donate-nav:hover{ color:#fff!important; background:#ef2028!important; }
+    @keyframes pulseDonate{
+      0%,100%{ transform:scale(1); box-shadow:0 8px 25px rgba(215,25,32,.30); }
+      50%{ transform:scale(1.06); box-shadow:0 10px 35px rgba(215,25,32,.65); }
+    }
+    .menu-toggle{
+      display:none; width:45px; height:45px;
+      border:1px solid rgba(255,255,255,.2);
+      background:rgba(255,255,255,.08);
+      border-radius:12px; cursor:pointer; padding:9px;
+    }
+    .menu-toggle span{
+      display:block; width:100%; height:3px; background:#fff;
+      margin:5px 0; border-radius:5px; transition:.3s;
+    }
+    .mobile-nav{
+      display:none; background:rgba(2,28,18,.98);
+      border-top:1px solid rgba(255,255,255,.1); padding:12px 4%;
+    }
+    .mobile-nav a{
+      display:block; color:#fff; padding:13px 15px;
+      border-radius:10px; font-weight:700; margin:3px 0;
+    }
+    .mobile-nav a:hover,
+    .mobile-nav a.active{ background:rgba(255,255,255,.08); color:var(--yellow); }
+    .mobile-nav .donate-nav{ text-align:center; margin-top:8px; }
+    .mobile-nav.active{ display:block; }
+
+    /* BANNER */
+    .page-banner{
+      background:
+        linear-gradient(135deg,rgba(2,28,18,.94),rgba(7,92,55,.86)),
+        url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1800&q=80')
+        center/cover no-repeat;
+      color:#fff; padding:175px 0 95px; text-align:center;
+    }
+    .banner-badge{
+      display:inline-flex; align-items:center; gap:9px;
+      padding:8px 17px; border:1px solid rgba(255,255,255,.3);
+      background:rgba(255,255,255,.09); border-radius:100px;
+      font-size:.78rem; font-weight:700; margin-bottom:20px;
+    }
+    .banner-badge i{ color:var(--yellow); }
+    .page-banner h1{
+      font-size:clamp(2rem,5vw,3.6rem); font-weight:900; line-height:1.2;
+    }
+    .page-banner h1 span{ color:var(--yellow); }
+    .page-banner p{
+      color:#cfe8db; margin:14px auto 0;
+      max-width:820px; font-size:1rem; line-height:1.8;
+    }
+    .breadcrumb{ margin-top:22px; font-size:.85rem; color:#a9c9b8; }
+    .breadcrumb a{ color:#cfe8db; }
+    .breadcrumb a:hover{ color:var(--yellow); }
+    .breadcrumb i{ font-size:.6rem; margin:0 8px; opacity:.7; }
+
+    /* POLICY WRAPPER */
+    .terms-section{
+      background:
+        linear-gradient(rgba(246,250,248,.96),rgba(246,250,248,.96)),
+        radial-gradient(circle at 20% 20%,#b8efd0,transparent 30%);
+      padding:80px 0 100px;
+    }
+    .terms-shell{
+      max-width:1000px; margin:auto; background:#fff;
+      border-radius:32px; box-shadow:0 30px 80px rgba(0,0,0,.1);
+      overflow:hidden; border:1px solid #dcebe2;
+    }
+    .terms-meta{
+      background:
+        radial-gradient(circle at 12% 20%,rgba(255,216,61,.18),transparent 30%),
+        linear-gradient(135deg,#043d27,#087443);
+      padding:42px 45px 36px; color:#fff;
+      position:relative; overflow:hidden;
+    }
+    .terms-meta::before{
+      content:""; position:absolute; inset:0;
+      background-image:radial-gradient(circle,rgba(255,255,255,.06) 1px,transparent 1px);
+      background-size:22px 22px; pointer-events:none;
+    }
+    .terms-meta-content{ position:relative; z-index:2; }
+    .terms-meta-badge{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:7px 16px; border-radius:100px;
+      background:rgba(255,216,61,.14);
+      border:1px solid rgba(255,216,61,.35);
+      color:var(--yellow);
+      font-size:.72rem; font-weight:900;
+      letter-spacing:2px; text-transform:uppercase;
+      margin-bottom:16px;
+    }
+    .terms-meta h2{
+      font-family:"Tiro Devanagari Hindi",serif;
+      font-size:clamp(1.4rem,3vw,1.9rem);
+      font-weight:900; line-height:1.35; margin-bottom:10px;
+    }
+    .terms-meta p{
+      color:#c9e5d6; line-height:1.75; font-size:.94rem; max-width:680px;
+    }
+    .terms-meta-info{
+      display:flex; flex-wrap:wrap; gap:14px;
+      margin-top:22px; padding-top:22px;
+      border-top:1px solid rgba(255,255,255,.16);
+    }
+    .meta-chip{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 15px; border-radius:100px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.14);
+      font-size:.75rem; font-weight:800; color:#d9f7e6;
+    }
+    .meta-chip i{ color:var(--yellow); font-size:.78rem; }
+
+    .terms-body{ padding:45px; }
+
+    .terms-intro{
+      padding:24px 26px; border-radius:18px;
+      background:
+        radial-gradient(circle at 15% 25%,rgba(255,216,61,.15),transparent 40%),
+        linear-gradient(135deg,#f0fbf5,#e5f5ec);
+      border-left:4px solid var(--green);
+      margin-bottom:38px;
+    }
+    .terms-intro p{
+      font-family:"Tiro Devanagari Hindi",serif;
+      font-size:.98rem; color:#374740; line-height:1.9; margin-bottom:12px;
+    }
+    .terms-intro p:last-child{ margin-bottom:0; }
+    .terms-intro p.en{
+      font-family:"Poppins",sans-serif; font-size:.88rem;
+      color:#5c6b64; font-style:italic; line-height:1.75;
+      padding-top:12px; border-top:1px dashed #d7e9de;
+    }
+    .terms-intro strong{ color:var(--dark-green); font-weight:900; }
+
+    .terms-block{
+      margin-bottom:38px; padding-bottom:32px;
+      border-bottom:1px dashed #d7e9de;
+    }
+    .terms-block:last-of-type{
+      border-bottom:none; padding-bottom:0; margin-bottom:24px;
+    }
+    .terms-block-head{
+      display:flex; align-items:flex-start; gap:16px; margin-bottom:20px;
+    }
+    .terms-num{
+      flex-shrink:0; width:48px; height:48px; border-radius:14px;
+      display:grid; place-items:center;
+      background:linear-gradient(145deg,#0ba35a,#06733f);
+      color:#fff; font-weight:900; font-size:1rem;
+      box-shadow:0 8px 20px rgba(8,116,67,.28);
+    }
+    .terms-block:nth-of-type(2) .terms-num{ background:linear-gradient(145deg,#ef2028,#a80f16); box-shadow:0 8px 20px rgba(215,25,32,.28); }
+    .terms-block:nth-of-type(3) .terms-num{ background:linear-gradient(145deg,#ffd83d,#c89a00); color:#1c2e22; box-shadow:0 8px 20px rgba(244,197,66,.3); }
+    .terms-block:nth-of-type(4) .terms-num{ background:linear-gradient(145deg,#14b8a6,#0f766e); box-shadow:0 8px 20px rgba(20,184,166,.28); }
+    .terms-block:nth-of-type(5) .terms-num{ background:linear-gradient(145deg,#f97316,#c2410c); box-shadow:0 8px 20px rgba(249,115,22,.28); }
+    .terms-block:nth-of-type(6) .terms-num{ background:linear-gradient(145deg,#7c3aed,#5b21b6); box-shadow:0 8px 20px rgba(124,58,237,.28); }
+    .terms-block:nth-of-type(7) .terms-num{ background:linear-gradient(145deg,#0ea5e9,#0369a1); box-shadow:0 8px 20px rgba(14,165,233,.28); }
+    .terms-block:nth-of-type(8) .terms-num{ background:linear-gradient(145deg,#dc2626,#7f1d1d); box-shadow:0 8px 20px rgba(220,38,38,.28); }
+    .terms-block:nth-of-type(9) .terms-num{ background:linear-gradient(145deg,#f59e0b,#b45309); box-shadow:0 8px 20px rgba(245,158,11,.28); }
+    .terms-block:nth-of-type(10) .terms-num{ background:linear-gradient(145deg,#8b5cf6,#6d28d9); box-shadow:0 8px 20px rgba(139,92,246,.28); }
+    .terms-block:nth-of-type(11) .terms-num{ background:linear-gradient(145deg,#06b6d4,#0e7490); box-shadow:0 8px 20px rgba(6,182,212,.28); }
+    .terms-block:nth-of-type(12) .terms-num{ background:linear-gradient(145deg,#22c55e,#15803d); box-shadow:0 8px 20px rgba(34,197,94,.28); }
+    .terms-block:nth-of-type(13) .terms-num{ background:linear-gradient(145deg,#e11d48,#9f1239); box-shadow:0 8px 20px rgba(225,29,72,.28); }
+    .terms-block:nth-of-type(14) .terms-num{ background:linear-gradient(145deg,#0ea5e9,#0369a1); box-shadow:0 8px 20px rgba(14,165,233,.28); }
+
+    .terms-block-head h3{
+      font-family:"Tiro Devanagari Hindi",serif;
+      font-size:1.2rem; font-weight:900;
+      color:var(--dark-green); line-height:1.4;
+      margin-bottom:4px; padding-top:4px;
+    }
+    .terms-block-head .sub{
+      font-size:.82rem; color:var(--muted);
+      font-weight:700; letter-spacing:.2px;
+    }
+    .terms-text p{
+      font-family:"Tiro Devanagari Hindi",serif;
+      font-size:.96rem; color:#3f4f48;
+      line-height:1.9; margin-bottom:14px;
+    }
+    .terms-text p.en{
+      font-family:"Poppins",sans-serif; font-size:.87rem;
+      color:#5c6b64; font-style:italic; line-height:1.8;
+      padding-left:14px; border-left:3px solid #e5f5ec;
+    }
+    .terms-text strong{ color:var(--dark-green); font-weight:900; }
+
+    .terms-list{
+      list-style:none; display:grid; gap:9px; margin:16px 0;
+    }
+    .terms-list li{
+      display:flex; gap:11px; align-items:flex-start;
+      padding:11px 14px; border-radius:12px;
+      background:#f4fbf7; border:1px solid #e0efe6;
+      font-size:.88rem; line-height:1.7; color:#3d4b45;
+    }
+    .terms-list li i{
+      flex-shrink:0; margin-top:4px;
+      font-size:.72rem; color:var(--green);
+    }
+    .terms-list li span.en{
+      display:block; font-size:.78rem;
+      color:#7a8880; font-style:italic; margin-top:3px;
+    }
+
+    .terms-highlight{
+      padding:18px 22px; border-radius:14px;
+      background:
+        radial-gradient(circle at 15% 25%,rgba(255,216,61,.16),transparent 45%),
+        linear-gradient(135deg,#fffbee,#fff7dd);
+      border:2px solid #f0dfa6; margin-top:18px;
+      display:flex; align-items:flex-start; gap:14px;
+    }
+    .terms-highlight > i{
+      flex-shrink:0; width:38px; height:38px;
+      display:grid; place-items:center; border-radius:12px;
+      background:linear-gradient(145deg,#ffd83d,#c89a00);
+      color:#1c2e22; font-size:1rem;
+      box-shadow:0 6px 16px rgba(244,197,66,.35);
+    }
+    .terms-highlight .th-text strong{
+      display:block;
+      font-family:"Tiro Devanagari Hindi",serif;
+      font-size:.95rem; font-weight:900;
+      color:#7a5e00; margin-bottom:6px;
+    }
+    .terms-highlight .th-text p{
+      font-size:.84rem; color:#7a5e00;
+      line-height:1.7; margin:0;
+    }
+
+    .terms-contact{
+      padding:32px 34px; border-radius:24px;
+      background:
+        radial-gradient(circle at 12% 22%,rgba(255,216,61,.22),transparent 40%),
+        radial-gradient(circle at 88% 88%,rgba(24,166,91,.25),transparent 45%),
+        linear-gradient(135deg,#021c12,#043d27 50%,#075f38);
+      color:#fff; position:relative; overflow:hidden; margin-top:10px;
+    }
+    .terms-contact::before{
+      content:""; position:absolute; inset:0;
+      background-image:radial-gradient(circle,rgba(255,255,255,.055) 1px,transparent 1px);
+      background-size:22px 22px; pointer-events:none;
+    }
+    .terms-contact-content{ position:relative; z-index:2; }
+    .terms-contact-head{
+      display:flex; align-items:center; gap:13px;
+      margin-bottom:22px; padding-bottom:16px;
+      border-bottom:1px solid rgba(255,255,255,.16);
+    }
+    .terms-contact-head i{
+      width:44px; height:44px; display:grid; place-items:center;
+      border-radius:14px;
+      background:linear-gradient(145deg,#ffd83d,#c89a00);
+      color:#1c2e22; font-size:1.15rem;
+      box-shadow:0 8px 20px rgba(244,197,66,.35);
+    }
+    .terms-contact-head strong{
+      font-family:"Tiro Devanagari Hindi",serif;
+      font-size:1.15rem; font-weight:900; letter-spacing:.3px;
+    }
+    .terms-contact p{
+      color:#c9e5d6; font-size:.92rem; line-height:1.8; margin-bottom:20px;
+    }
+    .contact-grid-terms{
+      display:grid; grid-template-columns:1fr 1fr; gap:12px;
+    }
+    .contact-chip-terms{
+      display:flex; align-items:center; gap:12px;
+      padding:14px 18px; border-radius:14px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.14);
+      transition:.3s; color:#fff;
+    }
+    .contact-chip-terms:hover{
+      background:rgba(255,216,61,.12);
+      border-color:rgba(255,216,61,.35);
+      transform:translateY(-3px);
+    }
+    .contact-chip-terms i{
+      flex-shrink:0; width:38px; height:38px;
+      display:grid; place-items:center; border-radius:12px;
+      background:rgba(255,216,61,.18);
+      color:var(--yellow); font-size:.9rem;
+    }
+    .contact-chip-terms .cc-label{
+      font-size:.68rem; font-weight:900; color:#a9c9b8;
+      letter-spacing:1.2px; text-transform:uppercase; margin-bottom:3px;
+    }
+    .contact-chip-terms .cc-value{
+      font-size:.88rem; font-weight:800; color:#fff; word-break:break-word;
+    }
+
+    .toc-box{
+      padding:24px 28px; border-radius:20px;
+      background:linear-gradient(135deg,#f8fcf9,#eff8f3);
+      border:2px solid #dcebe2; margin-bottom:38px;
+    }
+    .toc-head{
+      display:flex; align-items:center; gap:10px;
+      margin-bottom:18px; padding-bottom:12px;
+      border-bottom:1px solid #dcebe2;
+    }
+    .toc-head i{ font-size:1.1rem; color:var(--green); }
+    .toc-head strong{
+      font-family:"Tiro Devanagari Hindi",serif;
+      font-size:1.05rem; font-weight:900; color:var(--dark-green);
+    }
+    .toc-list{
+      list-style:none; display:grid;
+      grid-template-columns:1fr 1fr; gap:8px;
+    }
+    .toc-list a{
+      display:flex; align-items:center; gap:9px;
+      padding:10px 13px; border-radius:10px;
+      font-size:.83rem; font-weight:700; color:#4a5a52;
+      transition:.25s; border:1px solid transparent;
+    }
+    .toc-list a i{
+      flex-shrink:0; font-size:.72rem;
+      color:var(--green); width:16px;
+    }
+    .toc-list a:hover{
+      background:#fff; border-color:#a8d5bd;
+      color:var(--green); transform:translateX(3px);
+    }
+
+    .cta-strip{
+      background:
+        radial-gradient(circle at 15% 30%,rgba(255,216,61,.18),transparent 25%),
+        radial-gradient(circle at 85% 70%,rgba(8,116,67,.22),transparent 25%),
+        linear-gradient(135deg,#032a1a,#075f38);
+      color:#fff; padding:80px 0; text-align:center;
+    }
+    .cta-strip h2{
+      font-size:clamp(1.8rem,4vw,3rem);
+      font-weight:900; line-height:1.3;
+    }
+    .cta-strip h2 span{ color:var(--yellow); }
+    .cta-strip p{
+      color:#cdebd9; margin-top:14px;
+      max-width:720px; margin-left:auto; margin-right:auto; line-height:1.85;
+    }
+    .cta-buttons{
+      display:flex; justify-content:center; flex-wrap:wrap; gap:14px; margin-top:30px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:9px;
+      min-height:52px; padding:14px 25px; border-radius:14px;
+      font-size:.9rem; font-weight:800; border:none; cursor:pointer;
+      transition:.3s ease;
+    }
+    .btn:hover{ transform:translateY(-4px); }
+    .btn-red{ color:#fff; background:var(--red); box-shadow:0 12px 30px rgba(215,25,32,.35); }
+    .btn-green{ color:#fff; background:var(--green); box-shadow:0 12px 30px rgba(8,116,67,.35); }
+    .btn-outline{ color:#fff; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.35); }
+    .btn-pulse{ animation:pulseButton 1.5s infinite; }
+    @keyframes pulseButton{
+      0%,100%{ box-shadow:0 10px 28px rgba(215,25,32,.3); }
+      50%{ box-shadow:0 12px 40px rgba(215,25,32,.75); }
+    }
+
+    footer{ background:#01160d; color:#fff; padding-top:70px; }
+    .footer-grid{
+      display:grid; grid-template-columns:1.3fr 1fr 1fr;
+      gap:50px; padding-bottom:50px;
+    }
+    .footer-brand{ display:flex; align-items:center; gap:15px; margin-bottom:17px; }
+    .footer-brand img{ width:65px; height:65px; object-fit:contain; }
+    .footer-brand h3{ font-size:1.1rem; font-weight:900; }
+    .footer-tagline{ color:#b7d6c5; line-height:1.7; font-size:.9rem; }
+    .footer-heading{ font-size:1rem; font-weight:900; margin-bottom:22px; color:#fff; }
+    .social-heading{ text-align:center; }
+    .social-icons{ display:flex; justify-content:center; gap:15px; }
+    .social-icon{
+      width:50px; height:50px; display:grid; place-items:center;
+      border-radius:16px; background:#0c3925; color:#fff;
+      font-size:1.2rem; transition:.3s;
+      border:1px solid rgba(255,255,255,.08);
+    }
+    .social-icon:hover{ transform:translateY(-5px); background:var(--green); }
+    .quick-links a{
+      display:block; color:#b8d3c4; font-size:.88rem;
+      margin:11px 0; transition:.3s;
+    }
+    .quick-links a:hover{ color:var(--yellow); transform:translateX(4px); }
+    .footer-bottom{
+      border-top:1px solid rgba(255,255,255,.1);
+      padding:25px 0; text-align:center;
+      color:#90ad9c; font-size:.8rem;
+    }
+    .footer-bottom a{ color:#c5dace; margin:0 8px; }
+    .footer-bottom a:hover{ color:var(--yellow); }
+    .footer-bottom .copyright{ margin-top:10px; color:#d0e1d7; font-weight:600; }
+    .footer-name{ color:#fff; font-weight:800; margin-top:10px; }
+
+    .back-top{
+      position:fixed; right:20px; bottom:20px;
+      width:45px; height:45px; border:none; border-radius:50%;
+      background:var(--red); color:#fff; cursor:pointer; z-index:1000;
+      display:grid; place-items:center;
+      opacity:0; visibility:hidden; transition:.3s;
+      box-shadow:0 8px 25px rgba(215,25,32,.3);
+    }
+    .back-top.show{ opacity:1; visibility:visible; }
+
+    @media (prefers-reduced-motion: reduce){
+      *,*::before,*::after{
+        animation-duration:.01ms!important;
+        animation-iteration-count:1!important;
+        transition-duration:.01ms!important;
+        scroll-behavior:auto!important;
+      }
+    }
+
+    @media(max-width:1100px){
+      .desktop-nav{ gap:0; }
+      .desktop-nav a{ padding:10px 7px; font-size:.75rem; }
+      .donate-nav{ padding:10px 13px!important; }
+      .brand-logo{ width:55px; height:55px; }
+      .brand-name{ font-size:1.05rem; }
+    }
+
+    @media(max-width:850px){
+      .desktop-nav{ display:none; }
+      .menu-toggle{ display:block; }
+      .header-inner{ min-height:75px; }
+      .brand-logo{ width:52px; height:52px; }
+      .brand-name{ font-size:1rem; }
+      .brand-tagline{ font-size:.65rem; }
+      .page-banner{ padding:145px 0 75px; }
+      .terms-body{ padding:32px 24px; }
+      .terms-meta{ padding:34px 24px 28px; }
+      .footer-grid{ grid-template-columns:1fr; gap:35px; }
+      .social-heading{ text-align:left; }
+      .social-icons{ justify-content:flex-start; }
+      .terms-section{ padding:60px 0 80px; }
+      .toc-list{ grid-template-columns:1fr; }
+      .contact-grid-terms{ grid-template-columns:1fr; }
+    }
+
+    @media(max-width:600px){
+      .brand-name{ white-space:normal; line-height:1.15; }
+      .brand-tagline{ white-space:normal; }
+      .terms-shell{ border-radius:24px; }
+      .terms-body{ padding:26px 18px; }
+      .terms-meta{ padding:28px 20px 24px; }
+      .terms-meta h2{ font-size:1.25rem; }
+      .terms-meta-info{ gap:9px; margin-top:18px; padding-top:18px; }
+      .meta-chip{ font-size:.68rem; padding:7px 12px; }
+      .terms-block-head{ gap:12px; }
+      .terms-num{ width:42px; height:42px; font-size:.9rem; border-radius:12px; }
+      .terms-block-head h3{ font-size:1.05rem; }
+      .terms-block-head .sub{ font-size:.75rem; }
+      .terms-text p{ font-size:.9rem; }
+      .terms-text p.en{ font-size:.82rem; }
+      .terms-list li{ font-size:.83rem; padding:10px 12px; }
+      .terms-list li span.en{ font-size:.72rem; }
+      .terms-intro{ padding:18px 18px; }
+      .terms-intro p{ font-size:.92rem; }
+      .terms-contact{ padding:24px 20px; }
+      .terms-contact-head strong{ font-size:1rem; }
+      .toc-box{ padding:20px 18px; }
+      .cta-buttons .btn{ width:100%; }
+      .footer-bottom a{ display:inline-block; margin:5px; }
+    }
+
+    @media(max-width:380px){
+      .brand-logo{ width:45px; height:45px; }
+      .brand-name{ font-size:.82rem; }
+      .brand-tagline{ font-size:.57rem; }
+      .menu-toggle{ width:40px; height:40px; }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <img class="brand-logo"
+           src="https://raw.githubusercontent.com/sathchaleham-dot/sath-chale-ham-/main/sath_chale_ham_logo_HD-1.png"
+           alt="साथ चले हम फाउंडेशन Logo">
+      <div class="brand-text">
+        <div class="brand-name">साथ चले हम फाउंडेशन</div>
+        <div class="brand-tagline">साथ चले हम, बदलाव की ओर</div>
+      </div>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="work.html">Work</a>
+      <a href="team.html">Team</a>
+      <a href="events.html">Events</a>
+      <a href="join-us.html">Join Us</a>
+      <a href="donate.html" class="donate-nav"><i class="fa-solid fa-heart"></i> Donate Us</a>
+    </nav>
+
+    <button class="menu-toggle" id="menuToggle"
+            aria-label="Open Menu" aria-expanded="false"
+            aria-controls="mobileNav" type="button">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="work.html">Work</a>
+    <a href="team.html">Team</a>
+    <a href="events.html">Events</a>
+    <a href="join-us.html">Join Us</a>
+    <a href="donate.html" class="donate-nav"><i class="fa-solid fa-heart"></i> Donate Us</a>
+  </nav>
+</header>
+
+
+<!-- BANNER -->
+<section class="page-banner">
+  <div class="container">
+    <div class="banner-badge"><i class="fa-solid fa-file-contract"></i> Legal</div>
+
+    <h1>Terms &amp; Conditions | <span class="hindi">नियम एवं शर्तें</span></h1>
+
+    <p class="hi">
+      साथ चले हम फाउंडेशन की वेबसाइट का उपयोग करने से पहले कृपया इन नियमों एवं शर्तों को ध्यान से पढ़ें।
+    </p>
+
+    <p>
+      Please read these Terms &amp; Conditions carefully before using the Sath Chale Hum Foundation website.
+    </p>
+
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <i class="fa-solid fa-chevron-right"></i>
+      <span>Terms &amp; Conditions</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- TERMS CONTENT -->
+<section class="terms-section">
+  <div class="container">
+
+    <div class="terms-shell">
+
+      <!-- META HEADER -->
+      <div class="terms-meta">
+        <div class="terms-meta-content">
+
+          <div class="terms-meta-badge">
+            <i class="fa-solid fa-file-contract"></i>
+            Terms &amp; Conditions
+          </div>
+
+          <h2>नियम एवं शर्तें | Terms &amp; Conditions</h2>
+
+          <p>
+            ये नियम एवं शर्तें साथ चले हम फाउंडेशन की वेबसाइट, सेवाओं, दान एवं स्वयंसेवा गतिविधियों पर लागू होती हैं।
+          </p>
+
+          <div class="terms-meta-info">
+            <div class="meta-chip">
+              <i class="fa-solid fa-calendar-check"></i>
+              Last Updated: 19 September 2026
+            </div>
+            <div class="meta-chip">
+              <i class="fa-solid fa-globe"></i>
+              Applies to: sathchaleham.org
+            </div>
+            <div class="meta-chip">
+              <i class="fa-solid fa-scale-balanced"></i>
+              Governing Law: India
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- BODY -->
+      <div class="terms-body">
+
+        <!-- INTRO -->
+        <div class="terms-intro">
+          <p>
+            <strong>साथ चले हम फाउंडेशन</strong> ("हम", "हमारा", "संस्था") की वेबसाइट और सेवाओं का उपयोग करने के लिए निम्नलिखित नियम एवं शर्तें लागू होती हैं। इन शर्तों का पालन करना आपकी जिम्मेदारी है। वेबसाइट का उपयोग करके या किसी भी सेवा का लाभ उठाकर, आप इन नियमों एवं शर्तों से सहमत होते हैं।
+          </p>
+          <p class="en">
+            <strong>Sath Chale Hum Foundation</strong> ("we", "our", "the organization") — the following terms and conditions apply to the use of our website and services. It is your responsibility to comply with these terms. By using the website or availing any service, you agree to these Terms &amp; Conditions.
+          </p>
+        </div>
+
+
+        <!-- TABLE OF CONTENTS -->
+        <div class="toc-box">
+          <div class="toc-head">
+            <i class="fa-solid fa-list-ul"></i>
+            <strong>विषय सूची | Table of Contents</strong>
+          </div>
+          <ul class="toc-list">
+            <li><a href="#tsec1"><i class="fa-solid fa-circle"></i> स्वीकृति | Acceptance</a></li>
+            <li><a href="#tsec2"><i class="fa-solid fa-circle"></i> संस्था की जानकारी | About Organization</a></li>
+            <li><a href="#tsec3"><i class="fa-solid fa-circle"></i> वेबसाइट उपयोग | Website Use</a></li>
+            <li><a href="#tsec4"><i class="fa-solid fa-circle"></i> दान संबंधी शर्तें | Donation Terms</a></li>
+            <li><a href="#tsec5"><i class="fa-solid fa-circle"></i> स्वयंसेवा शर्तें | Volunteer Terms</a></li>
+            <li><a href="#tsec6"><i class="fa-solid fa-circle"></i> बौद्धिक संपदा | Intellectual Property</a></li>
+            <li><a href="#tsec7"><i class="fa-solid fa-circle"></i> निषिद्ध गतिविधियाँ | Prohibited Activities</a></li>
+            <li><a href="#tsec8"><i class="fa-solid fa-circle"></i> दायित्व की सीमा | Limitation of Liability</a></li>
+            <li><a href="#tsec9"><i class="fa-solid fa-circle"></i> बाहरी लिंक | External Links</a></li>
+            <li><a href="#tsec10"><i class="fa-solid fa-circle"></i> गोपनीयता | Privacy</a></li>
+            <li><a href="#tsec11"><i class="fa-solid fa-circle"></i> शर्तों में परिवर्तन | Changes to Terms</a></li>
+            <li><a href="#tsec12"><i class="fa-solid fa-circle"></i> अन्य शर्तें | Miscellaneous</a></li>
+            <li><a href="#tsec13"><i class="fa-solid fa-circle"></i> शासी कानून | Governing Law</a></li>
+            <li><a href="#tsec14"><i class="fa-solid fa-circle"></i> संपर्क करें | Contact Us</a></li>
+          </ul>
+        </div>
+
+
+        <!-- 01 -->
+        <div class="terms-block" id="tsec1">
+          <div class="terms-block-head">
+            <div class="terms-num">01</div>
+            <div>
+              <h3>स्वीकृति | Acceptance of Terms</h3>
+              <div class="sub">इन शर्तों की स्वीकृति</div>
+            </div>
+          </div>
+          <div class="terms-text">
+            <p>
+              इस वेबसाइट का उपयोग करके या साथ चले हम फाउंडेशन की किसी भी सेवा, कार्यक्रम, दान या स्वयंसेवा गतिविधि में भाग लेकर, आप पुष्टि करते हैं कि आपने इन नियमों एवं शर्तों को पढ़ा, समझा और स्वीकार किया है। यदि आप इन शर्तों से सहमत नहीं हैं, तो कृपया वेबसाइट का उपयोग न करें।
+            </p>
+            <p class="en">
+              By using this website or by participating in any service, program, donation, or volunteer activity of Sath Chale Hum Foundation, you confirm that you have read, understood, and accepted these Terms &amp; Conditions. If you do not agree to these terms, please do not use the website.
+            </p>
+          </div>
+        </div>
+
+
+        <!-- 02 -->
+        <div class="terms-block" id="tsec2">
+          <div class="terms-block-head">
+            <div class="terms-num">02</div>
+            <div>
+              <h3>संस्था की जानकारी | About the Organization</h3>
+              <div class="sub">हमारी संस्था के बारे में</div>
+            </div>
+          </div>
+          <div class="terms-text">
+            <p>
+              साथ चले हम फाउंडेशन एक गैर-लाभकारी, सामाजिक संस्था है, जो शिक्षा, स्वास्थ्य, महिला सशक्तिकरण, गरीब एवं जरूरतमंद लोगों की सहायता, ग्रामीण विकास, कौशल विकास, पर्यावरण संरक्षण एवं सामाजिक जागरूकता के क्षेत्रों में कार्यरत है। संस्था भारतीय कानूनों के अंतर्गत पंजीकृत है और पूरी पारदर्शिता के साथ कार्य करती है।
+            </p>
+            <p class="en">
+              Sath Chale Hum Foundation is a non-profit, social organization working in the fields of education, healthcare, women empowerment, support for the poor and needy, rural development, skill development, environmental protection, and social awareness. The organization is registered under Indian laws and operates with full transparency.
+            </p>
+          </div>
+        </div>
+
+
+        <!-- 03 -->
+        <div class="terms-block" id="tsec3">
+          <div class="terms-block-head">
+            <div class="terms-num">03</div>
+            <div>
+              <h3>वेबसाइट उपयोग | Website Use</h3>
+              <div class="sub">वेबसाइट का उचित उपयोग</div>
+            </div>
+          </div>
+          <div class="terms-text">
+            <p>
+              हमारी वेबसाइट का उपयोग करते समय आप निम्नलिखित बातों का पालन करने के लिए सहमत हैं:
+            </p>
+
+            <ul class="terms-list">
+              <li><i class="fa-solid fa-circle-check"></i><span>वेबसाइट का उपयोग केवल वैध उद्देश्यों के लिए करें। <span class="en">Use the website only for lawful purposes.</span></span></li>
+              <li><i class="fa-solid fa-circle-check"></i><span>वेबसाइट पर कोई भी झूठी, भ्रामक या अवैध जानकारी प्रस्तुत न करें। <span class="en">Do not submit any false, misleading, or illegal information.</span></span></li>
+              <li><i class="fa-solid fa-circle-check"></i><span>वेबसाइट की सुरक्षा, कार्यक्षमता या सामग्री में कोई भी हस्तक्षेप न करें। <span class="en">Do not interfere with the security, functionality, or content of the website.</span></span></li>
+              <li><i class="fa-solid fa-circle-check"></i><span>वेबसाइट पर उपलब्ध किसी भी सामग्री को बिना अनुमति के कॉपी, संशोधित या पुनःप्रकाशित न करें। <span class="en">Do not copy, modify, or republish any content without permission.</span></span></li>
+              <li><i class="fa-solid fa-circle-check"></i><span>अन्य उपयोगकर्ताओं के अनुभव में बाधा उत्पन्न न करें। <span class="en">Do not disrupt other users' experience.</span></span></li>
+              <li><i class="fa-solid fa-circle-check"></i><span>भारतीय कानूनों एवं नियमों का पूर्ण सम्मान करें। <span class="en">Fully respect Indian laws and regulations.</span></span></li>
+            </ul>
+          </div>
+        </div>
+
+
+        <!-- 04 -->
+        <div class="terms-block" id="tsec4">
+          <div class="terms-block-head">
+            <div class="terms-num">04</div>
+            <div>
+              <h3>दान संबंधी शर्तें | Donation Terms</h3>
+              <div class="sub">दान के नियम एवं शर्तें</div>
+            </div>
+          </div>
+          <div class="terms-text">
+            <p>
+              साथ चले हम फाउंडेशन को दिए गए सभी दान निम्नलिखित नियमों एवं शर्तों के अधीन हैं:
+            </p>
+
+            <ul class="terms-list">
+              <li><i class="fa-solid fa-circle-check"></i><span><strong>स्वैच्छिक दान:</strong> सभी दान पूरी तरह स्वैच्छिक हैं और बिना किसी दबाव के दिए जाते हैं। <span class="en">Voluntary Donations: all donations are completely voluntary and made without any pressure.</span></span></li>
+              <li><i class="fa-solid fa-circle-check"></i><span><strong>वापसी नहीं:</strong> दान की गई राशि सामान्यतः वापस नहीं की जाती। <span class="en">No Refund: donated amounts are generally non-refundable.</span></span></li>
+              <li><i class="fa-solid fa-circle-check"></i><span><strong>कर छूट:</strong> 80G प्रमाण पत्र के लिए आवेदन करने पर कर छूट का लाभ प्राप्त किया जा सकता है। <span class="en">Tax Exemption: tax benefits can be availed by applying for an 80G certificate.</span></span></li>
+              <li><i class="fa-solid fa-circle-check"></i><span><strong>उद्देश्य:</strong> दान का उपयोग संस्था के घोषित कार्यों एवं कार्यक्रमों में किया जाता है। <span class="en">Purpose: donations are used for the organization's declared activities and programs.</span></span></li>
+              <li><i class="fa-solid fa-circle-check"></i><span><strong>वित्तीय पारदर्शिता:</strong> सभी दान का लेखा-जोखा पूरी पारदर्शिता के साथ रखा जाता है। <span class="en">Financial Transparency: all donations are recorded with full transparency.</span></span></li>
+              <li><i class="fa-solid fa-circle-check"></i><span><strong>गलत उपयोग:</strong> दान राशि का उपयोग किसी भी गैरकानूनी कार्य में नहीं किया जाएगा। <span class="en">Misuse: donation amounts will not be used for any illegal activity.</span></span></li>
+            </ul>
+
+            <div class="terms-highlight">
+              <i class="fa-solid fa-circle-info"></i>
+              <div class="th-text">
+                <strong>महत्वपूर्ण सूचना | Important Information</strong>
+                <p>यदि आपने गलती से दान किया है या किसी भी प्रकार की तकनीकी त्रुटि हुई है, तो कृपया 48 घंटों के भीतर हमसे संपर्क करें। हम उचित जाँच के बाद उचित कार्रवाई करेंगे।</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- 05 -->
+        <div class="terms-block" id="tsec5">
+          <div class="terms-block-head">
+            <div class="terms-num">05</div>
+            <div>
+              <h3>स्वयंसेवा शर्तें | Volunteer Terms</h3>
+              <div class="sub">स्वयंसेवकों के लिए नियम एवं दायित्व</div>
+            </div>
+          </div>
+          <div class="terms-text">
+            <p>
+              स्वयंसेवक के रूप में पंजीकरण करते समय एवं संस्था के साथ कार्य करते समय, आप निम्नलिखित शर्तों से सहमत होते हैं:
+            </p>
+
+            <ul class="terms-list">
+              <li><i class="fa-solid fa-circle-check"></i><span><strong>सत्य जानकारी:</strong> पंजीकरण के समय दी गई सभी जानकारी सत्य एवं पूर्ण होनी चाहिए। <span class="en">Accurate Information: all information provided during registration must be true and complete.</span></span></li>
+              <li><i class="fa-solid fa-circle-check"></i><span><strong>आचरण:</strong> संस्था के आचार संहिता एवं व्यवहार नियमों का पालन करना अनिवार्य है। <span class="en">Conduct: compliance with the organization's code of conduct and behavior rules is mandatory.</span></span></li>
+              <li><i class="fa-solid fa-circle-check"></i><span><strong>गोपनीयता:</strong> संस्था की गोपनीय जानकारी को सार्वजनिक नहीं किया जाएगा। <span class="en">Confidentiality: confidential information of the organization will not be made public.</span></span></li>
+              <li><i class="fa-solid fa-circle-check"></i><span><strong>प्रतिनिधित्व:</strong> स्वयंसेवक संस्था के आधिकारिक प्रवक्ता नहीं हैं, जब तक कि लिखित अनुमति न दी गई हो। <span class="en">Representation: volunteers are not official spokespersons of the organization unless written permission is given.</span></span></li>
+              <li><i class="fa-solid fa-circle-check"></i><span><strong>निष्कासन का अधिकार:</strong> नियमों के उल्लंघन पर संस्था किसी भी स्वयंसेवक को हटाने का अधिकार रखती है। <span class="en">Right to Remove: the organization reserves the right to remove any volunteer for violation of rules.</span></span></li>
+              <li><i class="fa-solid fa-circle-check"></i><span><strong>कोई वेतन नहीं:</strong> स्वयंसेवा पूर्णतः अवैतनिक है — इसके बदले कोई वेतन या मुआवजा नहीं दिया जाता। <span class="en">No Payment: volunteering is completely unpaid — no salary or compensation is provided in return.</span></span></li>
+            </ul>
+          </div>
+        </div>
+
+
+        <!-- 06 -->
+        <div class="terms-block" id="tsec6">
+          <div class="terms-block-head">
+            <div class="terms-num">06</div>
+            <div>
+              <h3>बौद्धिक संपदा | Intellectual Property</h3>
+              <div class="sub">संस्था की बौद्धिक संपत्ति के अधिकार</div>
+            </div>
+          </div>
+          <div class="terms-text">
+            <p>
+              इस वेबसाइट पर उपलब्ध सभी सामग्री, जिसमें लेकिन इन्हीं तक सीमित नहीं — लोगो, ट्रेडमार्क, पाठ, चित्र, ग्राफिक्स, वीडियो, ऑडियो, दस्तावेज़ एवं डिज़ाइन — साथ चले हम फाउंडेशन की संपत्ति है और भारतीय एवं अंतर्राष्ट्रीय बौद्धिक संपदा कानूनों द्वारा संरक्षित है।
+            </p>
+            <p class="en">
+              All content available on this website, including but not limited to logos, trademarks, text, images, graphics, videos, audio, documents, and designs, is the property of Sath Chale Hum Foundation and is protected by Indian and international intellectual property laws.
+            </p>
+            <p>
+              बिना लिखित अनुमति के इस सामग्री का किसी भी रूप में उपयोग, प्रतिलिपि, वितरण या संशोधन सख्त वर्जित है।
+            </p>
+            <p class="en">
+              Any use, copying, distribution, or modification of this content in any form without written permission is strictly prohibited.
+            </p>
+          </div>
+        </div>
+
+
+        <!-- 07 -->
+        <div class="terms-block" id="tsec7">
+          <div class="terms-block-head">
+            <div class="terms-num">07</div>
+            <div>
+              <h3>निषिद्ध गतिविधियाँ | Prohibited Activities</h3>
+              <div class="sub">क्या नहीं करना चाहिए</div>
+            </div>
+          </div>
+          <div class="terms-text">
+            <p>
+              वेबसाइट या संस्था से जुड़ी किसी भी सेवा के उपयोग में निम्नलिखित गतिविधियाँ सख्त वर्जित हैं:
+            </p>
+
+            <ul class="terms-list">
+              <li><i class="fa-solid fa-circle-xmark"></i><span>किसी भी प्रकार की धोखाधड़ी या गलत पहचान का उपयोग। <span class="en">Any kind of fraud or use of false identity.</span></span></li>
+              <li><i class="fa-solid fa-circle-xmark"></i><span>अवैध, आपत्तिजनक या हानिकारक सामग्री अपलोड करना। <span class="en">Uploading illegal, offensive, or harmful content.</span></span></li>
+              <li><i class="fa-solid fa-circle-xmark"></i><span>वेबसाइट की सुरक्षा को भंग करने का प्रयास। <span class="en">Attempting to breach website security.</span></span></li>
+              <li><i class="fa-solid fa-circle-xmark"></i><span>संस्था के नाम का दुरुपयोग करना या गलत जानकारी फैलाना। <span class="en">Misusing the organization's name or spreading false information.</span></span></li>
+              <li><i class="fa-solid fa-circle-xmark"></i><span>अन्य उपयोगकर्ताओं को परेशान करना या उनके अधिकारों का उल्लंघन करना। <span class="en">Harassing other users or violating their rights.</span></span></li>
+              <li><i class="fa-solid fa-circle-xmark"></i><span>किसी भी प्रकार की स्पैम या अनचाहा विज्ञापन भेजना। <span class="en">Sending any kind of spam or unsolicited advertising.</span></span></li>
+            </ul>
+
+            <p>
+              इन नियमों के उल्लंघन पर संस्था कानूनी कार्रवाई करने का अधिकार रखती है।
+            </p>
+            <p class="en">
+              In case of violation of these terms, the organization reserves the right to take legal action.
+            </p>
+          </div>
+        </div>
+
+
+        <!-- 08 -->
+        <div class="terms-block" id="tsec8">
+          <div class="terms-block-head">
+            <div class="terms-num">08</div>
+            <div>
+              <h3>दायित्व की सीमा | Limitation of Liability</h3>
+              <div class="sub">संस्था की जिम्मेदारी की सीमा</div>
+            </div>
+          </div>
+          <div class="terms-text">
+            <p>
+              साथ चले हम फाउंडेशन वेबसाइट पर उपलब्ध जानकारी की पूर्णता, सटीकता या निरंतर उपलब्धता की गारंटी नहीं देता। वेबसाइट का उपयोग "जैसा है" के आधार पर किया जाता है।
+            </p>
+            <p class="en">
+              Sath Chale Hum Foundation does not guarantee the completeness, accuracy, or continuous availability of the information on the website. The website is used on an "as-is" basis.
+            </p>
+            <p>
+              संस्था किसी भी प्रकार की प्रत्यक्ष, अप्रत्यक्ष, आकस्मिक, विशेष या परिणामी क्षति के लिए उत्तरदायी नहीं होगी, जो वेबसाइट के उपयोग या उपयोग में असमर्थता से उत्पन्न हो।
+            </p>
+            <p class="en">
+              The organization shall not be liable for any direct, indirect, incidental, special, or consequential damages arising from the use of or inability to use the website.
+            </p>
+          </div>
+        </div>
+
+
+        <!-- 09 -->
+        <div class="terms-block" id="tsec9">
+          <div class="terms-block-head">
+            <div class="terms-num">09</div>
+            <div>
+              <h3>बाहरी लिंक | External Links</h3>
+              <div class="sub">अन्य वेबसाइटों के लिंक</div>
+            </div>
+          </div>
+          <div class="terms-text">
+            <p>
+              हमारी वेबसाइट पर सोशल मीडिया प्लेटफॉर्म, भुगतान गेटवे, सरकारी पोर्टल या अन्य तीसरे पक्ष की वेबसाइटों के लिंक हो सकते हैं। ये लिंक केवल आपकी सुविधा के लिए प्रदान किए गए हैं।
+            </p>
+            <p class="en">
+              Our website may contain links to social media platforms, payment gateways, government portals, or other third-party websites. These links are provided solely for your convenience.
+            </p>
+            <p>
+              इन बाहरी वेबसाइटों की सामग्री, गोपनीयता नीतियों या प्रथाओं के लिए साथ चले हम फाउंडेशन उत्तरदायी नहीं है।
+            </p>
+            <p class="en">
+              Sath Chale Hum Foundation is not responsible for the content, privacy policies, or practices of these external websites.
+            </p>
+          </div>
+        </div>
+
+
+        <!-- 10 -->
+        <div class="terms-block" id="tsec10">
+          <div class="terms-block-head">
+            <div class="terms-num">10</div>
+            <div>
+              <h3>गोपनीयता | Privacy</h3>
+              <div class="sub">व्यक्तिगत जानकारी की सुरक्षा</div>
+            </div>
+          </div>
+          <div class="terms-text">
+            <p>
+              आपकी व्यक्तिगत जानकारी का संग्रहण, उपयोग एवं सुरक्षा हमारी <a href="privacy.html" style="color:var(--green);font-weight:800;text-decoration:underline;">गोपनीयता नीति</a> के अनुसार की जाती है। इन नियमों एवं शर्तों के साथ-साथ हमारी गोपनीयता नीति भी आपके उपयोग पर लागू होती है।
+            </p>
+            <p class="en">
+              The collection, use, and protection of your personal information is carried out in accordance with our <a href="privacy.html" style="color:var(--green);font-weight:800;text-decoration:underline;">Privacy Policy</a>. Along with these Terms &amp; Conditions, our Privacy Policy also applies to your use.
+            </p>
+            <p>
+              कृपया हमारी गोपनीयता नीति को ध्यान से पढ़ें ताकि आप हमारी डेटा प्रथाओं को समझ सकें।
+            </p>
+            <p class="en">
+              Please read our Privacy Policy carefully to understand our data practices.
+            </p>
+          </div>
+        </div>
+
+
+        <!-- 11 -->
+        <div class="terms-block" id="tsec11">
+          <div class="terms-block-head">
+            <div class="terms-num">11</div>
+            <div>
+              <h3>शर्तों में परिवर्तन | Changes to Terms</h3>
+              <div class="sub">नियमों में संशोधन का अधिकार</div>
+            </div>
+          </div>
+          <div class="terms-text">
+            <p>
+              साथ चले हम फाउंडेशन किसी भी समय इन नियमों एवं शर्तों को संशोधित, अद्यतन या परिवर्तित करने का अधिकार सुरक्षित रखता है। कोई भी महत्वपूर्ण परिवर्तन इस पेज पर प्रकाशित किया जाएगा।
+            </p>
+            <p class="en">
+              Sath Chale Hum Foundation reserves the right to modify, update, or change these Terms &amp; Conditions at any time. Any material changes will be published on this page.
+            </p>
+            <p>
+              परिवर्तन के बाद वेबसाइट का निरंतर उपयोग आपकी अद्यतन शर्तों की स्वीकृति माना जाएगा। कृपया समय-समय पर इस पेज को देखते रहें।
+            </p>
+            <p class="en">
+              Continued use of the website after changes constitutes your acceptance of the updated terms. Please check this page periodically.
+            </p>
+          </div>
+        </div>
+
+
+        <!-- 12 -->
+        <div class="terms-block" id="tsec12">
+          <div class="terms-block-head">
+            <div class="terms-num">12</div>
+            <div>
+              <h3>अन्य शर्तें | Miscellaneous</h3>
+              <div class="sub">अतिरिक्त महत्वपूर्ण जानकारी</div>
+            </div>
+          </div>
+          <div class="terms-text">
+            <ul class="terms-list">
+              <li><i class="fa-solid fa-circle-check"></i><span><strong>पूर्ण समझौता:</strong> ये शर्तें आपके और संस्था के बीच पूर्ण समझौता दर्शाती हैं। <span class="en">Entire Agreement: these terms constitute the entire agreement between you and the organization.</span></span></li>
+              <li><i class="fa-solid fa-circle-check"></i><span><strong>वियोज्यता:</strong> यदि कोई भी शर्त अमान्य पाई जाती है, तो शेष शर्तें प्रभावी रहेंगी। <span class="en">Severability: if any provision is found invalid, the remaining provisions shall remain in effect.</span></span></li>
+              <li><i class="fa-solid fa-circle-check"></i><span><strong>अधिकारों का त्याग नहीं:</strong> किसी भी शर्त का प्रवर्तन न करना उस अधिकार का त्याग नहीं माना जाएगा। <span class="en">No Waiver: failure to enforce any provision shall not be considered a waiver of that right.</span></span></li>
+              <li><i class="fa-solid fa-circle-check"></i><span><strong>हस्तांतरण:</strong> आप इन शर्तों के अंतर्गत अपने अधिकारों को हस्तांतरित नहीं कर सकते। <span class="en">Assignment: you may not transfer your rights under these terms.</span></span></li>
+            </ul>
+          </div>
+        </div>
+
+
+        <!-- 13 -->
+        <div class="terms-block" id="tsec13">
+          <div class="terms-block-head">
+            <div class="terms-num">13</div>
+            <div>
+              <h3>शासी कानून | Governing Law</h3>
+              <div class="sub">कानूनी अधिकार क्षेत्र</div>
+            </div>
+          </div>
+          <div class="terms-text">
+            <p>
+              ये नियम एवं शर्तें भारत के कानूनों के अधीन हैं और उन्हीं के अनुसार व्याख्या की जाएँगी। इन शर्तों से उत्पन्न किसी भी विवाद का निपटारा भारत के सक्षम न्यायालयों के अधिकार क्षेत्र में होगा।
+            </p>
+            <p class="en">
+              These Terms &amp; Conditions are governed by and construed in accordance with the laws of India. Any dispute arising from these terms shall be subject to the jurisdiction of the competent courts in India.
+            </p>
+            <p>
+              किसी भी विवाद की स्थिति में पहले आपसी सहमति से समाधान का प्रयास किया जाएगा।
+            </p>
+            <p class="en">
+              In case of any dispute, an attempt will first be made to resolve it through mutual consent.
+            </p>
+          </div>
+        </div>
+
+
+        <!-- 14 -->
+        <div class="terms-block" id="tsec14">
+          <div class="terms-block-head">
+            <div class="terms-num">14</div>
+            <div>
+              <h3>संपर्क करें | Contact Us</h3>
+              <div class="sub">किसी भी प्रश्न के लिए संपर्क करें</div>
+            </div>
+          </div>
+          <div class="terms-text">
+            <p>
+              इन नियमों एवं शर्तों के बारे में किसी भी प्रश्न, चिंता, या सुझाव के लिए, कृपया हमसे निम्नलिखित माध्यमों से संपर्क करें:
+            </p>
+            <p class="en">
+              For any questions, concerns, or suggestions regarding these Terms &amp; Conditions, please contact us through the following means:
+            </p>
+          </div>
+
+          <div class="terms-contact">
+            <div class="terms-contact-content">
+
+              <div class="terms-contact-head">
+                <i class="fa-solid fa-headset"></i>
+                <strong>संपर्क करें | Contact Us</strong>
+              </div>
+
+              <p>
+                हमसे सीधे संपर्क करें — आपके हर प्रश्न का उत्तर देने के लिए हम तत्पर हैं।
+              </p>
+
+              <div class="contact-grid-terms">
+
+                <a href="mailto:sathchaleham@gmail.com" class="contact-chip-terms">
+                  <i class="fa-solid fa-envelope"></i>
+                  <div>
+                    <div class="cc-label">ईमेल | Email</div>
+                    <div class="cc-value">sathchaleham@gmail.com</div>
+                  </div>
+                </a>
+
+                <a href="tel:+917011893028" class="contact-chip-terms">
+                  <i class="fa-solid fa-phone"></i>
+                  <div>
+                    <div class="cc-label">हेल्पलाइन | Helpline</div>
+                    <div class="cc-value">+91 7011893028</div>
+                  </div>
+                </a>
+
+                <div class="contact-chip-terms">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <div>
+                    <div class="cc-label">पता | Address</div>
+                    <div class="cc-value">भारतीय नगर, वार्ड नं. 26/35, सिमरी-बख्तियारपुर रोड, सहरसा, बिहार – 852201</div>
+                  </div>
+                </div>
+
+                <div class="contact-chip-terms">
+                  <i class="fa-solid fa-clock"></i>
+                  <div>
+                    <div class="cc-label">कार्यालय समय | Office Hours</div>
+                    <div class="cc-value">सोम – शनि · 10:00 AM – 6:00 PM</div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- CLOSING -->
+        <div style="text-align:center;margin-top:36px;padding-top:28px;border-top:2px dashed #d7e9de;">
+          <p style="font-family:'Tiro Devanagari Hindi',serif;font-size:1rem;font-weight:900;color:var(--dark-green);line-height:1.6;margin-bottom:8px;">
+            🌱 साथ चले हम, बदलाव की ओर
+          </p>
+          <p style="font-size:.82rem;color:#7a8880;font-weight:700;letter-spacing:.3px;">
+            इन नियमों एवं शर्तों का पालन करने के लिए धन्यवाद।
+          </p>
+          <p style="font-size:.75rem;color:#9aa8a0;font-weight:600;font-style:italic;margin-top:6px;">
+            Thank you for following these Terms &amp; Conditions.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="cta-strip">
+  <div class="container">
+    <h2>साथ चले हम, <span>बदलाव की ओर</span></h2>
+    <p class="hindi">
+      इन शर्तों से सहमत हैं? तो आज ही हमसे जुड़ें या दान देकर हमारे कार्यों को सशक्त बनाएँ।
+    </p>
+    <div class="cta-buttons">
+      <a href="join-us.html" class="btn btn-green"><i class="fa-solid fa-users"></i> Join Us</a>
+      <a href="donate.html" class="btn btn-red btn-pulse"><i class="fa-solid fa-heart"></i> Donate Us</a>
+      <a href="privacy.html" class="btn btn-outline"><i class="fa-solid fa-shield-halved"></i> Privacy Policy</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="https://raw.githubusercontent.com/sathchaleham-dot/sath-chale-ham-/main/sath_chale_ham_logo_HD-1.png" alt="Sath Chale Hum Foundation Logo">
+          <h3>Sath Chale Hum Foundation</h3>
+        </div>
+        <div class="footer-tagline">
+          साथ चले हम – बदलाव की ओर<br>
+          Step Together Towards Change
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-heading social-heading">Our Social Media</div>
+        <div class="social-icons">
+          <a class="social-icon" href="https://www.facebook.com/share/1PUUzvUfoo/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a class="social-icon" href="https://www.instagram.com/sathchaleham?stkn=MWFzanhuYjFpcGhrZg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a class="social-icon" href="https://youtube.com/@sathchaleham?si=uKH0gC8E7rM_xdpC" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-heading">Quick Links | महत्वपूर्ण लिंक</div>
+        <div class="quick-links">
+          <a href="index.html">Home | होम</a>
+          <a href="about.html">About Us | हमारे बारे में</a>
+          <a href="work.html">Our Work | हमारे कार्य</a>
+          <a href="team.html">Our Team | हमारी टीम</a>
+          <a href="events.html">Events | कार्यक्रम</a>
+          <a href="donate.html">Donate Us | दान करें</a>
+          <a href="join-us.html">Join Us | हमारे साथ जुड़ें</a>
+          <a href="downloads.html">Downloads | डाउनलोड</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>
+        <a href="terms.html">Terms &amp; Conditions</a> |
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+      <div class="copyright">© 2026 Sath Chale Hum Foundation. All Rights Reserved.</div>
+      <div class="footer-name">-Sath Chale Hum Foundation-</div>
+    </div>
+  </div>
+</footer>
+
+
+<button class="back-top" id="backTop" aria-label="Back to Top" type="button">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+  var menuToggle = document.getElementById("menuToggle");
+  var mobileNav  = document.getElementById("mobileNav");
+
+  if(menuToggle && mobileNav){
+    menuToggle.addEventListener("click", function(){
+      mobileNav.classList.toggle("active");
+      menuToggle.setAttribute("aria-expanded", mobileNav.classList.contains("active") ? "true" : "false");
+    });
+    mobileNav.querySelectorAll("a").forEach(function(link){
+      link.addEventListener("click", function(){
+        mobileNav.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+
+  document.querySelectorAll('.toc-list a[href^="#"]').forEach(function(link){
+    link.addEventListener("click", function(e){
+      e.preventDefault();
+      var target = document.querySelector(this.getAttribute("href"));
+      if(target){
+        var offset = 110;
+        var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top: top, behavior: "smooth" });
+      }
+    });
+  });
+
+  var backTop = document.getElementById("backTop");
+  if(backTop){
+    window.addEventListener("scroll", function(){
+      if(window.scrollY > 500){
+        backTop.classList.add("show");
+      } else {
+        backTop.classList.remove("show");
+      }
+    });
+    backTop.addEventListener("click", function(){
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+});
+
+</script>
+
+</body>
+</html>
