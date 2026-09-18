@@ -1,1 +1,2184 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Downloads | डाउनलोड — Sath Chale Hum Foundation</title>
+  <meta name="description" content="साथ चले हम फाउंडेशन — 54 फॉर्म, दस्तावेज़, रिपोर्ट, मीडिया, नीतियाँ और अन्य उपयोगी सामग्री डाउनलोड करें।">
+  <meta name="theme-color" content="#071a12">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+
+    *{ margin:0; padding:0; box-sizing:border-box; }
+    html{ scroll-behavior:smooth; overflow-x:hidden; }
+
+    :root{
+      --green:#087443;
+      --dark-green:#043d27;
+      --deep:#021c12;
+      --gold:#f4c542;
+      --yellow:#ffd83d;
+      --red:#d71920;
+      --white:#ffffff;
+      --text:#18231e;
+      --muted:#65736c;
+    }
+
+    body{
+      font-family:"Poppins","Tiro Devanagari Hindi",sans-serif;
+      background:#f5f9f7;
+      color:var(--text);
+      overflow-x:hidden;
+    }
+
+    a{ text-decoration:none; color:inherit; }
+    img{ max-width:100%; display:block; }
+    button{ font-family:inherit; }
+
+    .container{ width:min(1180px,92%); margin:auto; }
+    .hindi{ font-family:"Tiro Devanagari Hindi",serif; }
+
+    /* HEADER */
+    .site-header{
+      position:fixed; left:0; top:0; width:100%; z-index:9999;
+      background:rgba(2,28,18,.93);
+      backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px);
+      border-bottom:1px solid rgba(255,255,255,.1);
+      box-shadow:0 10px 35px rgba(0,0,0,.12);
+    }
+    .header-inner{
+      min-height:88px; display:flex; align-items:center;
+      justify-content:space-between; gap:25px;
+    }
+    .brand{ display:flex; align-items:center; gap:14px; min-width:0; }
+    .brand-logo{
+      width:62px; height:62px; object-fit:contain; flex-shrink:0;
+      filter:drop-shadow(0 5px 10px rgba(0,0,0,.25));
+    }
+    .brand-text{ min-width:0; }
+    .brand-name{
+      color:#fff; font-size:clamp(1.05rem,2vw,1.55rem);
+      font-weight:900; line-height:1.2; white-space:nowrap;
+      text-shadow:0 2px 15px rgba(0,0,0,.3);
+    }
+    .brand-tagline{ color:#cde9da; font-size:.75rem; font-weight:600; margin-top:4px; white-space:nowrap; }
+    .desktop-nav{ display:flex; align-items:center; gap:4px; }
+    .desktop-nav a{
+      color:#fff; font-size:.83rem; font-weight:700;
+      padding:12px 11px; border-radius:12px; transition:.3s ease; white-space:nowrap;
+    }
+    .desktop-nav a:hover,
+    .desktop-nav a.active{ color:var(--yellow); background:rgba(255,255,255,.08); transform:translateY(-2px); }
+    .donate-nav{
+      background:var(--red)!important; padding:12px 18px!important;
+      box-shadow:0 8px 25px rgba(215,25,32,.35);
+      animation:pulseDonate 1.5s infinite;
+    }
+    .donate-nav:hover{ color:#fff!important; background:#ef2028!important; }
+    @keyframes pulseDonate{
+      0%,100%{ transform:scale(1); box-shadow:0 8px 25px rgba(215,25,32,.30); }
+      50%{ transform:scale(1.06); box-shadow:0 10px 35px rgba(215,25,32,.65); }
+    }
+    .menu-toggle{
+      display:none; width:45px; height:45px;
+      border:1px solid rgba(255,255,255,.2);
+      background:rgba(255,255,255,.08);
+      border-radius:12px; cursor:pointer; padding:9px;
+    }
+    .menu-toggle span{
+      display:block; width:100%; height:3px; background:#fff;
+      margin:5px 0; border-radius:5px; transition:.3s;
+    }
+    .mobile-nav{
+      display:none; background:rgba(2,28,18,.98);
+      border-top:1px solid rgba(255,255,255,.1); padding:12px 4%;
+    }
+    .mobile-nav a{
+      display:block; color:#fff; padding:13px 15px;
+      border-radius:10px; font-weight:700; margin:3px 0;
+    }
+    .mobile-nav a:hover,
+    .mobile-nav a.active{ background:rgba(255,255,255,.08); color:var(--yellow); }
+    .mobile-nav .donate-nav{ text-align:center; margin-top:8px; }
+    .mobile-nav.active{ display:block; }
+
+    /* BANNER */
+    .page-banner{
+      background:
+        linear-gradient(135deg,rgba(2,28,18,.94),rgba(7,92,55,.86)),
+        url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1800&q=80')
+        center/cover no-repeat;
+      color:#fff; padding:175px 0 95px; text-align:center;
+    }
+    .banner-badge{
+      display:inline-flex; align-items:center; gap:9px;
+      padding:8px 17px; border:1px solid rgba(255,255,255,.3);
+      background:rgba(255,255,255,.09); border-radius:100px;
+      font-size:.78rem; font-weight:700; margin-bottom:20px;
+    }
+    .banner-badge i{ color:var(--yellow); }
+    .page-banner h1{
+      font-size:clamp(2rem,5vw,3.6rem); font-weight:900; line-height:1.2;
+    }
+    .page-banner h1 span{ color:var(--yellow); }
+    .page-banner p{
+      color:#cfe8db; margin:14px auto 0;
+      max-width:820px; font-size:1rem; line-height:1.8;
+    }
+    .banner-stats{
+      display:flex; justify-content:center; gap:16px;
+      flex-wrap:wrap; margin-top:28px;
+    }
+    .banner-stat{
+      display:inline-flex; align-items:center; gap:9px;
+      padding:10px 18px; border-radius:100px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.18);
+      font-size:.82rem; font-weight:800; color:#e6f5ec;
+    }
+    .banner-stat i{ color:var(--yellow); }
+    .breadcrumb{ margin-top:22px; font-size:.85rem; color:#a9c9b8; }
+    .breadcrumb a{ color:#cfe8db; }
+    .breadcrumb a:hover{ color:var(--yellow); }
+    .breadcrumb i{ font-size:.6rem; margin:0 8px; opacity:.7; }
+
+    /* WRAPPER */
+    .downloads-wrapper{
+      position:relative;
+      padding:90px 0 100px;
+      background:
+        radial-gradient(circle at 10% 10%,rgba(255,216,61,.08),transparent 30%),
+        radial-gradient(circle at 90% 20%,rgba(215,25,32,.07),transparent 32%),
+        radial-gradient(circle at 50% 100%,rgba(8,116,67,.18),transparent 45%),
+        linear-gradient(160deg,#021c12 0%,#043d27 45%,#021c12 100%);
+      color:#fff;
+      overflow:hidden;
+    }
+    .downloads-wrapper::before{
+      content:"";
+      position:absolute; inset:0;
+      background-image:radial-gradient(circle,rgba(255,255,255,.035) 1px,transparent 1px);
+      background-size:26px 26px;
+      pointer-events:none;
+    }
+    .downloads-wrapper .container{ position:relative; z-index:2; }
+
+    .downloads-head{ text-align:center; margin-bottom:40px; }
+    .downloads-head .small-title{
+      display:inline-block; color:var(--yellow);
+      font-size:.9rem; font-weight:800;
+      letter-spacing:3px; text-transform:uppercase;
+      margin-bottom:14px;
+    }
+    .downloads-head h2{
+      font-size:clamp(2rem,4.4vw,3.2rem);
+      line-height:1.15; font-weight:900; color:#fff;
+    }
+    .downloads-head h2 span{ color:var(--yellow); }
+    .downloads-head p{
+      max-width:820px; margin:20px auto 0;
+      color:#b8d4c5; line-height:1.85; font-size:1rem;
+    }
+
+    /* FILTER BAR */
+    .filter-bar{
+      display:flex; justify-content:center;
+      gap:10px; flex-wrap:wrap; margin-bottom:50px;
+    }
+    .filter-btn{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:11px 20px; border-radius:12px;
+      font-size:.82rem; font-weight:800;
+      cursor:pointer; transition:.3s;
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(255,255,255,.06);
+      color:#fff; letter-spacing:.3px;
+    }
+    .filter-btn:hover{
+      background:rgba(255,216,61,.14);
+      border-color:rgba(255,216,61,.45);
+      color:var(--yellow);
+      transform:translateY(-2px);
+    }
+    .filter-btn.active{
+      background:var(--yellow); color:#173524;
+      border-color:var(--yellow);
+      box-shadow:0 8px 22px rgba(255,216,61,.28);
+    }
+    .filter-btn i{ font-size:.8rem; }
+
+    /* CATEGORY HEADER */
+    .category-section{ margin-bottom:70px; }
+    .category-section:last-of-type{ margin-bottom:0; }
+
+    .cat-header{
+      display:flex; align-items:center; gap:18px;
+      margin-bottom:28px; padding-bottom:18px;
+      border-bottom:2px solid rgba(255,255,255,.1);
+      flex-wrap:wrap;
+    }
+    .cat-icon{
+      flex-shrink:0;
+      width:60px; height:60px;
+      border-radius:18px;
+      display:grid; place-items:center;
+      font-size:1.5rem; color:#fff;
+      background:linear-gradient(145deg,#0ba35a,#06733f);
+      box-shadow:0 12px 30px rgba(8,116,67,.4);
+    }
+    .cat-header[data-tone="red"] .cat-icon{
+      background:linear-gradient(145deg,#ef2028,#a80f16);
+      box-shadow:0 12px 30px rgba(215,25,32,.4);
+    }
+    .cat-header[data-tone="gold"] .cat-icon{
+      background:linear-gradient(145deg,#ffd83d,#c89a00);
+      color:#1c2e22;
+      box-shadow:0 12px 30px rgba(244,197,66,.4);
+    }
+    .cat-header[data-tone="teal"] .cat-icon{
+      background:linear-gradient(145deg,#14b8a6,#0f766e);
+      box-shadow:0 12px 30px rgba(20,184,166,.4);
+    }
+    .cat-header[data-tone="purple"] .cat-icon{
+      background:linear-gradient(145deg,#8b5cf6,#6d28d9);
+      box-shadow:0 12px 30px rgba(139,92,246,.4);
+    }
+    .cat-header[data-tone="orange"] .cat-icon{
+      background:linear-gradient(145deg,#f97316,#c2410c);
+      box-shadow:0 12px 30px rgba(249,115,22,.4);
+    }
+    .cat-info{ flex:1; min-width:0; }
+    .cat-num{
+      font-size:.7rem; font-weight:900;
+      letter-spacing:2px; color:var(--yellow); margin-bottom:4px;
+    }
+    .cat-header[data-tone="red"] .cat-num{ color:#ff8a8f; }
+    .cat-header[data-tone="teal"] .cat-num{ color:#5eead4; }
+    .cat-header[data-tone="purple"] .cat-num{ color:#c4b5fd; }
+    .cat-header[data-tone="orange"] .cat-num{ color:#fdba74; }
+    .cat-title{
+      font-family:"Tiro Devanagari Hindi",serif;
+      font-size:clamp(1.25rem,2.5vw,1.7rem);
+      font-weight:900; color:#fff; line-height:1.3;
+    }
+    .cat-count{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 16px; border-radius:100px;
+      background:rgba(255,216,61,.12);
+      border:1px solid rgba(255,216,61,.3);
+      color:var(--yellow);
+      font-size:.78rem; font-weight:900;
+      letter-spacing:.5px; white-space:nowrap;
+    }
+    .cat-header[data-tone="red"] .cat-count{
+      background:rgba(255,107,112,.12);
+      border-color:rgba(255,107,112,.3);
+      color:#ff8a8f;
+    }
+    .cat-header[data-tone="teal"] .cat-count{
+      background:rgba(20,184,166,.12);
+      border-color:rgba(20,184,166,.3);
+      color:#5eead4;
+    }
+    .cat-header[data-tone="purple"] .cat-count{
+      background:rgba(139,92,246,.12);
+      border-color:rgba(139,92,246,.3);
+      color:#c4b5fd;
+    }
+    .cat-header[data-tone="orange"] .cat-count{
+      background:rgba(249,115,22,.12);
+      border-color:rgba(249,115,22,.3);
+      color:#fdba74;
+    }
+
+    /* PREMIUM CARD GRID */
+    .download-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:22px;
+    }
+
+    .download-card{
+      position:relative;
+      background:
+        linear-gradient(150deg,rgba(255,255,255,.09),rgba(255,255,255,.03));
+      border:1px solid rgba(255,255,255,.13);
+      border-radius:24px;
+      padding:26px 26px 24px;
+      backdrop-filter:blur(14px);
+      -webkit-backdrop-filter:blur(14px);
+      box-shadow:0 12px 40px rgba(0,0,0,.25);
+      transition:transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+      display:flex; flex-direction:column;
+      animation:fadeIn .5s ease both;
+    }
+    @keyframes fadeIn{
+      from{ opacity:0; transform:translateY(12px); }
+      to{ opacity:1; transform:translateY(0); }
+    }
+    .download-card:hover{
+      transform:translateY(-5px);
+      border-color:rgba(255,216,61,.4);
+      box-shadow:
+        0 22px 55px rgba(0,0,0,.4),
+        0 0 0 1px rgba(255,216,61,.2);
+    }
+    .download-card::before{
+      content:"";
+      position:absolute; top:0; left:0; right:0;
+      height:3px;
+      background:linear-gradient(90deg,transparent,var(--yellow),transparent);
+      opacity:0;
+      transition:opacity .35s;
+      border-radius:24px 24px 0 0;
+    }
+    .download-card:hover::before{ opacity:1; }
+
+    /* CARD HEADER */
+    .dc-head{
+      display:flex; align-items:center; gap:16px;
+      margin-bottom:18px;
+    }
+    .dc-icon{
+      flex-shrink:0;
+      width:58px; height:58px;
+      border-radius:16px;
+      display:grid; place-items:center;
+      font-size:1.35rem;
+      background:linear-gradient(145deg,#0ba35a,#06733f);
+      color:#fff;
+      box-shadow:
+        0 10px 25px rgba(8,116,67,.4),
+        inset 0 1px 0 rgba(255,255,255,.25);
+    }
+    .download-card[data-tone="red"] .dc-icon{
+      background:linear-gradient(145deg,#ef2028,#a80f16);
+      box-shadow:0 10px 25px rgba(215,25,32,.4),inset 0 1px 0 rgba(255,255,255,.25);
+    }
+    .download-card[data-tone="gold"] .dc-icon{
+      background:linear-gradient(145deg,#ffd83d,#c89a00);
+      color:#1c2e22;
+      box-shadow:0 10px 25px rgba(244,197,66,.4),inset 0 1px 0 rgba(255,255,255,.3);
+    }
+    .download-card[data-tone="teal"] .dc-icon{
+      background:linear-gradient(145deg,#14b8a6,#0f766e);
+      box-shadow:0 10px 25px rgba(20,184,166,.4),inset 0 1px 0 rgba(255,255,255,.25);
+    }
+    .download-card[data-tone="purple"] .dc-icon{
+      background:linear-gradient(145deg,#8b5cf6,#6d28d9);
+      box-shadow:0 10px 25px rgba(139,92,246,.4),inset 0 1px 0 rgba(255,255,255,.25);
+    }
+    .download-card[data-tone="orange"] .dc-icon{
+      background:linear-gradient(145deg,#f97316,#c2410c);
+      box-shadow:0 10px 25px rgba(249,115,22,.4),inset 0 1px 0 rgba(255,255,255,.25);
+    }
+
+    .dc-titles{ flex:1; min-width:0; }
+    .dc-serial{
+      display:inline-flex; align-items:center; gap:6px;
+      padding:3px 10px;
+      border-radius:100px;
+      background:rgba(255,216,61,.14);
+      border:1px solid rgba(255,216,61,.32);
+      color:var(--yellow);
+      font-size:.6rem; font-weight:900;
+      letter-spacing:1.4px;
+      margin-bottom:8px;
+    }
+    .download-card[data-tone="red"] .dc-serial{
+      background:rgba(255,107,112,.14);
+      border-color:rgba(255,107,112,.32);
+      color:#ff8a8f;
+    }
+    .download-card[data-tone="teal"] .dc-serial{
+      background:rgba(20,184,166,.14);
+      border-color:rgba(20,184,166,.32);
+      color:#5eead4;
+    }
+    .download-card[data-tone="purple"] .dc-serial{
+      background:rgba(139,92,246,.14);
+      border-color:rgba(139,92,246,.32);
+      color:#c4b5fd;
+    }
+    .download-card[data-tone="orange"] .dc-serial{
+      background:rgba(249,115,22,.14);
+      border-color:rgba(249,115,22,.32);
+      color:#fdba74;
+    }
+
+    .dc-title{
+      font-family:"Tiro Devanagari Hindi",serif;
+      font-size:1.1rem; font-weight:900;
+      color:#fff; line-height:1.35; margin-bottom:4px;
+    }
+    .dc-title-en{
+      font-size:.75rem; color:#9bbfa8;
+      font-weight:700; letter-spacing:.2px;
+    }
+
+    /* DESCRIPTION */
+    .dc-desc{
+      color:#c9e5d6;
+      font-size:.87rem;
+      line-height:1.7;
+      margin-bottom:18px;
+      flex:1;
+    }
+
+    /* META */
+    .dc-meta{
+      display:flex; flex-wrap:wrap;
+      gap:8px; margin-bottom:18px;
+      padding-top:14px;
+      border-top:1px dashed rgba(255,255,255,.14);
+    }
+    .dc-chip{
+      display:inline-flex; align-items:center; gap:6px;
+      padding:6px 12px; border-radius:9px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.09);
+      font-size:.72rem; font-weight:800; color:#d3e8dc;
+    }
+    .dc-chip i{ font-size:.7rem; color:var(--yellow); }
+    .download-card[data-tone="red"] .dc-chip i{ color:#ff8a8f; }
+    .download-card[data-tone="teal"] .dc-chip i{ color:#5eead4; }
+    .download-card[data-tone="purple"] .dc-chip i{ color:#c4b5fd; }
+    .download-card[data-tone="orange"] .dc-chip i{ color:#fdba74; }
+
+    /* CARD ACTIONS */
+    .dc-actions{
+      display:flex; gap:10px; flex-wrap:wrap;
+    }
+    .dc-btn{
+      flex:1;
+      min-width:130px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:9px;
+      min-height:50px;
+      padding:13px 22px;
+      border-radius:12px;
+      font-size:.85rem;
+      font-weight:900;
+      border:none;
+      cursor:pointer;
+      transition:.3s ease;
+      letter-spacing:.3px;
+      text-align:center;
+    }
+    .dc-btn-primary{
+      color:#fff;
+      background:linear-gradient(135deg,#087443,#0ba35a);
+      box-shadow:0 10px 25px rgba(8,116,67,.4);
+    }
+    .dc-btn-primary:hover{
+      transform:translateY(-3px);
+      box-shadow:0 14px 34px rgba(8,116,67,.55);
+    }
+    .download-card[data-tone="red"] .dc-btn-primary{
+      background:linear-gradient(135deg,#ef2028,#a80f16);
+      box-shadow:0 10px 25px rgba(215,25,32,.4);
+    }
+    .download-card[data-tone="red"] .dc-btn-primary:hover{
+      box-shadow:0 14px 34px rgba(215,25,32,.55);
+    }
+    .download-card[data-tone="gold"] .dc-btn-primary{
+      background:linear-gradient(135deg,#ffd83d,#c89a00);
+      color:#1c2e22;
+      box-shadow:0 10px 25px rgba(244,197,66,.4);
+    }
+    .download-card[data-tone="gold"] .dc-btn-primary:hover{
+      box-shadow:0 14px 34px rgba(244,197,66,.55);
+    }
+    .download-card[data-tone="teal"] .dc-btn-primary{
+      background:linear-gradient(135deg,#14b8a6,#0f766e);
+      box-shadow:0 10px 25px rgba(20,184,166,.4);
+    }
+    .download-card[data-tone="teal"] .dc-btn-primary:hover{
+      box-shadow:0 14px 34px rgba(20,184,166,.55);
+    }
+    .download-card[data-tone="purple"] .dc-btn-primary{
+      background:linear-gradient(135deg,#8b5cf6,#6d28d9);
+      box-shadow:0 10px 25px rgba(139,92,246,.4);
+    }
+    .download-card[data-tone="purple"] .dc-btn-primary:hover{
+      box-shadow:0 14px 34px rgba(139,92,246,.55);
+    }
+    .download-card[data-tone="orange"] .dc-btn-primary{
+      background:linear-gradient(135deg,#f97316,#c2410c);
+      box-shadow:0 10px 25px rgba(249,115,22,.4);
+    }
+    .download-card[data-tone="orange"] .dc-btn-primary:hover{
+      box-shadow:0 14px 34px rgba(249,115,22,.55);
+    }
+
+    .dc-btn-outline{
+      color:#fff;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.35);
+      flex:0 0 auto;
+      min-width:auto;
+      padding:13px 18px;
+    }
+    .dc-btn-outline:hover{
+      background:rgba(255,216,61,.14);
+      border-color:rgba(255,216,61,.5);
+      color:var(--yellow);
+      transform:translateY(-3px);
+    }
+
+    /* INFO NOTE */
+    .info-note{
+      margin-top:50px;
+      padding:24px 28px;
+      border-radius:20px;
+      background:rgba(255,216,61,.08);
+      border:1px solid rgba(255,216,61,.28);
+      display:flex;
+      align-items:flex-start;
+      gap:16px;
+    }
+    .info-note > i{
+      flex-shrink:0;
+      width:48px; height:48px;
+      display:grid; place-items:center;
+      border-radius:14px;
+      background:linear-gradient(145deg,#ffd83d,#c89a00);
+      color:#1c2e22;
+      font-size:1.2rem;
+      box-shadow:0 8px 22px rgba(244,197,66,.35);
+    }
+    .info-note .in-text strong{
+      display:block;
+      font-family:"Tiro Devanagari Hindi",serif;
+      font-size:1.05rem; font-weight:900;
+      color:var(--yellow); margin-bottom:8px;
+    }
+    .info-note .in-text p{
+      color:#c9e5d6; font-size:.87rem; line-height:1.75;
+    }
+    .info-note .in-text a{
+      color:var(--yellow); font-weight:800; text-decoration:underline;
+    }
+
+    /* CTA */
+    .cta-strip{
+      background:
+        radial-gradient(circle at 15% 30%,rgba(255,216,61,.18),transparent 25%),
+        radial-gradient(circle at 85% 70%,rgba(8,116,67,.22),transparent 25%),
+        linear-gradient(135deg,#032a1a,#075f38);
+      color:#fff; padding:80px 0; text-align:center;
+    }
+    .cta-strip h2{
+      font-size:clamp(1.8rem,4vw,3rem);
+      font-weight:900; line-height:1.3;
+    }
+    .cta-strip h2 span{ color:var(--yellow); }
+    .cta-strip p{
+      color:#cdebd9; margin-top:14px;
+      max-width:720px; margin-left:auto; margin-right:auto; line-height:1.85;
+    }
+    .cta-buttons{
+      display:flex; justify-content:center; flex-wrap:wrap; gap:14px; margin-top:30px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:9px;
+      min-height:52px; padding:14px 25px; border-radius:14px;
+      font-size:.9rem; font-weight:800; border:none; cursor:pointer;
+      transition:.3s ease;
+    }
+    .btn:hover{ transform:translateY(-4px); }
+    .btn-red{ color:#fff; background:var(--red); box-shadow:0 12px 30px rgba(215,25,32,.35); }
+    .btn-green{ color:#fff; background:var(--green); box-shadow:0 12px 30px rgba(8,116,67,.35); }
+    .btn-outline{ color:#fff; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.35); }
+    .btn-pulse{ animation:pulseButton 1.5s infinite; }
+    @keyframes pulseButton{
+      0%,100%{ box-shadow:0 10px 28px rgba(215,25,32,.3); }
+      50%{ box-shadow:0 12px 40px rgba(215,25,32,.75); }
+    }
+
+    /* FOOTER */
+    footer{ background:#01160d; color:#fff; padding-top:70px; }
+    .footer-grid{
+      display:grid; grid-template-columns:1.3fr 1fr 1fr;
+      gap:50px; padding-bottom:50px;
+    }
+    .footer-brand{ display:flex; align-items:center; gap:15px; margin-bottom:17px; }
+    .footer-brand img{ width:65px; height:65px; object-fit:contain; }
+    .footer-brand h3{ font-size:1.1rem; font-weight:900; }
+    .footer-tagline{ color:#b7d6c5; line-height:1.7; font-size:.9rem; }
+    .footer-heading{ font-size:1rem; font-weight:900; margin-bottom:22px; color:#fff; }
+    .social-heading{ text-align:center; }
+    .social-icons{ display:flex; justify-content:center; gap:15px; }
+    .social-icon{
+      width:50px; height:50px; display:grid; place-items:center;
+      border-radius:16px; background:#0c3925; color:#fff;
+      font-size:1.2rem; transition:.3s;
+      border:1px solid rgba(255,255,255,.08);
+    }
+    .social-icon:hover{ transform:translateY(-5px); background:var(--green); }
+    .quick-links a{
+      display:block; color:#b8d3c4; font-size:.88rem;
+      margin:11px 0; transition:.3s;
+    }
+    .quick-links a:hover{ color:var(--yellow); transform:translateX(4px); }
+    .footer-bottom{
+      border-top:1px solid rgba(255,255,255,.1);
+      padding:25px 0; text-align:center;
+      color:#90ad9c; font-size:.8rem;
+    }
+    .footer-bottom a{ color:#c5dace; margin:0 8px; }
+    .footer-bottom a:hover{ color:var(--yellow); }
+    .footer-bottom .copyright{ margin-top:10px; color:#d0e1d7; font-weight:600; }
+    .footer-name{ color:#fff; font-weight:800; margin-top:10px; }
+
+    .back-top{
+      position:fixed; right:20px; bottom:20px;
+      width:45px; height:45px; border:none; border-radius:50%;
+      background:var(--red); color:#fff; cursor:pointer; z-index:1000;
+      display:grid; place-items:center;
+      opacity:0; visibility:hidden; transition:.3s;
+      box-shadow:0 8px 25px rgba(215,25,32,.3);
+    }
+    .back-top.show{ opacity:1; visibility:visible; }
+
+    @media (prefers-reduced-motion: reduce){
+      *,*::before,*::after{
+        animation-duration:.01ms!important;
+        animation-iteration-count:1!important;
+        transition-duration:.01ms!important;
+        scroll-behavior:auto!important;
+      }
+    }
+
+    @media(max-width:1100px){
+      .desktop-nav{ gap:0; }
+      .desktop-nav a{ padding:10px 7px; font-size:.75rem; }
+      .donate-nav{ padding:10px 13px!important; }
+      .brand-logo{ width:55px; height:55px; }
+      .brand-name{ font-size:1.05rem; }
+    }
+
+    @media(max-width:850px){
+      .desktop-nav{ display:none; }
+      .menu-toggle{ display:block; }
+      .header-inner{ min-height:75px; }
+      .brand-logo{ width:52px; height:52px; }
+      .brand-name{ font-size:1rem; }
+      .brand-tagline{ font-size:.65rem; }
+      .page-banner{ padding:145px 0 75px; }
+      .download-grid{ grid-template-columns:1fr; }
+      .footer-grid{ grid-template-columns:1fr; gap:35px; }
+      .social-heading{ text-align:left; }
+      .social-icons{ justify-content:flex-start; }
+      .downloads-wrapper{ padding:70px 0 80px; }
+    }
+
+    @media(max-width:600px){
+      .brand-name{ white-space:normal; line-height:1.15; }
+      .brand-tagline{ white-space:normal; }
+      .download-card{ padding:22px 20px; }
+      .dc-icon{ width:52px; height:52px; font-size:1.15rem; }
+      .dc-title{ font-size:1rem; }
+      .dc-title-en{ font-size:.7rem; }
+      .dc-btn{ width:100%; }
+      .info-note{ padding:20px 18px; flex-direction:column; align-items:center; text-align:center; }
+      .filter-btn{ font-size:.72rem; padding:9px 14px; }
+      .cat-header{ gap:14px; }
+      .cat-icon{ width:52px; height:52px; font-size:1.25rem; border-radius:16px; }
+      .cat-title{ font-size:1.15rem; }
+      .cat-count{ font-size:.7rem; padding:6px 12px; }
+      .cta-buttons .btn{ width:100%; }
+      .footer-bottom a{ display:inline-block; margin:5px; }
+    }
+
+    @media(max-width:380px){
+      .brand-logo{ width:45px; height:45px; }
+      .brand-name{ font-size:.82rem; }
+      .brand-tagline{ font-size:.57rem; }
+      .menu-toggle{ width:40px; height:40px; }
+      .dc-chip{ font-size:.65rem; padding:5px 9px; }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <img class="brand-logo"
+           src="https://raw.githubusercontent.com/sathchaleham-dot/sath-chale-ham-/main/sath_chale_ham_logo_HD-1.png"
+           alt="साथ चले हम फाउंडेशन Logo">
+      <div class="brand-text">
+        <div class="brand-name">साथ चले हम फाउंडेशन</div>
+        <div class="brand-tagline">साथ चले हम, बदलाव की ओर</div>
+      </div>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="work.html">Work</a>
+      <a href="team.html">Team</a>
+      <a href="events.html">Events</a>
+      <a href="join-us.html">Join Us</a>
+      <a href="donate.html" class="donate-nav"><i class="fa-solid fa-heart"></i> Donate Us</a>
+    </nav>
+
+    <button class="menu-toggle" id="menuToggle"
+            aria-label="Open Menu" aria-expanded="false"
+            aria-controls="mobileNav" type="button">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="work.html">Work</a>
+    <a href="team.html">Team</a>
+    <a href="events.html">Events</a>
+    <a href="join-us.html">Join Us</a>
+    <a href="donate.html" class="donate-nav"><i class="fa-solid fa-heart"></i> Donate Us</a>
+  </nav>
+</header>
+
+
+<!-- =========================================================
+     PAGE BANNER
+========================================================= -->
+
+<section class="page-banner">
+  <div class="container">
+    <div class="banner-badge"><i class="fa-solid fa-download"></i> Downloads</div>
+
+    <h1>Downloads | <span class="hindi">डाउनलोड</span></h1>
+
+    <p class="hi">
+      साथ चले हम फाउंडेशन से संबंधित सभी फॉर्म, दस्तावेज़, रिपोर्ट, मीडिया, नीतियाँ और अन्य उपयोगी सामग्री यहाँ से डाउनलोड करें।
+    </p>
+
+    <p>
+      Download all forms, documents, reports, media, policies, and useful materials related to Sath Chale Hum Foundation.
+    </p>
+
+    <div class="banner-stats">
+      <div class="banner-stat"><i class="fa-solid fa-file-lines"></i> 54 Files</div>
+      <div class="banner-stat"><i class="fa-solid fa-layer-group"></i> 6 Categories</div>
+      <div class="banner-stat"><i class="fa-solid fa-shield-halved"></i> Official Docs</div>
+    </div>
+
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <i class="fa-solid fa-chevron-right"></i>
+      <span>Downloads</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================
+     DOWNLOADS WRAPPER
+========================================================= -->
+
+<section class="downloads-wrapper">
+  <div class="container">
+
+    <div class="downloads-head">
+      <span class="small-title">Download Center</span>
+      <h2>उपयोगी दस्तावेज़ एवं फॉर्म | <span>Useful Documents &amp; Forms</span></h2>
+      <p class="hindi">
+        नीचे दी गई छह श्रेणियों से आप अपनी आवश्यकता के अनुसार फॉर्म, दस्तावेज़, रिपोर्ट, मीडिया, नीतियाँ और अन्य जानकारी डाउनलोड कर सकते हैं।
+      </p>
+    </div>
+
+
+    <!-- FILTER BAR -->
+
+    <div class="filter-bar" role="tablist">
+      <button class="filter-btn active" data-filter="all" type="button"><i class="fa-solid fa-layer-group"></i> All</button>
+      <button class="filter-btn" data-filter="forms" type="button"><i class="fa-solid fa-file-lines"></i> Forms</button>
+      <button class="filter-btn" data-filter="documents" type="button"><i class="fa-solid fa-file-contract"></i> Documents</button>
+      <button class="filter-btn" data-filter="reports" type="button"><i class="fa-solid fa-chart-line"></i> Reports</button>
+      <button class="filter-btn" data-filter="media" type="button"><i class="fa-solid fa-photo-film"></i> Media</button>
+      <button class="filter-btn" data-filter="policies" type="button"><i class="fa-solid fa-shield-halved"></i> Policies</button>
+      <button class="filter-btn" data-filter="annual" type="button"><i class="fa-solid fa-calendar-check"></i> Annual / Misc</button>
+    </div>
+
+
+    <!-- =========================================================
+         CATEGORY 1 — FORMS (9 Files)
+    ========================================================= -->
+
+    <div class="category-section" data-cat="forms">
+      <div class="cat-header" data-tone="green">
+        <div class="cat-icon"><i class="fa-solid fa-file-lines"></i></div>
+        <div class="cat-info">
+          <div class="cat-num">CATEGORY 01</div>
+          <div class="cat-title">Forms | फॉर्म</div>
+        </div>
+        <div class="cat-count"><i class="fa-solid fa-layer-group"></i> 9 Files</div>
+      </div>
+
+      <div class="download-grid">
+
+        <article class="download-card" data-tone="green">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-file-signature"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 01</span>
+              <div class="dc-title">Volunteer Registration Form</div>
+              <div class="dc-title-en">स्वयंसेवक पंजीकरण</div>
+            </div>
+          </div>
+          <p class="dc-desc">साथ चले हम फाउंडेशन के साथ स्वयंसेवक के रूप में जुड़ने के लिए आवश्यक पंजीकरण फॉर्म — व्यक्तिगत जानकारी, संपर्क, रुचि एवं कौशल।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी + English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="01-Volunteer-Registration-Form.pdf"><i class="fa-solid fa-download"></i> Download</a>
+            <a href="join-us.html" class="dc-btn dc-btn-outline" title="Fill Online"><i class="fa-solid fa-pen-to-square"></i></a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="red">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-id-card"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 02</span>
+              <div class="dc-title">Member Registration Form</div>
+              <div class="dc-title-en">सदस्यता पंजीकरण</div>
+            </div>
+          </div>
+          <p class="dc-desc">संस्था के सदस्य बनने के लिए आवश्यक आवेदन फॉर्म — सदस्यता ग्रहण करें और संस्था के कार्यों में सक्रिय भागीदारी निभाएँ।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी + English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="02-Member-Registration-Form.pdf"><i class="fa-solid fa-download"></i> Download</a>
+            <a href="join-us.html" class="dc-btn dc-btn-outline" title="Fill Online"><i class="fa-solid fa-pen-to-square"></i></a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="gold">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 03</span>
+              <div class="dc-title">Donation Form</div>
+              <div class="dc-title-en">दान फॉर्म</div>
+            </div>
+          </div>
+          <p class="dc-desc">साथ चले हम फाउंडेशन को दान देने के लिए आवश्यक फॉर्म — दाता जानकारी, दान राशि, उद्देश्य एवं भुगतान विवरण।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी + English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="03-Donation-Form.pdf"><i class="fa-solid fa-download"></i> Download</a>
+            <a href="donate.html" class="dc-btn dc-btn-outline" title="Fill Online"><i class="fa-solid fa-pen-to-square"></i></a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="teal">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-receipt"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 04</span>
+              <div class="dc-title">80G Tax Exemption Form</div>
+              <div class="dc-title-en">80G कर छूट</div>
+            </div>
+          </div>
+          <p class="dc-desc">दान पर 80G के अंतर्गत कर छूट प्राप्त करने के लिए आवश्यक फॉर्म — आधिकारिक रसीद प्राप्त करें।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी + English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="04-80G-Tax-Exemption-Form.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="purple">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-handshake"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 05</span>
+              <div class="dc-title">CSR Partnership Form</div>
+              <div class="dc-title-en">CSR साझेदारी</div>
+            </div>
+          </div>
+          <p class="dc-desc">कंपनियों के साथ CSR साझेदारी के लिए आवेदन फॉर्म — सामाजिक उत्तरदायित्व कार्यक्रमों में सहयोग हेतु।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी + English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="05-CSR-Partnership-Form.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="orange">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-user-graduate"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 06</span>
+              <div class="dc-title">Internship Application Form</div>
+              <div class="dc-title-en">इंटर्नशिप आवेदन</div>
+            </div>
+          </div>
+          <p class="dc-desc">इंटर्नशिप के लिए आवेदन फॉर्म — छात्रों एवं युवाओं को सामाजिक कार्यों में अनुभव प्राप्त करने का अवसर।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी + English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="06-Internship-Application-Form.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="green">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-calendar-day"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 07</span>
+              <div class="dc-title">Event Registration Form</div>
+              <div class="dc-title-en">कार्यक्रम पंजीकरण</div>
+            </div>
+          </div>
+          <p class="dc-desc">हमारे विभिन्न कार्यक्रमों में भाग लेने के लिए पंजीकरण फॉर्म — शिविर, कार्यशालाएँ एवं अभियान।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी + English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="07-Event-Registration-Form.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="red">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-comment-dots"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 08</span>
+              <div class="dc-title">Feedback / Complaint Form</div>
+              <div class="dc-title-en">सुझाव / शिकायत</div>
+            </div>
+          </div>
+          <p class="dc-desc">अपने सुझाव, शिकायत या प्रतिक्रिया देने के लिए फॉर्म — आपकी राय हमारे लिए महत्वपूर्ण है।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी + English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="08-Feedback-Complaint-Form.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="gold">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-hands-holding-child"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 09</span>
+              <div class="dc-title">Beneficiary Application Form</div>
+              <div class="dc-title-en">लाभार्थी आवेदन</div>
+            </div>
+          </div>
+          <p class="dc-desc">जरूरतमंद लोगों की सहायता के लिए आवेदन फॉर्म — शिक्षा, स्वास्थ्य, राशन एवं अन्य सहायता हेतु।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी + English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="09-Beneficiary-Application-Form.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+
+    <!-- =========================================================
+         CATEGORY 2 — DOCUMENTS (11 Files)
+    ========================================================= -->
+
+    <div class="category-section" data-cat="documents">
+      <div class="cat-header" data-tone="red">
+        <div class="cat-icon"><i class="fa-solid fa-file-contract"></i></div>
+        <div class="cat-info">
+          <div class="cat-num">CATEGORY 02</div>
+          <div class="cat-title">Documents | दस्तावेज़</div>
+        </div>
+        <div class="cat-count"><i class="fa-solid fa-layer-group"></i> 11 Files</div>
+      </div>
+
+      <div class="download-grid">
+
+        <article class="download-card" data-tone="green">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-certificate"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 10</span>
+              <div class="dc-title">Registration Certificate</div>
+              <div class="dc-title-en">पंजीकरण प्रमाण पत्र</div>
+            </div>
+          </div>
+          <p class="dc-desc">संस्था का आधिकारिक पंजीकरण प्रमाण पत्र जो संस्था की वैधता एवं कानूनी स्थिति को दर्शाता है।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="10-Registration-Certificate.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="red">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-building-columns"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 11</span>
+              <div class="dc-title">NGO Darpan Certificate</div>
+              <div class="dc-title-en">NGO दर्पण प्रमाण</div>
+            </div>
+          </div>
+          <p class="dc-desc">NITI Aayog के NGO दर्पण पोर्टल पर पंजीकृत संस्था का आधिकारिक प्रमाण पत्र — सरकारी अनुदान हेतु आवश्यक।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="11-NGO-Darpan-Certificate.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="gold">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-scroll"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 12</span>
+              <div class="dc-title">Constitution / Bye-Laws</div>
+              <div class="dc-title-en">संविधान / नियमावली</div>
+            </div>
+          </div>
+          <p class="dc-desc">संस्था के संचालन, सदस्यता, समितियों, निर्णय प्रक्रियाओं एवं नियमों का विस्तृत संविधान एवं उपनियम।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी + English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="12-Constitution-Bye-Laws.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="teal">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-credit-card"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 13</span>
+              <div class="dc-title">PAN Card Copy</div>
+              <div class="dc-title-en">PAN कार्ड</div>
+            </div>
+          </div>
+          <p class="dc-desc">संस्था का स्थायी खाता संख्या (PAN) कार्ड — दान, कर छूट एवं अन्य आधिकारिक उद्देश्यों के लिए।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="13-PAN-Card-Copy.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="purple">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-file-shield"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 14</span>
+              <div class="dc-title">12A Certificate</div>
+              <div class="dc-title-en">12A प्रमाण पत्र</div>
+            </div>
+          </div>
+          <p class="dc-desc">आयकर अधिनियम की धारा 12A के अंतर्गत संस्था की कर छूट संबंधी मान्यता प्रमाण पत्र।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="14-12A-Certificate.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="orange">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 15</span>
+              <div class="dc-title">80G Certificate</div>
+              <div class="dc-title-en">80G प्रमाण पत्र</div>
+            </div>
+          </div>
+          <p class="dc-desc">दानकर्ताओं को कर छूट प्रदान करने की संस्था की मान्यता प्रमाण पत्र — आयकर धारा 80G के अंतर्गत।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="15-80G-Certificate.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="green">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-globe"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 16</span>
+              <div class="dc-title">FCRA Certificate</div>
+              <div class="dc-title-en">FCRA प्रमाण पत्र</div>
+            </div>
+          </div>
+          <p class="dc-desc">विदेशी अंशदान (Regulation) अधिनियम के अंतर्गत विदेशी दान प्राप्त करने की मान्यता प्रमाण पत्र।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="16-FCRA-Certificate.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="red">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-building"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 17</span>
+              <div class="dc-title">CSR-1 Certificate</div>
+              <div class="dc-title-en">CSR-1 प्रमाण पत्र</div>
+            </div>
+          </div>
+          <p class="dc-desc">कंपनी अधिनियम के अंतर्गत CSR कार्यों के लिए संस्था की पंजीकरण मान्यता (CSR-1) प्रमाण पत्र।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="17-CSR-1-Certificate.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="gold">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-gavel"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 18</span>
+              <div class="dc-title">Board Resolution</div>
+              <div class="dc-title-en">न्यास मंडल निर्णय</div>
+            </div>
+          </div>
+          <p class="dc-desc">न्यास मंडल की बैठकों में लिए गए महत्वपूर्ण निर्णयों का आधिकारिक रिकॉर्ड एवं प्रस्ताव।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी + English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="18-Board-Resolution.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="teal">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 19</span>
+              <div class="dc-title">Annual Compliance Documents</div>
+              <div class="dc-title-en">वार्षिक अनुपालन</div>
+            </div>
+          </div>
+          <p class="dc-desc">सालाना नियम अनुपालन से संबंधित सभी दस्तावेज़ एवं रिपोर्ट — कानूनी पारदर्शिता हेतु।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="19-Annual-Compliance-Documents.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="purple">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-file-signature"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 20</span>
+              <div class="dc-title">MoU / Partnership Templates</div>
+              <div class="dc-title-en">साझेदारी समझौते</div>
+            </div>
+          </div>
+          <p class="dc-desc">संस्था के साथ साझेदारी करने के लिए MoU एवं अन्य समझौतों के प्रारूप (Template)।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी + English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="20-MoU-Partnership-Templates.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+
+    <!-- =========================================================
+         CATEGORY 3 — REPORTS (8 Files)
+    ========================================================= -->
+
+    <div class="category-section" data-cat="reports">
+      <div class="cat-header" data-tone="gold">
+        <div class="cat-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <div class="cat-info">
+          <div class="cat-num">CATEGORY 03</div>
+          <div class="cat-title">Reports | रिपोर्ट</div>
+        </div>
+        <div class="cat-count"><i class="fa-solid fa-layer-group"></i> 8 Files</div>
+      </div>
+
+      <div class="download-grid">
+
+        <article class="download-card" data-tone="gold">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-book"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 21</span>
+              <div class="dc-title">Annual Report 2025</div>
+              <div class="dc-title-en">वार्षिक रिपोर्ट</div>
+            </div>
+          </div>
+          <p class="dc-desc">वर्ष 2025 में संस्था द्वारा किए गए सभी कार्यों, कार्यक्रमों, उपलब्धियों एवं वित्तीय विवरणों का संपूर्ण रिपोर्ट।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी + English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="21-Annual-Report-2025.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="teal">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-calendar-half-day"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 22</span>
+              <div class="dc-title">Half-Yearly Report</div>
+              <div class="dc-title-en">छमाही रिपोर्ट</div>
+            </div>
+          </div>
+          <p class="dc-desc">छह महीनों की संस्था की सभी गतिविधियों, कार्यक्रमों और प्रगति की विस्तृत रिपोर्ट।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी + English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="22-Half-Yearly-Report.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="green">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-calendar-week"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 23</span>
+              <div class="dc-title">Quarterly Report</div>
+              <div class="dc-title-en">त्रैमासिक रिपोर्ट</div>
+            </div>
+          </div>
+          <p class="dc-desc">प्रत्येक तीन महीने की अवधि में संस्था द्वारा किए गए कार्यों की विस्तृत त्रैमासिक रिपोर्ट।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी + English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="23-Quarterly-Report.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="red">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-chart-pie"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 24</span>
+              <div class="dc-title">Audit Report 2025</div>
+              <div class="dc-title-en">लेखा परीक्षण रिपोर्ट</div>
+            </div>
+          </div>
+          <p class="dc-desc">संस्था के वित्तीय लेखों का स्वतंत्र लेखा परीक्षकों द्वारा किया गया ऑडिट रिपोर्ट — पारदर्शिता का प्रमुख दस्तावेज़।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="24-Audit-Report-2025.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="purple">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 25</span>
+              <div class="dc-title">Financial Statement</div>
+              <div class="dc-title-en">वित्तीय विवरण</div>
+            </div>
+          </div>
+          <p class="dc-desc">संस्था की आय, व्यय, संपत्ति एवं देनदारियों का विस्तृत वित्तीय विवरण।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="25-Financial-Statement.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="orange">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-rocket"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 26</span>
+              <div class="dc-title">Impact Report</div>
+              <div class="dc-title-en">प्रभाव रिपोर्ट</div>
+            </div>
+          </div>
+          <p class="dc-desc">संस्था के कार्यों का समाज पर पड़ने वाले सकारात्मक प्रभावों का विस्तृत विश्लेषणात्मक रिपोर्ट।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी + English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="26-Impact-Report.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="teal">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-diagram-project"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 27</span>
+              <div class="dc-title">Project-wise Reports</div>
+              <div class="dc-title-en">परियोजना रिपोर्ट</div>
+            </div>
+          </div>
+          <p class="dc-desc">प्रत्येक परियोजना की अलग-अलग विस्तृत रिपोर्ट — प्रगति, व्यय एवं परिणाम सहित।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी + English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="27-Project-wise-Reports.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="green">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-file-invoice"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 28</span>
+              <div class="dc-title">ITR (Income Tax Return)</div>
+              <div class="dc-title-en">आयकर रिटर्न</div>
+            </div>
+          </div>
+          <p class="dc-desc">संस्था का वार्षिक आयकर रिटर्न विवरण — कर विभाग में जमा किया गया आधिकारिक दस्तावेज़।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="28-ITR-Income-Tax-Return.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+
+    <!-- =========================================================
+         CATEGORY 4 — MEDIA (12 Files)
+    ========================================================= -->
+
+    <div class="category-section" data-cat="media">
+      <div class="cat-header" data-tone="teal">
+        <div class="cat-icon"><i class="fa-solid fa-photo-film"></i></div>
+        <div class="cat-info">
+          <div class="cat-num">CATEGORY 04</div>
+          <div class="cat-title">Media | मीडिया</div>
+        </div>
+        <div class="cat-count"><i class="fa-solid fa-layer-group"></i> 12 Files</div>
+      </div>
+
+      <div class="download-grid">
+
+        <article class="download-card" data-tone="teal">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-file-image"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 29</span>
+              <div class="dc-title">Foundation Brochure</div>
+              <div class="dc-title-en">परिचय पत्रक</div>
+            </div>
+          </div>
+          <p class="dc-desc">साथ चले हम फाउंडेशन के बारे में संक्षिप्त परिचय, उद्देश्य, कार्यक्षेत्र एवं संपर्क विवरण के साथ प्रिंट-रेडी ब्रोशर।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी + English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="29-Foundation-Brochure.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="red">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-image"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 30</span>
+              <div class="dc-title">Foundation Poster</div>
+              <div class="dc-title-en">संस्था पोस्टर</div>
+            </div>
+          </div>
+          <p class="dc-desc">कार्यक्रमों, अभियानों एवं जागरूकता गतिविधियों में उपयोग होने वाला आधिकारिक पोस्टर — प्रिंट एवं डिजिटल उपयोग हेतु।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-image"></i> JPG</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="30-Foundation-Poster.jpg"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="gold">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-star"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 31</span>
+              <div class="dc-title">Foundation Logo Pack</div>
+              <div class="dc-title-en">लोगो पैक</div>
+            </div>
+          </div>
+          <p class="dc-desc">संस्था का आधिकारिक लोगो — PNG (transparent), JPG और SVG प्रारूपों में। मीडिया एवं साझेदारों हेतु।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-zipper"></i> ZIP</span>
+            <span class="dc-chip"><i class="fa-solid fa-layer-group"></i> PNG + JPG + SVG</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="31-Foundation-Logo-Pack.zip"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="purple">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-images"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 32</span>
+              <div class="dc-title">Event Photo Gallery</div>
+              <div class="dc-title-en">कार्यक्रम फोटो</div>
+            </div>
+          </div>
+          <p class="dc-desc">संस्था द्वारा आयोजित विभिन्न कार्यक्रमों, शिविरों एवं अभियानों की उच्च-गुणवत्ता वाली तस्वीरों का संग्रह।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-zipper"></i> ZIP</span>
+            <span class="dc-chip"><i class="fa-solid fa-image"></i> High Quality</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="32-Event-Photo-Gallery.zip"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="orange">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-newspaper"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 33</span>
+              <div class="dc-title">Press Release / Media Kit</div>
+              <div class="dc-title-en">मीडिया किट</div>
+            </div>
+          </div>
+          <p class="dc-desc">मीडिया के लिए तैयार प्रेस रिलीज़ एवं संपूर्ण मीडिया किट — समाचार, तथ्य एवं संपर्क सूचना सहित।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी + English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="33-Press-Release-Media-Kit.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="green">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 34</span>
+              <div class="dc-title">Newsletter</div>
+              <div class="dc-title-en">समाचार पत्र</div>
+            </div>
+          </div>
+          <p class="dc-desc">संस्था की मासिक / त्रैमासिक समाचार पत्रिका — गतिविधियों, कार्यक्रमों एवं उपलब्धियों की जानकारी।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी + English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="34-Newsletter.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="red">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-video"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 35</span>
+              <div class="dc-title">Videos / Documentaries</div>
+              <div class="dc-title-en">वीडियो</div>
+            </div>
+          </div>
+          <p class="dc-desc">संस्था के कार्यों, कार्यक्रमों एवं सफलता की कहानियों पर आधारित वीडियो एवं डॉक्युमेंट्री।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-video"></i> MP4</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="35-Videos-Documentaries.mp4"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="gold">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-trophy"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 36</span>
+              <div class="dc-title">Success Stories</div>
+              <div class="dc-title-en">सफलता कहानियाँ</div>
+            </div>
+          </div>
+          <p class="dc-desc">संस्था की मदद से जीवन में बदलाव लाने वाले लोगों की प्रेरणादायक सफलता की कहानियाँ।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी + English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="36-Success-Stories.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="teal">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-quote-left"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 37</span>
+              <div class="dc-title">Testimonials</div>
+              <div class="dc-title-en">अनुभव</div>
+            </div>
+          </div>
+          <p class="dc-desc">स्वयंसेवकों, दाताओं एवं लाभार्थियों के वास्तविक अनुभव एवं प्रतिक्रियाएँ।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी + English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="37-Testimonials.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="purple">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-bullhorn"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 38</span>
+              <div class="dc-title">Awareness Materials</div>
+              <div class="dc-title-en">जागरूकता सामग्री</div>
+            </div>
+          </div>
+          <p class="dc-desc">शिक्षा, स्वास्थ्य, स्वच्छता एवं पर्यावरण से संबंधित जागरूकता सामग्री — पोस्टर, पैम्फलेट, ब्रोशर।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="38-Awareness-Materials.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="orange">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-rectangle-ad"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 39</span>
+              <div class="dc-title">Banner / Hoarding Designs</div>
+              <div class="dc-title-en">बैनर डिजाइन</div>
+            </div>
+          </div>
+          <p class="dc-desc">कार्यक्रमों एवं अभियानों के लिए तैयार बैनर एवं होर्डिंग के डिजाइन टेम्पलेट।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-zipper"></i> ZIP</span>
+            <span class="dc-chip"><i class="fa-solid fa-image"></i> Print Ready</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="39-Banner-Hoarding-Designs.zip"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="green">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-hashtag"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 40</span>
+              <div class="dc-title">Social Media Posts</div>
+              <div class="dc-title-en">सोशल मीडिया पोस्ट</div>
+            </div>
+          </div>
+          <p class="dc-desc">सोशल मीडिया पर साझा करने के लिए तैयार पोस्ट एवं ग्राफिक्स — Facebook, Instagram, WhatsApp हेतु।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-zipper"></i> ZIP</span>
+            <span class="dc-chip"><i class="fa-solid fa-image"></i> Square + Story</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="40-Social-Media-Posts.zip"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+
+    <!-- =========================================================
+         CATEGORY 5 — POLICIES (8 Files)
+    ========================================================= -->
+
+    <div class="category-section" data-cat="policies">
+      <div class="cat-header" data-tone="purple">
+        <div class="cat-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <div class="cat-info">
+          <div class="cat-num">CATEGORY 05</div>
+          <div class="cat-title">Policies | नीतियाँ</div>
+        </div>
+        <div class="cat-count"><i class="fa-solid fa-layer-group"></i> 8 Files</div>
+      </div>
+
+      <div class="download-grid">
+
+        <article class="download-card" data-tone="purple">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-child-reaching"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 41</span>
+              <div class="dc-title">Child Protection Policy</div>
+              <div class="dc-title-en">बाल संरक्षण नीति</div>
+            </div>
+          </div>
+          <p class="dc-desc">बच्चों की सुरक्षा, सम्मान एवं अधिकारों की रक्षा के लिए संस्था की आधिकारिक नीति।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी + English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="41-Child-Protection-Policy.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="red">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-person-dress"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 42</span>
+              <div class="dc-title">Women Safety Policy</div>
+              <div class="dc-title-en">महिला सुरक्षा नीति</div>
+            </div>
+          </div>
+          <p class="dc-desc">महिलाओं की सुरक्षा, सम्मान एवं समान अवसर सुनिश्चित करने के लिए संस्था की नीति।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी + English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="42-Women-Safety-Policy.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="gold">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-hand"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 43</span>
+              <div class="dc-title">Anti-Harassment Policy</div>
+              <div class="dc-title-en">उत्पीड़न विरोधी नीति</div>
+            </div>
+          </div>
+          <p class="dc-desc">कार्यस्थल पर किसी भी प्रकार के उत्पीड़न के विरुद्ध संस्था की शून्य सहनशीलता नीति।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी + English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="43-Anti-Harassment-Policy.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="teal">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-bullhorn"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 44</span>
+              <div class="dc-title">Whistleblower Policy</div>
+              <div class="dc-title-en">शिकायत नीति</div>
+            </div>
+          </div>
+          <p class="dc-desc">अनियमितताओं या गलत कार्यों की सुरक्षित शिकायत करने की नीति एवं प्रक्रिया।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी + English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="44-Whistleblower-Policy.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="green">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-lock"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 45</span>
+              <div class="dc-title">Data Protection Policy</div>
+              <div class="dc-title-en">डेटा सुरक्षा नीति</div>
+            </div>
+          </div>
+          <p class="dc-desc">व्यक्तिगत एवं संवेदनशील जानकारी की सुरक्षा एवं गोपनीयता बनाए रखने की नीति।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी + English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="45-Data-Protection-Policy.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="gold">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-coins"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 46</span>
+              <div class="dc-title">Financial Policy</div>
+              <div class="dc-title-en">वित्तीय नीति</div>
+            </div>
+          </div>
+          <p class="dc-desc">संस्था की वित्तीय प्रक्रियाओं, बजट, व्यय एवं पारदर्शिता से संबंधित विस्तृत नीति।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी + English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="46-Financial-Policy.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="orange">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-hands-helping"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 47</span>
+              <div class="dc-title">Volunteer Policy</div>
+              <div class="dc-title-en">स्वयंसेवक नीति</div>
+            </div>
+          </div>
+          <p class="dc-desc">स्वयंसेवकों की भर्ती, प्रशिक्षण, अधिकार, जिम्मेदारियों एवं आचरण से संबंधित नीति।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी + English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="47-Volunteer-Policy.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="purple">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-scroll"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 48 ⭐</span>
+              <div class="dc-title">Code of Conduct</div>
+              <div class="dc-title-en">आचार संहिता</div>
+            </div>
+          </div>
+          <p class="dc-desc">संस्था के सभी सदस्यों, स्वयंसेवकों एवं कर्मचारियों के लिए आचार एवं व्यवहार की संहिता।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी + English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="48-Code-of-Conduct.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+
+    <!-- =========================================================
+         CATEGORY 6 — ANNUAL / MISC (6 Files)
+    ========================================================= -->
+
+    <div class="category-section" data-cat="annual">
+      <div class="cat-header" data-tone="orange">
+        <div class="cat-icon"><i class="fa-solid fa-calendar-check"></i></div>
+        <div class="cat-info">
+          <div class="cat-num">CATEGORY 06</div>
+          <div class="cat-title">Annual / Misc | वार्षिक एवं अन्य</div>
+        </div>
+        <div class="cat-count"><i class="fa-solid fa-layer-group"></i> 6 Files</div>
+      </div>
+
+      <div class="download-grid">
+
+        <article class="download-card" data-tone="orange">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-calendar-days"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 49</span>
+              <div class="dc-title">Annual Calendar</div>
+              <div class="dc-title-en">वार्षिक कैलेंडर</div>
+            </div>
+          </div>
+          <p class="dc-desc">पूरे वर्ष की सभी महत्वपूर्ण तिथियों, कार्यक्रमों एवं गतिविधियों का वार्षिक कैलेंडर।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी + English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="49-Annual-Calendar.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="green">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-list-check"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 50</span>
+              <div class="dc-title">Event Schedule</div>
+              <div class="dc-title-en">कार्यक्रम अनुसूची</div>
+            </div>
+          </div>
+          <p class="dc-desc">आगामी कार्यक्रमों की विस्तृत अनुसूची — तिथि, स्थान, समय एवं गतिविधियों सहित।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी + English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="50-Event-Schedule.pdf"><i class="fa-solid fa-download"></i> Download</a>
+            <a href="events.html" class="dc-btn dc-btn-outline" title="View Events"><i class="fa-solid fa-calendar-days"></i></a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="gold">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-book-open"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 51</span>
+              <div class="dc-title">Volunteer Handbook</div>
+              <div class="dc-title-en">स्वयंसेवक पुस्तिका</div>
+            </div>
+          </div>
+          <p class="dc-desc">स्वयंसेवकों के लिए संपूर्ण मार्गदर्शिका — नियम, दायित्व, सहयोग एवं आवश्यक जानकारी।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी + English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="51-Volunteer-Handbook.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="teal">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-circle-question"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 52</span>
+              <div class="dc-title">FAQ Document</div>
+              <div class="dc-title-en">सामान्य प्रश्न</div>
+            </div>
+          </div>
+          <p class="dc-desc">अक्सर पूछे जाने वाले प्रश्नों के उत्तर — संस्था, दान, स्वयंसेवा एवं कार्यक्रमों के बारे में।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी + English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="52-FAQ-Document.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="purple">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 53</span>
+              <div class="dc-title">Thank You Letter Template</div>
+              <div class="dc-title-en">धन्यवाद पत्र</div>
+            </div>
+          </div>
+          <p class="dc-desc">दाताओं, स्वयंसेवकों एवं सहयोगियों को धन्यवाद देने के लिए पत्र का प्रारूप (Template)।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी + English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="53-Thank-You-Letter-Template.pdf"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+        <article class="download-card" data-tone="red">
+          <div class="dc-head">
+            <div class="dc-icon"><i class="fa-solid fa-award"></i></div>
+            <div class="dc-titles">
+              <span class="dc-serial">FILE 54</span>
+              <div class="dc-title">Certificate Templates</div>
+              <div class="dc-title-hi hindi">प्रमाण पत्र टेम्पलेट</div>
+            </div>
+          </div>
+          <p class="dc-desc">स्वयंसेवा, प्रशिक्षण एवं सहभागिता के लिए प्रमाण पत्र के डिजाइन टेम्पलेट।</p>
+          <div class="dc-meta">
+            <span class="dc-chip"><i class="fa-solid fa-file-zipper"></i> ZIP</span>
+            <span class="dc-chip"><i class="fa-solid fa-language"></i> हिन्दी + English</span>
+          </div>
+          <div class="dc-actions">
+            <a href="#" class="dc-btn dc-btn-primary" data-download="54-Certificate-Templates.zip"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+
+    <!-- INFO NOTE -->
+
+    <div class="info-note">
+      <i class="fa-solid fa-circle-info"></i>
+      <div class="in-text">
+        <strong>📌 महत्वपूर्ण सूचना | Important Information</strong>
+        <p>
+          सभी 54 दस्तावेज़ और फॉर्म केवल आधिकारिक उपयोग के लिए हैं। किसी भी फ़ाइल को डाउनलोड करने में समस्या होने पर कृपया हमसे
+          <a href="mailto:sathchaleham@gmail.com">sathchaleham@gmail.com</a>
+          या
+          <a href="tel:+917011893028">+91 7011893028</a>
+          पर संपर्क करें।
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="cta-strip">
+  <div class="container">
+    <h2>कोई प्रश्न है? <span>हमसे संपर्क करें</span></h2>
+    <p class="hindi">
+      यदि आपको कोई विशेष दस्तावेज़ चाहिए या किसी फ़ाइल के बारे में जानकारी चाहिए, तो हमसे संपर्क करें।
+    </p>
+    <div class="cta-buttons">
+      <a href="join-us.html" class="btn btn-green"><i class="fa-solid fa-users"></i> Join Us</a>
+      <a href="donate.html" class="btn btn-red btn-pulse"><i class="fa-solid fa-heart"></i> Donate Us</a>
+      <a href="mailto:sathchaleham@gmail.com" class="btn btn-outline"><i class="fa-solid fa-envelope"></i> Email Us</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="https://raw.githubusercontent.com/sathchaleham-dot/sath-chale-ham-/main/sath_chale_ham_logo_HD-1.png" alt="Sath Chale Hum Foundation Logo">
+          <h3>Sath Chale Hum Foundation</h3>
+        </div>
+        <div class="footer-tagline">
+          साथ चले हम – बदलाव की ओर<br>
+          Step Together Towards Change
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-heading social-heading">Our Social Media</div>
+        <div class="social-icons">
+          <a class="social-icon" href="https://www.facebook.com/share/1PUUzvUfoo/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a class="social-icon" href="https://www.instagram.com/sathchaleham?stkn=MWFzanhuYjFpcGhrZg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a class="social-icon" href="https://youtube.com/@sathchaleham?si=uKH0gC8E7rM_xdpC" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-heading">Quick Links | महत्वपूर्ण लिंक</div>
+        <div class="quick-links">
+          <a href="index.html">Home | होम</a>
+          <a href="about.html">About Us | हमारे बारे में</a>
+          <a href="work.html">Our Work | हमारे कार्य</a>
+          <a href="team.html">Our Team | हमारी टीम</a>
+          <a href="events.html">Events | कार्यक्रम</a>
+          <a href="donate.html">Donate Us | दान करें</a>
+          <a href="join-us.html">Join Us | हमारे साथ जुड़ें</a>
+          <a href="downloads.html">Downloads | डाउनलोड</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>
+        <a href="terms.html">Terms &amp; Conditions</a> |
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+      <div class="copyright">© 2026 Sath Chale Hum Foundation. All Rights Reserved.</div>
+      <div class="footer-name">-Sath Chale Hum Foundation-</div>
+    </div>
+  </div>
+</footer>
+
+
+<button class="back-top" id="backTop" aria-label="Back to Top" type="button">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+  /* MOBILE MENU */
+  var menuToggle = document.getElementById("menuToggle");
+  var mobileNav  = document.getElementById("mobileNav");
+
+  if(menuToggle && mobileNav){
+    menuToggle.addEventListener("click", function(){
+      mobileNav.classList.toggle("active");
+      menuToggle.setAttribute("aria-expanded", mobileNav.classList.contains("active") ? "true" : "false");
+    });
+    mobileNav.querySelectorAll("a").forEach(function(link){
+      link.addEventListener("click", function(){
+        mobileNav.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+
+
+  /* CATEGORY FILTER */
+  var filterBtns = document.querySelectorAll(".filter-btn");
+  var sections = document.querySelectorAll(".category-section");
+
+  filterBtns.forEach(function(btn){
+    btn.addEventListener("click", function(){
+
+      filterBtns.forEach(function(b){ b.classList.remove("active"); });
+      btn.classList.add("active");
+
+      var filter = btn.getAttribute("data-filter");
+
+      sections.forEach(function(sec){
+        var cat = sec.getAttribute("data-cat");
+        if(filter === "all" || cat === filter){
+          sec.style.display = "block";
+          sec.style.animation = "none";
+          void sec.offsetWidth;
+          sec.style.animation = "fadeIn .45s ease both";
+        } else {
+          sec.style.display = "none";
+        }
+      });
+
+      var wrap = document.querySelector(".downloads-wrapper");
+      if(wrap){
+        var offset = 110;
+        var top = wrap.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top: top, behavior: "smooth" });
+      }
+    });
+  });
+
+
+  /* DOWNLOAD HANDLER */
+  document.querySelectorAll(".dc-btn-primary[data-download]").forEach(function(btn){
+    btn.addEventListener("click", function(e){
+      var filename = this.getAttribute("data-download");
+
+      if(this.getAttribute("href") === "#"){
+        e.preventDefault();
+
+        var originalHTML = this.innerHTML;
+        this.innerHTML = '<i class="fa-solid fa-circle-info"></i> Coming Soon';
+        this.style.opacity = "0.75";
+
+        var self = this;
+
+        setTimeout(function(){
+          alert(
+            "📄 " + filename + "\n\n" +
+            "यह फ़ाइल अभी अपलोड नहीं की गई है।\n" +
+            "This file has not been uploaded yet.\n\n" +
+            "कृपया बाद में पुनः प्रयास करें या हमसे संपर्क करें:\n" +
+            "📧 sathchaleham@gmail.com\n" +
+            "📞 +91 7011893028"
+          );
+        }, 150);
+
+        setTimeout(function(){
+          self.innerHTML = originalHTML;
+          self.style.opacity = "";
+        }, 2200);
+      }
+    });
+  });
+
+
+  /* BACK TO TOP */
+  var backTop = document.getElementById("backTop");
+  if(backTop){
+    window.addEventListener("scroll", function(){
+      if(window.scrollY > 500){
+        backTop.classList.add("show");
+      } else {
+        backTop.classList.remove("show");
+      }
+    });
+    backTop.addEventListener("click", function(){
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+});
+
+</script>
+
+</body>
+</html>
