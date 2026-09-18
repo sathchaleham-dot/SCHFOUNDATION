@@ -8,10 +8,6 @@
   <meta name="description" content="साथ चले हम फाउंडेशन के 16 कार्यक्रम — जनवरी 2027 से प्रत्येक रविवार, बिहार के विभिन्न जिलों में।">
   <meta name="theme-color" content="#071a12">
 
-  <meta property="og:title" content="Events | साथ चले हम फाउंडेशन">
-  <meta property="og:description" content="हर रविवार, बिहार के एक जिले में — 16 कार्यक्रम">
-  <meta property="og:type" content="website">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
@@ -19,12 +15,7 @@
 
   <style>
 
-    /* =========================================================
-       GLOBAL
-    ========================================================= */
-
     *{ margin:0; padding:0; box-sizing:border-box; }
-
     html{ scroll-behavior:smooth; overflow-x:hidden; }
 
     :root{
@@ -37,7 +28,6 @@
       --white:#ffffff;
       --text:#18231e;
       --muted:#65736c;
-      --shadow:0 18px 45px rgba(0,0,0,.12);
     }
 
     body{
@@ -52,144 +42,99 @@
     button{ font-family:inherit; }
 
     .container{ width:min(1180px,92%); margin:auto; }
-
     .hindi{ font-family:"Tiro Devanagari Hindi",serif; }
 
-    /* =========================================================
-       HEADER (same as home page)
-    ========================================================= */
-
+    /* HEADER */
     .site-header{
       position:fixed; left:0; top:0; width:100%; z-index:9999;
       background:rgba(2,28,18,.93);
-      backdrop-filter:blur(18px);
-      -webkit-backdrop-filter:blur(18px);
+      backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px);
       border-bottom:1px solid rgba(255,255,255,.1);
       box-shadow:0 10px 35px rgba(0,0,0,.12);
     }
-
     .header-inner{
       min-height:88px; display:flex; align-items:center;
-      justify-content:space-between; gap:25px;
+      justify-content:space-between; gap:20px;
     }
-
     .brand{ display:flex; align-items:center; gap:14px; min-width:0; }
-
     .brand-logo{
       width:62px; height:62px; object-fit:contain; flex-shrink:0;
       filter:drop-shadow(0 5px 10px rgba(0,0,0,.25));
     }
-
     .brand-text{ min-width:0; }
-
     .brand-name{
       color:#fff; font-size:clamp(1.05rem,2vw,1.55rem);
       font-weight:900; line-height:1.2; white-space:nowrap;
       text-shadow:0 2px 15px rgba(0,0,0,.3);
     }
-
-    .brand-tagline{
-      color:#cde9da; font-size:.75rem; font-weight:600;
-      margin-top:4px; white-space:nowrap;
-    }
-
-    .desktop-nav{ display:flex; align-items:center; gap:4px; }
-
+    .brand-tagline{ color:#cde9da; font-size:.75rem; font-weight:600; margin-top:4px; white-space:nowrap; }
+    .desktop-nav{ display:flex; align-items:center; gap:3px; flex-wrap:nowrap; }
     .desktop-nav a{
-      color:#fff; font-size:.83rem; font-weight:700;
-      padding:12px 11px; border-radius:12px;
-      transition:.3s ease; white-space:nowrap;
+      color:#fff; font-size:.78rem; font-weight:700;
+      padding:11px 9px; border-radius:12px; transition:.3s ease; white-space:nowrap;
     }
-
     .desktop-nav a:hover,
-    .desktop-nav a.active{
-      color:var(--yellow);
-      background:rgba(255,255,255,.08);
-      transform:translateY(-2px);
-    }
-
+    .desktop-nav a.active{ color:var(--yellow); background:rgba(255,255,255,.08); transform:translateY(-2px); }
     .donate-nav{
-      background:var(--red)!important;
-      padding:12px 18px!important;
+      background:var(--red)!important; padding:11px 15px!important;
       box-shadow:0 8px 25px rgba(215,25,32,.35);
       animation:pulseDonate 1.5s infinite;
     }
-
     .donate-nav:hover{ color:#fff!important; background:#ef2028!important; }
-
     @keyframes pulseDonate{
       0%,100%{ transform:scale(1); box-shadow:0 8px 25px rgba(215,25,32,.30); }
-      50%{ transform:scale(1.06); box-shadow:0 10px 35px rgba(215,25,32,.65); }
+      50%{ transform:scale(1.05); box-shadow:0 10px 35px rgba(215,25,32,.65); }
     }
-
     .menu-toggle{
       display:none; width:45px; height:45px;
       border:1px solid rgba(255,255,255,.2);
       background:rgba(255,255,255,.08);
       border-radius:12px; cursor:pointer; padding:9px;
     }
-
     .menu-toggle span{
       display:block; width:100%; height:3px; background:#fff;
       margin:5px 0; border-radius:5px; transition:.3s;
     }
-
     .mobile-nav{
       display:none; background:rgba(2,28,18,.98);
       border-top:1px solid rgba(255,255,255,.1); padding:12px 4%;
     }
-
     .mobile-nav a{
       display:block; color:#fff; padding:13px 15px;
       border-radius:10px; font-weight:700; margin:3px 0;
     }
-
     .mobile-nav a:hover,
     .mobile-nav a.active{ background:rgba(255,255,255,.08); color:var(--yellow); }
-
     .mobile-nav .donate-nav{ text-align:center; margin-top:8px; }
     .mobile-nav.active{ display:block; }
 
-    /* =========================================================
-       PAGE BANNER
-    ========================================================= */
-
+    /* BANNER */
     .page-banner{
       background:
         linear-gradient(135deg,rgba(2,28,18,.94),rgba(7,92,55,.86)),
         url('https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=1800&q=80')
         center/cover no-repeat;
-      color:#fff;
-      padding:175px 0 95px;
-      text-align:center;
+      color:#fff; padding:175px 0 95px; text-align:center;
     }
-
     .banner-badge{
       display:inline-flex; align-items:center; gap:9px;
       padding:8px 17px; border:1px solid rgba(255,255,255,.3);
       background:rgba(255,255,255,.09); border-radius:100px;
       font-size:.78rem; font-weight:700; margin-bottom:20px;
     }
-
     .banner-badge i{ color:var(--yellow); }
-
     .page-banner h1{
-      font-size:clamp(2rem,5vw,3.6rem);
-      font-weight:900; line-height:1.2;
+      font-size:clamp(2rem,5vw,3.6rem); font-weight:900; line-height:1.2;
     }
-
     .page-banner h1 span{ color:var(--yellow); }
-
     .page-banner p{
-      color:#cfe8db; margin:16px auto 0;
+      color:#cfe8db; margin:14px auto 0;
       max-width:820px; font-size:1rem; line-height:1.8;
     }
-
     .banner-stats{
       display:flex; justify-content:center; gap:18px;
       flex-wrap:wrap; margin-top:30px;
     }
-
     .banner-stat{
       display:inline-flex; align-items:center; gap:9px;
       padding:10px 18px; border-radius:100px;
@@ -197,21 +142,13 @@
       border:1px solid rgba(255,255,255,.18);
       font-size:.82rem; font-weight:800; color:#e6f5ec;
     }
-
     .banner-stat i{ color:var(--yellow); }
-
-    .breadcrumb{
-      margin-top:22px; font-size:.85rem; color:#a9c9b8;
-    }
-
+    .breadcrumb{ margin-top:22px; font-size:.85rem; color:#a9c9b8; }
     .breadcrumb a{ color:#cfe8db; }
     .breadcrumb a:hover{ color:var(--yellow); }
     .breadcrumb i{ font-size:.6rem; margin:0 8px; opacity:.7; }
 
-    /* =========================================================
-       PREMIUM WRAPPER
-    ========================================================= */
-
+    /* WRAPPER */
     .events-wrapper{
       position:relative;
       padding:80px 0 100px;
@@ -223,160 +160,105 @@
       color:#fff;
       overflow:hidden;
     }
-
     .events-wrapper::before{
       content:"";
       position:absolute; inset:0;
-      background-image:
-        radial-gradient(circle, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-image:radial-gradient(circle,rgba(255,255,255,.035) 1px,transparent 1px);
       background-size:26px 26px;
       pointer-events:none;
     }
-
     .events-wrapper .container{ position:relative; z-index:2; }
 
-    /* =========================================================
-       SECTION HEAD
-    ========================================================= */
-
-    .events-head{
-      text-align:center;
-      margin-bottom:45px;
-    }
-
+    .events-head{ text-align:center; margin-bottom:45px; }
     .events-head .small-title{
-      display:inline-block;
-      color:var(--yellow);
+      display:inline-block; color:var(--yellow);
       font-size:.9rem; font-weight:800;
       letter-spacing:3px; text-transform:uppercase;
       margin-bottom:14px;
     }
-
     .events-head h2{
       font-size:clamp(2rem,4.4vw,3.2rem);
       line-height:1.15; font-weight:900; color:#fff;
     }
-
     .events-head h2 span{ color:var(--yellow); }
-
     .events-head p{
       max-width:820px; margin:20px auto 0;
       color:#b8d4c5; line-height:1.85; font-size:1rem;
     }
 
-    /* =========================================================
-       MONTH FILTERS
-    ========================================================= */
-
+    /* FILTER */
     .filter-bar{
-      display:flex;
-      justify-content:center;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-bottom:45px;
+      display:flex; justify-content:center;
+      gap:10px; flex-wrap:wrap; margin-bottom:45px;
     }
-
     .filter-btn{
       display:inline-flex; align-items:center; gap:8px;
-      padding:11px 20px;
-      border-radius:12px;
-      font-size:.82rem;
-      font-weight:800;
-      cursor:pointer;
-      transition:.3s;
+      padding:11px 20px; border-radius:12px;
+      font-size:.82rem; font-weight:800;
+      cursor:pointer; transition:.3s;
       border:1px solid rgba(255,255,255,.18);
       background:rgba(255,255,255,.06);
-      color:#fff;
-      letter-spacing:.3px;
+      color:#fff; letter-spacing:.3px;
     }
-
     .filter-btn:hover{
       background:rgba(255,216,61,.14);
       border-color:rgba(255,216,61,.45);
-      color:var(--yellow);
-      transform:translateY(-2px);
+      color:var(--yellow); transform:translateY(-2px);
     }
-
     .filter-btn.active{
-      background:var(--yellow);
-      color:#173524;
+      background:var(--yellow); color:#173524;
       border-color:var(--yellow);
       box-shadow:0 8px 22px rgba(255,216,61,.28);
     }
-
     .filter-btn i{ font-size:.8rem; }
 
-    /* =========================================================
-       EVENT CARD
-    ========================================================= */
-
-    .event-grid{
-      display:grid;
-      gap:24px;
-    }
-
+    /* EVENT CARD */
+    .event-grid{ display:grid; gap:24px; }
     .event-card{
       position:relative;
-      display:grid;
-      grid-template-columns:170px 1fr;
-      background:
-        linear-gradient(150deg,rgba(255,255,255,.09),rgba(255,255,255,.03));
+      display:grid; grid-template-columns:170px 1fr;
+      background:linear-gradient(150deg,rgba(255,255,255,.09),rgba(255,255,255,.03));
       border:1px solid rgba(255,255,255,.13);
-      border-radius:24px;
-      overflow:hidden;
-      backdrop-filter:blur(14px);
-      -webkit-backdrop-filter:blur(14px);
+      border-radius:24px; overflow:hidden;
+      backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
       box-shadow:0 12px 40px rgba(0,0,0,.25);
-      transition:transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+      transition:border-color .35s ease, box-shadow .35s ease;
       animation:fadeIn .5s ease both;
     }
-
     @keyframes fadeIn{
       from{ opacity:0; transform:translateY(12px); }
       to{ opacity:1; transform:translateY(0); }
     }
-
     .event-card:hover{
       border-color:rgba(255,216,61,.35);
-      box-shadow:
-        0 22px 55px rgba(0,0,0,.4),
-        0 0 0 1px rgba(255,216,61,.2);
+      box-shadow:0 22px 55px rgba(0,0,0,.4),0 0 0 1px rgba(255,216,61,.2);
     }
 
-    /* ---------- DATE BLOCK ---------- */
-
+    /* DATE BLOCK */
     .event-date{
-      position:relative;
-      padding:26px 18px;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
+      position:relative; padding:26px 18px;
+      display:flex; flex-direction:column;
+      align-items:center; justify-content:center;
       text-align:center;
       background:linear-gradient(160deg,#0ba35a,#06733f);
       color:#fff;
     }
-
     .event-card[data-tone="red"] .event-date{
       background:linear-gradient(160deg,#ef2028,#a80f16);
     }
-
     .event-card[data-tone="gold"] .event-date{
       background:linear-gradient(160deg,#ffd83d,#c89a00);
       color:#1c2e22;
     }
-
     .event-date .ed-day{
       font-size:.7rem; font-weight:900;
       letter-spacing:2.5px; text-transform:uppercase;
       opacity:.85; margin-bottom:6px;
     }
-
     .event-date .ed-num{
-      font-size:2.7rem; font-weight:900; line-height:1;
-      margin-bottom:6px; font-family:"Poppins",sans-serif;
+      font-size:2.7rem; font-weight:900;
+      line-height:1; margin-bottom:6px;
     }
-
     .event-date .ed-month{
       font-size:.78rem; font-weight:900;
       letter-spacing:1.2px; text-transform:uppercase;
@@ -384,24 +266,17 @@
       border-top:1px solid rgba(255,255,255,.25);
       width:70%; text-align:center;
     }
-
     .event-card[data-tone="gold"] .event-date .ed-month{
       border-top-color:rgba(0,0,0,.18);
     }
-
     .event-date .ed-serial{
       position:absolute; top:10px; right:12px;
       font-size:.65rem; font-weight:900;
       letter-spacing:1px; opacity:.6;
     }
 
-    /* ---------- BODY ---------- */
-
-    .event-body{
-      padding:28px 30px;
-      min-width:0;
-    }
-
+    /* EVENT BODY */
+    .event-body{ padding:28px 30px; min-width:0; }
     .event-area{
       display:inline-flex; align-items:center; gap:8px;
       padding:6px 13px; border-radius:100px;
@@ -412,45 +287,30 @@
       letter-spacing:1.2px; text-transform:uppercase;
       margin-bottom:13px;
     }
-
     .event-area i{ font-size:.72rem; }
-
     .event-card[data-tone="red"] .event-area{
       background:rgba(255,107,112,.12);
       border-color:rgba(255,107,112,.3);
       color:#ff8a8f;
     }
-
     .event-card[data-tone="gold"] .event-area{
       background:rgba(255,216,61,.14);
       border-color:rgba(255,216,61,.35);
       color:var(--yellow);
     }
-
     .event-title{
       font-family:"Tiro Devanagari Hindi",serif;
       font-size:clamp(1.15rem,2vw,1.4rem);
-      font-weight:900;
-      color:#fff;
-      line-height:1.4;
-      margin-bottom:6px;
+      font-weight:900; color:#fff;
+      line-height:1.4; margin-bottom:6px;
     }
-
     .event-title-en{
-      color:#9bbfa8;
-      font-size:.85rem;
-      font-weight:600;
-      margin-bottom:18px;
-      letter-spacing:.2px;
+      color:#9bbfa8; font-size:.85rem;
+      font-weight:600; margin-bottom:18px; letter-spacing:.2px;
     }
-
     .event-meta{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-bottom:20px;
+      display:flex; flex-wrap:wrap; gap:10px; margin-bottom:20px;
     }
-
     .meta-chip{
       display:inline-flex; align-items:center; gap:7px;
       padding:7px 13px; border-radius:10px;
@@ -458,297 +318,819 @@
       border:1px solid rgba(255,255,255,.09);
       font-size:.78rem; font-weight:700; color:#d3e8dc;
     }
-
     .meta-chip i{ font-size:.72rem; color:var(--yellow); }
-
     .event-card[data-tone="red"] .meta-chip i{ color:#ff8a8f; }
     .event-card[data-tone="gold"] .meta-chip i{ color:var(--yellow); }
 
-    /* =========================================================
-       ACTIVITIES DROPDOWN (NEW)
-    ========================================================= */
-
+    /* DROPDOWN */
     .activities-dropdown{
       border-radius:16px;
       background:rgba(255,255,255,.035);
       border:1px solid rgba(255,255,255,.09);
-      overflow:hidden;
-      transition:border-color .35s ease, background .35s ease;
-      margin-bottom:18px;
+      overflow:hidden; transition:.35s ease; margin-bottom:18px;
     }
-
-    .activities-dropdown:hover{
-      border-color:rgba(255,216,61,.28);
-    }
-
+    .activities-dropdown:hover{ border-color:rgba(255,216,61,.28); }
     .activities-dropdown.open{
       border-color:rgba(255,216,61,.5);
       background:rgba(255,216,61,.05);
     }
-
     .activities-toggle{
-      width:100%;
-      display:flex;
-      align-items:center;
-      gap:12px;
-      padding:15px 18px;
-      background:transparent;
-      border:none;
-      color:#fff;
-      text-align:left;
-      cursor:pointer;
-      transition:.3s;
+      width:100%; display:flex; align-items:center;
+      gap:12px; padding:15px 18px;
+      background:transparent; border:none; color:#fff;
+      text-align:left; cursor:pointer; transition:.3s;
       font-family:inherit;
     }
-
-    .activities-toggle:hover{
-      background:rgba(255,216,61,.05);
-    }
-
+    .activities-toggle:hover{ background:rgba(255,216,61,.05); }
     .activities-toggle .at-icon{
-      flex-shrink:0;
-      width:36px;
-      height:36px;
-      border-radius:11px;
-      display:grid;
-      place-items:center;
+      flex-shrink:0; width:36px; height:36px;
+      border-radius:11px; display:grid; place-items:center;
       font-size:.85rem;
       background:rgba(255,216,61,.14);
       color:var(--yellow);
       border:1px solid rgba(255,216,61,.3);
       transition:.35s;
     }
-
     .event-card[data-tone="red"] .activities-toggle .at-icon{
       background:rgba(255,107,112,.14);
-      color:#ff8a8f;
-      border-color:rgba(255,107,112,.3);
+      color:#ff8a8f; border-color:rgba(255,107,112,.3);
     }
-
     .activities-dropdown.open .activities-toggle .at-icon{
-      background:var(--yellow);
-      color:#173524;
+      background:var(--yellow); color:#173524;
       transform:rotate(-6deg) scale(1.05);
     }
-
     .event-card[data-tone="red"] .activities-dropdown.open .activities-toggle .at-icon{
-      background:#ff8a8f;
-      color:#3a0507;
+      background:#ff8a8f; color:#3a0507;
     }
-
-    .activities-toggle .at-text{
-      flex:1;
-      min-width:0;
-    }
-
+    .activities-toggle .at-text{ flex:1; min-width:0; }
     .activities-toggle .at-title{
-      font-size:.85rem;
-      font-weight:900;
-      color:#fff;
-      letter-spacing:.5px;
-      line-height:1.3;
+      font-size:.85rem; font-weight:900;
+      color:#fff; letter-spacing:.5px; line-height:1.3;
     }
-
     .activities-toggle .at-sub{
-      font-size:.7rem;
-      font-weight:700;
-      color:#9bbfa8;
-      margin-top:3px;
-      letter-spacing:.4px;
+      font-size:.7rem; font-weight:700;
+      color:#9bbfa8; margin-top:3px; letter-spacing:.4px;
     }
-
-    .event-card[data-tone="red"] .activities-toggle .at-sub{ color:#d3a3a5; }
-
     .activities-toggle .at-chevron{
-      flex-shrink:0;
-      width:32px;
-      height:32px;
-      border-radius:50%;
-      display:grid;
-      place-items:center;
+      flex-shrink:0; width:32px; height:32px;
+      border-radius:50%; display:grid; place-items:center;
       background:rgba(255,255,255,.08);
       border:1px solid rgba(255,255,255,.14);
-      color:#fff;
-      font-size:.75rem;
+      color:#fff; font-size:.75rem;
       transition:transform .4s ease, background .3s, color .3s;
     }
-
     .activities-dropdown.open .activities-toggle .at-chevron{
       transform:rotate(180deg);
-      background:var(--yellow);
-      color:#173524;
+      background:var(--yellow); color:#173524;
       border-color:var(--yellow);
     }
-
     .event-card[data-tone="red"] .activities-dropdown.open .activities-toggle .at-chevron{
-      background:#ff8a8f;
-      color:#3a0507;
-      border-color:#ff8a8f;
+      background:#ff8a8f; color:#3a0507; border-color:#ff8a8f;
     }
-
     .activities-body{
-      max-height:0;
-      overflow:hidden;
+      max-height:0; overflow:hidden;
       transition:max-height .55s cubic-bezier(.4,0,.2,1);
     }
-
-    .activities-dropdown.open .activities-body{
-      max-height:2500px;
-    }
-
+    .activities-dropdown.open .activities-body{ max-height:2500px; }
     .activities-inner{
       padding:4px 16px 16px;
       border-top:1px dashed rgba(255,255,255,.13);
     }
-
-    /* ---------- POINTS LIST ---------- */
-
     .event-points{
-      list-style:none;
-      display:grid;
-      gap:9px;
-      padding-top:14px;
-      margin:0;
+      list-style:none; display:grid;
+      gap:9px; padding-top:14px; margin:0;
     }
-
     .event-points li{
-      display:flex;
-      gap:11px;
-      align-items:flex-start;
-      padding:10px 14px;
-      border-radius:12px;
+      display:flex; gap:11px; align-items:flex-start;
+      padding:10px 14px; border-radius:12px;
       background:rgba(255,255,255,.04);
       border:1px solid rgba(255,255,255,.07);
-      font-size:.87rem;
-      line-height:1.65;
-      color:#dceee4;
+      font-size:.87rem; line-height:1.65; color:#dceee4;
       transition:.25s;
     }
-
     .event-points li:hover{
       background:rgba(255,216,61,.07);
       border-color:rgba(255,216,61,.25);
       transform:translateX(3px);
     }
-
     .event-points li i{
-      flex-shrink:0;
-      margin-top:4px;
-      font-size:.7rem;
-      color:var(--yellow);
+      flex-shrink:0; margin-top:4px;
+      font-size:.7rem; color:var(--yellow);
     }
-
     .event-card[data-tone="red"] .event-points li i{ color:#ff8a8f; }
     .event-card[data-tone="gold"] .event-points li i{ color:var(--yellow); }
 
-    /* ---------- OUTCOME BOX ---------- */
-
     .event-outcome{
-      padding:14px 16px;
-      border-radius:14px;
+      padding:14px 16px; border-radius:14px;
       background:rgba(8,116,67,.15);
       border-left:3px solid #18a65b;
-      font-size:.85rem;
-      line-height:1.7;
-      color:#c6dfd1;
-      margin-bottom:20px;
+      font-size:.85rem; line-height:1.7;
+      color:#c6dfd1; margin-bottom:20px;
     }
-
     .event-card[data-tone="red"] .event-outcome{
       background:rgba(215,25,32,.13);
       border-left-color:#ef2028;
     }
-
     .event-card[data-tone="gold"] .event-outcome{
       background:rgba(244,197,66,.13);
       border-left-color:#ffd83d;
     }
-
     .event-outcome strong{
-      color:#fff;
-      display:block;
-      margin-bottom:5px;
-      font-size:.75rem;
-      letter-spacing:1.2px;
-      text-transform:uppercase;
+      color:#fff; display:block;
+      margin-bottom:5px; font-size:.75rem;
+      letter-spacing:1.2px; text-transform:uppercase;
     }
 
-    /* ---------- CARD ACTIONS ---------- */
-
+    /* EVENT ACTIONS — 3 BUTTONS */
     .event-actions{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
+      display:flex; gap:10px; flex-wrap:wrap;
       padding-top:18px;
       border-top:1px dashed rgba(255,255,255,.14);
     }
-
     .event-actions .btn{
-      min-height:44px;
-      padding:11px 20px;
-      font-size:.78rem;
-      border-radius:11px;
+      min-height:44px; padding:11px 18px;
+      font-size:.78rem; border-radius:11px;
+      flex:1; min-width:120px;
     }
-
-    /* =========================================================
-       BUTTONS
-    ========================================================= */
-
     .btn{
       display:inline-flex; align-items:center; justify-content:center; gap:9px;
       min-height:48px; padding:13px 22px; border-radius:12px;
-      font-size:.85rem; font-weight:800; border:none; cursor:pointer;
-      transition:.3s ease;
+      font-size:.85rem; font-weight:800; border:none;
+      cursor:pointer; transition:.3s ease;
+      font-family:inherit;
     }
-
     .btn:hover{ transform:translateY(-3px); }
-
     .btn-red{
       color:#fff; background:var(--red);
       box-shadow:0 10px 25px rgba(215,25,32,.35);
     }
-
     .btn-green{
-      color:#fff; background:var(--green);
+      color:#fff; background:linear-gradient(135deg,#087443,#0ba35a);
       box-shadow:0 10px 25px rgba(8,116,67,.35);
     }
-
+    .btn-register{
+      color:#1c2e22;
+      background:linear-gradient(135deg,#ffd83d,#c89a00);
+      box-shadow:0 10px 25px rgba(244,197,66,.35);
+      font-weight:900;
+    }
+    .btn-register:hover{
+      box-shadow:0 14px 34px rgba(244,197,66,.55);
+    }
     .btn-outline{
       color:#fff; background:rgba(255,255,255,.08);
       border:1px solid rgba(255,255,255,.35);
     }
-
     .btn-outline:hover{
       background:rgba(255,216,61,.14);
       border-color:rgba(255,216,61,.5);
       color:var(--yellow);
     }
-
     .btn-pulse{ animation:pulseButton 1.5s infinite; }
-
     @keyframes pulseButton{
       0%,100%{ box-shadow:0 10px 28px rgba(215,25,32,.3); }
       50%{ box-shadow:0 12px 40px rgba(215,25,32,.75); }
     }
 
     /* =========================================================
-       EMPTY STATE
+       EVENT REGISTRATION POPUP
     ========================================================= */
 
-    .empty-state{
-      display:none; text-align:center; padding:60px 20px; color:#a9c9b8;
+    .reg-overlay{
+      position:fixed; inset:0; z-index:100000;
+      background:rgba(0,0,0,.8);
+      backdrop-filter:blur(9px);
+      -webkit-backdrop-filter:blur(9px);
+      display:flex; align-items:center; justify-content:center;
+      padding:20px;
+      opacity:0; visibility:hidden;
+      transition:.4s ease;
+      overflow-y:auto;
+    }
+    .reg-overlay.active{ opacity:1; visibility:visible; }
+
+    .reg-popup{
+      width:min(900px,100%);
+      max-height:94vh;
+      overflow-y:auto;
+      background:linear-gradient(160deg,#ffffff,#f0faf4);
+      border-radius:32px;
+      box-shadow:0 40px 100px rgba(0,0,0,.55);
+      position:relative;
+      transform:translateY(30px) scale(.94);
+      transition:.5s cubic-bezier(.2,.8,.3,1);
+      overflow-x:hidden;
+    }
+    .reg-overlay.active .reg-popup{
+      transform:translateY(0) scale(1);
+    }
+    .reg-popup::-webkit-scrollbar{ width:8px; }
+    .reg-popup::-webkit-scrollbar-track{ background:transparent; }
+    .reg-popup::-webkit-scrollbar-thumb{ background:#c7ded3; border-radius:10px; }
+
+    /* REG HEADER */
+    .reg-head{
+      background:
+        radial-gradient(circle at 15% 25%,rgba(255,216,61,.18),transparent 40%),
+        linear-gradient(135deg,#043d27,#087443);
+      color:#fff;
+      padding:36px 40px 30px;
+      position:relative;
+      overflow:hidden;
+    }
+    .reg-head::before{
+      content:"";
+      position:absolute; inset:0;
+      background-image:radial-gradient(circle,rgba(255,255,255,.06) 1px,transparent 1px);
+      background-size:22px 22px;
+      pointer-events:none;
+    }
+    .reg-head-content{ position:relative; z-index:2; }
+
+    .reg-close{
+      position:absolute; top:16px; right:18px;
+      width:42px; height:42px; border-radius:50%;
+      border:none; background:rgba(255,255,255,.14);
+      color:#fff; font-size:1.15rem;
+      cursor:pointer; z-index:5;
+      display:grid; place-items:center;
+      transition:.3s;
+      backdrop-filter:blur(8px);
+    }
+    .reg-close:hover{
+      background:var(--red); transform:rotate(90deg);
     }
 
-    .empty-state.show{ display:block; }
-
-    .empty-state i{
-      font-size:2.5rem; color:rgba(255,216,61,.5); margin-bottom:14px;
+    .reg-badge{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:7px 16px; border-radius:100px;
+      background:rgba(255,216,61,.14);
+      border:1px solid rgba(255,216,61,.35);
+      color:var(--yellow);
+      font-size:.7rem; font-weight:900;
+      letter-spacing:2px; text-transform:uppercase;
+      margin-bottom:14px;
     }
 
-    /* =========================================================
-       CTA
-    ========================================================= */
+    .reg-head h3{
+      font-family:"Tiro Devanagari Hindi",serif;
+      font-size:clamp(1.35rem,2.8vw,1.75rem);
+      font-weight:900;
+      line-height:1.35;
+      margin-bottom:10px;
+    }
 
+    .reg-head p{
+      color:#c9e5d6;
+      line-height:1.7;
+      font-size:.9rem;
+      max-width:680px;
+    }
+
+    .reg-event-info{
+      margin-top:20px;
+      padding:14px 18px;
+      border-radius:14px;
+      background:rgba(255,216,61,.14);
+      border:1px solid rgba(255,216,61,.35);
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      gap:12px;
+    }
+    .reg-event-info i{
+      font-size:1.15rem;
+      color:var(--yellow);
+      flex-shrink:0;
+    }
+    .reg-event-info-text{
+      flex:1;
+      min-width:0;
+    }
+    .reg-event-info-text .rei-label{
+      font-size:.65rem;
+      font-weight:900;
+      color:#a9c9b8;
+      letter-spacing:1.4px;
+      text-transform:uppercase;
+      margin-bottom:4px;
+    }
+    .reg-event-info-text .rei-value{
+      font-family:"Tiro Devanagari Hindi",serif;
+      font-size:.95rem;
+      font-weight:900;
+      color:#fff;
+      line-height:1.35;
+    }
+
+    /* REG BODY */
+    .reg-body{ padding:36px 40px 32px; }
+
+    .reg-intro{
+      padding:16px 20px;
+      border-radius:14px;
+      background:linear-gradient(135deg,#f0fbf5,#e5f5ec);
+      border-left:4px solid var(--green);
+      margin-bottom:26px;
+      font-size:.85rem;
+      line-height:1.7;
+      color:#374740;
+    }
+    .reg-intro strong{ color:var(--dark-green); }
+
+    .reg-section{
+      margin-bottom:26px;
+      padding-bottom:22px;
+      border-bottom:1px dashed #d7e9de;
+    }
+    .reg-section:last-of-type{
+      border-bottom:none;
+      padding-bottom:8px;
+    }
+
+    .reg-section-title{
+      display:flex;
+      align-items:center;
+      gap:11px;
+      margin-bottom:18px;
+    }
+    .reg-section-num{
+      flex-shrink:0;
+      width:40px; height:40px;
+      border-radius:12px;
+      display:grid; place-items:center;
+      background:linear-gradient(145deg,#0ba35a,#06733f);
+      color:#fff;
+      font-weight:900;
+      font-size:.9rem;
+      box-shadow:0 8px 20px rgba(8,116,67,.28);
+    }
+    .reg-section:nth-of-type(2) .reg-section-num{
+      background:linear-gradient(145deg,#ef2028,#a80f16);
+      box-shadow:0 8px 20px rgba(215,25,32,.28);
+    }
+    .reg-section:nth-of-type(3) .reg-section-num{
+      background:linear-gradient(145deg,#ffd83d,#c89a00);
+      color:#1c2e22;
+      box-shadow:0 8px 20px rgba(244,197,66,.3);
+    }
+    .reg-section:nth-of-type(4) .reg-section-num{
+      background:linear-gradient(145deg,#14b8a6,#0f766e);
+      box-shadow:0 8px 20px rgba(20,184,166,.28);
+    }
+    .reg-section:nth-of-type(5) .reg-section-num{
+      background:linear-gradient(145deg,#f97316,#c2410c);
+      box-shadow:0 8px 20px rgba(249,115,22,.28);
+    }
+
+    .reg-section-title h4{
+      font-family:"Tiro Devanagari Hindi",serif;
+      font-size:1.05rem;
+      font-weight:900;
+      color:var(--dark-green);
+      line-height:1.35;
+    }
+    .reg-section-title p{
+      font-size:.72rem;
+      color:var(--muted);
+      font-weight:700;
+      margin-top:3px;
+      letter-spacing:.3px;
+    }
+
+    .reg-field-row{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+      margin-bottom:14px;
+    }
+    .reg-field-row.single{ grid-template-columns:1fr; }
+    .reg-field-row.triple{ grid-template-columns:repeat(3,1fr); }
+
+    .reg-field{
+      display:flex;
+      flex-direction:column;
+      min-width:0;
+    }
+    .reg-field label{
+      font-size:.78rem;
+      font-weight:800;
+      color:var(--dark-green);
+      margin-bottom:7px;
+      letter-spacing:.2px;
+      display:flex;
+      align-items:center;
+      gap:4px;
+      flex-wrap:wrap;
+    }
+    .reg-field label .req{ color:var(--red); font-size:.85rem; }
+    .reg-field label .hint{
+      font-size:.65rem; color:#8a988f;
+      font-weight:600; margin-left:auto;
+    }
+    .reg-field input,
+    .reg-field select,
+    .reg-field textarea{
+      width:100%;
+      padding:12px 14px;
+      border-radius:11px;
+      border:2px solid #dcebe2;
+      background:#f8fcf9;
+      font-family:inherit;
+      font-size:.88rem;
+      color:var(--text);
+      transition:.25s;
+    }
+    .reg-field textarea{
+      resize:vertical;
+      min-height:90px;
+      line-height:1.6;
+    }
+    .reg-field input:focus,
+    .reg-field select:focus,
+    .reg-field textarea:focus{
+      outline:none;
+      border-color:var(--green);
+      background:#fff;
+      box-shadow:0 0 0 4px rgba(8,116,67,.1);
+    }
+    .reg-field select{
+      cursor:pointer;
+      appearance:none;
+      background-image:url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23087443' stroke-width='3' stroke-linecap='round'%3e%3cpolyline points='6 9 12 15 18 9'/%3e%3c/svg%3e");
+      background-repeat:no-repeat;
+      background-position:right 14px center;
+      background-size:13px;
+      padding-right:38px;
+    }
+
+    /* OTHER REVEAL */
+    .other-reveal{
+      animation:regFadeReveal .35s ease;
+    }
+    @keyframes regFadeReveal{
+      from{ opacity:0; transform:translateY(-8px); }
+      to{ opacity:1; transform:translateY(0); }
+    }
+    .other-reveal input{
+      border-color:#ffd83d!important;
+      background:#fffef5!important;
+    }
+    .other-reveal input:focus{
+      border-color:var(--gold)!important;
+      box-shadow:0 0 0 4px rgba(244,197,66,.18)!important;
+    }
+    .other-reveal .reveal-label{
+      display:flex; align-items:center; gap:7px;
+      font-size:.75rem; font-weight:800;
+      color:#a37a00; margin-bottom:8px; letter-spacing:.3px;
+    }
+    .other-reveal .reveal-label i{ color:var(--gold); }
+
+    .reg-radio-row{
+      display:flex; gap:8px; flex-wrap:wrap;
+    }
+    .reg-radio-item{
+      position:relative; flex:1; min-width:100px;
+    }
+    .reg-radio-item input{
+      position:absolute; opacity:0; pointer-events:none;
+    }
+    .reg-radio-item label{
+      display:flex; align-items:center; justify-content:center;
+      gap:6px; padding:11px 12px;
+      border-radius:11px;
+      border:2px solid #dcebe2;
+      background:#f8fcf9;
+      font-size:.78rem; font-weight:800;
+      color:#4a5a52;
+      cursor:pointer; transition:.25s;
+      text-align:center; margin:0;
+      line-height:1.3;
+    }
+    .reg-radio-item label:hover{
+      border-color:#a8d5bd; background:#fff;
+    }
+    .reg-radio-item input:checked + label{
+      border-color:var(--green);
+      background:#e9f7ef;
+      color:var(--green);
+      box-shadow:0 6px 16px rgba(8,116,67,.15);
+    }
+
+    .reg-consent-box{
+      display:flex; gap:12px;
+      align-items:flex-start;
+      padding:16px 18px;
+      border-radius:14px;
+      background:#f4fbf7;
+      border:2px solid #dcebe2;
+      transition:.25s;
+    }
+    .reg-consent-box:focus-within{
+      border-color:var(--green);
+      box-shadow:0 0 0 4px rgba(8,116,67,.1);
+    }
+    .reg-consent-box input{
+      width:22px; height:22px;
+      accent-color:var(--green);
+      flex-shrink:0; cursor:pointer;
+      margin-top:2px;
+    }
+    .reg-consent-box label{
+      font-size:.82rem;
+      line-height:1.7;
+      color:#4a5a52;
+      cursor:pointer;
+      margin:0;
+    }
+    .reg-consent-box label strong{ color:var(--dark-green); }
+    .reg-consent-box label a{
+      color:var(--green);
+      font-weight:800;
+      text-decoration:underline;
+    }
+
+    .reg-submit-wrap{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      align-items:center;
+      text-align:center;
+      padding-top:22px;
+      border-top:2px dashed #d7e9de;
+      margin-top:20px;
+    }
+
+    .reg-submit-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:11px;
+      min-height:60px;
+      padding:16px 46px;
+      border-radius:16px;
+      border:none;
+      cursor:pointer;
+      font-family:inherit;
+      font-size:1rem;
+      font-weight:900;
+      letter-spacing:.6px;
+      color:#fff;
+      background:linear-gradient(135deg,#d71920,#a80f16);
+      box-shadow:0 18px 42px rgba(215,25,32,.4),inset 0 1px 0 rgba(255,255,255,.2);
+      transition:.4s;
+      animation:regBtnPulseRed 1.6s infinite;
+    }
+    .reg-submit-btn:hover{
+      transform:translateY(-3px);
+      box-shadow:0 22px 52px rgba(215,25,32,.55),inset 0 1px 0 rgba(255,255,255,.2);
+    }
+    .reg-submit-btn.ready{
+      background:linear-gradient(135deg,#0ba35a,#087443);
+      box-shadow:0 18px 42px rgba(8,116,67,.4),inset 0 1px 0 rgba(255,255,255,.2);
+      animation:regBtnPulseGreen 1.4s infinite;
+    }
+    .reg-submit-btn.ready:hover{
+      box-shadow:0 22px 52px rgba(8,116,67,.6),inset 0 1px 0 rgba(255,255,255,.2);
+    }
+    @keyframes regBtnPulseRed{
+      0%,100%{ transform:scale(1); box-shadow:0 18px 42px rgba(215,25,32,.35),inset 0 1px 0 rgba(255,255,255,.2); }
+      50%{ transform:scale(1.02); box-shadow:0 22px 55px rgba(215,25,32,.7),inset 0 1px 0 rgba(255,255,255,.2); }
+    }
+    @keyframes regBtnPulseGreen{
+      0%,100%{ transform:scale(1); box-shadow:0 18px 42px rgba(8,116,67,.35),inset 0 1px 0 rgba(255,255,255,.2); }
+      50%{ transform:scale(1.025); box-shadow:0 22px 55px rgba(8,116,67,.75),inset 0 1px 0 rgba(255,255,255,.2); }
+    }
+
+    .reg-submit-hint{
+      font-size:.75rem;
+      color:#8a988f;
+      font-weight:700;
+      display:flex;
+      align-items:center;
+      gap:6px;
+    }
+    .reg-submit-hint i{ color:#a37a00; }
+    .reg-submit-hint.ready-hint{ color:var(--green); }
+    .reg-submit-hint.ready-hint i{ color:var(--green); }
+
+    /* SUCCESS POPUP */
+    .reg-success-overlay{
+      position:fixed; inset:0; z-index:100001;
+      background:rgba(0,0,0,.85);
+      backdrop-filter:blur(10px);
+      display:flex; align-items:center; justify-content:center;
+      padding:20px;
+      opacity:0; visibility:hidden;
+      transition:.4s ease;
+      overflow-y:auto;
+    }
+    .reg-success-overlay.active{ opacity:1; visibility:visible; }
+
+    .reg-success-popup{
+      width:min(600px,100%);
+      max-height:94vh;
+      overflow-y:auto;
+      background:linear-gradient(160deg,#ffffff,#f0faf4);
+      border-radius:32px;
+      box-shadow:0 40px 100px rgba(0,0,0,.6);
+      padding:44px 36px 36px;
+      text-align:center;
+      position:relative;
+      transform:translateY(30px) scale(.94);
+      transition:.5s cubic-bezier(.2,.8,.3,1);
+    }
+    .reg-success-overlay.active .reg-success-popup{
+      transform:translateY(0) scale(1);
+    }
+
+    .reg-success-icon{
+      width:96px; height:96px;
+      margin:0 auto 22px;
+      border-radius:30px;
+      display:grid; place-items:center;
+      background:linear-gradient(145deg,#0ba35a,#06733f);
+      color:#fff;
+      font-size:2.4rem;
+      box-shadow:0 20px 45px rgba(8,116,67,.4),inset 0 2px 0 rgba(255,255,255,.25);
+      animation:regSuccessPulse 1.6s ease-in-out infinite;
+    }
+    @keyframes regSuccessPulse{
+      0%,100%{ transform:scale(1); }
+      50%{ transform:scale(1.06); }
+    }
+
+    .reg-success-popup h3{
+      font-family:"Tiro Devanagari Hindi",serif;
+      font-size:clamp(1.4rem,3vw,1.8rem);
+      font-weight:900;
+      color:var(--dark-green);
+      line-height:1.3;
+      margin-bottom:10px;
+    }
+    .reg-success-popup .welc-en{
+      font-size:.95rem;
+      font-weight:800;
+      color:#4a7c63;
+      margin-bottom:22px;
+    }
+    .reg-success-popup p{
+      color:#5c6b64;
+      line-height:1.8;
+      font-size:.92rem;
+      margin-bottom:16px;
+    }
+    .reg-success-popup p.hi{
+      font-family:"Tiro Devanagari Hindi",serif;
+      font-size:1rem;
+      color:#374740;
+    }
+
+    .reg-id-card{
+      padding:20px 22px;
+      border-radius:16px;
+      background:
+        radial-gradient(circle at 15% 20%,rgba(255,216,61,.22),transparent 45%),
+        linear-gradient(135deg,#043d27,#0ba35a);
+      color:#fff;
+      margin-bottom:16px;
+      position:relative;
+      overflow:hidden;
+      box-shadow:0 14px 34px rgba(8,116,67,.28);
+      text-align:left;
+    }
+    .reg-id-card::before{
+      content:"";
+      position:absolute; inset:0;
+      background-image:radial-gradient(circle,rgba(255,255,255,.07) 1px,transparent 1px);
+      background-size:18px 18px;
+      pointer-events:none;
+    }
+    .reg-id-content{ position:relative; z-index:2; }
+    .reg-id-label{
+      font-size:.65rem;
+      font-weight:900;
+      color:#c9e5d6;
+      letter-spacing:1.6px;
+      text-transform:uppercase;
+      margin-bottom:8px;
+    }
+    .reg-id-value{
+      font-family:"Courier New",monospace;
+      font-size:clamp(1rem,2.3vw,1.25rem);
+      font-weight:900;
+      color:var(--yellow);
+      letter-spacing:1.5px;
+      word-break:break-all;
+      line-height:1.3;
+    }
+
+    .reg-info-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+      margin-bottom:20px;
+      text-align:left;
+    }
+    .reg-info-item{
+      padding:12px 14px;
+      border-radius:12px;
+      background:#f8fcf9;
+      border:1.5px solid #dcebe2;
+    }
+    .reg-info-item .ri-label{
+      font-size:.62rem;
+      font-weight:900;
+      color:#8a988f;
+      letter-spacing:1.2px;
+      text-transform:uppercase;
+      margin-bottom:5px;
+    }
+    .reg-info-item .ri-value{
+      font-size:.88rem;
+      font-weight:900;
+      color:var(--dark-green);
+      line-height:1.35;
+      word-break:break-word;
+    }
+    .reg-info-item .ri-value.status-pending{
+      color:#a37a00;
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+    }
+    .reg-info-item .ri-value.status-pending::before{
+      content:"";
+      width:8px; height:8px;
+      border-radius:50%;
+      background:#f4c542;
+      box-shadow:0 0 0 3px rgba(244,197,66,.25);
+      animation:regPendingBlink 1.5s ease-in-out infinite;
+    }
+    @keyframes regPendingBlink{
+      0%,100%{ opacity:1; }
+      50%{ opacity:.4; }
+    }
+
+    .reg-thanks-banner{
+      padding:14px 16px;
+      border-radius:14px;
+      background:linear-gradient(135deg,#fff8e0,#fff4c9);
+      border:2px solid #f0dfa6;
+      margin-bottom:22px;
+      font-family:"Tiro Devanagari Hindi",serif;
+      font-weight:900;
+      color:#7a5e00;
+      font-size:.95rem;
+      line-height:1.5;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+    }
+    .reg-thanks-banner i{ color:#c89a00; font-size:1.1rem; }
+
+    .reg-success-actions{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+      padding-top:20px;
+      border-top:2px dashed #d7e9de;
+    }
+    .reg-success-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      min-height:50px;
+      padding:13px 18px;
+      border-radius:13px;
+      border:none;
+      cursor:pointer;
+      font-family:inherit;
+      font-size:.82rem;
+      font-weight:900;
+      letter-spacing:.3px;
+      transition:.3s;
+      text-decoration:none;
+    }
+    .reg-success-btn:hover{ transform:translateY(-3px); }
+    .reg-success-btn i{ font-size:.9rem; }
+    .reg-btn-print{
+      color:#fff;
+      background:linear-gradient(135deg,#087443,#0ba35a);
+      box-shadow:0 10px 26px rgba(8,116,67,.35);
+    }
+    .reg-btn-print:hover{ box-shadow:0 14px 34px rgba(8,116,67,.5); }
+    .reg-btn-home{
+      color:#fff;
+      background:linear-gradient(135deg,#d71920,#a80f16);
+      box-shadow:0 10px 26px rgba(215,25,32,.35);
+    }
+    .reg-btn-home:hover{ box-shadow:0 14px 34px rgba(215,25,32,.5); }
+
+    /* CTA STRIP */
     .cta-strip{
       background:
         radial-gradient(circle at 15% 30%,rgba(255,216,61,.18),transparent 25%),
@@ -756,82 +1138,56 @@
         linear-gradient(135deg,#032a1a,#075f38);
       color:#fff; padding:80px 0; text-align:center;
     }
-
     .cta-strip h2{
       font-size:clamp(1.8rem,4vw,3rem);
       font-weight:900; line-height:1.3;
     }
-
     .cta-strip h2 span{ color:var(--yellow); }
-
     .cta-strip p{
       color:#cdebd9; margin-top:14px;
-      max-width:720px; margin-left:auto; margin-right:auto;
-      line-height:1.85;
+      max-width:720px; margin-left:auto; margin-right:auto; line-height:1.85;
     }
-
     .cta-buttons{
       display:flex; justify-content:center;
       flex-wrap:wrap; gap:14px; margin-top:30px;
     }
 
-    /* =========================================================
-       FOOTER (same as home page)
-    ========================================================= */
-
+    /* FOOTER */
     footer{ background:#01160d; color:#fff; padding-top:70px; }
-
     .footer-grid{
       display:grid; grid-template-columns:1.3fr 1fr 1fr;
       gap:50px; padding-bottom:50px;
     }
-
-    .footer-brand{
-      display:flex; align-items:center; gap:15px; margin-bottom:17px;
-    }
-
+    .footer-brand{ display:flex; align-items:center; gap:15px; margin-bottom:17px; }
     .footer-brand img{ width:65px; height:65px; object-fit:contain; }
     .footer-brand h3{ font-size:1.1rem; font-weight:900; }
-
     .footer-tagline{ color:#b7d6c5; line-height:1.7; font-size:.9rem; }
-
     .footer-heading{ font-size:1rem; font-weight:900; margin-bottom:22px; color:#fff; }
-
     .social-heading{ text-align:center; }
-
     .social-icons{ display:flex; justify-content:center; gap:15px; }
-
     .social-icon{
       width:50px; height:50px; display:grid; place-items:center;
       border-radius:16px; background:#0c3925; color:#fff;
       font-size:1.2rem; transition:.3s;
       border:1px solid rgba(255,255,255,.08);
     }
-
     .social-icon:hover{ transform:translateY(-5px); background:var(--green); }
-
     .quick-links a{
       display:block; color:#b8d3c4; font-size:.88rem;
       margin:11px 0; transition:.3s;
     }
-
     .quick-links a:hover{ color:var(--yellow); transform:translateX(4px); }
-
     .footer-bottom{
       border-top:1px solid rgba(255,255,255,.1);
       padding:25px 0; text-align:center;
       color:#90ad9c; font-size:.8rem;
     }
-
     .footer-bottom a{ color:#c5dace; margin:0 8px; }
     .footer-bottom a:hover{ color:var(--yellow); }
     .footer-bottom .copyright{ margin-top:10px; color:#d0e1d7; font-weight:600; }
     .footer-name{ color:#fff; font-weight:800; margin-top:10px; }
 
-    /* =========================================================
-       BACK TO TOP
-    ========================================================= */
-
+    /* BACK TOP */
     .back-top{
       position:fixed; right:20px; bottom:20px;
       width:45px; height:45px; border:none; border-radius:50%;
@@ -840,13 +1196,27 @@
       opacity:0; visibility:hidden; transition:.3s;
       box-shadow:0 8px 25px rgba(215,25,32,.3);
     }
-
     .back-top.show{ opacity:1; visibility:visible; }
 
-    /* =========================================================
-       REDUCED MOTION
-    ========================================================= */
+    /* PRINT */
+    @media print{
+      body *{ visibility:hidden; }
+      .reg-success-popup,
+      .reg-success-popup *{ visibility:visible; }
+      .reg-success-popup{
+        position:absolute; left:0; top:0;
+        width:100%; max-height:none;
+        box-shadow:none; border-radius:0;
+      }
+      .reg-success-actions{ display:none !important; }
+      .reg-success-overlay{
+        position:absolute;
+        background:#fff;
+        backdrop-filter:none;
+      }
+    }
 
+    /* REDUCED MOTION */
     @media (prefers-reduced-motion: reduce){
       *,*::before,*::after{
         animation-duration:.01ms!important;
@@ -856,14 +1226,10 @@
       }
     }
 
-    /* =========================================================
-       RESPONSIVE
-    ========================================================= */
-
+    /* RESPONSIVE */
     @media(max-width:1100px){
-      .desktop-nav{ gap:0; }
-      .desktop-nav a{ padding:10px 7px; font-size:.75rem; }
-      .donate-nav{ padding:10px 13px!important; }
+      .desktop-nav a{ padding:10px 7px; font-size:.72rem; }
+      .donate-nav{ padding:10px 12px!important; }
       .brand-logo{ width:55px; height:55px; }
       .brand-name{ font-size:1.05rem; }
     }
@@ -875,7 +1241,6 @@
       .brand-logo{ width:52px; height:52px; }
       .brand-name{ font-size:1rem; }
       .brand-tagline{ font-size:.65rem; }
-
       .page-banner{ padding:145px 0 75px; }
 
       .event-card{ grid-template-columns:1fr; }
@@ -890,19 +1255,19 @@
       .event-date .ed-day{ margin:0; }
       .event-date .ed-num{ margin:0; font-size:1.9rem; }
       .event-date .ed-month{
-        border-top:none;
-        width:auto;
-        margin:0;
-        padding-top:0;
-        text-align:right;
+        border-top:none; width:auto;
+        margin:0; padding-top:0; text-align:right;
       }
       .event-date .ed-serial{ position:static; }
+
+      .events-wrapper{ padding:60px 0 80px; }
+
+      .reg-head{ padding:30px 24px 24px; }
+      .reg-body{ padding:28px 24px 24px; }
 
       .footer-grid{ grid-template-columns:1fr; gap:35px; }
       .social-heading{ text-align:left; }
       .social-icons{ justify-content:flex-start; }
-
-      .events-wrapper{ padding:60px 0 80px; }
     }
 
     @media(max-width:600px){
@@ -911,23 +1276,42 @@
 
       .event-body{ padding:22px 20px; }
 
-      .activities-toggle{ padding:13px 15px; gap:10px; }
-      .activities-toggle .at-icon{ width:32px; height:32px; font-size:.75rem; }
-      .activities-toggle .at-title{ font-size:.8rem; }
-      .activities-toggle .at-sub{ font-size:.65rem; }
-      .activities-toggle .at-chevron{ width:28px; height:28px; font-size:.68rem; }
-      .activities-inner{ padding:4px 12px 14px; }
-      .event-points li{ font-size:.83rem; padding:9px 12px; }
-
       .banner-stats{ gap:10px; }
-      .banner-stat{ font-size:.74rem; padding:8px 14px; }
+      .banner-stat{ font-size:.72rem; padding:8px 14px; }
 
       .filter-btn{ font-size:.75rem; padding:10px 15px; }
 
-      .event-actions .btn{ flex:1; min-width:120px; }
+      .event-actions .btn{
+        flex:1 1 100%;
+        min-width:100%;
+      }
+
+      .reg-popup{ border-radius:24px; }
+      .reg-head{ padding:26px 18px 22px; }
+      .reg-body{ padding:22px 18px 20px; }
+      .reg-head h3{ font-size:1.2rem; }
+      .reg-close{ top:12px; right:12px; width:38px; height:38px; }
+
+      .reg-field-row,
+      .reg-field-row.triple{ grid-template-columns:1fr; }
+
+      .reg-section-num{ width:36px; height:36px; font-size:.85rem; }
+      .reg-section-title h4{ font-size:.95rem; }
+
+      .reg-radio-item{ min-width:90px; }
+      .reg-radio-item label{ font-size:.72rem; padding:10px 8px; }
+
+      .reg-submit-btn{
+        width:100%; padding:15px 22px; font-size:.92rem; letter-spacing:.4px;
+      }
+
+      .reg-success-popup{ padding:34px 22px 28px; border-radius:24px; }
+      .reg-success-icon{ width:78px; height:78px; font-size:2rem; }
+      .reg-info-grid{ grid-template-columns:1fr; }
+      .reg-success-actions{ grid-template-columns:1fr; }
+      .reg-success-btn{ width:100%; }
 
       .cta-buttons .btn{ width:100%; }
-
       .footer-bottom a{ display:inline-block; margin:5px; }
     }
 
@@ -943,14 +1327,9 @@
 
 <body>
 
-<!-- =========================================================
-     HEADER
-========================================================= -->
-
+<!-- HEADER -->
 <header class="site-header">
-
   <div class="container header-inner">
-
     <a href="index.html" class="brand">
       <img class="brand-logo"
            src="https://raw.githubusercontent.com/sathchaleham-dot/sath-chale-ham-/main/sath_chale_ham_logo_HD-1.png"
@@ -968,9 +1347,8 @@
       <a href="team.html">Team</a>
       <a href="events.html" class="active">Events</a>
       <a href="join-us.html">Join Us</a>
-      <a href="donate.html" class="donate-nav">
-        <i class="fa-solid fa-heart"></i> Donate Us
-      </a>
+      <a href="downloads.html">Downloads</a>
+      <a href="donate.html" class="donate-nav"><i class="fa-solid fa-heart"></i> Donate Us</a>
     </nav>
 
     <button class="menu-toggle" id="menuToggle"
@@ -978,7 +1356,6 @@
             aria-controls="mobileNav" type="button">
       <span></span><span></span><span></span>
     </button>
-
   </div>
 
   <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
@@ -988,33 +1365,27 @@
     <a href="team.html">Team</a>
     <a href="events.html" class="active">Events</a>
     <a href="join-us.html">Join Us</a>
-    <a href="donate.html" class="donate-nav">
-      <i class="fa-solid fa-heart"></i> Donate Us
-    </a>
+    <a href="downloads.html">Downloads</a>
+    <a href="donate.html" class="donate-nav"><i class="fa-solid fa-heart"></i> Donate Us</a>
   </nav>
-
 </header>
 
 
-<!-- =========================================================
-     PAGE BANNER
-========================================================= -->
-
+<!-- BANNER -->
 <section class="page-banner">
-
   <div class="container">
+    <div class="banner-badge"><i class="fa-solid fa-calendar-days"></i> Events 2027</div>
 
-    <div class="banner-badge">
-      <i class="fa-solid fa-calendar-days"></i>
-      Events 2027
-    </div>
+    <h1>Events | <span class="hindi">कार्यक्रम</span></h1>
 
-    <h1>
-      Events | <span class="hindi">कार्यक्रम</span>
-    </h1>
+    <p class="hi">
+      जनवरी 2027 से प्रारंभ — प्रत्येक रविवार, बिहार के विभिन्न जिलों में।
+      पंजीकरण करने के लिए किसी भी कार्यक्रम में <strong style="color:#ffd83d;">"Register"</strong> बटन पर क्लिक करें।
+    </p>
 
-    <p class="hindi">
-      जनवरी 2027 से प्रारंभ — प्रत्येक रविवार, बिहार के विभिन्न जिलों में। किसी भी कार्यक्रम की पूरी गतिविधियाँ देखने के लिए उसके अंदर "कार्यक्रम की गतिविधियाँ" पर क्लिक करें।
+    <p>
+      Starting January 2027 — Every Sunday, across various districts of Bihar.
+      Click the <strong style="color:#ffd83d;">"Register"</strong> button on any event to register.
     </p>
 
     <div class="banner-stats">
@@ -1028,63 +1399,36 @@
       <i class="fa-solid fa-chevron-right"></i>
       <span>Events</span>
     </div>
-
   </div>
-
 </section>
 
 
-<!-- =========================================================
-     EVENTS WRAPPER
-========================================================= -->
-
+<!-- EVENTS WRAPPER -->
 <section class="events-wrapper">
-
   <div class="container">
 
     <div class="events-head">
       <span class="small-title">Upcoming Events</span>
-      <h2>
-        आगामी कार्यक्रम | <span>Upcoming Events</span>
-      </h2>
+      <h2>आगामी कार्यक्रम | <span>Upcoming Events</span></h2>
       <p class="hindi">
-        जनवरी 2027 से प्रत्येक रविवार को बिहार के एक जिले में हमारा कार्यक्रम आयोजित होगा। नीचे दिए फ़िल्टर से महीने के अनुसार कार्यक्रम देखें तथा प्रत्येक कार्ड में "कार्यक्रम की गतिविधियाँ" पर क्लिक करके पूरी जानकारी देखें।
+        जनवरी 2027 से प्रत्येक रविवार को बिहार के एक जिले में हमारा कार्यक्रम आयोजित होगा।
+        नीचे दिए फ़िल्टर से महीने के अनुसार कार्यक्रम देखें।
       </p>
     </div>
 
     <div class="filter-bar" role="tablist">
-
-      <button class="filter-btn active" data-filter="all" type="button">
-        <i class="fa-solid fa-layer-group"></i> All
-      </button>
-
-      <button class="filter-btn" data-filter="jan" type="button">
-        <i class="fa-regular fa-snowflake"></i> January
-      </button>
-
-      <button class="filter-btn" data-filter="feb" type="button">
-        <i class="fa-regular fa-heart"></i> February
-      </button>
-
-      <button class="filter-btn" data-filter="mar" type="button">
-        <i class="fa-solid fa-seedling"></i> March
-      </button>
-
-      <button class="filter-btn" data-filter="apr" type="button">
-        <i class="fa-regular fa-sun"></i> April
-      </button>
-
+      <button class="filter-btn active" data-filter="all" type="button"><i class="fa-solid fa-layer-group"></i> All</button>
+      <button class="filter-btn" data-filter="jan" type="button"><i class="fa-regular fa-snowflake"></i> January</button>
+      <button class="filter-btn" data-filter="feb" type="button"><i class="fa-regular fa-heart"></i> February</button>
+      <button class="filter-btn" data-filter="mar" type="button"><i class="fa-solid fa-seedling"></i> March</button>
+      <button class="filter-btn" data-filter="apr" type="button"><i class="fa-regular fa-sun"></i> April</button>
     </div>
 
 
     <div class="event-grid" id="eventGrid">
 
-
-      <!-- =============================================
-           EVENT 01 — Education (Patna) — 3 Jan 2027
-      ============================================= -->
-
-      <article class="event-card" data-month="jan" data-tone="gold">
+      <!-- EVENT 01 -->
+      <article class="event-card" data-month="jan" data-tone="gold" id="event-01">
         <div class="event-date">
           <span class="ed-serial">01/16</span>
           <span class="ed-day">Sunday</span>
@@ -1129,10 +1473,18 @@
 
           <div class="event-outcome">
             <strong><i class="fa-solid fa-bullseye"></i> अपेक्षित परिणाम | Expected Outcome</strong>
-            लगभग 100–150 बच्चों को शैक्षणिक सामग्री एवं मार्गदर्शन मिलेगा। 20–30 ड्रॉपआउट बच्चे शिक्षा से जुड़ सकेंगे तथा अभिभावकों में शिक्षा के प्रति जागरूकता बढ़ेगी।
+            लगभग 100–150 बच्चों को शैक्षणिक सामग्री एवं मार्गदर्शन मिलेगा। 20–30 ड्रॉपआउट बच्चे शिक्षा से जुड़ सकेंगे।
           </div>
 
           <div class="event-actions">
+            <button type="button" class="btn btn-register open-reg-popup"
+                    data-event-id="01"
+                    data-event-name="शैक्षणिक सामग्री वितरण एवं शिक्षा जागरूकता शिविर"
+                    data-event-date="03 January 2027"
+                    data-event-district="पटना"
+                    data-event-time="10:00 AM – 3:00 PM">
+              <i class="fa-solid fa-user-plus"></i> Register
+            </button>
             <a href="donate.html" class="btn btn-red"><i class="fa-solid fa-heart"></i> Support</a>
             <a href="join-us.html" class="btn btn-outline"><i class="fa-solid fa-users"></i> Volunteer</a>
           </div>
@@ -1140,11 +1492,8 @@
       </article>
 
 
-      <!-- =============================================
-           EVENT 02 — Women (Muzaffarpur) — 10 Jan 2027
-      ============================================= -->
-
-      <article class="event-card" data-month="jan" data-tone="red">
+      <!-- EVENT 02 -->
+      <article class="event-card" data-month="jan" data-tone="red" id="event-02">
         <div class="event-date">
           <span class="ed-serial">02/16</span>
           <span class="ed-day">Sunday</span>
@@ -1189,10 +1538,18 @@
 
           <div class="event-outcome">
             <strong><i class="fa-solid fa-bullseye"></i> अपेक्षित परिणाम | Expected Outcome</strong>
-            लगभग 80–100 महिलाएँ कौशल प्रशिक्षण से लाभान्वित होंगी। 15–20 महिलाएँ स्वरोजगार अपनाने के लिए प्रेरित होंगी तथा 5–10 SHG समूह नए उत्पाद बनाने की दिशा में आगे बढ़ेंगे।
+            लगभग 80–100 महिलाएँ कौशल प्रशिक्षण से लाभान्वित होंगी। 15–20 महिलाएँ स्वरोजगार अपनाने के लिए प्रेरित होंगी।
           </div>
 
           <div class="event-actions">
+            <button type="button" class="btn btn-register open-reg-popup"
+                    data-event-id="02"
+                    data-event-name="महिला कौशल विकास एवं स्वरोजगार प्रशिक्षण शिविर"
+                    data-event-date="10 January 2027"
+                    data-event-district="मुज़फ़्फ़रपुर"
+                    data-event-time="10:00 AM – 3:00 PM">
+              <i class="fa-solid fa-user-plus"></i> Register
+            </button>
             <a href="donate.html" class="btn btn-red"><i class="fa-solid fa-heart"></i> Support</a>
             <a href="join-us.html" class="btn btn-outline"><i class="fa-solid fa-users"></i> Volunteer</a>
           </div>
@@ -1200,11 +1557,8 @@
       </article>
 
 
-      <!-- =============================================
-           EVENT 03 — Health (Gaya) — 17 Jan 2027
-      ============================================= -->
-
-      <article class="event-card" data-month="jan" data-tone="green">
+      <!-- EVENT 03 -->
+      <article class="event-card" data-month="jan" data-tone="green" id="event-03">
         <div class="event-date">
           <span class="ed-serial">03/16</span>
           <span class="ed-day">Sunday</span>
@@ -1243,7 +1597,7 @@
                   <li><i class="fa-solid fa-circle-check"></i><span>निःशुल्क आवश्यक दवाओं का वितरण एवं दवा सेवन की विधि पर मार्गदर्शन।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>रक्तदान जागरूकता काउंटर तथा रक्तदाताओं का पंजीकरण।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>स्वच्छता, पोषण, संतुलित आहार एवं स्वस्थ जीवनशैली पर जागरूकता सत्र।</span></li>
-                  <li><i class="fa-solid fa-circle-check"></i><span>गंभीर रोगियों को जिला अस्पताल/सदर अस्पताल तक रेफर करने एवं आगे की सहायता में मार्गदर्शन।</span></li>
+                  <li><i class="fa-solid fa-circle-check"></i><span>गंभीर रोगियों को जिला अस्पताल तक रेफर करने एवं आगे की सहायता में मार्गदर्शन।</span></li>
                 </ul>
               </div>
             </div>
@@ -1251,10 +1605,18 @@
 
           <div class="event-outcome">
             <strong><i class="fa-solid fa-bullseye"></i> अपेक्षित परिणाम | Expected Outcome</strong>
-            लगभग 200–300 लोग निःशुल्क स्वास्थ्य जाँच से लाभान्वित होंगे। 50+ लोगों को चश्मा, 100+ को निःशुल्क दवा मिलेगी तथा 30+ गंभीर मामले उचित अस्पताल तक पहुँचेंगे।
+            लगभग 200–300 लोग निःशुल्क स्वास्थ्य जाँच से लाभान्वित होंगे। 50+ लोगों को चश्मा, 100+ को निःशुल्क दवा मिलेगी।
           </div>
 
           <div class="event-actions">
+            <button type="button" class="btn btn-register open-reg-popup"
+                    data-event-id="03"
+                    data-event-name="निःशुल्क स्वास्थ्य जाँच एवं चिकित्सा शिविर"
+                    data-event-date="17 January 2027"
+                    data-event-district="गया"
+                    data-event-time="9:00 AM – 4:00 PM">
+              <i class="fa-solid fa-user-plus"></i> Register
+            </button>
             <a href="donate.html" class="btn btn-red"><i class="fa-solid fa-heart"></i> Support</a>
             <a href="join-us.html" class="btn btn-outline"><i class="fa-solid fa-users"></i> Volunteer</a>
           </div>
@@ -1262,11 +1624,8 @@
       </article>
 
 
-      <!-- =============================================
-           EVENT 04 — Poor & Needy (Bhagalpur) — 24 Jan 2027
-      ============================================= -->
-
-      <article class="event-card" data-month="jan" data-tone="red">
+      <!-- EVENT 04 -->
+      <article class="event-card" data-month="jan" data-tone="red" id="event-04">
         <div class="event-date">
           <span class="ed-serial">04/16</span>
           <span class="ed-day">Sunday</span>
@@ -1301,7 +1660,7 @@
                   <li><i class="fa-solid fa-circle-check"></i><span>बच्चों एवं बुजुर्गों के लिए कपड़े, जूते-चप्पल एवं मौसमी सामग्री का वितरण।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>ठंड के मौसम को देखते हुए गरीब परिवारों को कंबल एवं शॉल का वितरण।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>बेघर एवं सड़क किनारे रहने वाले लोगों के लिए सामुदायिक भोजन कार्यक्रम।</span></li>
-                  <li><i class="fa-solid fa-circle-check"></i><span>जरूरतमंद परिवारों को सरकारी योजनाओं (राशन कार्ड, आयुष्मान भारत, पेंशन) से जोड़ने का शिविर।</span></li>
+                  <li><i class="fa-solid fa-circle-check"></i><span>जरूरतमंद परिवारों को सरकारी योजनाओं से जोड़ने का शिविर।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>महिलाओं एवं बच्चों के लिए स्वास्थ्य एवं पोषण संबंधी परामर्श काउंटर।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>गरीब बच्चों को स्कूल बैग एवं शैक्षणिक सामग्री का वितरण।</span></li>
                 </ul>
@@ -1311,10 +1670,18 @@
 
           <div class="event-outcome">
             <strong><i class="fa-solid fa-bullseye"></i> अपेक्षित परिणाम | Expected Outcome</strong>
-            लगभग 150–200 जरूरतमंद परिवारों को राशन किट मिलेगी। 100+ कंबल एवं 200+ कपड़े वितरित होंगे तथा 50+ परिवार सरकारी योजनाओं से जुड़ेंगे।
+            लगभग 150–200 जरूरतमंद परिवारों को राशन किट मिलेगी। 100+ कंबल एवं 200+ कपड़े वितरित होंगे।
           </div>
 
           <div class="event-actions">
+            <button type="button" class="btn btn-register open-reg-popup"
+                    data-event-id="04"
+                    data-event-name="राशन एवं आवश्यक सामग्री वितरण कार्यक्रम"
+                    data-event-date="24 January 2027"
+                    data-event-district="भागलपुर"
+                    data-event-time="10:00 AM – 3:00 PM">
+              <i class="fa-solid fa-user-plus"></i> Register
+            </button>
             <a href="donate.html" class="btn btn-red"><i class="fa-solid fa-heart"></i> Support</a>
             <a href="join-us.html" class="btn btn-outline"><i class="fa-solid fa-users"></i> Volunteer</a>
           </div>
@@ -1322,11 +1689,8 @@
       </article>
 
 
-      <!-- =============================================
-           EVENT 05 — Disability (Darbhanga) — 31 Jan 2027
-      ============================================= -->
-
-      <article class="event-card" data-month="jan" data-tone="green">
+      <!-- EVENT 05 -->
+      <article class="event-card" data-month="jan" data-tone="green" id="event-05">
         <div class="event-date">
           <span class="ed-serial">05/16</span>
           <span class="ed-day">Sunday</span>
@@ -1334,7 +1698,7 @@
           <span class="ed-month">Jan 2027</span>
         </div>
         <div class="event-body">
-          <span class="event-area"><i class="fa-solid fa-wheelchair"></i> दिव्यांगजन कल्याण एवं सशक्तिकरण</span>
+          <span class="event-area"><i class="fa-solid fa-wheelchair"></i> दिव्यांगजन कल्याण</span>
           <h3 class="event-title">दिव्यांगजन सहायता एवं सहायक उपकरण वितरण कार्यक्रम</h3>
           <p class="event-title-en">Disability Support &amp; Assistive Device Distribution</p>
 
@@ -1371,10 +1735,18 @@
 
           <div class="event-outcome">
             <strong><i class="fa-solid fa-bullseye"></i> अपेक्षित परिणाम | Expected Outcome</strong>
-            लगभग 100–120 दिव्यांगजनों को सहायक उपकरण एवं सहायता मिलेगी। 50+ दिव्यांग प्रमाण पत्र बनेंगे तथा 20+ लोग रोजगार/स्वरोजगार से जुड़ सकेंगे।
+            लगभग 100–120 दिव्यांगजनों को सहायक उपकरण एवं सहायता मिलेगी। 50+ दिव्यांग प्रमाण पत्र बनेंगे।
           </div>
 
           <div class="event-actions">
+            <button type="button" class="btn btn-register open-reg-popup"
+                    data-event-id="05"
+                    data-event-name="दिव्यांगजन सहायता एवं सहायक उपकरण वितरण कार्यक्रम"
+                    data-event-date="31 January 2027"
+                    data-event-district="दरभंगा"
+                    data-event-time="10:00 AM – 3:00 PM">
+              <i class="fa-solid fa-user-plus"></i> Register
+            </button>
             <a href="donate.html" class="btn btn-red"><i class="fa-solid fa-heart"></i> Support</a>
             <a href="join-us.html" class="btn btn-outline"><i class="fa-solid fa-users"></i> Volunteer</a>
           </div>
@@ -1382,11 +1754,8 @@
       </article>
 
 
-      <!-- =============================================
-           EVENT 06 — Senior Citizens (Purnia) — 7 Feb 2027
-      ============================================= -->
-
-      <article class="event-card" data-month="feb" data-tone="gold">
+      <!-- EVENT 06 -->
+      <article class="event-card" data-month="feb" data-tone="gold" id="event-06">
         <div class="event-date">
           <span class="ed-serial">06/16</span>
           <span class="ed-day">Sunday</span>
@@ -1420,10 +1789,10 @@
                   <li><i class="fa-solid fa-circle-check"></i><span>निःशुल्क स्वास्थ्य जाँच — BP, शुगर, हृदय जाँच एवं नेत्र परीक्षण।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>निःशुल्क आवश्यक दवाओं का वितरण एवं दवा सेवन पर मार्गदर्शन।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>जरूरतमंद बुजुर्गों को भोजन किट, कपड़े एवं कंबल का वितरण।</span></li>
-                  <li><i class="fa-solid fa-circle-check"></i><span>सरकारी पेंशन (वृद्धावस्था पेंशन) एवं आयुष्मान भारत योजना की जानकारी एवं आवेदन सहायता।</span></li>
+                  <li><i class="fa-solid fa-circle-check"></i><span>सरकारी पेंशन एवं आयुष्मान भारत योजना की जानकारी एवं आवेदन सहायता।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>अकेले रहने वाले बुजुर्गों के लिए सामुदायिक सहायता नेटवर्क की जानकारी।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>वरिष्ठ नागरिक अधिकारों एवं सामाजिक सुरक्षा पर जागरूकता सत्र।</span></li>
-                  <li><i class="fa-solid fa-circle-check"></i><span>बुजुर्गों के अनुभव एवं कहानियों पर आधारित मिलन समारोह — मानसिक एवं सामाजिक सहयोग।</span></li>
+                  <li><i class="fa-solid fa-circle-check"></i><span>बुजुर्गों के अनुभव एवं कहानियों पर आधारित मिलन समारोह।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>डिजिटल साक्षरता काउंटर — मोबाइल, वीडियो कॉल एवं सरकारी ऐप के उपयोग की जानकारी।</span></li>
                 </ul>
               </div>
@@ -1432,10 +1801,18 @@
 
           <div class="event-outcome">
             <strong><i class="fa-solid fa-bullseye"></i> अपेक्षित परिणाम | Expected Outcome</strong>
-            लगभग 150–200 वरिष्ठ नागरिक लाभान्वित होंगे। 50+ बुजुर्गों को पेंशन योजना से जोड़ा जाएगा तथा सामाजिक एवं भावनात्मक रूप से उनका मनोबल बढ़ेगा।
+            लगभग 150–200 वरिष्ठ नागरिक लाभान्वित होंगे। 50+ बुजुर्गों को पेंशन योजना से जोड़ा जाएगा।
           </div>
 
           <div class="event-actions">
+            <button type="button" class="btn btn-register open-reg-popup"
+                    data-event-id="06"
+                    data-event-name="वृद्धजन सम्मान एवं स्वास्थ्य सहायता कार्यक्रम"
+                    data-event-date="07 February 2027"
+                    data-event-district="पूर्णिया"
+                    data-event-time="10:00 AM – 3:00 PM">
+              <i class="fa-solid fa-user-plus"></i> Register
+            </button>
             <a href="donate.html" class="btn btn-red"><i class="fa-solid fa-heart"></i> Support</a>
             <a href="join-us.html" class="btn btn-outline"><i class="fa-solid fa-users"></i> Volunteer</a>
           </div>
@@ -1443,11 +1820,8 @@
       </article>
 
 
-      <!-- =============================================
-           EVENT 07 — Youth & Skill (Saharsa) — 14 Feb 2027
-      ============================================= -->
-
-      <article class="event-card" data-month="feb" data-tone="green">
+      <!-- EVENT 07 -->
+      <article class="event-card" data-month="feb" data-tone="green" id="event-07">
         <div class="event-date">
           <span class="ed-serial">07/16</span>
           <span class="ed-day">Sunday</span>
@@ -1482,7 +1856,7 @@
                   <li><i class="fa-solid fa-circle-check"></i><span>साक्षात्कार (Interview) की तैयारी — रिज़्यूमे बनाना एवं सामान्य प्रश्नों की तैयारी।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>प्रतियोगी परीक्षाओं (SSC, BPSC, Railway, Bank) की तैयारी पर मार्गदर्शन।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>कंप्यूटर, डिजिटल साक्षरता एवं इंटरनेट आधारित रोजगार के अवसरों की जानकारी।</span></li>
-                  <li><i class="fa-solid fa-circle-check"></i><span>उद्यमिता (Entrepreneurship) एवं स्टार्टअप आइडिया पर सत्र — युवाओं को स्वरोजगार के लिए प्रेरणा।</span></li>
+                  <li><i class="fa-solid fa-circle-check"></i><span>उद्यमिता (Entrepreneurship) एवं स्टार्टअप आइडिया पर सत्र।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>नेतृत्व विकास, टीम वर्क एवं जिम्मेदारी पर प्रेरक वक्तव्य।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>खेल एवं प्रतिभा विकास कार्यक्रम — युवाओं की छुपी प्रतिभाओं को मंच।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>युवा स्वयंसेवक पंजीकरण काउंटर — समाज सेवा से जुड़ने का अवसर।</span></li>
@@ -1493,10 +1867,18 @@
 
           <div class="event-outcome">
             <strong><i class="fa-solid fa-bullseye"></i> अपेक्षित परिणाम | Expected Outcome</strong>
-            लगभग 150–200 युवा इस कार्यशाला से लाभान्वित होंगे। 30–40 युवा रोजगार के लिए तैयार होंगे तथा 20+ युवा स्वरोजगार/स्टार्टअप की दिशा में आगे बढ़ेंगे।
+            लगभग 150–200 युवा लाभान्वित होंगे। 30–40 युवा रोजगार के लिए तैयार होंगे।
           </div>
 
           <div class="event-actions">
+            <button type="button" class="btn btn-register open-reg-popup"
+                    data-event-id="07"
+                    data-event-name="युवा कौशल विकास एवं करियर मार्गदर्शन कार्यशाला"
+                    data-event-date="14 February 2027"
+                    data-event-district="सहरसा"
+                    data-event-time="10:00 AM – 4:00 PM">
+              <i class="fa-solid fa-user-plus"></i> Register
+            </button>
             <a href="donate.html" class="btn btn-red"><i class="fa-solid fa-heart"></i> Support</a>
             <a href="join-us.html" class="btn btn-outline"><i class="fa-solid fa-users"></i> Volunteer</a>
           </div>
@@ -1504,11 +1886,8 @@
       </article>
 
 
-      <!-- =============================================
-           EVENT 08 — Employment (Samastipur) — 21 Feb 2027
-      ============================================= -->
-
-      <article class="event-card" data-month="feb" data-tone="red">
+      <!-- EVENT 08 -->
+      <article class="event-card" data-month="feb" data-tone="red" id="event-08">
         <div class="event-date">
           <span class="ed-serial">08/16</span>
           <span class="ed-day">Sunday</span>
@@ -1516,7 +1895,7 @@
           <span class="ed-month">Feb 2027</span>
         </div>
         <div class="event-body">
-          <span class="event-area"><i class="fa-solid fa-briefcase"></i> रोजगार, स्वरोजगार एवं आजीविका</span>
+          <span class="event-area"><i class="fa-solid fa-briefcase"></i> रोजगार एवं आजीविका</span>
           <h3 class="event-title">रोजगार मेला एवं स्वरोजगार मार्गदर्शन शिविर</h3>
           <p class="event-title-en">Job Fair &amp; Self-Employment Guidance Camp</p>
 
@@ -1541,7 +1920,7 @@
                   <li><i class="fa-solid fa-circle-check"></i><span>स्थानीय एवं आस-पास के रोजगारदाताओं के साथ रोजगार मेले का आयोजन।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>ITI, Polytechnic, कंप्यूटर एवं तकनीकी कौशल के लिए प्रशिक्षण केंद्रों की जानकारी।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>ऑनलाइन नौकरी पोर्टल्स (NCS, Indeed, LinkedIn) पर रजिस्ट्रेशन एवं आवेदन की विधि।</span></li>
-                  <li><i class="fa-solid fa-circle-check"></i><span>स्वरोजगार मार्गदर्शन — छोटे व्यवसाय (दुकान, सर्विस सेंटर, फूड स्टॉल) की योजना बनाना।</span></li>
+                  <li><i class="fa-solid fa-circle-check"></i><span>स्वरोजगार मार्गदर्शन — छोटे व्यवसाय की योजना बनाना।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>MUDRA लोन, PMEGP, Stand Up India जैसी सरकारी योजनाओं की जानकारी एवं आवेदन सहायता।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>बैंकिंग एवं डिजिटल भुगतान (UPI, Paytm, BHIM) पर व्यावहारिक प्रशिक्षण।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>वित्तीय साक्षरता — बचत, निवेश एवं बजट बनाने पर सत्र।</span></li>
@@ -1555,10 +1934,18 @@
 
           <div class="event-outcome">
             <strong><i class="fa-solid fa-bullseye"></i> अपेक्षित परिणाम | Expected Outcome</strong>
-            50–70 लोगों को मौके पर नौकरी मिलने की संभावना। 100+ युवाओं को स्वरोजगार एवं सरकारी योजनाओं की जानकारी मिलेगी तथा 30+ को लोन प्रक्रिया में सहायता मिलेगी।
+            50–70 लोगों को मौके पर नौकरी मिलने की संभावना। 100+ युवाओं को स्वरोजगार की जानकारी मिलेगी।
           </div>
 
           <div class="event-actions">
+            <button type="button" class="btn btn-register open-reg-popup"
+                    data-event-id="08"
+                    data-event-name="रोजगार मेला एवं स्वरोजगार मार्गदर्शन शिविर"
+                    data-event-date="21 February 2027"
+                    data-event-district="समस्तीपुर"
+                    data-event-time="10:00 AM – 4:00 PM">
+              <i class="fa-solid fa-user-plus"></i> Register
+            </button>
             <a href="donate.html" class="btn btn-red"><i class="fa-solid fa-heart"></i> Support</a>
             <a href="join-us.html" class="btn btn-outline"><i class="fa-solid fa-users"></i> Volunteer</a>
           </div>
@@ -1566,11 +1953,8 @@
       </article>
 
 
-      <!-- =============================================
-           EVENT 09 — Rural Development (Madhubani) — 28 Feb 2027
-      ============================================= -->
-
-      <article class="event-card" data-month="feb" data-tone="gold">
+      <!-- EVENT 09 -->
+      <article class="event-card" data-month="feb" data-tone="gold" id="event-09">
         <div class="event-date">
           <span class="ed-serial">09/16</span>
           <span class="ed-day">Sunday</span>
@@ -1578,7 +1962,7 @@
           <span class="ed-month">Feb 2027</span>
         </div>
         <div class="event-body">
-          <span class="event-area"><i class="fa-solid fa-house-chimney"></i> ग्रामीण विकास एवं ग्राम उत्थान</span>
+          <span class="event-area"><i class="fa-solid fa-house-chimney"></i> ग्रामीण विकास</span>
           <h3 class="event-title">ग्रामीण विकास एवं जन-जागरूकता अभियान</h3>
           <p class="event-title-en">Rural Development &amp; Public Awareness Campaign</p>
 
@@ -1605,10 +1989,10 @@
                   <li><i class="fa-solid fa-circle-check"></i><span>ग्रामीण स्वास्थ्य शिविर — सामान्य जाँच, दवा वितरण एवं स्वास्थ्य परामर्श।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>स्वच्छता अभियान — गाँव में सफाई अभियान एवं कचरा प्रबंधन पर जागरूकता।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>पेयजल एवं जल स्रोतों की सुरक्षा पर चर्चा एवं समाधान निकालना।</span></li>
-                  <li><i class="fa-solid fa-circle-check"></i><span>महिला सशक्तिकरण सत्र — स्वयं सहायता समूहों का गठन एवं सशक्तिकरण।</span></li>
-                  <li><i class="fa-solid fa-circle-check"></i><span>युवाओं के लिए कौशल एवं रोजगार की जानकारी — स्थानीय रोजगार के अवसर।</span></li>
+                  <li><i class="fa-solid fa-circle-check"></i><span>महिला सशक्तिकरण सत्र — स्वयं सहायता समूहों का गठन।</span></li>
+                  <li><i class="fa-solid fa-circle-check"></i><span>युवाओं के लिए कौशल एवं रोजगार की जानकारी।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>किसानों के लिए कृषि सलाह एवं सरकारी कृषि योजनाओं की जानकारी।</span></li>
-                  <li><i class="fa-solid fa-circle-check"></i><span>सरकारी योजनाओं की जानकारी काउंटर — राशन कार्ड, आवास, पेंशन, आयुष्मान।</span></li>
+                  <li><i class="fa-solid fa-circle-check"></i><span>सरकारी योजनाओं की जानकारी काउंटर।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>पर्यावरण संरक्षण — गाँव में वृक्षारोपण एवं हरित पहल।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>ग्राम स्तर पर जन-जागरूकता रैली एवं सांस्कृतिक कार्यक्रम।</span></li>
                 </ul>
@@ -1618,10 +2002,18 @@
 
           <div class="event-outcome">
             <strong><i class="fa-solid fa-bullseye"></i> अपेक्षित परिणाम | Expected Outcome</strong>
-            पूरा गाँव इस अभियान से जुड़ेगा। 200+ ग्रामीणों को सरकारी योजनाओं, स्वास्थ्य एवं शिक्षा की जानकारी मिलेगी तथा गाँव में सामूहिक विकास की भावना बढ़ेगी।
+            पूरा गाँव इस अभियान से जुड़ेगा। 200+ ग्रामीणों को सरकारी योजनाओं, स्वास्थ्य एवं शिक्षा की जानकारी मिलेगी।
           </div>
 
           <div class="event-actions">
+            <button type="button" class="btn btn-register open-reg-popup"
+                    data-event-id="09"
+                    data-event-name="ग्रामीण विकास एवं जन-जागरूकता अभियान"
+                    data-event-date="28 February 2027"
+                    data-event-district="मधुबनी"
+                    data-event-time="10:00 AM – 3:00 PM">
+              <i class="fa-solid fa-user-plus"></i> Register
+            </button>
             <a href="donate.html" class="btn btn-red"><i class="fa-solid fa-heart"></i> Support</a>
             <a href="join-us.html" class="btn btn-outline"><i class="fa-solid fa-users"></i> Volunteer</a>
           </div>
@@ -1629,11 +2021,8 @@
       </article>
 
 
-      <!-- =============================================
-           EVENT 10 — Agriculture (Saran/Chhapra) — 7 Mar 2027
-      ============================================= -->
-
-      <article class="event-card" data-month="mar" data-tone="green">
+      <!-- EVENT 10 -->
+      <article class="event-card" data-month="mar" data-tone="green" id="event-10">
         <div class="event-date">
           <span class="ed-serial">10/16</span>
           <span class="ed-day">Sunday</span>
@@ -1664,14 +2053,14 @@
               <div class="activities-inner">
                 <ul class="event-points">
                   <li><i class="fa-solid fa-circle-check"></i><span>कृषि वैज्ञानिकों द्वारा आधुनिक खेती की तकनीकों पर व्याख्यान एवं प्रशिक्षण।</span></li>
-                  <li><i class="fa-solid fa-circle-check"></i><span>जैविक एवं प्राकृतिक खेती पर विशेष सत्र — रासायनिक उर्वरकों को कम करने की विधि।</span></li>
-                  <li><i class="fa-solid fa-circle-check"></i><span>उन्नत किस्म के बीज, जैविक खाद एवं आधुनिक कृषि यंत्रों की जानकारी एवं नमूना प्रदर्शनी।</span></li>
-                  <li><i class="fa-solid fa-circle-check"></i><span>मृदा स्वास्थ्य कार्ड (Soil Health Card) की जाँच एवं उपयोग पर जानकारी।</span></li>
-                  <li><i class="fa-solid fa-circle-check"></i><span>जल संरक्षण एवं ड्रिप/स्प्रिंकलर सिंचाई के लाभ पर मार्गदर्शन।</span></li>
+                  <li><i class="fa-solid fa-circle-check"></i><span>जैविक एवं प्राकृतिक खेती पर विशेष सत्र।</span></li>
+                  <li><i class="fa-solid fa-circle-check"></i><span>उन्नत किस्म के बीज, जैविक खाद एवं आधुनिक कृषि यंत्रों की जानकारी।</span></li>
+                  <li><i class="fa-solid fa-circle-check"></i><span>मृदा स्वास्थ्य कार्ड की जाँच एवं उपयोग पर जानकारी।</span></li>
+                  <li><i class="fa-solid fa-circle-check"></i><span>जल संरक्षण एवं ड्रिप/स्प्रिंकलर सिंचाई के लाभ।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>बागवानी, फल-सब्जी उत्पादन एवं पशुपालन पर अतिरिक्त आय के सुझाव।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>किसान कौशल विकास एवं कृषि आधारित स्वरोजगार की जानकारी।</span></li>
-                  <li><i class="fa-solid fa-circle-check"></i><span>किसान समूह (FPO) के गठन एवं कृषि बाजार (Mandi, eNAM) तक पहुँच पर जानकारी।</span></li>
-                  <li><i class="fa-solid fa-circle-check"></i><span>सरकारी कृषि योजनाओं (PM-Kisan, PMFBY, KCC) की जानकारी एवं आवेदन सहायता।</span></li>
+                  <li><i class="fa-solid fa-circle-check"></i><span>किसान समूह (FPO) के गठन एवं कृषि बाजार तक पहुँच पर जानकारी।</span></li>
+                  <li><i class="fa-solid fa-circle-check"></i><span>सरकारी कृषि योजनाओं की जानकारी एवं आवेदन सहायता।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>पशुपालन एवं मत्स्य पालन से अतिरिक्त आय के अवसरों पर चर्चा।</span></li>
                 </ul>
               </div>
@@ -1680,10 +2069,18 @@
 
           <div class="event-outcome">
             <strong><i class="fa-solid fa-bullseye"></i> अपेक्षित परिणाम | Expected Outcome</strong>
-            लगभग 150–200 किसान आधुनिक खेती की तकनीकों से लाभान्वित होंगे। 50+ किसान जैविक खेती अपनाने में रुचि दिखाएँगे तथा 30+ किसान FPO से जुड़ेंगे।
+            लगभग 150–200 किसान आधुनिक खेती की तकनीकों से लाभान्वित होंगे।
           </div>
 
           <div class="event-actions">
+            <button type="button" class="btn btn-register open-reg-popup"
+                    data-event-id="10"
+                    data-event-name="किसान जागरूकता एवं आधुनिक कृषि प्रशिक्षण शिविर"
+                    data-event-date="07 March 2027"
+                    data-event-district="सारण (छपरा)"
+                    data-event-time="9:00 AM – 3:00 PM">
+              <i class="fa-solid fa-user-plus"></i> Register
+            </button>
             <a href="donate.html" class="btn btn-red"><i class="fa-solid fa-heart"></i> Support</a>
             <a href="join-us.html" class="btn btn-outline"><i class="fa-solid fa-users"></i> Volunteer</a>
           </div>
@@ -1691,11 +2088,8 @@
       </article>
 
 
-      <!-- =============================================
-           EVENT 11 — Environment (Nalanda) — 14 Mar 2027
-      ============================================= -->
-
-      <article class="event-card" data-month="mar" data-tone="green">
+      <!-- EVENT 11 -->
+      <article class="event-card" data-month="mar" data-tone="green" id="event-11">
         <div class="event-date">
           <span class="ed-serial">11/16</span>
           <span class="ed-day">Sunday</span>
@@ -1726,11 +2120,11 @@
               <div class="activities-inner">
                 <ul class="event-points">
                   <li><i class="fa-solid fa-circle-check"></i><span>सामूहिक वृक्षारोपण अभियान — छायादार, फलदार एवं औषधीय पौधों का रोपण।</span></li>
-                  <li><i class="fa-solid fa-circle-check"></i><span>स्थानीय निवासियों को निःशुल्क पौधों का वितरण एवं देखभाल की जानकारी।</span></li>
+                  <li><i class="fa-solid fa-circle-check"></i><span>स्थानीय निवासियों को निःशुल्क पौधों का वितरण।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>वन संरक्षण एवं जैव विविधता पर जागरूकता सत्र।</span></li>
-                  <li><i class="fa-solid fa-circle-check"></i><span>जल संरक्षण अभियान — तालाब, कुआँ एवं जल स्रोतों की सफाई एवं संरक्षण।</span></li>
-                  <li><i class="fa-solid fa-circle-check"></i><span>वर्षा जल संचयन (Rainwater Harvesting) की विधि पर व्याख्यान एवं डेमो।</span></li>
-                  <li><i class="fa-solid fa-circle-check"></i><span>प्लास्टिक प्रदूषण के विरुद्ध जागरूकता रैली एवं प्लास्टिक मुक्त गाँव का संकल्प।</span></li>
+                  <li><i class="fa-solid fa-circle-check"></i><span>जल संरक्षण अभियान — तालाब, कुआँ एवं जल स्रोतों की सफाई।</span></li>
+                  <li><i class="fa-solid fa-circle-check"></i><span>वर्षा जल संचयन की विधि पर व्याख्यान एवं डेमो।</span></li>
+                  <li><i class="fa-solid fa-circle-check"></i><span>प्लास्टिक प्रदूषण के विरुद्ध जागरूकता रैली।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>कचरा पृथक्करण एवं कंपोस्ट खाद बनाने का व्यावहारिक प्रशिक्षण।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>स्कूली बच्चों के लिए पर्यावरण शिक्षा कार्यक्रम एवं चित्रकला प्रतियोगिता।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>ऊर्जा बचत, सौर ऊर्जा एवं नवीकरणीय ऊर्जा पर जागरूकता।</span></li>
@@ -1742,10 +2136,18 @@
 
           <div class="event-outcome">
             <strong><i class="fa-solid fa-bullseye"></i> अपेक्षित परिणाम | Expected Outcome</strong>
-            500+ पेड़ लगाए जाएँगे, 1000+ पौधे वितरित होंगे तथा 200+ परिवार जल संरक्षण एवं प्लास्टिक मुक्ति के संकल्प से जुड़ेंगे।
+            500+ पेड़ लगाए जाएँगे, 1000+ पौधे वितरित होंगे।
           </div>
 
           <div class="event-actions">
+            <button type="button" class="btn btn-register open-reg-popup"
+                    data-event-id="11"
+                    data-event-name="वृक्षारोपण एवं जल संरक्षण अभियान"
+                    data-event-date="14 March 2027"
+                    data-event-district="नालंदा"
+                    data-event-time="8:00 AM – 2:00 PM">
+              <i class="fa-solid fa-user-plus"></i> Register
+            </button>
             <a href="donate.html" class="btn btn-red"><i class="fa-solid fa-heart"></i> Support</a>
             <a href="join-us.html" class="btn btn-outline"><i class="fa-solid fa-users"></i> Volunteer</a>
           </div>
@@ -1753,11 +2155,8 @@
       </article>
 
 
-      <!-- =============================================
-           EVENT 12 — Sanitation & Nutrition (Begusarai) — 21 Mar 2027
-      ============================================= -->
-
-      <article class="event-card" data-month="mar" data-tone="red">
+      <!-- EVENT 12 -->
+      <article class="event-card" data-month="mar" data-tone="red" id="event-12">
         <div class="event-date">
           <span class="ed-serial">12/16</span>
           <span class="ed-day">Sunday</span>
@@ -1793,11 +2192,11 @@
                   <li><i class="fa-solid fa-circle-check"></i><span>स्वच्छ पेयजल के महत्व एवं जल शुद्धिकरण की विधियों की जानकारी।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>जल स्रोतों की सफाई एवं उनके संरक्षण पर विशेष सत्र।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>कचरा पृथक्करण एवं घर पर कंपोस्ट बनाने की विधि का प्रशिक्षण।</span></li>
-                  <li><i class="fa-solid fa-circle-check"></i><span>प्लास्टिक के उपयोग को कम करने एवं कपड़े के थैले के उपयोग पर जोर।</span></li>
-                  <li><i class="fa-solid fa-circle-check"></i><span>बच्चों में स्वच्छता शिक्षा — स्कूल जाने से पहले की दिनचर्या पर सत्र।</span></li>
+                  <li><i class="fa-solid fa-circle-check"></i><span>प्लास्टिक के उपयोग को कम करने पर जोर।</span></li>
+                  <li><i class="fa-solid fa-circle-check"></i><span>बच्चों में स्वच्छता शिक्षा।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>पोषण जागरूकता — संतुलित आहार, मौसमी फल-सब्जियों का महत्व।</span></li>
-                  <li><i class="fa-solid fa-circle-check"></i><span>कुपोषण (Malnutrition) की पहचान एवं रोकथाम पर विशेषज्ञ व्याख्यान।</span></li>
-                  <li><i class="fa-solid fa-circle-check"></i><span>महिलाओं एवं माताओं के लिए पोषण परामर्श — गर्भवती एवं स्तनपान कराने वाली महिलाओं के लिए विशेष सत्र।</span></li>
+                  <li><i class="fa-solid fa-circle-check"></i><span>कुपोषण की पहचान एवं रोकथाम पर विशेषज्ञ व्याख्यान।</span></li>
+                  <li><i class="fa-solid fa-circle-check"></i><span>महिलाओं एवं माताओं के लिए पोषण परामर्श।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>बच्चों के लिए पोषण किट एवं स्वस्थ नाश्ते के नमूने का वितरण।</span></li>
                 </ul>
               </div>
@@ -1806,10 +2205,18 @@
 
           <div class="event-outcome">
             <strong><i class="fa-solid fa-bullseye"></i> अपेक्षित परिणाम | Expected Outcome</strong>
-            300+ लोग स्वच्छता एवं पोषण की जानकारी से लाभान्वित होंगे। 100+ बच्चों को पोषण किट मिलेगी तथा 50+ महिलाएँ पोषण परामर्श से जुड़ेंगी।
+            300+ लोग स्वच्छता एवं पोषण की जानकारी से लाभान्वित होंगे।
           </div>
 
           <div class="event-actions">
+            <button type="button" class="btn btn-register open-reg-popup"
+                    data-event-id="12"
+                    data-event-name="स्वच्छता एवं पोषण जागरूकता अभियान"
+                    data-event-date="21 March 2027"
+                    data-event-district="बेगूसराय"
+                    data-event-time="10:00 AM – 3:00 PM">
+              <i class="fa-solid fa-user-plus"></i> Register
+            </button>
             <a href="donate.html" class="btn btn-red"><i class="fa-solid fa-heart"></i> Support</a>
             <a href="join-us.html" class="btn btn-outline"><i class="fa-solid fa-users"></i> Volunteer</a>
           </div>
@@ -1817,11 +2224,8 @@
       </article>
 
 
-      <!-- =============================================
-           EVENT 13 — Animal Welfare (Katihar) — 28 Mar 2027
-      ============================================= -->
-
-      <article class="event-card" data-month="mar" data-tone="gold">
+      <!-- EVENT 13 -->
+      <article class="event-card" data-month="mar" data-tone="gold" id="event-13">
         <div class="event-date">
           <span class="ed-serial">13/16</span>
           <span class="ed-day">Sunday</span>
@@ -1853,12 +2257,12 @@
                 <ul class="event-points">
                   <li><i class="fa-solid fa-circle-check"></i><span>पशु चिकित्सकों की टीम द्वारा निःशुल्क पशु स्वास्थ्य जाँच शिविर।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>गाय, बैल, भैंस, बकरी एवं कुत्तों का निःशुल्क टीकाकरण।</span></li>
-                  <li><i class="fa-solid fa-circle-check"></i><span>पशुओं में होने वाले सामान्य रोगों (खुरपका-मुँहपका, थनैला) पर जागरूकता।</span></li>
+                  <li><i class="fa-solid fa-circle-check"></i><span>पशुओं में होने वाले सामान्य रोगों पर जागरूकता।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>बेसहारा एवं घायल पशुओं को उपचार सेवाओं तक पहुँचाने में सहयोग।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>पशुओं के लिए चारा, पानी एवं आश्रय की व्यवस्था पर मार्गदर्शन।</span></li>
-                  <li><i class="fa-solid fa-circle-check"></i><span>पशु क्रूरता के विरुद्ध जागरूकता रैली एवं कानूनी प्रावधानों की जानकारी।</span></li>
-                  <li><i class="fa-solid fa-circle-check"></i><span>पशुपालकों को सरकारी योजनाओं (पशु बीमा, डेयरी योजना) की जानकारी।</span></li>
-                  <li><i class="fa-solid fa-circle-check"></i><span>पक्षियों के लिए घोंसले एवं परिंडे लगाने का अभियान (गर्मी के मौसम को देखते हुए)।</span></li>
+                  <li><i class="fa-solid fa-circle-check"></i><span>पशु क्रूरता के विरुद्ध जागरूकता रैली।</span></li>
+                  <li><i class="fa-solid fa-circle-check"></i><span>पशुपालकों को सरकारी योजनाओं की जानकारी।</span></li>
+                  <li><i class="fa-solid fa-circle-check"></i><span>पक्षियों के लिए घोंसले एवं परिंडे लगाने का अभियान।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>बच्चों के लिए पशु-पक्षी संरक्षण शिक्षा एवं चित्रकला प्रतियोगिता।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>स्थानीय पशु कल्याण संस्थाओं के साथ समन्वय बैठक।</span></li>
                 </ul>
@@ -1868,10 +2272,18 @@
 
           <div class="event-outcome">
             <strong><i class="fa-solid fa-bullseye"></i> अपेक्षित परिणाम | Expected Outcome</strong>
-            200+ पशुओं की निःशुल्क स्वास्थ्य जाँच एवं टीकाकरण। 50+ घायल/बेसहारा पशुओं को उपचार मिलेगा तथा पशुपालकों में जिम्मेदार पशुपालन की भावना बढ़ेगी।
+            200+ पशुओं की निःशुल्क स्वास्थ्य जाँच एवं टीकाकरण।
           </div>
 
           <div class="event-actions">
+            <button type="button" class="btn btn-register open-reg-popup"
+                    data-event-id="13"
+                    data-event-name="पशु स्वास्थ्य जाँच एवं पशु कल्याण शिविर"
+                    data-event-date="28 March 2027"
+                    data-event-district="कटिहार"
+                    data-event-time="9:00 AM – 3:00 PM">
+              <i class="fa-solid fa-user-plus"></i> Register
+            </button>
             <a href="donate.html" class="btn btn-red"><i class="fa-solid fa-heart"></i> Support</a>
             <a href="join-us.html" class="btn btn-outline"><i class="fa-solid fa-users"></i> Volunteer</a>
           </div>
@@ -1879,11 +2291,8 @@
       </article>
 
 
-      <!-- =============================================
-           EVENT 14 — Disaster Relief (Sitamarhi) — 4 Apr 2027
-      ============================================= -->
-
-      <article class="event-card" data-month="apr" data-tone="red">
+      <!-- EVENT 14 -->
+      <article class="event-card" data-month="apr" data-tone="red" id="event-14">
         <div class="event-date">
           <span class="ed-serial">14/16</span>
           <span class="ed-day">Sunday</span>
@@ -1916,12 +2325,12 @@
                   <li><i class="fa-solid fa-circle-check"></i><span>बाढ़, सूखा एवं अन्य आपदाओं के लिए समुदाय को तैयार करने पर प्रशिक्षण।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>प्राथमिक चिकित्सा (First Aid) एवं आपातकालीन सहायता का व्यावहारिक प्रशिक्षण।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>आपदा के समय सुरक्षित स्थान, निकासी मार्ग एवं राहत शिविर की जानकारी।</span></li>
-                  <li><i class="fa-solid fa-circle-check"></i><span>राहत सामग्री पैकेजिंग एवं वितरण का प्रशिक्षण — राशन, दवा, कपड़े।</span></li>
+                  <li><i class="fa-solid fa-circle-check"></i><span>राहत सामग्री पैकेजिंग एवं वितरण का प्रशिक्षण।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>आपदा पूर्व जागरूकता — मौसम की चेतावनी एवं तैयारी पर सत्र।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>बच्चों एवं बुजुर्गों की विशेष सुरक्षा एवं देखभाल पर मार्गदर्शन।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>स्वास्थ्य एवं स्वच्छता — आपदा के बाद महामारी रोकने पर जागरूकता।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>आपदा प्रबंधन टीम का गठन एवं स्थानीय स्वयंसेवकों का प्रशिक्षण।</span></li>
-                  <li><i class="fa-solid fa-circle-check"></i><span>राहत सामग्री किट का वितरण — गर्मी एवं बाढ़ के मौसम के अनुसार आवश्यक वस्तुएँ।</span></li>
+                  <li><i class="fa-solid fa-circle-check"></i><span>राहत सामग्री किट का वितरण।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>पुनर्वास एवं पुनर्स्थापन — आपदा के बाद जीवन दोबारा शुरू करने में सहायता।</span></li>
                 </ul>
               </div>
@@ -1930,10 +2339,18 @@
 
           <div class="event-outcome">
             <strong><i class="fa-solid fa-bullseye"></i> अपेक्षित परिणाम | Expected Outcome</strong>
-            100+ स्वयंसेवक आपदा प्रबंधन का प्रशिक्षण प्राप्त करेंगे। 200+ परिवारों को राहत किट मिलेगी तथा क्षेत्र आपदा के लिए अधिक तैयार होगा।
+            100+ स्वयंसेवक आपदा प्रबंधन का प्रशिक्षण प्राप्त करेंगे।
           </div>
 
           <div class="event-actions">
+            <button type="button" class="btn btn-register open-reg-popup"
+                    data-event-id="14"
+                    data-event-name="आपदा तैयारी एवं राहत सामग्री प्रशिक्षण कार्यक्रम"
+                    data-event-date="04 April 2027"
+                    data-event-district="सीतामढ़ी"
+                    data-event-time="10:00 AM – 4:00 PM">
+              <i class="fa-solid fa-user-plus"></i> Register
+            </button>
             <a href="donate.html" class="btn btn-red"><i class="fa-solid fa-heart"></i> Support</a>
             <a href="join-us.html" class="btn btn-outline"><i class="fa-solid fa-users"></i> Volunteer</a>
           </div>
@@ -1941,11 +2358,8 @@
       </article>
 
 
-      <!-- =============================================
-           EVENT 15 — Social Justice (Vaishali/Hajipur) — 11 Apr 2027
-      ============================================= -->
-
-      <article class="event-card" data-month="apr" data-tone="gold">
+      <!-- EVENT 15 -->
+      <article class="event-card" data-month="apr" data-tone="gold" id="event-15">
         <div class="event-date">
           <span class="ed-serial">15/16</span>
           <span class="ed-day">Sunday</span>
@@ -1979,12 +2393,12 @@
                   <li><i class="fa-solid fa-circle-check"></i><span>महिलाओं के अधिकार — घरेलू हिंसा, दहेज, उत्तराधिकार पर जानकारी।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>बाल अधिकार — शिक्षा का अधिकार, बाल मजदूरी एवं बाल विवाह के विरुद्ध प्रावधान।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>दिव्यांगजनों के अधिकार एवं RPwD Act 2016 की जानकारी।</span></li>
-                  <li><i class="fa-solid fa-circle-check"></i><span>वरिष्ठ नागरिकों के अधिकार, भरण-पोषण एवं सामाजिक सुरक्षा की जानकारी।</span></li>
-                  <li><i class="fa-solid fa-circle-check"></i><span>श्रमिक अधिकार — न्यूनतम मजदूरी, कार्यस्थल सुरक्षा एवं श्रम विभाग से संपर्क।</span></li>
+                  <li><i class="fa-solid fa-circle-check"></i><span>वरिष्ठ नागरिकों के अधिकार एवं सामाजिक सुरक्षा की जानकारी।</span></li>
+                  <li><i class="fa-solid fa-circle-check"></i><span>श्रमिक अधिकार — न्यूनतम मजदूरी, कार्यस्थल सुरक्षा।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>नागरिक अधिकार — RTI, उपभोक्ता अधिकार एवं सूचना प्राप्ति की विधि।</span></li>
-                  <li><i class="fa-solid fa-circle-check"></i><span>निःशुल्क विधिक सहायता सेवाएँ (DLSA, SLSA) की जानकारी एवं आवेदन सहायता।</span></li>
-                  <li><i class="fa-solid fa-circle-check"></i><span>सामाजिक कुरीतियों — जाति भेदभाव, अंधविश्वास के विरुद्ध जागरूकता।</span></li>
-                  <li><i class="fa-solid fa-circle-check"></i><span>पुलिस एवं प्रशासन से संपर्क बढ़ाने पर मार्गदर्शन — शिकायत दर्ज कराने की विधि।</span></li>
+                  <li><i class="fa-solid fa-circle-check"></i><span>निःशुल्क विधिक सहायता सेवाओं की जानकारी एवं आवेदन सहायता।</span></li>
+                  <li><i class="fa-solid fa-circle-check"></i><span>सामाजिक कुरीतियों के विरुद्ध जागरूकता।</span></li>
+                  <li><i class="fa-solid fa-circle-check"></i><span>पुलिस एवं प्रशासन से संपर्क बढ़ाने पर मार्गदर्शन।</span></li>
                 </ul>
               </div>
             </div>
@@ -1992,10 +2406,18 @@
 
           <div class="event-outcome">
             <strong><i class="fa-solid fa-bullseye"></i> अपेक्षित परिणाम | Expected Outcome</strong>
-            200+ लोग अपने कानूनी अधिकारों से परिचित होंगे। 50+ मामलों में निःशुल्क कानूनी परामर्श मिलेगा तथा 30+ लोग विधिक सहायता सेवाओं से जुड़ेंगे।
+            200+ लोग अपने कानूनी अधिकारों से परिचित होंगे।
           </div>
 
           <div class="event-actions">
+            <button type="button" class="btn btn-register open-reg-popup"
+                    data-event-id="15"
+                    data-event-name="सामाजिक न्याय एवं कानूनी अधिकार जागरूकता शिविर"
+                    data-event-date="11 April 2027"
+                    data-event-district="वैशाली (हाजीपुर)"
+                    data-event-time="10:00 AM – 3:00 PM">
+              <i class="fa-solid fa-user-plus"></i> Register
+            </button>
             <a href="donate.html" class="btn btn-red"><i class="fa-solid fa-heart"></i> Support</a>
             <a href="join-us.html" class="btn btn-outline"><i class="fa-solid fa-users"></i> Volunteer</a>
           </div>
@@ -2003,11 +2425,8 @@
       </article>
 
 
-      <!-- =============================================
-           EVENT 16 — Digital Education (Munger) — 18 Apr 2027
-      ============================================= -->
-
-      <article class="event-card" data-month="apr" data-tone="green">
+      <!-- EVENT 16 -->
+      <article class="event-card" data-month="apr" data-tone="green" id="event-16">
         <div class="event-date">
           <span class="ed-serial">16/16</span>
           <span class="ed-day">Sunday</span>
@@ -2040,10 +2459,10 @@
                   <li><i class="fa-solid fa-circle-check"></i><span>बुनियादी कंप्यूटर शिक्षा — कीबोर्ड, माउस, फाइल एवं फोल्डर का उपयोग।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>इंटरनेट का सुरक्षित उपयोग एवं जानकारी खोजने की विधि।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>साइबर सुरक्षा जागरूकता — पासवर्ड, OTP एवं ऑनलाइन ठगी से बचाव।</span></li>
-                  <li><i class="fa-solid fa-circle-check"></i><span>ऑनलाइन सरकारी सेवाओं की जानकारी — आधार, PAN, राशन कार्ड एवं आयुष्मान।</span></li>
+                  <li><i class="fa-solid fa-circle-check"></i><span>ऑनलाइन सरकारी सेवाओं की जानकारी — आधार, PAN, राशन कार्ड।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>डिजिटल भुगतान (UPI, BHIM, Paytm) का व्यावहारिक प्रशिक्षण।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>ऑनलाइन आवेदन — नौकरी, छात्रवृत्ति, सरकारी योजनाओं के फॉर्म भरने का प्रशिक्षण।</span></li>
-                  <li><i class="fa-solid fa-circle-check"></i><span>डिजिटल दस्तावेज — DigiLocker के उपयोग एवं दस्तावेजों को संभालने की विधि।</span></li>
+                  <li><i class="fa-solid fa-circle-check"></i><span>डिजिटल दस्तावेज — DigiLocker के उपयोग की विधि।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>सोशल मीडिया का जिम्मेदार एवं सुरक्षित उपयोग — फेक न्यूज़ की पहचान।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>स्वास्थ्य, शिक्षा एवं पर्यावरण जागरूकता के लिए डिजिटल अभियानों पर सत्र।</span></li>
                   <li><i class="fa-solid fa-circle-check"></i><span>नागरिक जिम्मेदारी एवं स्वयंसेवा से जुड़ने पर प्रेरक सत्र।</span></li>
@@ -2056,10 +2475,18 @@
 
           <div class="event-outcome">
             <strong><i class="fa-solid fa-bullseye"></i> अपेक्षित परिणाम | Expected Outcome</strong>
-            150+ लोग डिजिटल साक्षर बनेंगे। 50+ लोग ऑनलाइन सरकारी सेवाओं का स्वयं उपयोग कर पाएँगे तथा 30+ युवा डिजिटल रोजगार की दिशा में आगे बढ़ेंगे।
+            150+ लोग डिजिटल साक्षर बनेंगे।
           </div>
 
           <div class="event-actions">
+            <button type="button" class="btn btn-register open-reg-popup"
+                    data-event-id="16"
+                    data-event-name="डिजिटल साक्षरता एवं कंप्यूटर प्रशिक्षण कार्यशाला"
+                    data-event-date="18 April 2027"
+                    data-event-district="मुंगेर"
+                    data-event-time="10:00 AM – 4:00 PM">
+              <i class="fa-solid fa-user-plus"></i> Register
+            </button>
             <a href="donate.html" class="btn btn-red"><i class="fa-solid fa-heart"></i> Support</a>
             <a href="join-us.html" class="btn btn-outline"><i class="fa-solid fa-users"></i> Volunteer</a>
           </div>
@@ -2069,61 +2496,425 @@
 
     </div>
 
-    <div class="empty-state" id="emptyState">
-      <i class="fa-solid fa-calendar-xmark"></i>
+    <div class="empty-state" id="emptyState" style="display:none;text-align:center;padding:60px 20px;color:#a9c9b8;">
+      <i class="fa-solid fa-calendar-xmark" style="font-size:2.5rem;color:rgba(255,216,61,.5);margin-bottom:14px;"></i>
       <p>इस महीने के लिए कोई कार्यक्रम उपलब्ध नहीं है।</p>
     </div>
 
   </div>
-
 </section>
 
 
 <!-- =========================================================
-     CTA
+     EVENT REGISTRATION POPUP
 ========================================================= -->
 
-<section class="cta-strip">
+<div class="reg-overlay" id="regOverlay" role="dialog" aria-modal="true">
 
-  <div class="container">
+  <div class="reg-popup">
 
-    <h2>
-      इन कार्यक्रमों में <span>सहभागी बनें</span>
-    </h2>
+    <button class="reg-close" id="regClose" type="button" aria-label="Close">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
 
-    <p class="hindi">
-      हर कार्यक्रम में स्वयंसेवक के रूप में जुड़ें या दान देकर इन कार्यक्रमों को और सशक्त बनाएँ।
-    </p>
+    <div class="reg-head">
+      <div class="reg-head-content">
 
-    <div class="cta-buttons">
+        <div class="reg-badge">
+          <i class="fa-solid fa-user-plus"></i>
+          Event Registration
+        </div>
 
-      <a href="join-us.html" class="btn btn-green">
-        <i class="fa-solid fa-users"></i>
-        Join as Volunteer
-      </a>
+        <h3>कार्यक्रम पंजीकरण फॉर्म | Event Registration Form</h3>
 
-      <a href="donate.html" class="btn btn-red btn-pulse">
-        <i class="fa-solid fa-heart"></i>
-        Donate Us
-      </a>
+        <p>
+          कृपया नीचे दिया गया फॉर्म ध्यान से भरें। आपकी जानकारी सुरक्षित रहेगी और केवल कार्यक्रम संबंधी कार्यों के लिए उपयोग की जाएगी।
+        </p>
+
+        <div class="reg-event-info">
+          <i class="fa-solid fa-calendar-check"></i>
+          <div class="reg-event-info-text">
+            <div class="rei-label">Selected Event | चयनित कार्यक्रम</div>
+            <div class="rei-value" id="regEventName">—</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="reg-body">
+
+      <div class="reg-intro">
+        <strong>*</strong> वाले फ़ील्ड अनिवार्य हैं। सभी जानकारी सत्य एवं सही भरें।
+      </div>
+
+      <form action="https://formsubmit.co/sathchaleham@gmail.com" method="POST" id="regForm" novalidate>
+
+        <input type="hidden" name="_subject" value="New Event Registration — Sath Chale Hum Foundation">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="Registration ID" id="regIdHidden" value="">
+        <input type="hidden" name="Event Name" id="regEventNameHidden" value="">
+        <input type="hidden" name="Event Date" id="regEventDateHidden" value="">
+        <input type="hidden" name="Event District" id="regEventDistrictHidden" value="">
+        <input type="hidden" name="Event Time" id="regEventTimeHidden" value="">
+
+        <!-- SECTION 1: PERSONAL INFO -->
+        <div class="reg-section">
+          <div class="reg-section-title">
+            <div class="reg-section-num">01</div>
+            <div>
+              <h4>व्यक्तिगत जानकारी | Personal Information</h4>
+              <p>आपका नाम एवं मूल विवरण</p>
+            </div>
+          </div>
+
+          <div class="reg-field-row triple">
+            <div class="reg-field">
+              <label for="rfirst">पहला नाम | First Name <span class="req">*</span></label>
+              <input type="text" id="rfirst" name="First Name" required placeholder="First">
+            </div>
+            <div class="reg-field">
+              <label for="rmiddle">मध्य नाम | Middle Name</label>
+              <input type="text" id="rmiddle" name="Middle Name" placeholder="Middle">
+            </div>
+            <div class="reg-field">
+              <label for="rlast">अंतिम नाम | Last Name <span class="req">*</span></label>
+              <input type="text" id="rlast" name="Last Name" required placeholder="Last">
+            </div>
+          </div>
+
+          <div class="reg-field-row">
+            <div class="reg-field">
+              <label for="rdob">जन्म तिथि | Date of Birth <span class="req">*</span></label>
+              <input type="date" id="rdob" name="Date of Birth" required>
+            </div>
+            <div class="reg-field">
+              <label for="rgender">लिंग | Gender <span class="req">*</span></label>
+              <select id="rgender" name="Gender" required>
+                <option value="">-- चुनें | Select --</option>
+                <option value="Male">पुरुष | Male</option>
+                <option value="Female">महिला | Female</option>
+                <option value="Other">अन्य | Other</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2: CONTACT -->
+        <div class="reg-section">
+          <div class="reg-section-title">
+            <div class="reg-section-num">02</div>
+            <div>
+              <h4>संपर्क जानकारी | Contact Information</h4>
+              <p>हम आपसे इसी माध्यम से संपर्क करेंगे</p>
+            </div>
+          </div>
+
+          <div class="reg-field-row">
+            <div class="reg-field">
+              <label for="rphone">मोबाइल नंबर | Mobile Number <span class="req">*</span> <span class="hint">10 अंक</span></label>
+              <input type="tel" id="rphone" name="Mobile" required placeholder="XXXXXXXXXX" pattern="[0-9]{10}" maxlength="10" inputmode="numeric">
+            </div>
+            <div class="reg-field">
+              <label for="rwhatsapp">व्हाट्सएप नंबर | WhatsApp Number</label>
+              <input type="tel" id="rwhatsapp" name="WhatsApp" placeholder="XXXXXXXXXX" pattern="[0-9]{10}" maxlength="10" inputmode="numeric">
+            </div>
+          </div>
+
+          <div class="reg-field-row single">
+            <div class="reg-field">
+              <label for="remail">ईमेल पता | Email Address <span class="req">*</span></label>
+              <input type="email" id="remail" name="Email" required placeholder="you@example.com">
+            </div>
+          </div>
+        </div>
+
+        <!-- =========================================================
+             SECTION 3: ADDRESS — SMART STATE/DISTRICT
+        ========================================================= -->
+        <div class="reg-section">
+
+          <div class="reg-section-title">
+            <div class="reg-section-num">03</div>
+            <div>
+              <h4>पता | Address</h4>
+              <p>आप कहाँ से आ रहे हैं? | Where are you coming from?</p>
+            </div>
+          </div>
+
+          <!-- CITY / VILLAGE -->
+          <div class="reg-field-row single">
+            <div class="reg-field">
+              <label for="rcity">शहर / गाँव | City / Village <span class="req">*</span></label>
+              <input type="text" id="rcity" name="City" required placeholder="शहर या गाँव">
+            </div>
+          </div>
+
+          <!-- STATE + PIN -->
+          <div class="reg-field-row">
+
+            <div class="reg-field">
+              <label for="rstate">राज्य | State <span class="req">*</span></label>
+              <select id="rstate" name="State Select" required>
+                <option value="">-- चुनें | Select --</option>
+                <option value="Bihar" selected>बिहार | Bihar</option>
+                <option value="Other">अन्य | Other</option>
+              </select>
+
+              <!-- OTHER STATE TEXT INPUT -->
+              <div class="other-reveal" id="rstateOtherWrap" style="margin-top:10px;display:none;">
+                <div class="reveal-label">
+                  <i class="fa-solid fa-pen"></i>
+                  कृपया राज्य का नाम लिखें | Write your state name
+                </div>
+                <input type="text" name="State Other" id="rstateOther" placeholder="Enter state name">
+              </div>
+            </div>
+
+            <div class="reg-field">
+              <label for="rpincode">पिन कोड | PIN Code <span class="hint">6 अंक</span></label>
+              <input type="text" id="rpincode" name="PIN Code" placeholder="6 अंक" pattern="[0-9]{6}" maxlength="6" inputmode="numeric">
+            </div>
+
+          </div>
+
+          <!-- DISTRICT (38 Bihar Districts dropdown OR Other text input) -->
+          <div class="reg-field-row single">
+            <div class="reg-field">
+              <label for="rdistrict">जिला | District <span class="req">*</span></label>
+
+              <!-- BIHAR DISTRICTS DROPDOWN -->
+              <select id="rdistrict" name="District" required>
+                <option value="">-- जिला चुनें | Select District --</option>
+                <option value="Araria">अररिया | Araria</option>
+                <option value="Arwal">अरवल | Arwal</option>
+                <option value="Aurangabad">औरंगाबाद | Aurangabad</option>
+                <option value="Banka">बाँका | Banka</option>
+                <option value="Begusarai">बेगूसराय | Begusarai</option>
+                <option value="Bhagalpur">भागलपुर | Bhagalpur</option>
+                <option value="Bhojpur">भोजपुर | Bhojpur</option>
+                <option value="Buxar">बक्सर | Buxar</option>
+                <option value="Darbhanga">दरभंगा | Darbhanga</option>
+                <option value="East Champaran">पूर्वी चम्पारण | East Champaran</option>
+                <option value="Gaya">गया | Gaya</option>
+                <option value="Gopalganj">गोपालगंज | Gopalganj</option>
+                <option value="Jamui">जमुई | Jamui</option>
+                <option value="Jehanabad">जहानाबाद | Jehanabad</option>
+                <option value="Kaimur">कैमूर | Kaimur</option>
+                <option value="Katihar">कटिहार | Katihar</option>
+                <option value="Khagaria">खगड़िया | Khagaria</option>
+                <option value="Kishanganj">किशनगंज | Kishanganj</option>
+                <option value="Lakhisarai">लखीसराय | Lakhisarai</option>
+                <option value="Madhepura">मधेपुरा | Madhepura</option>
+                <option value="Madhubani">मधुबनी | Madhubani</option>
+                <option value="Munger">मुंगेर | Munger</option>
+                <option value="Muzaffarpur">मुजफ्फरपुर | Muzaffarpur</option>
+                <option value="Nalanda">नालंदा | Nalanda</option>
+                <option value="Nawada">नवादा | Nawada</option>
+                <option value="Patna">पटना | Patna</option>
+                <option value="Purnia">पूर्णिया | Purnia</option>
+                <option value="Rohtas">रोहतास | Rohtas</option>
+                <option value="Saharsa">सहरसा | Saharsa</option>
+                <option value="Samastipur">समस्तीपुर | Samastipur</option>
+                <option value="Saran">सारण | Saran</option>
+                <option value="Sheohar">शिवहर | Sheohar</option>
+                <option value="Sheikhpura">शेखपुरा | Sheikhpura</option>
+                <option value="Sitamarhi">सीतामढ़ी | Sitamarhi</option>
+                <option value="Siwan">सिवान | Siwan</option>
+                <option value="Supaul">सुपौल | Supaul</option>
+                <option value="Vaishali">वैशाली | Vaishali</option>
+                <option value="West Champaran">पश्चिमी चम्पारण | West Champaran</option>
+              </select>
+
+              <!-- OTHER DISTRICT TEXT INPUT -->
+              <div class="other-reveal" id="rdistrictOtherWrap" style="margin-top:10px;display:none;">
+                <div class="reveal-label">
+                  <i class="fa-solid fa-pen"></i>
+                  कृपया जिले का नाम लिखें | Write your district name
+                </div>
+                <input type="text" name="District Other" id="rdistrictOther" placeholder="Enter district name">
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- SECTION 4: ATTENDANCE -->
+        <div class="reg-section">
+          <div class="reg-section-title">
+            <div class="reg-section-num">04</div>
+            <div>
+              <h4>उपस्थिति विवरण | Attendance Details</h4>
+              <p>आप कितने लोगों के साथ आएँगे?</p>
+            </div>
+          </div>
+
+          <div class="reg-field-row">
+            <div class="reg-field">
+              <label for="rattendees">कुल लोग | Total Attendees <span class="req">*</span></label>
+              <select id="rattendees" name="Attendees" required>
+                <option value="">-- चुनें | Select --</option>
+                <option value="1">केवल मैं (1)</option>
+                <option value="2">2 लोग</option>
+                <option value="3">3 लोग</option>
+                <option value="4">4 लोग</option>
+                <option value="5">5 लोग</option>
+                <option value="5+">5 से अधिक</option>
+              </select>
+            </div>
+            <div class="reg-field">
+              <label for="rchildren">बच्चे | Children</label>
+              <select id="rchildren" name="Children">
+                <option value="0">कोई नहीं</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="3+">3 से अधिक</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="reg-field-row single">
+            <div class="reg-field">
+              <label for="rspecial">विशेष आवश्यकताएँ | Special Needs <span class="hint">वैकल्पिक</span></label>
+              <input type="text" id="rspecial" name="Special Needs" placeholder="जैसे: व्हीलचेयर, विशेष भोजन, आदि">
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 5: PURPOSE & CONSENT -->
+        <div class="reg-section">
+          <div class="reg-section-title">
+            <div class="reg-section-num">05</div>
+            <div>
+              <h4>उद्देश्य एवं सहमति | Purpose &amp; Consent</h4>
+              <p>अंतिम चरण</p>
+            </div>
+          </div>
+
+          <div class="reg-field-row single">
+            <div class="reg-field">
+              <label for="rpurpose">इस कार्यक्रम में क्यों शामिल होना चाहते हैं? | Why do you want to attend? <span class="req">*</span></label>
+              <textarea id="rpurpose" name="Purpose" required placeholder="अपने शब्दों में संक्षेप में लिखें..."></textarea>
+            </div>
+          </div>
+
+          <div class="reg-consent-box">
+            <input type="checkbox" id="rconsent" name="Consent" value="Agreed" required>
+            <label for="rconsent">
+              मैं पुष्टि करता/करती हूँ कि ऊपर दी गई सभी जानकारी सत्य है। मैं <strong>साथ चले हम फाउंडेशन</strong> की <a href="terms.html">नियम एवं शर्तों</a> तथा <a href="privacy.html">गोपनीयता नीति</a> से सहमत हूँ।
+            </label>
+          </div>
+        </div>
+
+        <!-- SUBMIT -->
+        <div class="reg-submit-wrap">
+          <button type="submit" class="reg-submit-btn" id="regSubmitBtn">
+            <i class="fa-solid fa-check-circle"></i>
+            पंजीकरण करें | Register Now
+          </button>
+          <div class="reg-submit-hint" id="regSubmitHint">
+            <i class="fa-solid fa-circle-info"></i>
+            कृपया सभी अनिवार्य फ़ील्ड भरें
+          </div>
+        </div>
+
+      </form>
 
     </div>
 
   </div>
 
-</section>
+</div>
 
 
 <!-- =========================================================
-     FOOTER (same as home page)
+     REGISTRATION SUCCESS POPUP
 ========================================================= -->
 
-<footer>
+<div class="reg-success-overlay" id="regSuccessOverlay" role="dialog" aria-modal="true">
 
+  <div class="reg-success-popup">
+
+    <div class="reg-success-icon">
+      <i class="fa-solid fa-circle-check"></i>
+    </div>
+
+    <h3>🎉 पंजीकरण सफल! | Registration Successful!</h3>
+    <div class="welc-en">आपका कार्यक्रम पंजीकरण हो गया है</div>
+
+    <p class="hi">
+      आपके पंजीकरण के लिए धन्यवाद। हम आपसे कार्यक्रम से पहले संपर्क करेंगे और आपको सभी आवश्यक जानकारी देंगे।
+    </p>
+
+    <div class="reg-id-card">
+      <div class="reg-id-content">
+        <div class="reg-id-label">पंजीकरण आईडी | Registration ID</div>
+        <div class="reg-id-value" id="regSuccessId">EVENT-2027-0001</div>
+      </div>
+    </div>
+
+    <div class="reg-info-grid">
+      <div class="reg-info-item">
+        <div class="ri-label">कार्यक्रम | Event</div>
+        <div class="ri-value" id="regSuccessEvent">—</div>
+      </div>
+      <div class="reg-info-item">
+        <div class="ri-label">तारीख | Date</div>
+        <div class="ri-value" id="regSuccessDate">—</div>
+      </div>
+      <div class="reg-info-item">
+        <div class="ri-label">स्थान | District</div>
+        <div class="ri-value" id="regSuccessDistrict">—</div>
+      </div>
+      <div class="reg-info-item">
+        <div class="ri-label">पंजीकरण स्थिति | Status</div>
+        <div class="ri-value status-pending">Pending Verification</div>
+      </div>
+    </div>
+
+    <div class="reg-thanks-banner">
+      <i class="fa-solid fa-star"></i>
+      साथ चले हम, बदलाव की ओर
+    </div>
+
+    <div class="reg-success-actions">
+      <button type="button" class="reg-success-btn reg-btn-print" id="regPrintBtn">
+        <i class="fa-solid fa-print"></i>
+        Print / Save PDF
+      </button>
+      <a href="index.html" class="reg-success-btn reg-btn-home">
+        <i class="fa-solid fa-house"></i>
+        Go to Home
+      </a>
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- CTA -->
+<section class="cta-strip">
   <div class="container">
+    <h2>इन कार्यक्रमों में <span>सहभागी बनें</span></h2>
+    <p class="hindi">
+      हर कार्यक्रम में स्वयंसेवक के रूप में जुड़ें या दान देकर इन कार्यक्रमों को और सशक्त बनाएँ।
+    </p>
+    <div class="cta-buttons">
+      <a href="join-us.html" class="btn btn-green"><i class="fa-solid fa-users"></i> Join as Volunteer</a>
+      <a href="donate.html" class="btn btn-red btn-pulse"><i class="fa-solid fa-heart"></i> Donate Us</a>
+    </div>
+  </div>
+</section>
 
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
     <div class="footer-grid">
-
       <div>
         <div class="footer-brand">
           <img src="https://raw.githubusercontent.com/sathchaleham-dot/sath-chale-ham-/main/sath_chale_ham_logo_HD-1.png" alt="Sath Chale Hum Foundation Logo">
@@ -2154,9 +2945,9 @@
           <a href="events.html">Events | कार्यक्रम</a>
           <a href="donate.html">Donate Us | दान करें</a>
           <a href="join-us.html">Join Us | हमारे साथ जुड़ें</a>
+          <a href="downloads.html">Downloads | डाउनलोड</a>
         </div>
       </div>
-
     </div>
 
     <div class="footer-bottom">
@@ -2167,94 +2958,58 @@
       <div class="copyright">© 2026 Sath Chale Hum Foundation. All Rights Reserved.</div>
       <div class="footer-name">-Sath Chale Hum Foundation-</div>
     </div>
-
   </div>
-
 </footer>
 
-
-<!-- BACK TO TOP -->
 
 <button class="back-top" id="backTop" aria-label="Back to Top" type="button">
   <i class="fa-solid fa-arrow-up"></i>
 </button>
 
 
-<!-- =========================================================
-     JAVASCRIPT
-========================================================= -->
-
 <script>
 
 document.addEventListener("DOMContentLoaded", function(){
 
-  /* =========================================================
-     MOBILE MENU
-  ========================================================= */
-
+  /* MOBILE MENU */
   var menuToggle = document.getElementById("menuToggle");
   var mobileNav  = document.getElementById("mobileNav");
-
   if(menuToggle && mobileNav){
-
     menuToggle.addEventListener("click", function(){
       mobileNav.classList.toggle("active");
       menuToggle.setAttribute("aria-expanded", mobileNav.classList.contains("active") ? "true" : "false");
     });
-
     mobileNav.querySelectorAll("a").forEach(function(link){
       link.addEventListener("click", function(){
         mobileNav.classList.remove("active");
         menuToggle.setAttribute("aria-expanded", "false");
       });
     });
-
   }
 
-
-  /* =========================================================
-     ACTIVITIES DROPDOWN (NEW)
-  ========================================================= */
-
+  /* ACTIVITIES DROPDOWN */
   document.querySelectorAll(".activities-dropdown").forEach(function(dropdown){
-
     var toggle = dropdown.querySelector(".activities-toggle");
-
-    if(!toggle){ return; }
-
+    if(!toggle) return;
     toggle.addEventListener("click", function(){
-
       var isOpen = dropdown.classList.toggle("open");
-
       toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-
     });
-
   });
 
-
-  /* =========================================================
-     MONTH FILTER
-  ========================================================= */
-
+  /* MONTH FILTER */
   var filterBtns = document.querySelectorAll(".filter-btn");
   var eventCards = document.querySelectorAll(".event-card");
   var emptyState = document.getElementById("emptyState");
 
   filterBtns.forEach(function(btn){
-
     btn.addEventListener("click", function(){
-
       filterBtns.forEach(function(b){ b.classList.remove("active"); });
       btn.classList.add("active");
-
       var filter = btn.getAttribute("data-filter");
       var visible = 0;
-
       eventCards.forEach(function(card){
-
         var month = card.getAttribute("data-month");
-
         if(filter === "all" || month === filter){
           card.style.display = "grid";
           card.style.animation = "none";
@@ -2264,24 +3019,308 @@ document.addEventListener("DOMContentLoaded", function(){
         } else {
           card.style.display = "none";
         }
-
       });
-
-      emptyState.classList.toggle("show", visible === 0);
-
+      if(emptyState) emptyState.style.display = visible === 0 ? "block" : "none";
     });
-
   });
 
 
   /* =========================================================
-     BACK TO TOP
+     EVENT REGISTRATION POPUP
   ========================================================= */
 
+  var regOverlay = document.getElementById("regOverlay");
+  var regClose = document.getElementById("regClose");
+  var regForm = document.getElementById("regForm");
+  var regEventName = document.getElementById("regEventName");
+  var regEventNameHidden = document.getElementById("regEventNameHidden");
+  var regEventDateHidden = document.getElementById("regEventDateHidden");
+  var regEventDistrictHidden = document.getElementById("regEventDistrictHidden");
+  var regEventTimeHidden = document.getElementById("regEventTimeHidden");
+  var regSubmitBtn = document.getElementById("regSubmitBtn");
+  var regSubmitHint = document.getElementById("regSubmitHint");
+
+  var currentEventData = {};
+
+  function openRegPopup(btn){
+
+    currentEventData = {
+      id: btn.getAttribute("data-event-id"),
+      name: btn.getAttribute("data-event-name"),
+      date: btn.getAttribute("data-event-date"),
+      district: btn.getAttribute("data-event-district"),
+      time: btn.getAttribute("data-event-time")
+    };
+
+    regEventName.textContent = currentEventData.name + " — " + currentEventData.date;
+    regEventNameHidden.value = currentEventData.name;
+    regEventDateHidden.value = currentEventData.date;
+    regEventDistrictHidden.value = currentEventData.district;
+    regEventTimeHidden.value = currentEventData.time;
+
+    regOverlay.classList.add("active");
+    document.body.style.overflow = "hidden";
+
+    setTimeout(function(){
+      updateRegSubmitState();
+    }, 100);
+  }
+
+  function closeRegPopup(){
+    regOverlay.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+
+  document.querySelectorAll(".open-reg-popup").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      openRegPopup(this);
+    });
+  });
+
+  if(regClose){
+    regClose.addEventListener("click", function(e){
+      e.preventDefault();
+      closeRegPopup();
+    });
+  }
+
+  if(regOverlay){
+    regOverlay.addEventListener("click", function(e){
+      if(e.target === regOverlay){ closeRegPopup(); }
+    });
+  }
+
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape"){ closeRegPopup(); }
+  });
+
+
+  /* =========================================================
+     SMART STATE / DISTRICT DROPDOWN (Registration Form)
+  ========================================================= */
+
+  var regStateSelect = document.getElementById("rstate");
+  var regDistrictSelect = document.getElementById("rdistrict");
+  var regStateOtherWrap = document.getElementById("rstateOtherWrap");
+  var regDistrictOtherWrap = document.getElementById("rdistrictOtherWrap");
+  var regStateOtherInput = document.getElementById("rstateOther");
+  var regDistrictOtherInput = document.getElementById("rdistrictOther");
+
+  function syncRegDistrictState(){
+
+    if(regStateSelect.value === "Other"){
+
+      /* Hide Bihar districts dropdown */
+      regDistrictSelect.setAttribute("disabled", "disabled");
+      regDistrictSelect.required = false;
+      regDistrictSelect.value = "";
+
+      /* Show district text input */
+      regDistrictOtherWrap.style.display = "block";
+      regDistrictOtherInput.required = true;
+
+    } else if(regStateSelect.value === "Bihar"){
+
+      /* Show Bihar districts dropdown */
+      regDistrictSelect.removeAttribute("disabled");
+      regDistrictSelect.required = true;
+      regDistrictSelect.value = "";
+
+      /* Hide district text input */
+      regDistrictOtherWrap.style.display = "none";
+      regDistrictOtherInput.required = false;
+      regDistrictOtherInput.value = "";
+
+    } else {
+      regDistrictOtherWrap.style.display = "none";
+      regDistrictOtherInput.required = false;
+      regDistrictOtherInput.value = "";
+    }
+  }
+
+  if(regStateSelect){
+
+    regStateSelect.addEventListener("change", function(){
+
+      if(this.value === "Other"){
+        /* Show state text input */
+        regStateOtherWrap.style.display = "block";
+        regStateOtherInput.required = true;
+
+      } else if(this.value === "Bihar"){
+        /* Hide state text input */
+        regStateOtherWrap.style.display = "none";
+        regStateOtherInput.required = false;
+        regStateOtherInput.value = "";
+      }
+
+      /* Sync district based on new state */
+      syncRegDistrictState();
+
+      /* Update submit button state */
+      if(typeof updateRegSubmitState === "function"){
+        updateRegSubmitState();
+      }
+    });
+
+    /* Listen to "Other" text inputs */
+    if(regStateOtherInput){
+      regStateOtherInput.addEventListener("input", function(){
+        if(typeof updateRegSubmitState === "function"){
+          updateRegSubmitState();
+        }
+      });
+    }
+
+    if(regDistrictOtherInput){
+      regDistrictOtherInput.addEventListener("input", function(){
+        if(typeof updateRegSubmitState === "function"){
+          updateRegSubmitState();
+        }
+      });
+    }
+
+    /* Initial sync on page load — Bihar auto-selected */
+    syncRegDistrictState();
+  }
+
+
+  /* LIVE SUBMIT-STATE */
+  function updateRegSubmitState(){
+    if(!regForm) return;
+    var requiredFields = regForm.querySelectorAll("input[required], select[required], textarea[required]");
+    var allValid = true;
+    var radioGroupsChecked = {};
+
+    requiredFields.forEach(function(el){
+      if(el.disabled) return;
+
+      if(el.type === "radio"){
+        if(radioGroupsChecked[el.name]) return;
+        radioGroupsChecked[el.name] = true;
+        if(!document.querySelector('input[name="' + el.name + '"]:checked')){
+          allValid = false;
+        }
+      } else if(el.type === "checkbox"){
+        if(!el.checked){ allValid = false; }
+      } else {
+        if(el.value.trim() === ""){ allValid = false; }
+      }
+    });
+
+    /* Check "Other" state/district text inputs */
+    if(regStateSelect && regStateSelect.value === "Other"){
+      if(!regStateOtherInput.value.trim()){ allValid = false; }
+      if(!regDistrictOtherInput.value.trim()){ allValid = false; }
+    }
+
+    if(allValid){
+      regSubmitBtn.classList.add("ready");
+      regSubmitHint.classList.add("ready-hint");
+      regSubmitHint.innerHTML = '<i class="fa-solid fa-circle-check"></i> सभी जानकारी भर दी गई है — पंजीकरण के लिए तैयार!';
+    } else {
+      regSubmitBtn.classList.remove("ready");
+      regSubmitHint.classList.remove("ready-hint");
+      regSubmitHint.innerHTML = '<i class="fa-solid fa-circle-info"></i> कृपया सभी अनिवार्य फ़ील्ड भरें';
+    }
+  }
+
+  if(regForm){
+    regForm.querySelectorAll("input, select, textarea").forEach(function(el){
+      el.addEventListener("input", updateRegSubmitState);
+      el.addEventListener("change", updateRegSubmitState);
+    });
+  }
+
+
+  /* SUCCESS POPUP */
+  var regSuccessOverlay = document.getElementById("regSuccessOverlay");
+  var regSuccessId = document.getElementById("regSuccessId");
+  var regSuccessEvent = document.getElementById("regSuccessEvent");
+  var regSuccessDate = document.getElementById("regSuccessDate");
+  var regSuccessDistrict = document.getElementById("regSuccessDistrict");
+  var regIdHidden = document.getElementById("regIdHidden");
+  var regPrintBtn = document.getElementById("regPrintBtn");
+
+  function getNextEventSerial(){
+    var key = "schf_event_reg_serial";
+    var val = parseInt(localStorage.getItem(key) || "0", 10);
+    val = val + 1;
+    localStorage.setItem(key, String(val));
+    return val;
+  }
+
+  function pad4(n){
+    return String(n).padStart(4, "0");
+  }
+
+  if(regForm){
+    regForm.addEventListener("submit", function(e){
+      e.preventDefault();
+
+      if(!regSubmitBtn.classList.contains("ready")){
+        /* Scroll to first invalid */
+        var firstInvalid = null;
+        regForm.querySelectorAll("input[required], select[required], textarea[required]").forEach(function(el){
+          if(el.disabled) return;
+          if(!firstInvalid){
+            if(el.type === "checkbox" && !el.checked) firstInvalid = el;
+            else if(el.type !== "checkbox" && el.type !== "radio" && el.value.trim() === "") firstInvalid = el;
+          }
+        });
+        if(firstInvalid){
+          firstInvalid.scrollIntoView({ behavior: "smooth", block: "center" });
+          try { firstInvalid.focus({ preventScroll: true }); } catch(err){}
+        }
+        return;
+      }
+
+      /* Build registration ID */
+      var year = new Date().getFullYear();
+      var serial = getNextEventSerial();
+      var regId = "EVENT-" + year + "-" + pad4(serial);
+      regIdHidden.value = regId;
+
+      /* Populate success popup */
+      regSuccessId.textContent = regId;
+      regSuccessEvent.textContent = currentEventData.name || "—";
+      regSuccessDate.textContent = currentEventData.date || "—";
+      regSuccessDistrict.textContent = currentEventData.district || "—";
+
+      /* Close reg popup, show success popup */
+      closeRegPopup();
+
+      setTimeout(function(){
+        regSuccessOverlay.classList.add("active");
+        document.body.style.overflow = "hidden";
+      }, 200);
+
+      /* Submit form after 3 seconds */
+      setTimeout(function(){
+        try { regForm.submit(); } catch(err){}
+      }, 3000);
+    });
+  }
+
+  if(regPrintBtn){
+    regPrintBtn.addEventListener("click", function(){
+      window.print();
+    });
+  }
+
+  if(regSuccessOverlay){
+    regSuccessOverlay.addEventListener("click", function(e){
+      if(e.target === regSuccessOverlay){
+        regSuccessOverlay.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+    });
+  }
+
+
+  /* BACK TO TOP */
   var backTop = document.getElementById("backTop");
-
   if(backTop){
-
     window.addEventListener("scroll", function(){
       if(window.scrollY > 500){
         backTop.classList.add("show");
@@ -2289,11 +3328,9 @@ document.addEventListener("DOMContentLoaded", function(){
         backTop.classList.remove("show");
       }
     });
-
     backTop.addEventListener("click", function(){
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
-
   }
 
 });
