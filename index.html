@@ -88,6 +88,12 @@ section{
   font-family:'Noto Sans Devanagari','Poppins',sans-serif;
 }
 
+/* Header offset */
+
+section[id], main[id]{
+  scroll-margin-top:95px;
+}
+
 /* =========================================================
    GLOBAL SECTION
 ========================================================= */
@@ -123,10 +129,10 @@ section{
 }
 
 .section-title{
-  font-size:clamp(31px,4vw,54px);
-  line-height:1.08;
+  font-size:clamp(29px,3.8vw,50px);
+  line-height:1.22;
   font-weight:900;
-  letter-spacing:-.04em;
+  letter-spacing:-.01em;
   color:var(--deep);
 }
 
@@ -150,7 +156,52 @@ section{
 }
 
 /* =========================================================
-   INTRO - FAIL SAFE
+   CORNER TRANSPARENT NUMBER
+========================================================= */
+
+.corner-num{
+  position:absolute;
+  top:24px;
+  right:28px;
+  z-index:1;
+  font-family:'Poppins',sans-serif;
+  font-size:clamp(46px,6.5vw,82px);
+  font-weight:900;
+  line-height:1;
+  letter-spacing:-.05em;
+  color:rgba(255,255,255,.13);
+  pointer-events:none;
+  user-select:none;
+}
+
+/* Light surfaces */
+
+.team-category .corner-num,
+.up-event .corner-num{
+  color:rgba(8,116,67,.11);
+}
+
+/* Hero slide */
+
+.hero-slide .corner-num{
+  top:120px;
+  right:5%;
+  font-size:clamp(60px,10vw,140px);
+  color:rgba(255,255,255,.08);
+}
+
+@media(max-width:1000px){
+  .hero-slide .corner-num{ display:none; }
+}
+
+/* Values slide layout (number हटने के बाद) */
+
+.value-slide{
+  grid-template-columns:1fr;
+}
+
+/* =========================================================
+   INTRO
 ========================================================= */
 
 .intro-screen{
@@ -193,10 +244,7 @@ section{
   animation:introOrb 8s ease-in-out infinite alternate;
 }
 
-.intro-orb.one{
-  top:-220px;
-  left:-170px;
-}
+.intro-orb.one{ top:-220px; left:-170px; }
 
 .intro-orb.two{
   right:-200px;
@@ -205,9 +253,7 @@ section{
 }
 
 @keyframes introOrb{
-  to{
-    transform:translate(70px,40px) scale(1.15);
-  }
+  to{ transform:translate(70px,40px) scale(1.15); }
 }
 
 .intro-content{
@@ -242,23 +288,15 @@ section{
 }
 
 @keyframes introLogo{
-  from{
-    opacity:0;
-    transform:scale(.62);
-    filter:blur(12px);
-  }
-  to{
-    opacity:1;
-    transform:scale(1);
-    filter:blur(0);
-  }
+  from{ opacity:0; transform:scale(.62); filter:blur(12px); }
+  to{ opacity:1; transform:scale(1); filter:blur(0); }
 }
 
 .intro-name{
   font-size:clamp(26px,5vw,56px);
   font-weight:900;
-  line-height:1.15;
-  letter-spacing:-.035em;
+  line-height:1.18;
+  letter-spacing:-.02em;
   animation:introText 1s 2s both;
 }
 
@@ -296,36 +334,17 @@ section{
 }
 
 @keyframes introText{
-  from{
-    opacity:0;
-    transform:translateY(25px);
-    filter:blur(8px);
-  }
-  to{
-    opacity:1;
-    transform:none;
-    filter:none;
-  }
+  from{ opacity:0; transform:translateY(25px); filter:blur(8px); }
+  to{ opacity:1; transform:none; filter:none; }
 }
 
 @keyframes introSupport{
-  from{
-    opacity:0;
-    transform:scale(.8);
-    filter:blur(10px);
-  }
-  to{
-    opacity:1;
-    transform:scale(1);
-    filter:none;
-  }
+  from{ opacity:0; transform:scale(.8); filter:blur(10px); }
+  to{ opacity:1; transform:scale(1); filter:none; }
 }
 
 @keyframes introRupee{
-  to{
-    transform:scale(1.08);
-    text-shadow:0 0 30px rgba(244,197,66,.8);
-  }
+  to{ transform:scale(1.08); text-shadow:0 0 30px rgba(244,197,66,.8); }
 }
 
 .intro-progress{
@@ -345,9 +364,7 @@ section{
   animation:introProgress 10s linear forwards;
 }
 
-@keyframes introProgress{
-  to{width:100%}
-}
+@keyframes introProgress{ to{width:100%} }
 
 .skip-intro{
   position:absolute;
@@ -428,10 +445,7 @@ section{
   border-radius:11px;
 }
 
-.brand-text{
-  color:#fff;
-  min-width:0;
-}
+.brand-text{ color:#fff; min-width:0; }
 
 .brand-name{
   font-family:'Noto Sans Devanagari',sans-serif;
@@ -496,7 +510,7 @@ section{
   gap:8px;
   padding:12px 17px;
   background:linear-gradient(135deg,#ffd83d,#f4c542);
-  color:#153b27;
+  color:#153b27 !important;
   border-radius:50px;
   font-size:12px;
   font-weight:900;
@@ -516,10 +530,10 @@ section{
   animation:shine 3.2s infinite;
 }
 
+.donate-nav::before{ content:none !important; }
+
 @keyframes donatePulse{
-  50%{
-    box-shadow:0 10px 35px rgba(244,197,66,.45);
-  }
+  50%{ box-shadow:0 10px 35px rgba(244,197,66,.45); }
 }
 
 @keyframes shine{
@@ -554,9 +568,7 @@ section{
   transform:translateY(7px) rotate(45deg);
 }
 
-.menu-toggle.open span:nth-child(2){
-  opacity:0;
-}
+.menu-toggle.open span:nth-child(2){ opacity:0; }
 
 .menu-toggle.open span:nth-child(3){
   transform:translateY(-7px) rotate(-45deg);
@@ -630,9 +642,7 @@ section{
   animation:donatePulse 2s infinite;
 }
 
-.mobile-menu .mobile-donate i{
-  color:#123522;
-}
+.mobile-menu .mobile-donate i{ color:#123522; }
 
 /* =========================================================
    HERO
@@ -651,14 +661,14 @@ section{
   inset:0;
   opacity:0;
   visibility:hidden;
-  transform:scale(1.06);
+  transform:scale(1);
   transition:opacity 1.1s ease,transform 5.8s ease,visibility 1.1s;
 }
 
 .hero-slide.active{
   opacity:1;
   visibility:visible;
-  transform:scale(1);
+  transform:scale(1.06);
 }
 
 .hero-slide img{
@@ -689,35 +699,15 @@ section{
   color:#fff;
 }
 
-.hero-number{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  margin-bottom:18px;
-  color:var(--gold);
-  font-size:11px;
-  font-weight:900;
-  letter-spacing:.18em;
-}
-
-.hero-number::before{
-  content:"";
-  width:35px;
-  height:2px;
-  background:var(--gold);
-}
-
 .hero-copy h1{
   font-family:'Noto Sans Devanagari','Poppins',sans-serif;
-  font-size:clamp(37px,6vw,78px);
-  line-height:1.08;
+  font-size:clamp(35px,5.5vw,72px);
+  line-height:1.22;
   font-weight:900;
-  letter-spacing:-.04em;
+  letter-spacing:-.01em;
 }
 
-.hero-copy h1 span{
-  color:var(--gold);
-}
+.hero-copy h1 span{ color:var(--gold); }
 
 .hero-copy p{
   margin-top:20px;
@@ -749,9 +739,7 @@ section{
   transition:.3s;
 }
 
-.btn:hover{
-  transform:translateY(-3px);
-}
+.btn:hover{ transform:translateY(-3px); }
 
 .btn-primary{
   background:linear-gradient(135deg,var(--gold),var(--yellow));
@@ -857,9 +845,7 @@ section{
   animation:smilePulse 1.8s infinite;
 }
 
-@keyframes smilePulse{
-  50%{transform:scale(1.12)}
-}
+@keyframes smilePulse{ 50%{transform:scale(1.12)} }
 
 /* =========================================================
    ₹1 SUPPORT
@@ -882,15 +868,13 @@ section{
 
 .support-copy h2{
   font-family:'Noto Sans Devanagari',sans-serif;
-  font-size:clamp(30px,4vw,51px);
-  line-height:1.18;
+  font-size:clamp(28px,3.8vw,48px);
+  line-height:1.28;
   font-weight:900;
   color:var(--deep);
 }
 
-.support-copy h2 span{
-  color:var(--green);
-}
+.support-copy h2 span{ color:var(--green); }
 
 .support-copy p{
   margin-top:20px;
@@ -976,24 +960,12 @@ section{
   animation:ringExpand 3.5s infinite ease-out;
 }
 
-.rupee-stage::before{
-  inset:15%;
-}
-
-.rupee-stage::after{
-  inset:4%;
-  animation-delay:1.5s;
-}
+.rupee-stage::before{ inset:15%; }
+.rupee-stage::after{ inset:4%; animation-delay:1.5s; }
 
 @keyframes ringExpand{
-  0%,100%{
-    transform:scale(.88);
-    opacity:.15;
-  }
-  50%{
-    transform:scale(1.05);
-    opacity:.55;
-  }
+  0%,100%{ transform:scale(.88); opacity:.15; }
+  50%{ transform:scale(1.05); opacity:.55; }
 }
 
 .rotating-ring{
@@ -1015,19 +987,10 @@ section{
   box-shadow:0 0 18px rgba(244,197,66,.8);
 }
 
-.rotating-ring::before{
-  top:10%;
-  left:50%;
-}
+.rotating-ring::before{ top:10%; left:50%; }
+.rotating-ring::after{ bottom:10%; right:50%; }
 
-.rotating-ring::after{
-  bottom:10%;
-  right:50%;
-}
-
-@keyframes rotateRing{
-  to{transform:rotate(360deg)}
-}
+@keyframes rotateRing{ to{transform:rotate(360deg)} }
 
 .rupee-core{
   position:relative;
@@ -1079,9 +1042,9 @@ section{
 }
 
 @keyframes rupeeShine{
-  0%,40%{transform:rotate(-30deg) translateX(-170px);opacity:0}
-  50%{opacity:.8}
-  65%,100%{transform:rotate(-30deg) translateX(170px);opacity:0}
+  0%,40%{ transform:rotate(-30deg) translateX(-170px); opacity:0; }
+  50%{ opacity:.8; }
+  65%,100%{ transform:rotate(-30deg) translateX(170px); opacity:0; }
 }
 
 .particle{
@@ -1103,10 +1066,7 @@ section{
 .p6{top:48%;right:9%;animation-delay:1.4s}
 
 @keyframes particleFloat{
-  50%{
-    transform:translateY(-20px) scale(1.5);
-    opacity:.45;
-  }
+  50%{ transform:translateY(-20px) scale(1.5); opacity:.45; }
 }
 
 .float-word{
@@ -1131,9 +1091,7 @@ section{
 .w4{bottom:28%;left:0;animation-delay:2.2s}
 .w5{top:62%;left:22%;animation-delay:2.8s}
 
-@keyframes wordFloat{
-  50%{transform:translateY(-8px)}
-}
+@keyframes wordFloat{ 50%{transform:translateY(-8px)} }
 
 .support-note{
   margin-top:22px;
@@ -1146,9 +1104,7 @@ section{
    ABOUT
 ========================================================= */
 
-.about{
-  background:#fff;
-}
+.about{ background:#fff; }
 
 .about-grid{
   display:grid;
@@ -1213,15 +1169,13 @@ section{
 .about-content h2{
   margin-top:10px;
   font-family:'Noto Sans Devanagari',sans-serif;
-  font-size:clamp(30px,4vw,48px);
-  line-height:1.18;
+  font-size:clamp(28px,3.8vw,46px);
+  line-height:1.28;
   font-weight:900;
   color:var(--deep);
 }
 
-.about-content h2 span{
-  color:var(--green);
-}
+.about-content h2 span{ color:var(--green); }
 
 .about-content p{
   margin-top:18px;
@@ -1240,8 +1194,7 @@ section{
 ========================================================= */
 
 .mission-section{
-  background:
-    linear-gradient(135deg,#021c12,#043d27);
+  background:linear-gradient(135deg,#021c12,#043d27);
   color:#fff;
 }
 
@@ -1294,7 +1247,8 @@ section{
 
 .mv-card h3{
   font-family:'Noto Sans Devanagari',sans-serif;
-  font-size:25px;
+  font-size:24px;
+  line-height:1.35;
   font-weight:900;
 }
 
@@ -1314,9 +1268,7 @@ section{
    SLIDESHOW COMPONENT
 ========================================================= */
 
-.slider-section{
-  background:#f6faf8;
-}
+.slider-section{ background:#f6faf8; }
 
 .premium-slider{
   position:relative;
@@ -1340,10 +1292,11 @@ section{
   min-width:100%;
   min-height:450px;
   padding:50px;
-  display:grid;
-  grid-template-columns:130px 1fr;
-  align-items:center;
-  gap:40px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+  gap:15px;
   color:#fff;
   position:relative;
   overflow:hidden;
@@ -1360,15 +1313,6 @@ section{
   background:rgba(244,197,66,.09);
 }
 
-.value-number{
-  position:relative;
-  z-index:2;
-  font-size:75px;
-  font-weight:900;
-  color:rgba(244,197,66,.24);
-  line-height:1;
-}
-
 .value-icon{
   width:75px;
   height:75px;
@@ -1380,13 +1324,16 @@ section{
   color:var(--gold);
   font-size:30px;
   margin-bottom:22px;
+  position:relative;
+  z-index:2;
 }
 
 .value-slide h3{
   position:relative;
   z-index:2;
   font-family:'Noto Sans Devanagari',sans-serif;
-  font-size:clamp(27px,4vw,45px);
+  font-size:clamp(25px,3.6vw,42px);
+  line-height:1.3;
   font-weight:900;
 }
 
@@ -1430,14 +1377,6 @@ section{
   color:#fff;
 }
 
-.slider-counter{
-  min-width:90px;
-  text-align:center;
-  font-size:12px;
-  font-weight:900;
-  color:var(--green);
-}
-
 .slider-dots{
   display:flex;
   justify-content:center;
@@ -1465,31 +1404,16 @@ section{
    WORK AREAS
 ========================================================= */
 
-.work-section{
-  background:#fff;
-}
+.work-section{ background:#fff; }
 
-.work-slider .value-slide{
-  min-height:470px;
-}
+.work-slider .value-slide{ min-height:470px; }
 
-.work-slide-content{
-  max-width:680px;
-}
-
-.work-slide-content .small-label{
-  display:inline-block;
-  color:var(--gold);
-  font-size:11px;
-  font-weight:900;
-  letter-spacing:.14em;
-  margin-bottom:18px;
-}
+.work-slide-content{ max-width:680px; }
 
 .work-slide-content h3{
   font-family:'Noto Sans Devanagari',sans-serif;
-  font-size:clamp(25px,3.7vw,44px);
-  line-height:1.2;
+  font-size:clamp(23px,3.4vw,40px);
+  line-height:1.32;
   font-weight:900;
 }
 
@@ -1513,6 +1437,7 @@ section{
   color:var(--gold);
   font-size:47px;
   box-shadow:inset 0 0 40px rgba(255,255,255,.04);
+  margin-bottom:25px;
 }
 
 /* =========================================================
@@ -1574,7 +1499,7 @@ section{
 
 .team-category h3{
   font-family:'Noto Sans Devanagari',sans-serif;
-  font-size:19px;
+  font-size:18px;
   line-height:1.4;
   font-weight:900;
   color:var(--deep);
@@ -1588,27 +1513,17 @@ section{
 }
 
 /* =========================================================
-   HOW WE WORK
+   HOW WE WORK + HELP
 ========================================================= */
 
-.method-section{
-  background:#fff;
-}
+.method-section{ background:#fff; }
+.help-section{ background:linear-gradient(180deg,#f6faf8,#fff); }
 
 .method-slide.m1{background:linear-gradient(135deg,#043d27,#087443)}
 .method-slide.m2{background:linear-gradient(135deg,#123b32,#0a6246)}
 .method-slide.m3{background:linear-gradient(135deg,#3d3210,#756016)}
 .method-slide.m4{background:linear-gradient(135deg,#073e31,#087443)}
 .method-slide.m5{background:linear-gradient(135deg,#203b2d,#043d27)}
-
-/* =========================================================
-   HOW YOU CAN HELP
-========================================================= */
-
-.help-section{
-  background:
-    linear-gradient(180deg,#f6faf8,#fff);
-}
 
 .help-slide.h1{background:linear-gradient(135deg,#043d27,#087443)}
 .help-slide.h2{background:linear-gradient(135deg,#503f0d,#8c6b12)}
@@ -1617,7 +1532,217 @@ section{
 .help-slide.h5{background:linear-gradient(135deg,#4c3510,#043d27)}
 
 /* =========================================================
-   EVENTS
+   UPCOMING EVENTS
+========================================================= */
+
+.upcoming-section{
+  background:
+    radial-gradient(circle at 12% 15%,rgba(8,116,67,.07),transparent 28%),
+    #f7fbf8;
+}
+
+.upcoming-list{
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+  max-width:980px;
+  margin:auto;
+}
+
+.up-event{
+  position:relative;
+  overflow:hidden;
+  background:#fff;
+  border:1px solid rgba(8,116,67,.12);
+  border-radius:26px;
+  padding:32px;
+  box-shadow:0 18px 50px rgba(2,28,18,.06);
+  transition:.4s;
+}
+
+.up-event:hover{
+  transform:translateY(-4px);
+  box-shadow:0 26px 65px rgba(2,28,18,.11);
+}
+
+.up-event-head{
+  display:flex;
+  align-items:flex-start;
+  gap:20px;
+  padding-bottom:22px;
+  border-bottom:1px dashed rgba(8,116,67,.18);
+  position:relative;
+  z-index:2;
+}
+
+.up-date{
+  flex:0 0 80px;
+  text-align:center;
+  padding:13px 6px;
+  border-radius:18px;
+  background:linear-gradient(135deg,#043d27,#087443);
+  color:#fff;
+}
+
+.up-date strong{
+  display:block;
+  font-size:28px;
+  font-weight:900;
+  line-height:1;
+}
+
+.up-date span{
+  display:block;
+  margin-top:6px;
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:.14em;
+  color:var(--gold);
+}
+
+.up-cat{
+  display:inline-block;
+  padding:5px 13px;
+  margin-bottom:10px;
+  border-radius:50px;
+  background:rgba(8,116,67,.08);
+  color:var(--green);
+  font-size:10px;
+  font-weight:800;
+}
+
+.up-event h3{
+  font-family:'Noto Sans Devanagari',sans-serif;
+  font-size:clamp(19px,2.4vw,26px);
+  line-height:1.42;
+  font-weight:900;
+  color:var(--deep);
+}
+
+.up-en{
+  margin-top:7px;
+  font-size:12px;
+  font-style:italic;
+  color:var(--muted);
+}
+
+.up-info{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:20px;
+  position:relative;
+  z-index:2;
+}
+
+.up-info span{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 14px;
+  border-radius:50px;
+  background:#f3f8f5;
+  border:1px solid rgba(8,116,67,.1);
+  color:var(--green);
+  font-size:11px;
+  font-weight:700;
+}
+
+.up-toggle{
+  margin-top:22px;
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  padding:14px 18px;
+  border-radius:16px;
+  border:1px solid rgba(8,116,67,.15);
+  background:#f3f8f5;
+  color:var(--green);
+  font-size:12px;
+  font-weight:900;
+  cursor:pointer;
+  transition:.3s;
+  position:relative;
+  z-index:2;
+}
+
+.up-toggle:hover{ background:rgba(8,116,67,.09); }
+
+.up-toggle i{ transition:transform .35s; }
+
+.up-toggle.open i{ transform:rotate(180deg); }
+
+.up-activities{
+  list-style:none;
+  counter-reset:upact;
+  max-height:0;
+  overflow:hidden;
+  opacity:0;
+  transition:max-height .45s ease,opacity .35s ease,margin .35s ease;
+  position:relative;
+  z-index:2;
+}
+
+.up-activities.open{
+  opacity:1;
+  margin-top:18px;
+}
+
+.up-activities li{
+  counter-increment:upact;
+  position:relative;
+  padding:12px 0 12px 42px;
+  font-size:12.5px;
+  line-height:1.9;
+  color:var(--text);
+  border-bottom:1px solid rgba(8,116,67,.07);
+}
+
+.up-activities li:last-child{ border-bottom:0; }
+
+.up-activities li::before{
+  content:counter(upact);
+  position:absolute;
+  left:0;
+  top:13px;
+  width:25px;
+  height:25px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:rgba(8,116,67,.09);
+  color:var(--green);
+  font-size:10px;
+  font-weight:900;
+}
+
+.up-outcome{
+  margin-top:18px;
+  padding:16px 18px;
+  border-radius:16px;
+  border-left:4px solid var(--gold);
+  background:rgba(244,197,66,.1);
+  font-size:12px;
+  line-height:1.9;
+  color:#3d4d44;
+  position:relative;
+  z-index:2;
+}
+
+.up-outcome strong{ color:var(--deep); }
+
+.up-register{
+  margin-top:22px;
+  width:100%;
+  position:relative;
+  z-index:2;
+}
+
+/* =========================================================
+   EVENTS (existing)
 ========================================================= */
 
 .events-section{
@@ -1625,13 +1750,9 @@ section{
   color:#fff;
 }
 
-.events-section .section-title{
-  color:#fff;
-}
+.events-section .section-title{ color:#fff; }
 
-.events-section .section-subtitle{
-  color:rgba(255,255,255,.62);
-}
+.events-section .section-subtitle{ color:rgba(255,255,255,.62); }
 
 .events-grid{
   display:grid;
@@ -1655,13 +1776,9 @@ section{
   transition:.7s;
 }
 
-.event-card:hover img{
-  transform:scale(1.07);
-}
+.event-card:hover img{ transform:scale(1.07); }
 
-.event-content{
-  padding:22px;
-}
+.event-content{ padding:22px; }
 
 .event-content h3{
   font-family:'Noto Sans Devanagari',sans-serif;
@@ -1680,9 +1797,7 @@ section{
    JOURNEY
 ========================================================= */
 
-.journey-section{
-  background:#fff;
-}
+.journey-section{ background:#fff; }
 
 .journey-line{
   display:grid;
@@ -1751,12 +1866,10 @@ section{
   background:
     linear-gradient(90deg,rgba(2,28,18,.94),rgba(2,28,18,.6)),
     url('https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=2000&q=85')
-    center/cover fixed;
+    center/cover;
 }
 
-.join-content{
-  max-width:780px;
-}
+.join-content{ max-width:780px; }
 
 .join-content .section-kicker{
   color:var(--gold);
@@ -1766,14 +1879,12 @@ section{
 
 .join-content h2{
   font-family:'Noto Sans Devanagari',sans-serif;
-  font-size:clamp(35px,5vw,65px);
-  line-height:1.1;
+  font-size:clamp(32px,4.5vw,58px);
+  line-height:1.24;
   font-weight:900;
 }
 
-.join-content h2 span{
-  color:var(--gold);
-}
+.join-content h2 span{ color:var(--gold); }
 
 .join-content p{
   margin-top:20px;
@@ -1783,9 +1894,7 @@ section{
   line-height:2;
 }
 
-.join-content .en{
-  color:rgba(255,255,255,.58);
-}
+.join-content .en{ color:rgba(255,255,255,.58); }
 
 .cta-buttons{
   display:flex;
@@ -1794,10 +1903,7 @@ section{
   margin-top:30px;
 }
 
-.cta-button{
-  position:relative;
-  overflow:hidden;
-}
+.cta-button{ position:relative; overflow:hidden; }
 
 .download-btn{
   border:1px solid rgba(255,255,255,.25);
@@ -1809,9 +1915,7 @@ section{
    GALLERY
 ========================================================= */
 
-.gallery-section{
-  background:#f7fbf8;
-}
+.gallery-section{ background:#f7fbf8; }
 
 .gallery-grid{
   display:grid;
@@ -1831,9 +1935,7 @@ section{
   grid-row:span 2;
 }
 
-.gallery-item:nth-child(2){
-  grid-column:span 2;
-}
+.gallery-item:nth-child(2){ grid-column:span 2; }
 
 .gallery-item img{
   width:100%;
@@ -1842,17 +1944,13 @@ section{
   transition:.7s;
 }
 
-.gallery-item:hover img{
-  transform:scale(1.09);
-}
+.gallery-item:hover img{ transform:scale(1.09); }
 
 /* =========================================================
    TRUST
 ========================================================= */
 
-.trust-section{
-  background:#fff;
-}
+.trust-section{ background:#fff; }
 
 .trust-grid{
   display:grid;
@@ -1903,13 +2001,12 @@ section{
 
 .final-cta h2{
   font-family:'Noto Sans Devanagari',sans-serif;
-  font-size:clamp(34px,5vw,64px);
+  font-size:clamp(30px,4.5vw,58px);
+  line-height:1.24;
   font-weight:900;
 }
 
-.final-cta h2 span{
-  color:var(--gold);
-}
+.final-cta h2 span{ color:var(--gold); }
 
 .final-cta p{
   margin:16px auto 0;
@@ -1928,9 +2025,7 @@ footer{
   color:#fff;
 }
 
-.footer-main{
-  padding:70px 0 40px;
-}
+.footer-main{ padding:70px 0 40px; }
 
 .footer-grid{
   display:grid;
@@ -2022,8 +2117,8 @@ footer{
 }
 
 .footer-bottom p{
-  color:rgba(255,255,255,.45);
-  font-size:10px;
+  color:rgba(255,255,255,.62);
+  font-size:11px;
 }
 
 .footer-motto{
@@ -2074,10 +2169,7 @@ footer{
   transition:opacity .8s ease,transform .8s ease;
 }
 
-.reveal.visible{
-  opacity:1;
-  transform:none;
-}
+.reveal.visible{ opacity:1; transform:none; }
 
 .reveal-left{
   opacity:0;
@@ -2085,10 +2177,7 @@ footer{
   transition:.8s ease;
 }
 
-.reveal-left.visible{
-  opacity:1;
-  transform:none;
-}
+.reveal-left.visible{ opacity:1; transform:none; }
 
 .reveal-right{
   opacity:0;
@@ -2096,10 +2185,7 @@ footer{
   transition:.8s ease;
 }
 
-.reveal-right.visible{
-  opacity:1;
-  transform:none;
-}
+.reveal-right.visible{ opacity:1; transform:none; }
 
 /* =========================================================
    RESPONSIVE
@@ -2107,128 +2193,58 @@ footer{
 
 @media(max-width:1100px){
 
-  .desktop-nav{
-    display:none;
-  }
+  .desktop-nav{ display:none; }
 
-  .menu-toggle{
-    display:flex;
-  }
+  .menu-toggle{ display:flex; }
 
-  .team-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
+  .team-grid{ grid-template-columns:repeat(2,1fr); }
 
-  .support-layout{
-    grid-template-columns:1fr;
-  }
+  .support-layout{ grid-template-columns:1fr; }
 
-  .support-copy{
-    text-align:center;
-    max-width:750px;
-    margin:auto;
-  }
+  .support-copy{ text-align:center; max-width:750px; margin:auto; }
 
-  .support-copy .btn{
-    margin:auto;
-  }
+  .support-copy .btn{ margin:auto; }
 
-  .selected-message{
-    text-align:center;
-  }
+  .selected-message{ text-align:center; }
 
-  .about-grid{
-    grid-template-columns:1fr;
-  }
+  .about-grid{ grid-template-columns:1fr; }
 
-  .about-image{
-    max-width:650px;
-    width:100%;
-    margin:auto;
-  }
+  .about-image{ max-width:650px; width:100%; margin:auto; }
 
-  .about-content{
-    max-width:800px;
-    margin:auto;
-  }
+  .about-content{ max-width:800px; margin:auto; }
 
-  .footer-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
+  .footer-grid{ grid-template-columns:repeat(2,1fr); }
 }
 
 @media(max-width:800px){
 
-  .section{
-    padding:75px 0;
-  }
+  .section{ padding:75px 0; }
 
-  .section-head{
-    margin-bottom:38px;
-  }
+  .section-head{ margin-bottom:38px; }
 
-  .hero-content{
-    top:52%;
-  }
+  .hero-content{ top:52%; }
 
-  .hero-copy{
-    max-width:100%;
-  }
+  .hero-copy{ max-width:100%; }
 
-  .hero-copy h1{
-    font-size:clamp(34px,10vw,55px);
-  }
+  .hero-copy h1{ font-size:clamp(32px,9vw,50px); }
 
-  .hero-progress{
-    bottom:25px;
-  }
+  .hero-progress{ bottom:25px; }
 
-  .scroll-cue{
-    display:none;
-  }
+  .scroll-cue{ display:none; }
 
-  .mv-grid{
-    grid-template-columns:1fr;
-  }
+  .mv-grid{ grid-template-columns:1fr; }
 
-  .value-slide{
-    grid-template-columns:1fr;
-    gap:15px;
-    min-height:430px;
-    padding:35px 27px;
-  }
+  .value-slide{ min-height:430px; padding:35px 27px; }
 
-  .value-number{
-    position:absolute;
-    top:25px;
-    right:25px;
-    font-size:55px;
-  }
+  .value-icon{ width:62px; height:62px; font-size:25px; }
 
-  .value-icon{
-    width:62px;
-    height:62px;
-    font-size:25px;
-  }
+  .work-slider .value-slide{ min-height:440px; }
 
-  .work-slider .value-slide{
-    min-height:440px;
-  }
+  .work-icon-big{ width:80px; height:80px; font-size:32px; }
 
-  .work-icon-big{
-    width:80px;
-    height:80px;
-    font-size:32px;
-  }
+  .events-grid{ grid-template-columns:1fr; }
 
-  .events-grid{
-    grid-template-columns:1fr;
-  }
-
-  .journey-line{
-    grid-template-columns:1fr;
-    gap:25px;
-  }
+  .journey-line{ grid-template-columns:1fr; gap:25px; }
 
   .journey-line::before{
     left:36px;
@@ -2247,38 +2263,22 @@ footer{
     gap:18px;
   }
 
-  .journey-step strong{
-    margin-top:0;
-  }
+  .journey-step strong{ margin-top:0; }
 
-  .gallery-grid{
-    grid-template-columns:repeat(2,1fr);
-    grid-auto-rows:170px;
-  }
+  .gallery-grid{ grid-template-columns:repeat(2,1fr); grid-auto-rows:170px; }
 
-  .gallery-item:nth-child(2){
-    grid-column:span 1;
-  }
+  .gallery-item:nth-child(2){ grid-column:span 1; }
 
-  .trust-grid{
-    grid-template-columns:1fr;
-  }
+  .trust-grid{ grid-template-columns:1fr; }
 
-  .footer-grid{
-    grid-template-columns:1fr 1fr;
-  }
+  .footer-grid{ grid-template-columns:1fr 1fr; }
 
-  .footer-bottom-inner{
-    flex-direction:column;
-    text-align:center;
-  }
+  .footer-bottom-inner{ flex-direction:column; text-align:center; }
 }
 
 @media(max-width:600px){
 
-  .header-inner{
-    width:92%;
-  }
+  .header-inner{ width:92%; }
 
   .logo-box{
     width:47px;
@@ -2287,137 +2287,79 @@ footer{
     border-radius:13px;
   }
 
-  .logo-box img{
-    border-radius:10px;
+  .logo-box img{ border-radius:10px; }
+
+  .brand-name{ font-size:13px; }
+
+  .brand-tagline{ font-size:7px; }
+
+  .menu-toggle{ width:43px; height:43px; }
+
+  .intro-logo-box{ width:min(82vw,310px); padding:8px; border-radius:17px; }
+
+  .intro-name{ font-size:clamp(24px,8vw,35px); }
+
+  .intro-support{ font-size:clamp(25px,8vw,38px); }
+
+  .skip-intro{ right:15px; bottom:15px; }
+
+  .smile-track{ font-size:16px; }
+
+  .amount-grid{ grid-template-columns:repeat(4,1fr); gap:7px; }
+
+  .amount-btn{ padding:15px 5px; font-size:16px; border-radius:15px; }
+
+  .support-visual{ min-height:390px; }
+
+  .rupee-core{ width:175px; height:175px; }
+
+  .rupee-core strong{ font-size:78px; }
+
+  .float-word{ font-size:8px; padding:6px 9px; }
+
+  .about-image{ min-height:390px; }
+
+  .about-image img{ height:390px; }
+
+  .about-image-card{ right:12px; bottom:12px; width:190px; padding:17px; }
+
+  .mv-card{ padding:30px 24px; }
+
+  .team-grid{ grid-template-columns:1fr; }
+
+  .team-category{ min-height:180px; }
+
+  .events-grid{ gap:14px; }
+
+  .event-card{ min-height:auto; }
+
+  .gallery-grid{ grid-template-columns:repeat(2,1fr); grid-auto-rows:140px; gap:8px; }
+
+  .footer-grid{ grid-template-columns:1fr; gap:32px; }
+
+  .footer-main{ padding:55px 0 30px; }
+
+  .final-cta{ padding:75px 0; }
+
+  .cta-buttons{ flex-direction:column; align-items:stretch; }
+
+  .cta-buttons .btn{ width:100%; }
+
+  .up-event{ padding:22px 18px; }
+
+  .up-event-head{ flex-direction:column; gap:15px; }
+
+  .up-date{
+    flex:0 0 auto;
+    align-self:flex-start;
+    padding:11px 20px;
   }
 
-  .brand-name{
-    font-size:13px;
-  }
+  .up-date strong{ font-size:24px; }
 
-  .brand-tagline{
-    font-size:7px;
-  }
+  .up-info span{ font-size:10px; }
 
-  .menu-toggle{
-    width:43px;
-    height:43px;
-  }
-
-  .intro-logo-box{
-    width:min(82vw,310px);
-    padding:8px;
-    border-radius:17px;
-  }
-
-  .intro-name{
-    font-size:clamp(24px,8vw,35px);
-  }
-
-  .intro-support{
-    font-size:clamp(25px,8vw,38px);
-  }
-
-  .skip-intro{
-    right:15px;
-    bottom:15px;
-  }
-
-  .smile-track{
-    font-size:16px;
-  }
-
-  .amount-grid{
-    grid-template-columns:repeat(4,1fr);
-    gap:7px;
-  }
-
-  .amount-btn{
-    padding:15px 5px;
-    font-size:16px;
-    border-radius:15px;
-  }
-
-  .support-visual{
-    min-height:390px;
-  }
-
-  .rupee-core{
-    width:175px;
-    height:175px;
-  }
-
-  .rupee-core strong{
-    font-size:78px;
-  }
-
-  .float-word{
-    font-size:8px;
-    padding:6px 9px;
-  }
-
-  .about-image{
-    min-height:390px;
-  }
-
-  .about-image img{
-    height:390px;
-  }
-
-  .about-image-card{
-    right:12px;
-    bottom:12px;
-    width:190px;
-    padding:17px;
-  }
-
-  .mv-card{
-    padding:30px 24px;
-  }
-
-  .team-grid{
-    grid-template-columns:1fr;
-  }
-
-  .team-category{
-    min-height:180px;
-  }
-
-  .events-grid{
-    gap:14px;
-  }
-
-  .event-card{
-    min-height:auto;
-  }
-
-  .gallery-grid{
-    grid-template-columns:repeat(2,1fr);
-    grid-auto-rows:140px;
-    gap:8px;
-  }
-
-  .footer-grid{
-    grid-template-columns:1fr;
-    gap:32px;
-  }
-
-  .footer-main{
-    padding:55px 0 30px;
-  }
-
-  .final-cta{
-    padding:75px 0;
-  }
-
-  .cta-buttons{
-    flex-direction:column;
-    align-items:stretch;
-  }
-
-  .cta-buttons .btn{
-    width:100%;
-  }
+  .corner-num{ top:16px; right:18px; font-size:40px; }
 }
 
 /* =========================================================
@@ -2426,13 +2368,9 @@ footer{
 
 @media(prefers-reduced-motion:reduce){
 
-  html{
-    scroll-behavior:auto;
-  }
+  html{ scroll-behavior:auto; }
 
-  *,
-  *::before,
-  *::after{
+  *,*::before,*::after{
     animation-duration:.01ms!important;
     animation-iteration-count:1!important;
     transition-duration:.01ms!important;
@@ -2528,6 +2466,7 @@ footer{
       <a href="#work">Work</a>
       <a href="#team">Team</a>
       <a href="join-us.html">Join Us</a>
+      <a href="#upcoming">Upcoming</a>
       <a href="#events">Events</a>
 
       <a href="#support" class="donate-nav">
@@ -2548,8 +2487,6 @@ footer{
 
   </div>
 
-
-  <!-- MOBILE MENU -->
 
   <div class="mobile-menu" id="mobileMenu">
 
@@ -2590,6 +2527,11 @@ footer{
         Join Us
       </a>
 
+      <a href="#upcoming" class="mobile-link">
+        <i class="fa-solid fa-calendar-check"></i>
+        Upcoming Events
+      </a>
+
       <a href="#events" class="mobile-link">
         <i class="fa-solid fa-calendar-days"></i>
         Events
@@ -2625,15 +2567,13 @@ footer{
 
     <div class="hero-overlay"></div>
 
+    <span class="corner-num" aria-hidden="true">01</span>
+
     <div class="hero-content">
 
       <div class="container">
 
         <div class="hero-copy">
-
-          <div class="hero-number">
-            01 / 05
-          </div>
 
           <h1>
             एक किताब, एक अवसर,<br>
@@ -2677,15 +2617,13 @@ footer{
 
     <div class="hero-overlay"></div>
 
+    <span class="corner-num" aria-hidden="true">02</span>
+
     <div class="hero-content">
 
       <div class="container">
 
         <div class="hero-copy">
-
-          <div class="hero-number">
-            02 / 05
-          </div>
 
           <h1>
             स्वस्थ समाज,<br>
@@ -2728,15 +2666,13 @@ footer{
 
     <div class="hero-overlay"></div>
 
+    <span class="corner-num" aria-hidden="true">03</span>
+
     <div class="hero-content">
 
       <div class="container">
 
         <div class="hero-copy">
-
-          <div class="hero-number">
-            03 / 05
-          </div>
 
           <h1>
             सशक्त महिलाएँ,<br>
@@ -2775,15 +2711,13 @@ footer{
 
     <div class="hero-overlay"></div>
 
+    <span class="corner-num" aria-hidden="true">04</span>
+
     <div class="hero-content">
 
       <div class="container">
 
         <div class="hero-copy">
-
-          <div class="hero-number">
-            04 / 05
-          </div>
 
           <h1>
             हर बच्चे के सपनों को<br>
@@ -2823,15 +2757,13 @@ footer{
 
     <div class="hero-overlay"></div>
 
+    <span class="corner-num" aria-hidden="true">05</span>
+
     <div class="hero-content">
 
       <div class="container">
 
         <div class="hero-copy">
-
-          <div class="hero-number">
-            05 / 05
-          </div>
 
           <h1>
             जब हम साथ चलते हैं,<br>
@@ -2865,8 +2797,6 @@ footer{
   </div>
 
 
-  <!-- HERO PROGRESS -->
-
   <div class="hero-progress">
 
     <div class="container">
@@ -2879,25 +2809,11 @@ footer{
 
         <div class="hero-track">
 
-          <div class="hero-segment active">
-            <span></span>
-          </div>
-
-          <div class="hero-segment">
-            <span></span>
-          </div>
-
-          <div class="hero-segment">
-            <span></span>
-          </div>
-
-          <div class="hero-segment">
-            <span></span>
-          </div>
-
-          <div class="hero-segment">
-            <span></span>
-          </div>
+          <div class="hero-segment active"><span></span></div>
+          <div class="hero-segment"><span></span></div>
+          <div class="hero-segment"><span></span></div>
+          <div class="hero-segment"><span></span></div>
+          <div class="hero-segment"><span></span></div>
 
         </div>
 
@@ -2978,21 +2894,10 @@ footer{
 
         <div class="amount-grid">
 
-          <button class="amount-btn selected" data-amount="1">
-            ₹1
-          </button>
-
-          <button class="amount-btn" data-amount="2">
-            ₹2
-          </button>
-
-          <button class="amount-btn" data-amount="5">
-            ₹5
-          </button>
-
-          <button class="amount-btn" data-amount="10">
-            ₹10
-          </button>
+          <button class="amount-btn selected" data-amount="1">₹1</button>
+          <button class="amount-btn" data-amount="2">₹2</button>
+          <button class="amount-btn" data-amount="5">₹5</button>
+          <button class="amount-btn" data-amount="10">₹10</button>
 
         </div>
 
@@ -3147,9 +3052,7 @@ footer{
           <i class="fa-solid fa-bullseye"></i>
         </div>
 
-        <h3>
-          Our Mission | हमारा मिशन
-        </h3>
+        <h3>Our Mission | हमारा मिशन</h3>
 
         <p>
           हमारा मिशन समाज के जरूरतमंद और वंचित लोगों तक शिक्षा,
@@ -3171,9 +3074,7 @@ footer{
           <i class="fa-solid fa-eye"></i>
         </div>
 
-        <h3>
-          Our Vision | हमारा विज़न
-        </h3>
+        <h3>Our Vision | हमारा विज़न</h3>
 
         <p>
           हमारा विज़न एक ऐसे समावेशी, जागरूक, आत्मनिर्भर और सशक्त समाज
@@ -3227,163 +3128,52 @@ footer{
         <div class="slider-track" id="valuesTrack">
 
           <article class="value-slide v1">
-
-            <div class="value-number">01</div>
-
-            <div>
-
-              <div class="value-icon">
-                <i class="fa-solid fa-hands-holding-heart"></i>
-              </div>
-
-              <h3>
-                Service | सेवा
-              </h3>
-
-              <p>
-                समाज और जरूरतमंद लोगों की सहायता के प्रति समर्पित भावना।
-              </p>
-
-            </div>
-
+            <span class="corner-num" aria-hidden="true">01</span>
+            <div class="value-icon"><i class="fa-solid fa-hands-holding-heart"></i></div>
+            <h3>Service | सेवा</h3>
+            <p>समाज और जरूरतमंद लोगों की सहायता के प्रति समर्पित भावना।</p>
           </article>
-
 
           <article class="value-slide v2">
-
-            <div class="value-number">02</div>
-
-            <div>
-
-              <div class="value-icon">
-                <i class="fa-solid fa-scale-balanced"></i>
-              </div>
-
-              <h3>
-                Equality | समानता
-              </h3>
-
-              <p>
-                प्रत्येक व्यक्ति के सम्मान और समान अवसर को महत्व देना।
-              </p>
-
-            </div>
-
+            <span class="corner-num" aria-hidden="true">02</span>
+            <div class="value-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+            <h3>Equality | समानता</h3>
+            <p>प्रत्येक व्यक्ति के सम्मान और समान अवसर को महत्व देना।</p>
           </article>
-
 
           <article class="value-slide v3">
-
-            <div class="value-number">03</div>
-
-            <div>
-
-              <div class="value-icon">
-                <i class="fa-solid fa-shield-heart"></i>
-              </div>
-
-              <h3>
-                Integrity | ईमानदारी
-              </h3>
-
-              <p>
-                अपने कार्यों में जिम्मेदारी, ईमानदारी और नैतिकता बनाए रखना।
-              </p>
-
-            </div>
-
+            <span class="corner-num" aria-hidden="true">03</span>
+            <div class="value-icon"><i class="fa-solid fa-shield-heart"></i></div>
+            <h3>Integrity | ईमानदारी</h3>
+            <p>अपने कार्यों में जिम्मेदारी, ईमानदारी और नैतिकता बनाए रखना।</p>
           </article>
-
 
           <article class="value-slide v4">
-
-            <div class="value-number">04</div>
-
-            <div>
-
-              <div class="value-icon">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </div>
-
-              <h3>
-                Transparency | पारदर्शिता
-              </h3>
-
-              <p>
-                कार्यों और संसाधनों के उपयोग में पारदर्शिता को महत्व देना।
-              </p>
-
-            </div>
-
+            <span class="corner-num" aria-hidden="true">04</span>
+            <div class="value-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <h3>Transparency | पारदर्शिता</h3>
+            <p>कार्यों और संसाधनों के उपयोग में पारदर्शिता को महत्व देना।</p>
           </article>
-
 
           <article class="value-slide v5">
-
-            <div class="value-number">05</div>
-
-            <div>
-
-              <div class="value-icon">
-                <i class="fa-solid fa-heart"></i>
-              </div>
-
-              <h3>
-                Compassion | करुणा
-              </h3>
-
-              <p>
-                जरूरतमंद लोगों के प्रति संवेदनशीलता और सहयोग की भावना।
-              </p>
-
-            </div>
-
+            <span class="corner-num" aria-hidden="true">05</span>
+            <div class="value-icon"><i class="fa-solid fa-heart"></i></div>
+            <h3>Compassion | करुणा</h3>
+            <p>जरूरतमंद लोगों के प्रति संवेदनशीलता और सहयोग की भावना।</p>
           </article>
-
 
           <article class="value-slide v6">
-
-            <div class="value-number">06</div>
-
-            <div>
-
-              <div class="value-icon">
-                <i class="fa-solid fa-seedling"></i>
-              </div>
-
-              <h3>
-                Empowerment | सशक्तिकरण
-              </h3>
-
-              <p>
-                लोगों को अवसर, कौशल और आत्मनिर्भरता की दिशा में आगे बढ़ाना।
-              </p>
-
-            </div>
-
+            <span class="corner-num" aria-hidden="true">06</span>
+            <div class="value-icon"><i class="fa-solid fa-seedling"></i></div>
+            <h3>Empowerment | सशक्तिकरण</h3>
+            <p>लोगों को अवसर, कौशल और आत्मनिर्भरता की दिशा में आगे बढ़ाना।</p>
           </article>
 
-
           <article class="value-slide v7">
-
-            <div class="value-number">07</div>
-
-            <div>
-
-              <div class="value-icon">
-                <i class="fa-solid fa-people-group"></i>
-              </div>
-
-              <h3>
-                Community Participation | सामुदायिक भागीदारी
-              </h3>
-
-              <p>
-                समुदाय को सकारात्मक बदलाव की प्रक्रिया में साथ लेकर चलना।
-              </p>
-
-            </div>
-
+            <span class="corner-num" aria-hidden="true">07</span>
+            <div class="value-icon"><i class="fa-solid fa-people-group"></i></div>
+            <h3>Community Participation | सामुदायिक भागीदारी</h3>
+            <p>समुदाय को सकारात्मक बदलाव की प्रक्रिया में साथ लेकर चलना।</p>
           </article>
 
         </div>
@@ -3393,15 +3183,11 @@ footer{
 
       <div class="slider-controls">
 
-        <button class="slider-arrow" id="valuesPrev">
+        <button class="slider-arrow" id="valuesPrev" aria-label="Previous slide">
           <i class="fa-solid fa-arrow-left"></i>
         </button>
 
-        <div class="slider-counter">
-          <span id="valuesCurrent">01</span> / 07
-        </div>
-
-        <button class="slider-arrow" id="valuesNext">
+        <button class="slider-arrow" id="valuesNext" aria-label="Next slide">
           <i class="fa-solid fa-arrow-right"></i>
         </button>
 
@@ -3451,451 +3237,116 @@ footer{
 
         <div class="slider-track" id="workTrack">
 
-          <!-- 01 -->
-
-          <article class="value-slide work-slide-content"
-                   style="background:linear-gradient(135deg,#043d27,#087443)">
-
-            <div class="work-icon-big">
-              <i class="fa-solid fa-book-open-reader"></i>
-            </div>
-
-            <div>
-
-              <span class="small-label">
-                01 / 16
-              </span>
-
-              <h3>
-                शिक्षा एवं बाल विकास
-              </h3>
-
-              <p>
-                Education & Child Development
-              </p>
-
-            </div>
-
+          <article class="value-slide work-slide-content" style="background:linear-gradient(135deg,#043d27,#087443)">
+            <span class="corner-num" aria-hidden="true">01</span>
+            <div class="work-icon-big"><i class="fa-solid fa-book-open-reader"></i></div>
+            <h3>शिक्षा एवं बाल विकास</h3>
+            <p>Education &amp; Child Development</p>
           </article>
 
-
-          <!-- 02 -->
-
-          <article class="value-slide work-slide-content"
-                   style="background:linear-gradient(135deg,#513c0c,#806514)">
-
-            <div class="work-icon-big">
-              <i class="fa-solid fa-person-dress"></i>
-            </div>
-
-            <div>
-
-              <span class="small-label">
-                02 / 16
-              </span>
-
-              <h3>
-                महिला सशक्तिकरण एवं विकास
-              </h3>
-
-              <p>
-                Women Empowerment & Development
-              </p>
-
-            </div>
-
+          <article class="value-slide work-slide-content" style="background:linear-gradient(135deg,#513c0c,#806514)">
+            <span class="corner-num" aria-hidden="true">02</span>
+            <div class="work-icon-big"><i class="fa-solid fa-person-dress"></i></div>
+            <h3>महिला सशक्तिकरण एवं विकास</h3>
+            <p>Women Empowerment &amp; Development</p>
           </article>
 
-
-          <!-- 03 -->
-
-          <article class="value-slide work-slide-content"
-                   style="background:linear-gradient(135deg,#123d31,#087443)">
-
-            <div class="work-icon-big">
-              <i class="fa-solid fa-heart-pulse"></i>
-            </div>
-
-            <div>
-
-              <span class="small-label">
-                03 / 16
-              </span>
-
-              <h3>
-                स्वास्थ्य एवं चिकित्सा
-              </h3>
-
-              <p>
-                Health & Medical Care
-              </p>
-
-            </div>
-
+          <article class="value-slide work-slide-content" style="background:linear-gradient(135deg,#123d31,#087443)">
+            <span class="corner-num" aria-hidden="true">03</span>
+            <div class="work-icon-big"><i class="fa-solid fa-heart-pulse"></i></div>
+            <h3>स्वास्थ्य एवं चिकित्सा</h3>
+            <p>Health &amp; Medical Care</p>
           </article>
 
-
-          <!-- 04 -->
-
-          <article class="value-slide work-slide-content"
-                   style="background:linear-gradient(135deg,#4b291b,#8a4e26)">
-
-            <div class="work-icon-big">
-              <i class="fa-solid fa-hand-holding-heart"></i>
-            </div>
-
-            <div>
-
-              <span class="small-label">
-                04 / 16
-              </span>
-
-              <h3>
-                गरीब एवं जरूरतमंद कल्याण
-              </h3>
-
-              <p>
-                Welfare of Poor & Needy
-              </p>
-
-            </div>
-
+          <article class="value-slide work-slide-content" style="background:linear-gradient(135deg,#4b291b,#8a4e26)">
+            <span class="corner-num" aria-hidden="true">04</span>
+            <div class="work-icon-big"><i class="fa-solid fa-hand-holding-heart"></i></div>
+            <h3>गरीब एवं जरूरतमंद कल्याण</h3>
+            <p>Welfare of Poor &amp; Needy</p>
           </article>
 
-
-          <!-- 05 -->
-
-          <article class="value-slide work-slide-content"
-                   style="background:linear-gradient(135deg,#233f35,#38785b)">
-
-            <div class="work-icon-big">
-              <i class="fa-solid fa-wheelchair"></i>
-            </div>
-
-            <div>
-
-              <span class="small-label">
-                05 / 16
-              </span>
-
-              <h3>
-                दिव्यांगजन कल्याण एवं सशक्तिकरण
-              </h3>
-
-              <p>
-                Disability Welfare & Empowerment
-              </p>
-
-            </div>
-
+          <article class="value-slide work-slide-content" style="background:linear-gradient(135deg,#233f35,#38785b)">
+            <span class="corner-num" aria-hidden="true">05</span>
+            <div class="work-icon-big"><i class="fa-solid fa-wheelchair"></i></div>
+            <h3>दिव्यांगजन कल्याण एवं सशक्तिकरण</h3>
+            <p>Disability Welfare &amp; Empowerment</p>
           </article>
 
-
-          <!-- 06 -->
-
-          <article class="value-slide work-slide-content"
-                   style="background:linear-gradient(135deg,#4a3810,#7d6519)">
-
-            <div class="work-icon-big">
-              <i class="fa-solid fa-person-cane"></i>
-            </div>
-
-            <div>
-
-              <span class="small-label">
-                06 / 16
-              </span>
-
-              <h3>
-                वृद्धजन कल्याण
-              </h3>
-
-              <p>
-                Senior Citizen Welfare
-              </p>
-
-            </div>
-
+          <article class="value-slide work-slide-content" style="background:linear-gradient(135deg,#4a3810,#7d6519)">
+            <span class="corner-num" aria-hidden="true">06</span>
+            <div class="work-icon-big"><i class="fa-solid fa-person-cane"></i></div>
+            <h3>वृद्धजन कल्याण</h3>
+            <p>Senior Citizen Welfare</p>
           </article>
 
-
-          <!-- 07 -->
-
-          <article class="value-slide work-slide-content"
-                   style="background:linear-gradient(135deg,#073d36,#087463)">
-
-            <div class="work-icon-big">
-              <i class="fa-solid fa-user-graduate"></i>
-            </div>
-
-            <div>
-
-              <span class="small-label">
-                07 / 16
-              </span>
-
-              <h3>
-                युवा विकास एवं कौशल विकास
-              </h3>
-
-              <p>
-                Youth Development & Skill Development
-              </p>
-
-            </div>
-
+          <article class="value-slide work-slide-content" style="background:linear-gradient(135deg,#073d36,#087463)">
+            <span class="corner-num" aria-hidden="true">07</span>
+            <div class="work-icon-big"><i class="fa-solid fa-user-graduate"></i></div>
+            <h3>युवा विकास एवं कौशल विकास</h3>
+            <p>Youth Development &amp; Skill Development</p>
           </article>
 
-
-          <!-- 08 -->
-
-          <article class="value-slide work-slide-content"
-                   style="background:linear-gradient(135deg,#183b2d,#496e34)">
-
-            <div class="work-icon-big">
-              <i class="fa-solid fa-briefcase"></i>
-            </div>
-
-            <div>
-
-              <span class="small-label">
-                08 / 16
-              </span>
-
-              <h3>
-                रोजगार, स्वरोजगार एवं आजीविका
-              </h3>
-
-              <p>
-                Employment, Self-Employment & Livelihood
-              </p>
-
-            </div>
-
+          <article class="value-slide work-slide-content" style="background:linear-gradient(135deg,#183b2d,#496e34)">
+            <span class="corner-num" aria-hidden="true">08</span>
+            <div class="work-icon-big"><i class="fa-solid fa-briefcase"></i></div>
+            <h3>रोजगार, स्वरोजगार एवं आजीविका</h3>
+            <p>Employment, Self-Employment &amp; Livelihood</p>
           </article>
 
-
-          <!-- 09 -->
-
-          <article class="value-slide work-slide-content"
-                   style="background:linear-gradient(135deg,#063d29,#2d7652)">
-
-            <div class="work-icon-big">
-              <i class="fa-solid fa-house-chimney"></i>
-            </div>
-
-            <div>
-
-              <span class="small-label">
-                09 / 16
-              </span>
-
-              <h3>
-                ग्रामीण विकास एवं ग्राम उत्थान
-              </h3>
-
-              <p>
-                Rural Development & Village Upliftment
-              </p>
-
-            </div>
-
+          <article class="value-slide work-slide-content" style="background:linear-gradient(135deg,#063d29,#2d7652)">
+            <span class="corner-num" aria-hidden="true">09</span>
+            <div class="work-icon-big"><i class="fa-solid fa-house-chimney"></i></div>
+            <h3>ग्रामीण विकास एवं ग्राम उत्थान</h3>
+            <p>Rural Development &amp; Village Upliftment</p>
           </article>
 
-
-          <!-- 10 -->
-
-          <article class="value-slide work-slide-content"
-                   style="background:linear-gradient(135deg,#43500d,#768b17)">
-
-            <div class="work-icon-big">
-              <i class="fa-solid fa-wheat-awn"></i>
-            </div>
-
-            <div>
-
-              <span class="small-label">
-                10 / 16
-              </span>
-
-              <h3>
-                कृषि एवं किसान कल्याण
-              </h3>
-
-              <p>
-                Agriculture & Farmer Welfare
-              </p>
-
-            </div>
-
+          <article class="value-slide work-slide-content" style="background:linear-gradient(135deg,#43500d,#768b17)">
+            <span class="corner-num" aria-hidden="true">10</span>
+            <div class="work-icon-big"><i class="fa-solid fa-wheat-awn"></i></div>
+            <h3>कृषि एवं किसान कल्याण</h3>
+            <p>Agriculture &amp; Farmer Welfare</p>
           </article>
 
-
-          <!-- 11 -->
-
-          <article class="value-slide work-slide-content"
-                   style="background:linear-gradient(135deg,#073d2b,#087443)">
-
-            <div class="work-icon-big">
-              <i class="fa-solid fa-leaf"></i>
-            </div>
-
-            <div>
-
-              <span class="small-label">
-                11 / 16
-              </span>
-
-              <h3>
-                पर्यावरण एवं जल संरक्षण
-              </h3>
-
-              <p>
-                Environment & Water Conservation
-              </p>
-
-            </div>
-
+          <article class="value-slide work-slide-content" style="background:linear-gradient(135deg,#073d2b,#087443)">
+            <span class="corner-num" aria-hidden="true">11</span>
+            <div class="work-icon-big"><i class="fa-solid fa-leaf"></i></div>
+            <h3>पर्यावरण एवं जल संरक्षण</h3>
+            <p>Environment &amp; Water Conservation</p>
           </article>
 
-
-          <!-- 12 -->
-
-          <article class="value-slide work-slide-content"
-                   style="background:linear-gradient(135deg,#143d39,#39786e)">
-
-            <div class="work-icon-big">
-              <i class="fa-solid fa-droplet"></i>
-            </div>
-
-            <div>
-
-              <span class="small-label">
-                12 / 16
-              </span>
-
-              <h3>
-                स्वच्छता, पेयजल एवं पोषण
-              </h3>
-
-              <p>
-                Sanitation, Drinking Water & Nutrition
-              </p>
-
-            </div>
-
+          <article class="value-slide work-slide-content" style="background:linear-gradient(135deg,#143d39,#39786e)">
+            <span class="corner-num" aria-hidden="true">12</span>
+            <div class="work-icon-big"><i class="fa-solid fa-droplet"></i></div>
+            <h3>स्वच्छता, पेयजल एवं पोषण</h3>
+            <p>Sanitation, Drinking Water &amp; Nutrition</p>
           </article>
 
-
-          <!-- 13 -->
-
-          <article class="value-slide work-slide-content"
-                   style="background:linear-gradient(135deg,#3b3010,#705c19)">
-
-            <div class="work-icon-big">
-              <i class="fa-solid fa-paw"></i>
-            </div>
-
-            <div>
-
-              <span class="small-label">
-                13 / 16
-              </span>
-
-              <h3>
-                पशु कल्याण एवं संरक्षण
-              </h3>
-
-              <p>
-                Animal Welfare & Protection
-              </p>
-
-            </div>
-
+          <article class="value-slide work-slide-content" style="background:linear-gradient(135deg,#3b3010,#705c19)">
+            <span class="corner-num" aria-hidden="true">13</span>
+            <div class="work-icon-big"><i class="fa-solid fa-paw"></i></div>
+            <h3>पशु कल्याण एवं संरक्षण</h3>
+            <p>Animal Welfare &amp; Protection</p>
           </article>
 
-
-          <!-- 14 -->
-
-          <article class="value-slide work-slide-content"
-                   style="background:linear-gradient(135deg,#4c291e,#80503b)">
-
-            <div class="work-icon-big">
-              <i class="fa-solid fa-house-flood-water"></i>
-            </div>
-
-            <div>
-
-              <span class="small-label">
-                14 / 16
-              </span>
-
-              <h3>
-                आपदा राहत एवं पुनर्वास
-              </h3>
-
-              <p>
-                Disaster Relief & Rehabilitation
-              </p>
-
-            </div>
-
+          <article class="value-slide work-slide-content" style="background:linear-gradient(135deg,#4c291e,#80503b)">
+            <span class="corner-num" aria-hidden="true">14</span>
+            <div class="work-icon-big"><i class="fa-solid fa-house-flood-water"></i></div>
+            <h3>आपदा राहत एवं पुनर्वास</h3>
+            <p>Disaster Relief &amp; Rehabilitation</p>
           </article>
 
-
-          <!-- 15 -->
-
-          <article class="value-slide work-slide-content"
-                   style="background:linear-gradient(135deg,#173d35,#236b58)">
-
-            <div class="work-icon-big">
-              <i class="fa-solid fa-scale-balanced"></i>
-            </div>
-
-            <div>
-
-              <span class="small-label">
-                15 / 16
-              </span>
-
-              <h3>
-                सामाजिक न्याय, मानव अधिकार एवं कानूनी जागरूकता
-              </h3>
-
-              <p>
-                Social Justice, Human Rights & Legal Awareness
-              </p>
-
-            </div>
-
+          <article class="value-slide work-slide-content" style="background:linear-gradient(135deg,#173d35,#236b58)">
+            <span class="corner-num" aria-hidden="true">15</span>
+            <div class="work-icon-big"><i class="fa-solid fa-scale-balanced"></i></div>
+            <h3>सामाजिक न्याय, मानव अधिकार एवं कानूनी जागरूकता</h3>
+            <p>Social Justice, Human Rights &amp; Legal Awareness</p>
           </article>
 
-
-          <!-- 16 -->
-
-          <article class="value-slide work-slide-content"
-                   style="background:linear-gradient(135deg,#043d27,#075e42)">
-
-            <div class="work-icon-big">
-              <i class="fa-solid fa-laptop"></i>
-            </div>
-
-            <div>
-
-              <span class="small-label">
-                16 / 16
-              </span>
-
-              <h3>
-                डिजिटल शिक्षा, जन-जागरूकता एवं सामाजिक विकास
-              </h3>
-
-              <p>
-                Digital Education, Public Awareness & Social Development
-              </p>
-
-            </div>
-
+          <article class="value-slide work-slide-content" style="background:linear-gradient(135deg,#043d27,#075e42)">
+            <span class="corner-num" aria-hidden="true">16</span>
+            <div class="work-icon-big"><i class="fa-solid fa-laptop"></i></div>
+            <h3>डिजिटल शिक्षा, जन-जागरूकता एवं सामाजिक विकास</h3>
+            <p>Digital Education, Public Awareness &amp; Social Development</p>
           </article>
 
         </div>
@@ -3905,15 +3356,11 @@ footer{
 
       <div class="slider-controls">
 
-        <button class="slider-arrow" id="workPrev">
+        <button class="slider-arrow" id="workPrev" aria-label="Previous slide">
           <i class="fa-solid fa-arrow-left"></i>
         </button>
 
-        <div class="slider-counter">
-          <span id="workCurrent">01</span> / 16
-        </div>
-
-        <button class="slider-arrow" id="workNext">
+        <button class="slider-arrow" id="workNext" aria-label="Next slide">
           <i class="fa-solid fa-arrow-right"></i>
         </button>
 
@@ -3960,71 +3407,31 @@ footer{
     <div class="team-grid">
 
       <article class="team-category reveal">
-
-        <div class="team-icon">
-          <i class="fa-solid fa-building-columns"></i>
-        </div>
-
-        <h3>
-          Board of Trustees | न्यास मंडल
-        </h3>
-
-        <p>
-          Foundation के न्यास एवं संस्थागत दिशा से संबंधित संरचना।
-        </p>
-
+        <span class="corner-num" aria-hidden="true">01</span>
+        <div class="team-icon"><i class="fa-solid fa-building-columns"></i></div>
+        <h3>Board of Trustees | न्यास मंडल</h3>
+        <p>Foundation के न्यास एवं संस्थागत दिशा से संबंधित संरचना।</p>
       </article>
 
-
       <article class="team-category reveal">
-
-        <div class="team-icon">
-          <i class="fa-solid fa-star"></i>
-        </div>
-
-        <h3>
-          Senior & Executive Members | वरिष्ठ एवं कार्यकारी सदस्य
-        </h3>
-
-        <p>
-          वरिष्ठ एवं कार्यकारी सदस्यों के सहयोग और संगठनात्मक भूमिका
-          के लिए dedicated section।
-        </p>
-
+        <span class="corner-num" aria-hidden="true">02</span>
+        <div class="team-icon"><i class="fa-solid fa-star"></i></div>
+        <h3>Senior &amp; Executive Members | वरिष्ठ एवं कार्यकारी सदस्य</h3>
+        <p>वरिष्ठ एवं कार्यकारी सदस्यों के सहयोग और संगठनात्मक भूमिका के लिए dedicated section।</p>
       </article>
 
-
       <article class="team-category reveal">
-
-        <div class="team-icon">
-          <i class="fa-solid fa-lightbulb"></i>
-        </div>
-
-        <h3>
-          Advisory Board | सलाहकार मंडल
-        </h3>
-
-        <p>
-          विभिन्न क्षेत्रों में मार्गदर्शन और सलाह देने वाली संरचना।
-        </p>
-
+        <span class="corner-num" aria-hidden="true">03</span>
+        <div class="team-icon"><i class="fa-solid fa-lightbulb"></i></div>
+        <h3>Advisory Board | सलाहकार मंडल</h3>
+        <p>विभिन्न क्षेत्रों में मार्गदर्शन और सलाह देने वाली संरचना।</p>
       </article>
 
-
       <article class="team-category reveal">
-
-        <div class="team-icon">
-          <i class="fa-solid fa-rocket"></i>
-        </div>
-
-        <h3>
-          Program Team | कार्यक्रम संचालन टीम
-        </h3>
-
-        <p>
-          कार्यक्रमों और सामाजिक गतिविधियों के संचालन एवं समन्वय से जुड़ी टीम।
-        </p>
-
+        <span class="corner-num" aria-hidden="true">04</span>
+        <div class="team-icon"><i class="fa-solid fa-rocket"></i></div>
+        <h3>Program Team | कार्यक्रम संचालन टीम</h3>
+        <p>कार्यक्रमों और सामाजिक गतिविधियों के संचालन एवं समन्वय से जुड़ी टीम।</p>
       </article>
 
     </div>
@@ -4065,112 +3472,38 @@ footer{
         <div class="slider-track" id="methodTrack">
 
           <article class="value-slide method-slide m1">
-
-            <div class="work-icon-big">
-              <i class="fa-solid fa-hand-holding-heart"></i>
-            </div>
-
-            <div>
-              <span class="small-label">01 / 05</span>
-
-              <h3>
-                सीधी मदद
-              </h3>
-
-              <p>
-                Direct Help
-              </p>
-
-            </div>
-
+            <span class="corner-num" aria-hidden="true">01</span>
+            <div class="work-icon-big"><i class="fa-solid fa-hand-holding-heart"></i></div>
+            <h3>सीधी मदद</h3>
+            <p>Direct Help</p>
           </article>
-
 
           <article class="value-slide method-slide m2">
-
-            <div class="work-icon-big">
-              <i class="fa-solid fa-people-arrows"></i>
-            </div>
-
-            <div>
-              <span class="small-label">02 / 05</span>
-
-              <h3>
-                मिलकर काम करना
-              </h3>
-
-              <p>
-                Working Together
-              </p>
-
-            </div>
-
+            <span class="corner-num" aria-hidden="true">02</span>
+            <div class="work-icon-big"><i class="fa-solid fa-people-arrows"></i></div>
+            <h3>मिलकर काम करना</h3>
+            <p>Working Together</p>
           </article>
-
 
           <article class="value-slide method-slide m3">
-
-            <div class="work-icon-big">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-
-            <div>
-              <span class="small-label">03 / 05</span>
-
-              <h3>
-                ईमानदारी और पारदर्शिता
-              </h3>
-
-              <p>
-                Honesty & Transparency
-              </p>
-
-            </div>
-
+            <span class="corner-num" aria-hidden="true">03</span>
+            <div class="work-icon-big"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <h3>ईमानदारी और पारदर्शिता</h3>
+            <p>Honesty &amp; Transparency</p>
           </article>
-
 
           <article class="value-slide method-slide m4">
-
-            <div class="work-icon-big">
-              <i class="fa-solid fa-people-group"></i>
-            </div>
-
-            <div>
-              <span class="small-label">04 / 05</span>
-
-              <h3>
-                समुदाय की भागीदारी
-              </h3>
-
-              <p>
-                Community Participation
-              </p>
-
-            </div>
-
+            <span class="corner-num" aria-hidden="true">04</span>
+            <div class="work-icon-big"><i class="fa-solid fa-people-group"></i></div>
+            <h3>समुदाय की भागीदारी</h3>
+            <p>Community Participation</p>
           </article>
 
-
           <article class="value-slide method-slide m5">
-
-            <div class="work-icon-big">
-              <i class="fa-solid fa-scale-balanced"></i>
-            </div>
-
-            <div>
-              <span class="small-label">05 / 05</span>
-
-              <h3>
-                समानता और सम्मान
-              </h3>
-
-              <p>
-                Equality & Respect
-              </p>
-
-            </div>
-
+            <span class="corner-num" aria-hidden="true">05</span>
+            <div class="work-icon-big"><i class="fa-solid fa-scale-balanced"></i></div>
+            <h3>समानता और सम्मान</h3>
+            <p>Equality &amp; Respect</p>
           </article>
 
         </div>
@@ -4180,15 +3513,11 @@ footer{
 
       <div class="slider-controls">
 
-        <button class="slider-arrow" id="methodPrev">
+        <button class="slider-arrow" id="methodPrev" aria-label="Previous slide">
           <i class="fa-solid fa-arrow-left"></i>
         </button>
 
-        <div class="slider-counter">
-          <span id="methodCurrent">01</span> / 05
-        </div>
-
-        <button class="slider-arrow" id="methodNext">
+        <button class="slider-arrow" id="methodNext" aria-label="Next slide">
           <i class="fa-solid fa-arrow-right"></i>
         </button>
 
@@ -4234,112 +3563,38 @@ footer{
         <div class="slider-track" id="helpTrack">
 
           <article class="value-slide help-slide h1">
-
-            <div class="work-icon-big">
-              <i class="fa-regular fa-clock"></i>
-            </div>
-
-            <div>
-              <span class="small-label">01 / 05</span>
-
-              <h3>
-                अपना समय दें
-              </h3>
-
-              <p>
-                Give Your Time
-              </p>
-
-            </div>
-
+            <span class="corner-num" aria-hidden="true">01</span>
+            <div class="work-icon-big"><i class="fa-regular fa-clock"></i></div>
+            <h3>अपना समय दें</h3>
+            <p>Give Your Time</p>
           </article>
-
 
           <article class="value-slide help-slide h2">
-
-            <div class="work-icon-big">
-              <i class="fa-solid fa-heart"></i>
-            </div>
-
-            <div>
-              <span class="small-label">02 / 05</span>
-
-              <h3>
-                दान दें
-              </h3>
-
-              <p>
-                Donate
-              </p>
-
-            </div>
-
+            <span class="corner-num" aria-hidden="true">02</span>
+            <div class="work-icon-big"><i class="fa-solid fa-heart"></i></div>
+            <h3>दान दें</h3>
+            <p>Donate</p>
           </article>
-
 
           <article class="value-slide help-slide h3">
-
-            <div class="work-icon-big">
-              <i class="fa-solid fa-handshake"></i>
-            </div>
-
-            <div>
-              <span class="small-label">03 / 05</span>
-
-              <h3>
-                सहयोग करें
-              </h3>
-
-              <p>
-                Support Us
-              </p>
-
-            </div>
-
+            <span class="corner-num" aria-hidden="true">03</span>
+            <div class="work-icon-big"><i class="fa-solid fa-handshake"></i></div>
+            <h3>सहयोग करें</h3>
+            <p>Support Us</p>
           </article>
-
 
           <article class="value-slide help-slide h4">
-
-            <div class="work-icon-big">
-              <i class="fa-solid fa-bullhorn"></i>
-            </div>
-
-            <div>
-              <span class="small-label">04 / 05</span>
-
-              <h3>
-                जागरूकता फैलाएँ
-              </h3>
-
-              <p>
-                Spread Awareness
-              </p>
-
-            </div>
-
+            <span class="corner-num" aria-hidden="true">04</span>
+            <div class="work-icon-big"><i class="fa-solid fa-bullhorn"></i></div>
+            <h3>जागरूकता फैलाएँ</h3>
+            <p>Spread Awareness</p>
           </article>
 
-
           <article class="value-slide help-slide h5">
-
-            <div class="work-icon-big">
-              <i class="fa-solid fa-microphone"></i>
-            </div>
-
-            <div>
-              <span class="small-label">05 / 05</span>
-
-              <h3>
-                अपनी आवाज़ बनें
-              </h3>
-
-              <p>
-                Be a Voice for Change
-              </p>
-
-            </div>
-
+            <span class="corner-num" aria-hidden="true">05</span>
+            <div class="work-icon-big"><i class="fa-solid fa-microphone"></i></div>
+            <h3>अपनी आवाज़ बनें</h3>
+            <p>Be a Voice for Change</p>
           </article>
 
         </div>
@@ -4349,15 +3604,11 @@ footer{
 
       <div class="slider-controls">
 
-        <button class="slider-arrow" id="helpPrev">
+        <button class="slider-arrow" id="helpPrev" aria-label="Previous slide">
           <i class="fa-solid fa-arrow-left"></i>
         </button>
 
-        <div class="slider-counter">
-          <span id="helpCurrent">01</span> / 05
-        </div>
-
-        <button class="slider-arrow" id="helpNext">
+        <button class="slider-arrow" id="helpNext" aria-label="Next slide">
           <i class="fa-solid fa-arrow-right"></i>
         </button>
 
@@ -4404,72 +3655,28 @@ footer{
     <div class="journey-line">
 
       <div class="journey-step reveal">
-
-        <div class="journey-circle">
-          <i class="fa-solid fa-indian-rupee-sign"></i>
-        </div>
-
-        <div>
-          <strong>आपका ₹1</strong>
-          <span>Your Support</span>
-        </div>
-
+        <div class="journey-circle"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+        <div><strong>आपका ₹1</strong><span>Your Support</span></div>
       </div>
 
-
       <div class="journey-step reveal">
-
-        <div class="journey-circle">
-          <i class="fa-solid fa-handshake"></i>
-        </div>
-
-        <div>
-          <strong>सहयोग</strong>
-          <span>Support</span>
-        </div>
-
+        <div class="journey-circle"><i class="fa-solid fa-handshake"></i></div>
+        <div><strong>सहयोग</strong><span>Support</span></div>
       </div>
 
-
       <div class="journey-step reveal">
-
-        <div class="journey-circle">
-          <i class="fa-solid fa-people-group"></i>
-        </div>
-
-        <div>
-          <strong>कार्यक्रम</strong>
-          <span>Programs</span>
-        </div>
-
+        <div class="journey-circle"><i class="fa-solid fa-people-group"></i></div>
+        <div><strong>कार्यक्रम</strong><span>Programs</span></div>
       </div>
 
-
       <div class="journey-step reveal">
-
-        <div class="journey-circle">
-          <i class="fa-solid fa-house-user"></i>
-        </div>
-
-        <div>
-          <strong>समुदाय</strong>
-          <span>Community</span>
-        </div>
-
+        <div class="journey-circle"><i class="fa-solid fa-house-user"></i></div>
+        <div><strong>समुदाय</strong><span>Community</span></div>
       </div>
 
-
       <div class="journey-step reveal">
-
-        <div class="journey-circle">
-          <i class="fa-solid fa-seedling"></i>
-        </div>
-
-        <div>
-          <strong>बदलाव</strong>
-          <span>Positive Change</span>
-        </div>
-
+        <div class="journey-circle"><i class="fa-solid fa-seedling"></i></div>
+        <div><strong>बदलाव</strong><span>Positive Change</span></div>
       </div>
 
     </div>
@@ -4480,7 +3687,281 @@ footer{
 
 
 <!-- =======================================================
-     EVENTS
+     UPCOMING EVENTS
+======================================================= -->
+
+<section class="section upcoming-section" id="upcoming">
+
+  <div class="container">
+
+    <div class="section-head reveal">
+
+      <div class="section-kicker">
+        <i class="fa-solid fa-calendar-check"></i>
+        Register Now
+      </div>
+
+      <h2 class="section-title">
+        आगामी कार्यक्रम | <span>Upcoming Events</span>
+      </h2>
+
+      <p class="section-subtitle">
+        नीचे दिए गए कार्यक्रमों में <strong>"Register Now"</strong>
+        बटन पर क्लिक करके अभी पंजीकरण करें।
+      </p>
+
+      <div class="gold-line"></div>
+
+    </div>
+
+
+    <div class="upcoming-list">
+
+
+      <!-- EVENT 01 -->
+
+      <article class="up-event reveal">
+
+        <span class="corner-num" aria-hidden="true">01</span>
+
+        <div class="up-event-head">
+
+          <div class="up-date">
+            <strong>03</strong>
+            <span>JAN 2027</span>
+          </div>
+
+          <div>
+
+            <span class="up-cat">श्रेणी: शिक्षा एवं बाल विकास</span>
+
+            <h3>शैक्षणिक सामग्री वितरण एवं शिक्षा जागरूकता शिविर</h3>
+
+            <p class="up-en">Educational Material Distribution &amp; Awareness Camp</p>
+
+          </div>
+
+        </div>
+
+
+        <div class="up-info">
+
+          <span><i class="fa-solid fa-calendar-day"></i> Sunday, 03 January 2027</span>
+          <span><i class="fa-solid fa-location-dot"></i> पटना, बिहार</span>
+          <span><i class="fa-regular fa-clock"></i> 10:00 AM – 3:00 PM</span>
+
+        </div>
+
+
+        <button class="up-toggle" type="button">
+          कार्यक्रम की गतिविधियाँ (8)
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <ol class="up-activities">
+
+          <li>जरूरतमंद बच्चों को निःशुल्क किताबें, कॉपी, पेन, पेंसिल, स्कूल बैग एवं अन्य शैक्षणिक सामग्री का वितरण।</li>
+
+          <li>स्कूल से बाहर रहे बच्चों की पहचान कर उन्हें शिक्षा से जोड़ने के लिए अभिभावकों से संवाद एवं प्रेरणा सत्र।</li>
+
+          <li>गरीब एवं वंचित परिवारों के 100+ बच्चों को ड्रॉपआउट रोकने हेतु छात्रवृत्ति एवं शैक्षणिक सहायता का पंजीकरण।</li>
+
+          <li>बच्चों के लिए चित्रकला, निबंध, प्रश्नोत्तरी एवं खेल आधारित प्रतियोगिताओं का आयोजन।</li>
+
+          <li>शिक्षा, बाल अधिकार एवं बाल श्रम के विरुद्ध जागरूकता रैली एवं नुक्कड़ नाटक।</li>
+
+          <li>माता-पिता एवं अभिभावकों के लिए शिक्षा के महत्व एवं सरकारी शिक्षा योजनाओं पर जानकारी सत्र।</li>
+
+          <li>स्कूल प्रशासन एवं शिक्षकों के साथ समन्वय बैठक — बच्चों के शैक्षणिक स्तर पर चर्चा।</li>
+
+          <li>करियर मार्गदर्शन काउंटर — कक्षा 9वीं से 12वीं के छात्रों के लिए भविष्य की दिशा पर परामर्श।</li>
+
+        </ol>
+
+
+        <p class="up-outcome">
+          <strong>अपेक्षित परिणाम:</strong>
+          लगभग 100–150 बच्चों को शैक्षणिक सामग्री एवं मार्गदर्शन मिलेगा।
+          20–30 ड्रॉपआउट बच्चे शिक्षा से जुड़ सकेंगे।
+        </p>
+
+
+        <a href="register.html?event=education-camp"
+           class="btn btn-primary up-register">
+          <i class="fa-solid fa-pen-to-square"></i>
+          Register Now
+        </a>
+
+      </article>
+
+
+      <!-- EVENT 02 -->
+
+      <article class="up-event reveal">
+
+        <span class="corner-num" aria-hidden="true">02</span>
+
+        <div class="up-event-head">
+
+          <div class="up-date">
+            <strong>10</strong>
+            <span>JAN 2027</span>
+          </div>
+
+          <div>
+
+            <span class="up-cat">श्रेणी: महिला सशक्तिकरण एवं विकास</span>
+
+            <h3>महिला कौशल विकास एवं स्वरोजगार प्रशिक्षण शिविर</h3>
+
+            <p class="up-en">Women's Skill Development &amp; Self-Employment Training Camp</p>
+
+          </div>
+
+        </div>
+
+
+        <div class="up-info">
+
+          <span><i class="fa-solid fa-calendar-day"></i> Sunday, 10 January 2027</span>
+          <span><i class="fa-solid fa-location-dot"></i> मुज़फ़्फ़रपुर, बिहार</span>
+          <span><i class="fa-regular fa-clock"></i> 10:00 AM – 3:00 PM</span>
+
+        </div>
+
+
+        <button class="up-toggle" type="button">
+          कार्यक्रम की गतिविधियाँ (8)
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <ol class="up-activities">
+
+          <li>महिलाओं के लिए सिलाई, कढ़ाई, हस्तकला एवं जरी-जरदौजी का निःशुल्क प्रशिक्षण शिविर।</li>
+
+          <li>स्वयं सहायता समूहों (SHG) की महिलाओं को उत्पाद निर्माण, पैकेजिंग एवं ब्रांडिंग पर मार्गदर्शन।</li>
+
+          <li>महिला उद्यमिता विकास कार्यशाला — छोटे व्यवसाय शुरू करने की योजना एवं बजट बनाना।</li>
+
+          <li>महिलाओं के अधिकार, घरेलू हिंसा के विरुद्ध कानूनी प्रावधान एवं सहायता हेल्पलाइन की जानकारी।</li>
+
+          <li>बाल विवाह एवं दहेज प्रथा जैसी सामाजिक कुरीतियों के विरुद्ध जागरूकता सत्र।</li>
+
+          <li>महिला स्वास्थ्य, पोषण एवं मातृ स्वास्थ्य पर विशेषज्ञ चिकित्सकों का व्याख्यान।</li>
+
+          <li>सरकारी योजनाओं (MUDRA, SHG, PMEGP, सुकन्या समृद्धि) की जानकारी एवं ऑनलाइन आवेदन सहायता।</li>
+
+          <li>महिलाओं को डिजिटल साक्षरता एवं मोबाइल बैंकिंग के उपयोग का व्यावहारिक प्रशिक्षण।</li>
+
+        </ol>
+
+
+        <p class="up-outcome">
+          <strong>अपेक्षित परिणाम:</strong>
+          लगभग 80–100 महिलाएँ कौशल प्रशिक्षण से लाभान्वित होंगी।
+          15–20 महिलाएँ स्वरोजगार अपनाने के लिए प्रेरित होंगी।
+        </p>
+
+
+        <a href="register.html?event=women-skill"
+           class="btn btn-primary up-register">
+          <i class="fa-solid fa-pen-to-square"></i>
+          Register Now
+        </a>
+
+      </article>
+
+
+      <!-- EVENT 03 -->
+
+      <article class="up-event reveal">
+
+        <span class="corner-num" aria-hidden="true">03</span>
+
+        <div class="up-event-head">
+
+          <div class="up-date">
+            <strong>17</strong>
+            <span>JAN 2027</span>
+          </div>
+
+          <div>
+
+            <span class="up-cat">श्रेणी: स्वास्थ्य एवं चिकित्सा</span>
+
+            <h3>निःशुल्क स्वास्थ्य जाँच एवं चिकित्सा शिविर</h3>
+
+            <p class="up-en">Free Health Check-up &amp; Medical Camp</p>
+
+          </div>
+
+        </div>
+
+
+        <div class="up-info">
+
+          <span><i class="fa-solid fa-calendar-day"></i> Sunday, 17 January 2027</span>
+          <span><i class="fa-solid fa-location-dot"></i> गया, बिहार</span>
+          <span><i class="fa-regular fa-clock"></i> 9:00 AM – 4:00 PM</span>
+
+        </div>
+
+
+        <button class="up-toggle" type="button">
+          कार्यक्रम की गतिविधियाँ (10)
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <ol class="up-activities">
+
+          <li>अनुभवी सामान्य चिकित्सकों द्वारा निःशुल्क स्वास्थ्य परामर्श एवं जाँच।</li>
+
+          <li>नेत्र विशेषज्ञ द्वारा नेत्र जाँच, दृष्टि परीक्षण एवं आवश्यक चश्मा वितरण।</li>
+
+          <li>दंत चिकित्सक द्वारा दाँतों की जाँच, मुँह के रोगों की पहचान एवं परामर्श।</li>
+
+          <li>मधुमेह (Diabetes) एवं रक्तचाप (BP) की निःशुल्क जाँच।</li>
+
+          <li>महिलाओं के लिए विशेष स्त्री रोग परामर्श एवं मातृ स्वास्थ्य जाँच।</li>
+
+          <li>बच्चों के लिए टीकाकरण परामर्श एवं पोषण स्तर की जाँच।</li>
+
+          <li>निःशुल्क आवश्यक दवाओं का वितरण एवं दवा सेवन की विधि पर मार्गदर्शन।</li>
+
+          <li>रक्तदान जागरूकता काउंटर तथा रक्तदाताओं का पंजीकरण।</li>
+
+          <li>स्वच्छता, पोषण, संतुलित आहार एवं स्वस्थ जीवनशैली पर जागरूकता सत्र।</li>
+
+          <li>गंभीर रोगियों को जिला अस्पताल तक रेफर करने एवं आगे की सहायता में मार्गदर्शन।</li>
+
+        </ol>
+
+
+        <p class="up-outcome">
+          <strong>अपेक्षित परिणाम:</strong>
+          लगभग 200–300 लोग निःशुल्क स्वास्थ्य जाँच से लाभान्वित होंगे।
+          50+ लोगों को चश्मा, 100+ को निःशुल्क दवा मिलेगी।
+        </p>
+
+
+        <a href="register.html?event=health-camp"
+           class="btn btn-primary up-register">
+          <i class="fa-solid fa-pen-to-square"></i>
+          Register Now
+        </a>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     EVENTS (Past / Social Activities)
 ======================================================= -->
 
 <section class="section events-section" id="events">
@@ -4495,7 +3976,7 @@ footer{
       </div>
 
       <h2 class="section-title">
-        Events & <span>Social Activities</span>
+        Events &amp; <span>Social Activities</span>
       </h2>
 
       <p class="section-subtitle">
@@ -4515,62 +3996,37 @@ footer{
 
         <img
           src="https://images.unsplash.com/photo-1594708767771-a7502209ff51?auto=format&fit=crop&w=1000&q=85"
-          alt="Social Activity">
+          alt="Social Activity" loading="lazy">
 
         <div class="event-content">
-
-          <h3>
-            सामाजिक जागरूकता
-          </h3>
-
-          <p>
-            समाज में जागरूकता और सकारात्मक भागीदारी को बढ़ावा देने
-            वाली गतिविधियाँ।
-          </p>
-
+          <h3>सामाजिक जागरूकता</h3>
+          <p>समाज में जागरूकता और सकारात्मक भागीदारी को बढ़ावा देने वाली गतिविधियाँ।</p>
         </div>
 
       </article>
-
 
       <article class="event-card reveal">
 
         <img
           src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=85"
-          alt="Health Activity">
+          alt="Health Activity" loading="lazy">
 
         <div class="event-content">
-
-          <h3>
-            स्वास्थ्य एवं जागरूकता
-          </h3>
-
-          <p>
-            स्वास्थ्य, जागरूकता और समुदाय के सहयोग से जुड़े प्रयास।
-          </p>
-
+          <h3>स्वास्थ्य एवं जागरूकता</h3>
+          <p>स्वास्थ्य, जागरूकता और समुदाय के सहयोग से जुड़े प्रयास।</p>
         </div>
 
       </article>
-
 
       <article class="event-card reveal">
 
         <img
           src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1000&q=85"
-          alt="Community Activity">
+          alt="Community Activity" loading="lazy">
 
         <div class="event-content">
-
-          <h3>
-            सामुदायिक गतिविधियाँ
-          </h3>
-
-          <p>
-            लोगों को साथ जोड़ने और समुदाय में सहयोग की भावना को
-            मजबूत करने वाली गतिविधियाँ।
-          </p>
-
+          <h3>सामुदायिक गतिविधियाँ</h3>
+          <p>लोगों को साथ जोड़ने और समुदाय में सहयोग की भावना को मजबूत करने वाली गतिविधियाँ।</p>
         </div>
 
       </article>
@@ -4608,37 +4064,14 @@ footer{
 
     <div class="gallery-grid">
 
-      <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1000&q=85" alt="Community">
-      </div>
-
-      <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1000&q=85" alt="Women">
-      </div>
-
-      <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&w=1000&q=85" alt="Support">
-      </div>
-
-      <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=1000&q=85" alt="Children">
-      </div>
-
-      <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1000&q=85" alt="Community Work">
-      </div>
-
-      <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1594708767771-a7502209ff51?auto=format&fit=crop&w=1000&q=85" alt="Activity">
-      </div>
-
-      <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=85" alt="Health">
-      </div>
-
-      <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1000&q=85" alt="Team">
-      </div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1000&q=85" alt="Community" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1000&q=85" alt="Women" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&w=1000&q=85" alt="Support" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=1000&q=85" alt="Children" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1000&q=85" alt="Community Work" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1594708767771-a7502209ff51?auto=format&fit=crop&w=1000&q=85" alt="Activity" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=85" alt="Health" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1000&q=85" alt="Team" loading="lazy"></div>
 
     </div>
 
@@ -4676,7 +4109,7 @@ footer{
       <p class="en">
         Join us and be part of our journey towards positive change
         in society. Your time, support, and efforts can bring new hope
-        into someone’s life.
+        into someone's life.
       </p>
 
       <div class="cta-buttons">
@@ -4717,7 +4150,7 @@ footer{
 
       <div class="section-kicker">
         <i class="fa-solid fa-shield-heart"></i>
-        Trust & Transparency
+        Trust &amp; Transparency
       </div>
 
       <h2 class="section-title">
@@ -4737,50 +4170,21 @@ footer{
     <div class="trust-grid">
 
       <article class="trust-card reveal">
-
         <i class="fa-solid fa-file-lines"></i>
-
-        <h3>
-          Information
-        </h3>
-
-        <p>
-          Foundation से संबंधित आवश्यक जानकारी को स्पष्ट और
-          व्यवस्थित रूप में उपलब्ध कराने का प्रयास।
-        </p>
-
+        <h3>Information</h3>
+        <p>Foundation से संबंधित आवश्यक जानकारी को स्पष्ट और व्यवस्थित रूप में उपलब्ध कराने का प्रयास।</p>
       </article>
 
-
       <article class="trust-card reveal">
-
         <i class="fa-solid fa-eye"></i>
-
-        <h3>
-          Transparency
-        </h3>
-
-        <p>
-          कार्यों और संसाधनों के उपयोग में पारदर्शिता और
-          जिम्मेदारी को महत्व।
-        </p>
-
+        <h3>Transparency</h3>
+        <p>कार्यों और संसाधनों के उपयोग में पारदर्शिता और जिम्मेदारी को महत्व।</p>
       </article>
 
-
       <article class="trust-card reveal">
-
         <i class="fa-solid fa-download"></i>
-
-        <h3>
-          Downloads
-        </h3>
-
-        <p>
-          आवश्यक documents और resources को भविष्य में यहाँ
-          उपलब्ध कराया जा सकता है।
-        </p>
-
+        <h3>Downloads</h3>
+        <p>आवश्यक documents और resources को भविष्य में यहाँ उपलब्ध कराया जा सकता है।</p>
       </article>
 
     </div>
@@ -4791,7 +4195,7 @@ footer{
 
 
 <!-- =======================================================
-     FINAL DONATE CTA
+     FINAL CTA
 ======================================================= -->
 
 <section class="final-cta" id="final-donate">
@@ -4853,20 +4257,14 @@ footer{
         <div class="footer-brand">
 
           <div class="logo-box">
-
             <img
               src="https://raw.githubusercontent.com/sathchaleham-dot/sath-chale-ham-/main/sath_chale_ham_logo_HD-1.png"
               alt="Sath Chale Hum Foundation Logo">
-
           </div>
 
-          <h3>
-            साथ चले हम फाउंडेशन
-          </h3>
+          <h3>साथ चले हम फाउंडेशन</h3>
 
-          <div class="tagline">
-            साथ चले हम, बदलाव की ओर!
-          </div>
+          <div class="tagline">साथ चले हम, बदलाव की ओर!</div>
 
           <p>
             शिक्षा, स्वास्थ्य, महिला सशक्तिकरण, जरूरतमंद सहायता,
@@ -4877,21 +4275,10 @@ footer{
 
           <div class="socials">
 
-            <a href="#" aria-label="Facebook">
-              <i class="fa-brands fa-facebook-f"></i>
-            </a>
-
-            <a href="#" aria-label="Instagram">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-
-            <a href="#" aria-label="YouTube">
-              <i class="fa-brands fa-youtube"></i>
-            </a>
-
-            <a href="#" aria-label="WhatsApp">
-              <i class="fa-brands fa-whatsapp"></i>
-            </a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
 
           </div>
 
@@ -4900,24 +4287,20 @@ footer{
 
         <div class="footer-col">
 
-          <h4>
-            Quick Links
-          </h4>
+          <h4>Quick Links</h4>
 
           <a href="#home">Home</a>
           <a href="#about">About Us</a>
           <a href="#work">Our Work</a>
           <a href="#team">Our Team</a>
-          <a href="#events">Events</a>
+          <a href="#upcoming">Upcoming Events</a>
 
         </div>
 
 
         <div class="footer-col">
 
-          <h4>
-            Get Involved
-          </h4>
+          <h4>Get Involved</h4>
 
           <a href="#support">Donate Us</a>
           <a href="join-us.html">Join Us</a>
@@ -4929,9 +4312,7 @@ footer{
 
         <div class="footer-col">
 
-          <h4>
-            Information
-          </h4>
+          <h4>Information</h4>
 
           <a href="#about">About Foundation</a>
           <a href="#values">Our Values</a>
@@ -4975,8 +4356,6 @@ footer{
 </footer>
 
 
-<!-- BACK TO TOP -->
-
 <button class="back-top" id="backTop" aria-label="Back to top">
   <i class="fa-solid fa-arrow-up"></i>
 </button>
@@ -4987,10 +4366,6 @@ footer{
 ======================================================= -->
 
 <script>
-
-/* =========================================================
-   SAFE DOM READY
-========================================================= */
 
 document.addEventListener("DOMContentLoaded", function(){
 
@@ -5006,55 +4381,35 @@ document.addEventListener("DOMContentLoaded", function(){
   function hideIntro(){
 
     if(introClosed) return;
-
     introClosed = true;
 
     document.body.classList.remove("intro-active");
 
     if(intro){
-
       intro.classList.remove("show");
       intro.classList.add("intro-hide");
       intro.setAttribute("aria-hidden","true");
 
       setTimeout(function(){
-
         intro.style.display = "none";
-
       },850);
-
     }
-
   }
-
-  /*
-    Intro is activated only after JS successfully starts.
-    If JS fails completely, intro remains display:none,
-    therefore page is still accessible.
-  */
 
   if(intro){
 
     requestAnimationFrame(function(){
-
       intro.classList.add("show");
       intro.setAttribute("aria-hidden","false");
       document.body.classList.add("intro-active");
-
     });
 
     setTimeout(hideIntro,10000);
-
-    /* Safety fallback */
-
     setTimeout(hideIntro,11000);
-
   }
 
   if(skipIntro){
-
     skipIntro.addEventListener("click",hideIntro);
-
   }
 
 
@@ -5065,21 +4420,14 @@ document.addEventListener("DOMContentLoaded", function(){
   const header = document.getElementById("siteHeader");
 
   function headerScroll(){
-
     if(window.scrollY > 40){
-
       header.classList.add("scrolled");
-
     }else{
-
       header.classList.remove("scrolled");
-
     }
-
   }
 
   window.addEventListener("scroll",headerScroll,{passive:true});
-
   headerScroll();
 
 
@@ -5092,13 +4440,10 @@ document.addEventListener("DOMContentLoaded", function(){
   const mobileLinks = document.querySelectorAll(".mobile-link");
 
   function closeMobileMenu(){
-
     if(!menuToggle || !mobileMenu) return;
-
     menuToggle.classList.remove("open");
     mobileMenu.classList.remove("open");
     document.body.style.overflow = "";
-
   }
 
   if(menuToggle && mobileMenu){
@@ -5106,17 +4451,12 @@ document.addEventListener("DOMContentLoaded", function(){
     menuToggle.addEventListener("click",function(){
 
       const isOpen = mobileMenu.classList.toggle("open");
-
       menuToggle.classList.toggle("open",isOpen);
 
       if(isOpen){
-
         document.body.style.overflow = "hidden";
-
       }else{
-
         document.body.style.overflow = "";
-
       }
 
     });
@@ -5124,18 +4464,12 @@ document.addEventListener("DOMContentLoaded", function(){
   }
 
   mobileLinks.forEach(function(link){
-
-    link.addEventListener("click",function(){
-
-      closeMobileMenu();
-
-    });
-
+    link.addEventListener("click",closeMobileMenu);
   });
 
 
   /* =======================================================
-     HERO SLIDER
+     HERO SLIDER (FIXED PROGRESS)
   ======================================================= */
 
   const heroSlides = document.querySelectorAll(".hero-slide");
@@ -5152,52 +4486,30 @@ document.addEventListener("DOMContentLoaded", function(){
     heroIndex = (index + heroSlides.length) % heroSlides.length;
 
     heroSlides.forEach(function(slide,i){
-
       slide.classList.toggle("active",i === heroIndex);
-
     });
 
-    heroSegments.forEach(function(segment,i){
-
+    heroSegments.forEach(function(segment){
       segment.classList.remove("active");
-
-      const span = segment.querySelector("span");
-
-      if(span){
-
-        span.style.animation = "none";
-
-        void span.offsetWidth;
-
-      }
-
-      if(i === heroIndex){
-
-        segment.classList.add("active");
-
-      }
-
     });
 
-    if(heroNumber){
+    /* Force reflow to restart CSS animation */
+    void document.body.offsetWidth;
 
-      heroNumber.textContent =
-        String(heroIndex + 1).padStart(2,"0");
-
+    if(heroSegments[heroIndex]){
+      heroSegments[heroIndex].classList.add("active");
     }
 
+    if(heroNumber){
+      heroNumber.textContent = String(heroIndex + 1).padStart(2,"0");
+    }
   }
 
   function startHero(){
-
     clearInterval(heroTimer);
-
     heroTimer = setInterval(function(){
-
       showHero(heroIndex + 1);
-
     },5500);
-
   }
 
   showHero(0);
@@ -5205,167 +4517,133 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
   /* =======================================================
-     GENERIC SLIDER FUNCTION
+     GENERIC SLIDER
   ======================================================= */
 
   function createSlider(config){
 
     const track = document.getElementById(config.track);
-
     if(!track) return;
 
     const slides = Array.from(track.children);
 
     const prev = document.getElementById(config.prev);
     const next = document.getElementById(config.next);
-    const current = document.getElementById(config.current);
     const dotsContainer = document.getElementById(config.dots);
 
     let index = 0;
     let timer = null;
+    let isVisible = true;
 
     function render(){
 
-      track.style.transform =
-        "translateX(-" + (index * 100) + "%)";
-
-      if(current){
-
-        current.textContent =
-          String(index + 1).padStart(2,"0");
-
-      }
+      track.style.transform = "translateX(-" + (index * 100) + "%)";
 
       if(dotsContainer){
-
         Array.from(dotsContainer.children).forEach(function(dot,i){
-
           dot.classList.toggle("active",i === index);
-
+          dot.setAttribute("aria-current", i === index ? "true" : "false");
         });
-
       }
+
+      slides.forEach(function(slide,i){
+        slide.setAttribute("aria-hidden", i === index ? "false" : "true");
+        slide.querySelectorAll("a,button").forEach(function(el){
+          el.tabIndex = i === index ? 0 : -1;
+        });
+      });
 
     }
 
     function goTo(newIndex){
-
-      index =
-        (newIndex + slides.length) % slides.length;
-
+      index = (newIndex + slides.length) % slides.length;
       render();
-
     }
 
     function start(){
-
       clearInterval(timer);
-
+      if(!isVisible) return;
       timer = setInterval(function(){
-
         goTo(index + 1);
-
       },5000);
-
     }
 
     if(prev){
-
       prev.addEventListener("click",function(){
-
         goTo(index - 1);
         start();
-
       });
-
     }
 
     if(next){
-
       next.addEventListener("click",function(){
-
         goTo(index + 1);
         start();
-
       });
-
     }
 
     if(dotsContainer){
-
       slides.forEach(function(_,i){
 
         const dot = document.createElement("button");
-
-        dot.className =
-          "slider-dot" + (i === 0 ? " active" : "");
-
-        dot.setAttribute(
-          "aria-label",
-          "Go to slide " + (i + 1)
-        );
+        dot.className = "slider-dot" + (i === 0 ? " active" : "");
+        dot.type = "button";
+        dot.setAttribute("aria-label","Go to slide " + (i + 1));
 
         dot.addEventListener("click",function(){
-
           goTo(i);
           start();
-
         });
 
         dotsContainer.appendChild(dot);
-
       });
+    }
 
+    /* Pause on hover */
+    const wrapper = track.closest(".premium-slider");
+    if(wrapper){
+      wrapper.addEventListener("mouseenter",function(){ clearInterval(timer); });
+      wrapper.addEventListener("mouseleave",start);
+    }
+
+    /* Pause when off-screen */
+    if("IntersectionObserver" in window && wrapper){
+      new IntersectionObserver(function(entries){
+        isVisible = entries[0].isIntersecting;
+        if(isVisible){ start(); } else { clearInterval(timer); }
+      },{threshold:.15}).observe(wrapper);
     }
 
     /* Touch swipe */
-
     let startX = 0;
 
     track.addEventListener("touchstart",function(e){
-
       startX = e.touches[0].clientX;
-
     },{passive:true});
 
     track.addEventListener("touchend",function(e){
-
       const endX = e.changedTouches[0].clientX;
       const difference = startX - endX;
-
       if(Math.abs(difference) > 45){
-
-        if(difference > 0){
-
-          goTo(index + 1);
-
-        }else{
-
-          goTo(index - 1);
-
-        }
-
+        if(difference > 0){ goTo(index + 1); }
+        else{ goTo(index - 1); }
         start();
-
       }
-
     },{passive:true});
 
     render();
     start();
-
   }
 
 
   /* =======================================================
-     INITIALIZE ALL SLIDESHOWS
+     INITIALIZE SLIDESHOWS
   ======================================================= */
 
   createSlider({
     track:"valuesTrack",
     prev:"valuesPrev",
     next:"valuesNext",
-    current:"valuesCurrent",
     dots:"valuesDots"
   });
 
@@ -5373,7 +4651,6 @@ document.addEventListener("DOMContentLoaded", function(){
     track:"workTrack",
     prev:"workPrev",
     next:"workNext",
-    current:"workCurrent",
     dots:"workDots"
   });
 
@@ -5381,7 +4658,6 @@ document.addEventListener("DOMContentLoaded", function(){
     track:"methodTrack",
     prev:"methodPrev",
     next:"methodNext",
-    current:"methodCurrent",
     dots:"methodDots"
   });
 
@@ -5389,7 +4665,6 @@ document.addEventListener("DOMContentLoaded", function(){
     track:"helpTrack",
     prev:"helpPrev",
     next:"helpNext",
-    current:"helpCurrent",
     dots:"helpDots"
   });
 
@@ -5398,26 +4673,20 @@ document.addEventListener("DOMContentLoaded", function(){
      ₹1 / ₹2 / ₹5 / ₹10
   ======================================================= */
 
-  const amountButtons =
-    document.querySelectorAll(".amount-btn");
-
-  const selectedMessage =
-    document.getElementById("selectedMessage");
+  const amountButtons = document.querySelectorAll(".amount-btn");
+  const selectedMessage = document.getElementById("selectedMessage");
 
   amountButtons.forEach(function(button){
 
     button.addEventListener("click",function(){
 
       amountButtons.forEach(function(btn){
-
         btn.classList.remove("selected");
-
       });
 
       button.classList.add("selected");
 
-      const amount =
-        button.getAttribute("data-amount");
+      const amount = button.getAttribute("data-amount");
 
       if(selectedMessage){
 
@@ -5426,21 +4695,11 @@ document.addEventListener("DOMContentLoaded", function(){
 
         selectedMessage.animate(
           [
-            {
-              opacity:.4,
-              transform:"translateY(5px)"
-            },
-            {
-              opacity:1,
-              transform:"translateY(0)"
-            }
+            { opacity:.4, transform:"translateY(5px)" },
+            { opacity:1, transform:"translateY(0)" }
           ],
-          {
-            duration:400,
-            easing:"ease-out"
-          }
+          { duration:400, easing:"ease-out" }
         );
-
       }
 
     });
@@ -5449,48 +4708,71 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
   /* =======================================================
+     UPCOMING EVENTS — ACCORDION
+  ======================================================= */
+
+  document.querySelectorAll(".up-toggle").forEach(function(btn){
+
+    btn.addEventListener("click",function(){
+
+      const panel = btn.nextElementSibling;
+      if(!panel) return;
+
+      const isOpen = btn.classList.toggle("open");
+
+      if(isOpen){
+        panel.classList.add("open");
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }else{
+        panel.classList.remove("open");
+        panel.style.maxHeight = "0px";
+      }
+
+    });
+
+  });
+
+  window.addEventListener("resize",function(){
+    document.querySelectorAll(".up-activities.open").forEach(function(p){
+      p.style.maxHeight = p.scrollHeight + "px";
+    });
+  },{passive:true});
+
+
+  /* =======================================================
      REVEAL ON SCROLL
   ======================================================= */
 
-  const revealElements =
-    document.querySelectorAll(
-      ".reveal,.reveal-left,.reveal-right"
-    );
+  const revealElements = document.querySelectorAll(
+    ".reveal,.reveal-left,.reveal-right"
+  );
 
   if("IntersectionObserver" in window){
 
-    const observer =
-      new IntersectionObserver(function(entries){
+    const observer = new IntersectionObserver(function(entries){
 
-        entries.forEach(function(entry){
+      entries.forEach(function(entry){
 
-          if(entry.isIntersecting){
+        if(entry.isIntersecting){
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
 
-            entry.target.classList.add("visible");
-
-            observer.unobserve(entry.target);
-
-          }
-
-        });
-
-      },{
-        threshold:.12,
-        rootMargin:"0px 0px -40px 0px"
       });
 
+    },{
+      threshold:.12,
+      rootMargin:"0px 0px -40px 0px"
+    });
+
     revealElements.forEach(function(element){
-
       observer.observe(element);
-
     });
 
   }else{
 
     revealElements.forEach(function(element){
-
       element.classList.add("visible");
-
     });
 
   }
@@ -5500,52 +4782,38 @@ document.addEventListener("DOMContentLoaded", function(){
      ACTIVE NAV
   ======================================================= */
 
-  const sections =
-    document.querySelectorAll(
-      "main section[id]"
-    );
+  const sections = document.querySelectorAll("main section[id]");
 
-  const navLinks =
-    document.querySelectorAll(
-      ".desktop-nav a[href^='#']"
-    );
+  const navLinks = document.querySelectorAll(
+    ".desktop-nav a[href^='#']:not(.donate-nav)"
+  );
 
   if("IntersectionObserver" in window){
 
-    const navObserver =
-      new IntersectionObserver(function(entries){
+    const navObserver = new IntersectionObserver(function(entries){
 
-        entries.forEach(function(entry){
+      entries.forEach(function(entry){
 
-          if(entry.isIntersecting){
+        if(entry.isIntersecting){
 
-            navLinks.forEach(function(link){
+          navLinks.forEach(function(link){
 
-              link.classList.remove("active");
+            link.classList.remove("active");
 
-              if(
-                link.getAttribute("href") ===
-                "#" + entry.target.id
-              ){
+            if(link.getAttribute("href") === "#" + entry.target.id){
+              link.classList.add("active");
+            }
 
-                link.classList.add("active");
+          });
 
-              }
+        }
 
-            });
-
-          }
-
-        });
-
-      },{
-        threshold:.35
       });
 
+    },{ threshold:.35 });
+
     sections.forEach(function(section){
-
       navObserver.observe(section);
-
     });
 
   }
@@ -5555,42 +4823,23 @@ document.addEventListener("DOMContentLoaded", function(){
      BACK TO TOP
   ======================================================= */
 
-  const backTop =
-    document.getElementById("backTop");
+  const backTop = document.getElementById("backTop");
 
   function backTopCheck(){
-
     if(window.scrollY > 650){
-
       backTop.classList.add("show");
-
     }else{
-
       backTop.classList.remove("show");
-
     }
-
   }
 
-  window.addEventListener(
-    "scroll",
-    backTopCheck,
-    {passive:true}
-  );
-
+  window.addEventListener("scroll",backTopCheck,{passive:true});
   backTopCheck();
 
   if(backTop){
-
     backTop.addEventListener("click",function(){
-
-      window.scrollTo({
-        top:0,
-        behavior:"smooth"
-      });
-
+      window.scrollTo({ top:0, behavior:"smooth" });
     });
-
   }
 
 
@@ -5598,15 +4847,8 @@ document.addEventListener("DOMContentLoaded", function(){
      YEAR
   ======================================================= */
 
-  const year =
-    document.getElementById("currentYear");
-
-  if(year){
-
-    year.textContent =
-      new Date().getFullYear();
-
-  }
+  const year = document.getElementById("currentYear");
+  if(year){ year.textContent = new Date().getFullYear(); }
 
 
   /* =======================================================
@@ -5614,37 +4856,27 @@ document.addEventListener("DOMContentLoaded", function(){
   ======================================================= */
 
   document.addEventListener("keydown",function(e){
-
     if(e.key === "Escape"){
-
       closeMobileMenu();
-
       hideIntro();
-
     }
-
   });
 
 });
 
 
 /* =========================================================
-   EXTRA SAFETY:
-   If browser has unusual JS timing, make sure intro cannot
-   remain on screen indefinitely.
+   SAFETY FALLBACK
 ========================================================= */
 
 setTimeout(function(){
 
-  const intro =
-    document.getElementById("introScreen");
+  const intro = document.getElementById("introScreen");
 
   if(intro){
-
     intro.classList.remove("show");
     intro.classList.add("intro-hide");
     intro.style.pointerEvents = "none";
-
   }
 
   document.body.classList.remove("intro-active");
